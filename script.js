@@ -12,9 +12,25 @@ async function loadGistData() {
     loaderContainer.style.display = "block";
 // Haetaan nuotit tietokannoista session.org ja FolkWiki
     const urls = [
-        "sessionSet16.js",
+        "sessionSet01.js",
+    "sessionSet05.js",
+    "sessionSet06.js",
+    "sessionSet07.js",
+    "sessionSet08.js",
+    "sessionSet09.js",
+    "sessionSet10.js",
+    "sessionSet11.js",
+    "sessionSet12.js",
+    "sessionSet13.js",
+    "sessionSet14.js",
+    "sessionSet15.js",
+    "sessionSet16.js",
     "sessionSet17.js",
-    "sessionSet18.js"
+    "sessionSet18.js",
+    "extrasetti5.js",
+    "folkwikiSet1.js",
+    "folkwikiSet2.js",
+    "folkwikiSet3.js"
     ];
 
     let loaded = 0;
