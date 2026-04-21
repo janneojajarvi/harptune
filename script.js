@@ -98,7 +98,7 @@ loadGistData();
 window.onload = function() {
     console.log("Sivu ladattu, haku valmiina heti kun Gistit saapuvat.");
     
-      // --- KIELIPAKETTI ---
+     // --- KIELIPAKETTI ---
     const translations = {
         fi: {
         settings: "Säädöt & Toiminnot",  
