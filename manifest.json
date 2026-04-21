@@ -1,7 +1,9 @@
 {
   "name": "harptune",
   "short_name": "harptune",
-  "start_url": "index.html",
+  "id": "/harptune/",
+  "start_url": "/harptune/index.html",
+  "scope": "/harptune/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2196F3",
