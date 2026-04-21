@@ -929,23 +929,44 @@ favoritesSelect.onchange = () => {
      
       
     document.getElementById('searchBtn').onclick = () => {
-        const q = document.getElementById('searchInput').value.toLowerCase();
-        const filterMode = document.getElementById('filterSelect').value;
-        const resDiv = document.getElementById('searchResults');
-        const currentLang = localStorage.getItem('prefLang') || 'fi';
-        const t = translations[currentLang];
+    const q = document.getElementById('searchInput').value.toLowerCase();
+    const filterMode = document.getElementById('filterSelect').value;
+    const resDiv = document.getElementById('searchResults');
+    const currentLang = localStorage.getItem('prefLang') || 'fi';
+    const t = translations[currentLang];
 
-        if (!q) return;
+    if (!q) return;
 
-        resDiv.innerHTML = ""; // Tyhjennetään vanhat tulokset
-        resDiv.style.display = "block";
-        statusDisplay.innerText = t.msgSearching;
+    resDiv.innerHTML = ""; // Tyhjennetään vanhat tulokset
+    resDiv.style.display = "block";
+    statusDisplay.innerText = t.msgSearching;
 
-        // 1. Suodatetaan kirjastosta osumat nimen perusteella
-        const matches = (window.harpLibrary || []).filter(tune => 
-    tune.name.toLowerCase().includes(q)
-);
+    // 1. Suodatetaan kirjastosta osumat nimen ja metatietojen (O, R, S) perusteella
+    const matches = (window.harpLibrary || []).filter(tune => {
+    // Muutetaan hakusana q muotoon, jossa ei ole väliviivoja (esim. "bysscalle")
+    const cleanQ = q.replace(/[-]/g, "");
+    const abc = tune.abc || "";
+    
+    // Apufunktio, joka puhdistaa tekstin vertailua varten
+    const cleanText = (text) => text.toLowerCase().replace(/[-]/g, "");
 
+    const nameMatch = cleanText(tune.name).includes(cleanQ);
+    
+    // Haetaan metatiedot
+    const origin = (abc.match(/^O:\s*(.*)/m) || ["", ""])[1];
+    const rhythm = (abc.match(/^R:\s*(.*)/m) || ["", ""])[1];
+    const source = (abc.match(/^S:\s*(.*)/m) || ["", ""])[1];
+    const disco = (abc.match(/^D:\s*(.*)/m) || ["", ""])[1];
+
+    // Tarkistetaan löytyykö puhdistettu hakusana mistään kentästä
+    return nameMatch || 
+           cleanText(origin).includes(cleanQ) || 
+           cleanText(rhythm).includes(cleanQ) || 
+           cleanText(source).includes(cleanQ) || 
+           cleanText(disco).includes(cleanQ);
+});
+
+     
         if (matches.length === 0) {
             resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFoundSrch || "Ei löytynyt"}</div>`;
             statusDisplay.innerText = t.msgNotFoundSrch || "Ei löytynyt";
