@@ -1,6 +1,6 @@
 {
-  "name": "HarpTune downloader",
-  "short_name": "Harptune",
+  "name": "harptune",
+  "short_name": "harptune",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
