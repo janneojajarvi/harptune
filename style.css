@@ -539,3 +539,6 @@ textarea, select, input[type="text"] {
     margin: 0 auto; /* Keskittää nuotin */
 }
 
+        .abcjs-inline-audio {
+    min-height: 40px; /* Varmistaa, että säädin mahtuu näkyviin */
+}
