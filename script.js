@@ -780,19 +780,30 @@ if (titleDisplay) {
 
     // --- AUDIO JA TALLENNUS ---
     playBtn.onclick = async () => {
-        document.getElementById('audio-interface').style.display = "block";
-        const visualObj = ABCJS.renderAbc("paper", getFinalAbc(), { 
-            visualTranspose: (octaveOffset * 12) + transposeOffset 
-        })[0];
+    document.getElementById('audio-interface').style.display = "block";
+    
+    // Lisätään responsive: "resize", jotta nuotti ei kutistu vaan täyttää tilan
+    const visualObj = ABCJS.renderAbc("paper", getFinalAbc(), { 
+        visualTranspose: (octaveOffset * 12) + transposeOffset,
+        responsive: "resize" // TÄMÄ estää pienenemisen
+    })[0];
 
-        if (synthControl) { try { await synthControl.pause(); } catch(e) {} }
-        synthControl = new ABCJS.synth.SynthController();
-        await synthControl.load("#audio-control", null, { displayPlay: true, displayProgress: true, displayRestart: true });
-        await synthControl.setTune(visualObj, false);
-        
-        const startElem = document.querySelector('.abcjs-midi-start');
-        if(startElem) startElem.click();
-    };
+    if (synthControl) { try { await synthControl.pause(); } catch(e) {} }
+    
+    synthControl = new ABCJS.synth.SynthController();
+    
+    // Tässä on mukana displayProgress: true edistymispalkkia varten
+    await synthControl.load("#audio-control", null, { 
+        displayPlay: true, 
+        displayProgress: true, 
+        displayRestart: true 
+    });
+    
+    await synthControl.setTune(visualObj, false);
+    
+    const startElem = document.querySelector('.abcjs-midi-start');
+    if(startElem) startElem.click();
+};
 
     stopBtn.onclick = async () => {
         if (synthControl) {
