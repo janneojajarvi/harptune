@@ -1,4 +1,4 @@
-const CACHE_NAME = 'harptune';
+const CACHE_NAME = 'harptune-v2';
 const ASSETS = [
   './',
   './index.html',
