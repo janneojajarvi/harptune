@@ -1,0 +1,26 @@
+var GSkene = [
+  {
+    "name": "Wat ye what I got late yestreen - Bagpipe Set",
+    "abc": "X:1\nT:Wat ye what I got late yestreen - Bagpipe Set\nZ:Jack Campin <http://www.campin.me.uk/>\nS:George Skene's MS, NLS Adv.MS.5.2.21, 1715\nN:bar 8 is | [ge][ec][cA] d2:| in the MS\nN:bar 28 is |fA/c/c d2:| in the MS\nM:6/8\nK:Dmix\ne|\\\ncAa ef/g/a|eae fde|cAa ef/g/a|gec d2:|\nf/g/|\\\na2e f2d|gec efg|a2e f2d|gec d2:|\ne|\\\ncAa ef/g/a|a/g/f/g/a a/g/f/g/a|cAa ef/g/a|gec d2:|\nf/g/|\\\naee fdd|ecc gee|aee fdd|ecA d2:|\nA|\\\ndad dad|cgc cgc|dad dad|ecA ecA|\nd2a a/g/f/g/a|c2g g/f/e/f/g|d2a a/g/f/g/a/f/|gec d2||\ne|\\\ncAe {f}ec/d/e|{f}ec/d/e {f}ec/d/e|cAe {f}ec/d/e|fA/B/c d2:|\ne|\\\nd/c/d/e/f/g/ a/g/f/g/a/f/|c/B/c/d/e/f/ g/f/e/f/g/e/|\\\nd/c/d/e/f/g/ a/g/f/g/a/f/|g/f/e/d/e/c/ d2:|\nf/g/|\\\na/g/f/e/f/d/ f/e/f/g/a/f/|g/f/e/d/e/c/ e/d/e/f/g/e/|\\\na/g/f/e/f/d/ f/e/f/g/a/f/|g/e/f/d/e/c/ d2:|"
+  },
+  {
+    "name": "Malcome Kaird's Come Again - Bagpipe way",
+    "abc": "X:2\nT:Malcome Kaird's Come Again - Bagpipe way\nZ:Jack Campin <http://www.campin.me.uk/>\nS:George Skene's MS, NLS Adv.MS.5.2.21, 1715\nN:Notes given a ~ are marked with a superscripted  in the MS\nM:4/4\nL:1/8\nK:Gmix\nd|\\\nB2 Gc (d/c/B/A/) BG|A/~A/B G/~G/c A/~A/c F/F/d|\\\nB2 Ac (d/c/B/A/) BG|G/G/G G/G/G BGG:|\nd|\\\nBG d2   BG g2|BG f2 AF Fd|BG d2 BG g2|BG d2 BG g2|\n(B/c/B) d2 (B/c/B) g2|A/~B/A f2 AFFf|\\\n(g/f/e/d/) ec (d/c/B/A/)BG|A/~B/A f2 AGG:|\nd|\\\nBGBG BGBG|A/~A/B G/G/c A/A/c F/F/d|\\\nBGBG BGBG|A/~B/A f2 BGG:|\nf|\\\n(g/f/e/)d/ ec (d/c/B/)A/ BG|A/B/A f2 AFFf|\\\n(g/f/e/)d/ ec d/c/B/A/ BG|A/~B/A f2 BGG:|\nA|\\\nG/~G/G BG G/G/G BG|A/~B/A f2 AFFA|\\\nG/G/G BG G/G/G BG|A/B/A f2 BGG:|\n(e/f/)|\\\ngBBg BBgB|A/B/A f2 AFF(e/f/)|\\\ngBBg BBgB|A/B/A f2 BGG:|\nB|\\\nG/~G/G G/G/G G/G/G G/G/G|A/A/B G/G/c A/A/c F/F/d|\\\nG/G/G G/G/G G/G/G G/G/G|A/B/A f2 BGG:|\nB|\\\nG/~G/G gBgBgB|A/B/A f2 AFFA|G/G/G gB gBgB|A/B/A f2 BGG:|\nA|\\\nG/~G/G A/A/A G/G/G A/A/A|G/G/G A/A/A cFFA|\\\nG/G/G A/A/A G/G/G A/A/A|G/G/G A/A/A G/G/G A/A/A|\nG/G/G A/A/A G/G/G A/A/A|G/G/G A/A/A cFFd|\\\nB2Gc d/c/B/A/ BG|A/~A/B G/G/c A/A/B G:|\nd|\\\nBGGc d/c/B/A/ BG|A/~A/B G/G/c A/A/c F/F/d|\\\nBGGc d/c/B/A/ BG|A/~A/B G/G/B A/A/B G/G/B|\nA/~A/B G/G/B A/A/B G/G/B|A/A/c F/F/c A/A/c F/F/c|\\\nA/A/~B G/G/B A/A/B G/G/B|A/A/~B G/G/B A/A/B G/G/B|\nA/~A/B G/G/B A/A/B G/G/B|A/A/c F/F/c A/A/c F/F/c|\\\nBGGc d/c/B/A/ BG|G/G/G G/G/G BGG|]"
+  },
+  {
+    "name": "Cauld Kail in Aberdeen Kail-castocks in Strabogie - Bagpipe humour",
+    "abc": "X:3\nT:Cauld Kail in Aberdeen Kail-castocks in Strabogie - Bagpipe humour\nZ:Jack Campin <http://www.campin.me.uk/>\nS:George Skene's MS, NLS Adv.MS.5.2.21, 1715\nN:anacruses 1, 5 added by me\nM:4/4\nL:1/8\nK:D\nf|\\\ne2c{B}A edBG|c/~d/e A~c/d/ e2d::e|cA A/~A/A BGdB|\ncA A/~A/A A/~A/A ae|cA A/~A/A BGdB|c/~d/e Aa e2d::\ng|\\\nfAcA edBG|fAcB/A/ e2d::e|cA c/~d/e G~B/c/ dB|\ncA c/~e/a A~f/g/ ae|fdec gGdB|cAca e2d::\ng|a/g/f/e/ c/d/e/c/ g/f/e/d/ B/c/d/B/|a/g/f/e/ c/d/e/c/ e2d::e|c>ac>a BGdB|\nc>ac>a cAae|c>ac>a (BG)dB|cAfd e2d::\ne|\\\nAaeg dgdB|Aaeg e2d::e|cAgd BGdB|\ncAec aefe|cAgd BGdB|cAca e2d::\ne|\\\nAe c/d/e/c/ Gd B/c/d/B/|Ae c/d/e/c/ e2d::e|(3c~dc (3c~dc BGdB|\n(3c~dc (3c~dc cAae|(3c~dc (3c~dc BGdB|(c/B/A) fd e2d:|"
+  },
+  {
+    "name": "(Cauld Kail) A way instead of the gatherings in the second measure",
+    "abc": "X:4\nT:(Cauld Kail) A way instead of the gatherings in the second measure\nZ:Jack Campin <http://www.campin.me.uk/>\nS:George Skene's MS, NLS Adv.MS.5.2.21, 1715\nM:4/4\nL:1/8\nK:D\na|\\\n(cA)(cA) (BG)dB|(cA)(cA) (cA)ae|\\\n(cA)(cA) (BG)dB|(cA)(cf) e2d:|"
+  },
+  {
+    "name": "(Cauld Kail) A noys. way of the 2d. measure wt. gatherings",
+    "abc": "X:5\nT:(Cauld Kail) A noys. way of the 2d. measure wt. gatherings\nZ:Jack Campin <http://www.campin.me.uk/>\nS:George Skene's MS, NLS Adv.MS.5.2.21, 1715\nZ:Jack Campin 1998\nM:4/4\nL:1/8\nK:D\ne|\\\ncA A/~A/A BG G/~G/G|cA A/A/~A A/~A/A A/~A/A|\\\ncA A/~A/A BG G/~G/G|c/~B/A c/e/a e2d:|"
+  },
+  {
+    "name": "Gird the Cogie",
+    "abc": "X:6\nT:Gird the Cogie, for the pipe  Ingram's Set\nZ:Jack Campin <http://www.campin.me.uk/>\nS:George Skene's MS, NLS Adv.MS.5.2.21, 1715\nM:4/4\nL:1/8\nK:Amix\nf|\\\n(efe)A (B~B/c/B)G|efeA c2A(c/e/)|\\\n(efe)A B(c/B/B)G|e(f/g/) (a/g/f/e/) c2A:|\nf/g/|\\\n(a/g/f/e/) (c/d/e/c/) d>B G(f/g/)|(a/g/f/e/) ae f2 e(f/g/)|\\\n(a/g/f/e/) (c/d/e/c/) g>B GB|Af/g/ ae c2A:|\nB|\\\nAA/B/ AA/B/ GG/B/ GG/B/|A/A/B A/A/B A/A/B A/A/B|\\\nA/A/B A/A/B G/G/B G/G/B|Af/g/ ae c2A:|\n(f/g/)|\\\na/g/f/e/ c/d/e/c/ g>B Gf/g/|a/g/f/e/ ae f2 ef/g/|acac gBgB|cAae c2A:|\n{g}f|\\\n{f}eAeA {c}BGBG|{f}eAeA cAcA|eAeA BGBG|fAeA c2A:|\nB|\\\nA/A/B AB G/G/B GB|A/A/B AB A/A/B AB|A/A/B AB G/G/B GB|Af/g/ ae c2A:|\n(f/g/)|\\\na/g/f/e/ c/d/e/f/ d/c/B/A/ Gf/g/|a/g/f/e/ ae f2 ef/g/|\\\nacca BBgB|d/c/B/A/ ae c2A:|\n{g}f|\\\neA c/d/e/c/ dGdB|eA c/d/e/c/ aA c/d/e/c/|\\\nfA c/d/e/c/ B/A/G dB|Af/g/ ae c2A:|\n\n% Jack Campin * 11 Third Street, Newtongrange EH22 4PU, Scotland  07800 739 557\n% <http://www.campin.me.uk/>                 food intolerance data and recipes,\n% freeware logic fonts for the Macintosh, and Scots traditional music resources"
+  }
+];
