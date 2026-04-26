@@ -964,12 +964,12 @@ var esavelmat_kansantanssit = [
     abc: "X:1\nT:kt1_0243\nO:Kitee, Suorlahden kylä, Pohjois-Karjala\nS:Mikko Haltunen/ E. Sivori\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kt1_0243\nK:D\n|: A8 A4 | f4 e4 d4 | c4 B4 c4 | d4 e4 f4 | A8 A4 | f4 e4 d4 | c4 B4 c4 | d8 A8 | A4 f4 e4 | d4 c4 B4 | c4 d4 e4 | f4 A8 | A4 f4 e4 | d4 c4 B4 | c4 d8 | a6 f2g2 e2 | d4 f4 f4 | e2c2 A2c2 e2c2 | d4 e4 f4 | a6 f2g2 e2 | d4 f4 f4 | e2c2 A2c2 e2f2 | d8 a6 | f2g2 e2d4 f4 | f4 e2c2 A2c2 | e2c2 d4 e4 | f4 a6 f2 | g2e2 d4 f4 | f4 e2c2 A2c2 | e2f2 d8:|"
   },
   {
-    name: "Ruotsin katrilli "Prins Oskar"",
-    abc: "X:1\nT:Ruotsin katrilli "Prins Oskar"\nO:-()\nS:Robert Lehrbäck, lukkari Kuopiosta\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kt1_0244\nK:D\n|: DFA2 A2A2 | F2D2 D2D2 | d2cd cBcA | Bcde fdA2 | DFA2 A2Ad | fdA2 A2A2 | dffe gecA | ced2 d2d2:| | cde2 e2e2 | f2e6 | cee2 d2dB | ^GEA^G ABcB | cdec eced | fde2 e2ef | ^gaa2 f2fd | B^GA4 cd | e2e2 e2f2 | e6 ce | e2d2 dB^GE | A^GAB cBcd | ecec edfd | e2e2 ef^ga | a2f2 fdB^G | A4 DFA2 | AGFA dcBA | GFG2 EFG2 | GFE2 edcB | AGF2 DFA2 | AGF2 dcB2 | gfe2 eddc | BA^GA Bcd2 | f2d2 DFA2 | AGFA dcBA | GFG2 EFG2 | GFE2 edcB | AGF2 DFA2 | AGF2 dcB2 | gfe2 eddc | BA^GA Bcd2 | f2d4:|"
+    name: "Ruotsin katrilli Prins Oskar",
+    abc: "X:1\nT:Ruotsin katrilli Prins Oskar\nO:-()\nS:Robert Lehrbäck, lukkari Kuopiosta\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kt1_0244\nK:D\n|: DFA2 A2A2 | F2D2 D2D2 | d2cd cBcA | Bcde fdA2 | DFA2 A2Ad | fdA2 A2A2 | dffe gecA | ced2 d2d2:| | cde2 e2e2 | f2e6 | cee2 d2dB | ^GEA^G ABcB | cdec eced | fde2 e2ef | ^gaa2 f2fd | B^GA4 cd | e2e2 e2f2 | e6 ce | e2d2 dB^GE | A^GAB cBcd | ecec edfd | e2e2 ef^ga | a2f2 fdB^G | A4 DFA2 | AGFA dcBA | GFG2 EFG2 | GFE2 edcB | AGF2 DFA2 | AGF2 dcB2 | gfe2 eddc | BA^GA Bcd2 | f2d2 DFA2 | AGFA dcBA | GFG2 EFG2 | GFE2 edcB | AGF2 DFA2 | AGF2 dcB2 | gfe2 eddc | BA^GA Bcd2 | f2d4:|"
   },
   {
-    name: "Ruotsin katrilli "Emeli"",
-    abc: "X:1\nT:Ruotsin katrilli "Emeli"\nO:-()\nS:Robert Lehrbäck, lukkari Kuopiosta\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kt1_0245\nK:F\n|: FAc2 cAf2 | fca2 afc'2 | c'a^fg ^fgfe | defg afc2 | FAc2 cAf2 | fca2 afc'2 | c'a^fg ^fgec | def2 a2f2:||: A2d2 d^cd2 | fed2 a^ga2 | egf2 fefe | fd^cd e^cA2 | A2d2 d^cd2 | fed2 a^ga2 | egf2 fgfe | d^cd2 d2d2:||: FAc2 cAf2 | fca2 afc'2 | c'a^fg ^fgfe | defg afc2 | FAc2 cAf2 | fca2 afc'2 | c'a^fg ^fgec | def2 a2f2:| | c2a6 | gaf2 fac2 | cfd2 bagf | efg^f gag2 | e2a6 | gaf2 fac2 | cfd2 bagf | efg4 f2 | c2g6 | agfe dc=Bc | defe d^cdg | bgf4 e2 | c2a6 | gaf2 fac2 | cfd2 bagf | feg4 f2 | c2a6 | gaf2 fac2 | cfd2 bagf | efg^f gag2 | e2a6 | gaf2 fac2 | cfd2 bagf | efg4 f2 | c2g6 | agfe dc=Bc | defe d^cdg | bgf4 e2 | c2a6 | gaf2 fac2 | cfd2 bagf | feg4 f2:|"
+    name: "Ruotsin katrilli Emeli",
+    abc: "X:1\nT:Ruotsin katrilli Emeli\nO:-()\nS:Robert Lehrbäck, lukkari Kuopiosta\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kt1_0245\nK:F\n|: FAc2 cAf2 | fca2 afc'2 | c'a^fg ^fgfe | defg afc2 | FAc2 cAf2 | fca2 afc'2 | c'a^fg ^fgec | def2 a2f2:||: A2d2 d^cd2 | fed2 a^ga2 | egf2 fefe | fd^cd e^cA2 | A2d2 d^cd2 | fed2 a^ga2 | egf2 fgfe | d^cd2 d2d2:||: FAc2 cAf2 | fca2 afc'2 | c'a^fg ^fgfe | defg afc2 | FAc2 cAf2 | fca2 afc'2 | c'a^fg ^fgec | def2 a2f2:| | c2a6 | gaf2 fac2 | cfd2 bagf | efg^f gag2 | e2a6 | gaf2 fac2 | cfd2 bagf | efg4 f2 | c2g6 | agfe dc=Bc | defe d^cdg | bgf4 e2 | c2a6 | gaf2 fac2 | cfd2 bagf | feg4 f2 | c2a6 | gaf2 fac2 | cfd2 bagf | efg^f gag2 | e2a6 | gaf2 fac2 | cfd2 bagf | efg4 f2 | c2g6 | agfe dc=Bc | defe d^cdg | bgf4 e2 | c2a6 | gaf2 fac2 | cfd2 bagf | feg4 f2:|"
   },
   {
     name: "Ruotsin katrilli",
@@ -1852,8 +1852,8 @@ var esavelmat_kansantanssit = [
     abc: "X:1\nT:Akaan polska\nO:Akaa, Pirkanmaa\nS:O. A. J. Carlenius\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kt1_0469\nK:D\n|: A4 dcdf | edeg fefa | agfg e2g2 | f2e2 d2f2 | efed cdcB:| | A4 DFAF | DFA=c =c2B2 | DGBG DGBd | d2c2 Acec | A2c2 e2c2 | dcBA GFED | E2D2 DFAF | DFA=c =c2B2 | DGBG DGBd | d2c2 Acec | A2c2 e2c2 | Acec A2c2 | e2g2 f2d2 | fedc c2d2 | d4:|"
   },
   {
-    name: ""Jokos tahdot tiliä laittaa?"",
-    abc: "X:1\nT:"Jokos tahdot tiliä laittaa?"\nO:Pirkkala, Pirkanmaa\nS:O. A. J. Carlenius\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kt1_0470\nK:C\n|: efed e2^ce | a2gf e2^c2 | d2e2 g2f2 | fed^c d2A2 | efed e2^ce | a2gf e2^c2 | d2e2 g2f2 | fed^c d4 | agfe gfed | ^cde^c A2A2 | d2e2 g2f2 | fed^c d2f2 | agfe gfed | ^cde^c A2A2 | d2e2 g2f2 | fed^c d4:|"
+    name: "Jokos tahdot tiliä laittaa?",
+    abc: "X:1\nT:Jokos tahdot tiliä laittaa?\nO:Pirkkala, Pirkanmaa\nS:O. A. J. Carlenius\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kt1_0470\nK:C\n|: efed e2^ce | a2gf e2^c2 | d2e2 g2f2 | fed^c d2A2 | efed e2^ce | a2gf e2^c2 | d2e2 g2f2 | fed^c d4 | agfe gfed | ^cde^c A2A2 | d2e2 g2f2 | fed^c d2f2 | agfe gfed | ^cde^c A2A2 | d2e2 g2f2 | fed^c d4:|"
   },
   {
     name: "Hämeen polska",
@@ -2612,8 +2612,8 @@ var esavelmat_kansantanssit = [
     abc: "X:1\nT:kt1_0663\nO:Lempäälä, Pirkanmaa\nS:O. A. J. Carlenius\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kt1_0663\nK:Bb\n|: F2Bc d2B2 | F2f2 d3B | F2B2 d2B2 | ecAc B2F2 | F2Bc d2B2 | F2f2 d3B | F2B2 d2B2 | ecAc B4 | f2df bagf | gfed e2c2 | cde=e f2B2 | FAcA B4:|"
   },
   {
-    name: ""Katteli, koitteli, heitteli"",
-    abc: "X:1\nT:"Katteli, koitteli, heitteli"\nO:Keuruu, Keski-Suomi\nS:O. A. J. Carlenius\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kt1_0664\nK:A\n|: E4 A2AB | c2cd e2ef | e2c2 edcd | B2e2 cdcB | A2E2 A2AB | c2cd e2ef | e2c2 edcd | B2e2 cdcB | |: A2E2 c2cB | c2A2 F2FE | F2AF AGEG | B2d2 dcBc:| | A4:|"
+    name: "Katteli, koitteli, heitteli",
+    abc: "X:1\nT:Katteli, koitteli, heitteli\nO:Keuruu, Keski-Suomi\nS:O. A. J. Carlenius\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kt1_0664\nK:A\n|: E4 A2AB | c2cd e2ef | e2c2 edcd | B2e2 cdcB | A2E2 A2AB | c2cd e2ef | e2c2 edcd | B2e2 cdcB | |: A2E2 c2cB | c2A2 F2FE | F2AF AGEG | B2d2 dcBc:| | A4:|"
   },
   {
     name: "Kanteleen soitto",
