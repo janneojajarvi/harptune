@@ -13,7 +13,7 @@ async function loadGistData() {
 // Haetaan nuotit tietokannoista session.org ja FolkWiki
     const urls = [
         "sessionSet01.js",
-        "esavelmat_kt1.js",
+        "esavelmat_setti1.js",
     "sessionSet05.js",
     "sessionSet06.js",
     "sessionSet07.js",
