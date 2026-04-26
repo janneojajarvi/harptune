@@ -216,52 +216,52 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Loru\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Lösönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0054\nK:G\n|: e2e2 e3c | d2d2 d4 | A2Bc d2c2 | B2A2 d3c | e2e2 e3c | d2d2 d4 | A2Bc d2c2 | B2A2 d4 | A2Bc d2c2 | B2A2 d4:|"
   },
   {
-    name: ""Kasaski"",
-    abc: "X:1\nT:"Kasaski"\nO:Pielisjärvi, Kylänlahti, Pohjois-Karjala\nS:Juhana Kiiskinen/A. Lähteenkorva\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0055\nK:G\n|: d2D2 d2D2 | A2D2 A2D2 | |: G6 D2 | G4 F2A2 | G2G2 D2D2 | G2G2 F2A2:| | G6 A2 | B3A G2F2 | E4 D2FG | A2A2 FGAF | d6 A2 | B3A G2F2 | E4 D2FG | A2A2 F2AF | d8:|"
+    name: "Kasaski",
+    abc: "X:1\nT:Kasaski\nO:Pielisjärvi, Kylänlahti, Pohjois-Karjala\nS:Juhana Kiiskinen/A. Lähteenkorva\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0055\nK:G\n|: d2D2 d2D2 | A2D2 A2D2 | |: G6 D2 | G4 F2A2 | G2G2 D2D2 | G2G2 F2A2:| | G6 A2 | B3A G2F2 | E4 D2FG | A2A2 FGAF | d6 A2 | B3A G2F2 | E4 D2FG | A2A2 F2AF | d8:|"
   },
   {
-    name: ""Kakkunassi"",
-    abc: "X:1\nT:"Kakkunassi"\nO:Pielisjärvi, Pohjois-Karjala\nS:Taavi Kiiskinen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0056\nK:G\n|: G2d2 c2ce | A2Ac B3A | G2d2 c2e2 | A2Ac B3A | G2GB A2F2 | G2E2 F2D2 | G3B A2F2 | G2E2 D4 | c2c2 B2BG | A2AG B2BG | c2c2 B2BG | A2AF G4 | c4 B2BG | A2AG B2BG | c2c2 B2BG | A2AF G4:|"
+    name: "Kakkunassi",
+    abc: "X:1\nT:Kakkunassi\nO:Pielisjärvi, Pohjois-Karjala\nS:Taavi Kiiskinen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0056\nK:G\n|: G2d2 c2ce | A2Ac B3A | G2d2 c2e2 | A2Ac B3A | G2GB A2F2 | G2E2 F2D2 | G3B A2F2 | G2E2 D4 | c2c2 B2BG | A2AG B2BG | c2c2 B2BG | A2AF G4 | c4 B2BG | A2AG B2BG | c2c2 B2BG | A2AF G4:|"
   },
   {
-    name: ""Veneähen laulu"",
-    abc: "X:1\nT:"Veneähen laulu"\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0057\nK:G\n|: D2d2 dBc2 | ecB2 dBAD | EFd2 dBc2 | gcB2 d2gc | BAd2 d2A2 | A2A2 A2A2 | AFB2 B2A2 | A2A2 A2d2 | d2d4 c2 | e2B2 d2A2 | EFd2 dBc2 | gcB2 d2dc | BAd2 d2A2 | A2A2 A2A2 | AFB2 B2A2 | A2A2 A2d2 | d2d4:|"
+    name: "Veneähen laulu",
+    abc: "X:1\nT:Veneähen laulu\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0057\nK:G\n|: D2d2 dBc2 | ecB2 dBAD | EFd2 dBc2 | gcB2 d2gc | BAd2 d2A2 | A2A2 A2A2 | AFB2 B2A2 | A2A2 A2d2 | d2d4 c2 | e2B2 d2A2 | EFd2 dBc2 | gcB2 d2dc | BAd2 d2A2 | A2A2 A2A2 | AFB2 B2A2 | A2A2 A2d2 | d2d4:|"
   },
   {
-    name: ""Jurvala"",
-    abc: "X:1\nT:"Jurvala"\nO:Pielisjärvi, Kylänlahti, Pohjois-Karjala\nS:Juhana Kiiskinen/A. Lähteenkorva\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0058\nK:G\n|: G4 B4 | d2D2 d4 | e2d2 c2B2 | c2d2 c4 | A2D2 A2d2 | A2d2 d4 | e2d2 c2B2 | c2d2 c4 | A2d2 d2B2 | B2G2 B2G2 | A2F2 A2F2 | G8 | A2Bc d2B2 | B2B2 B2G2 | A2F2 A2F2 | G8:|"
+    name: "Jurvala",
+    abc: "X:1\nT:Jurvala\nO:Pielisjärvi, Kylänlahti, Pohjois-Karjala\nS:Juhana Kiiskinen/A. Lähteenkorva\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0058\nK:G\n|: G4 B4 | d2D2 d4 | e2d2 c2B2 | c2d2 c4 | A2D2 A2d2 | A2d2 d4 | e2d2 c2B2 | c2d2 c4 | A2d2 d2B2 | B2G2 B2G2 | A2F2 A2F2 | G8 | A2Bc d2B2 | B2B2 B2G2 | A2F2 A2F2 | G8:|"
   },
   {
     name: "kjs_0059",
     abc: "X:1\nT:kjs_0059\nO:Pielisjärvi, Pohjois-Karjala\nS:Taavi Kiiskinen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0059\nK:G\n|: G4 G3B | d4 d4 | e4 d3c | B4 G4 | G4 A3B | c4 c3B | B4 B3A | A8 | A6 A2 | A2A2 A2B2 | c2B2 d2c2 | c2B2 A2G2 | G4 G4 | G4 G2B2 | d6 B2 | A4 F2A2 | G8 | G4 G2B2 | d4 d4 | e4 d3c | B4 G4 | G4 A3B | c4 B3A | B4 B3A | A8 | A6 A2 | A2A2 A2B2 | c2B2 d2c2 | c2B2 A2G2 | G4 G4 | G4 G2B2 | d6 B2 | A4 F2A2 | G8:|"
   },
   {
-    name: ""Veneähen laulu"",
-    abc: "X:1\nT:"Veneähen laulu"\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0060\nK:G\n|: d3B dcBA d4 | d2d2 c2e2 B2d2 | A2AB A2GF E2A2 | B2AG A2E2 d4 | d2d2 c2e2 B2d2 | A2AB A2GF E2A2 | B2AG A2E2 d4 | d2Bc dcBA d4 | d2d2 c2g2 B2d2 | A2AB A2GF E2A2 | B2B2 A2G2 d4 | d2d2 c2g2 B2d2 | A2AB A2GF E2A2 | B2B2 A2G2 d4:|"
+    name: "Veneähen laulu",
+    abc: "X:1\nT:Veneähen laulu\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0060\nK:G\n|: d3B dcBA d4 | d2d2 c2e2 B2d2 | A2AB A2GF E2A2 | B2AG A2E2 d4 | d2d2 c2e2 B2d2 | A2AB A2GF E2A2 | B2AG A2E2 d4 | d2Bc dcBA d4 | d2d2 c2g2 B2d2 | A2AB A2GF E2A2 | B2B2 A2G2 d4 | d2d2 c2g2 B2d2 | A2AB A2GF E2A2 | B2B2 A2G2 d4:|"
   },
   {
     name: "kjs_0061",
     abc: "X:1\nT:kjs_0061\nO:Suojärvi, Kuikkaniemi, Laatokan Karjala\nS:Vanja Trofimov/A. O. Väisänen\nM:5/8, 3/4,\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0061\nK:G\n|: B2G4 d2g4 | B6 g2a2 | g2e4 c2B2 | A2e2 d4 B6 | edcB A2B4 | B2G4 d2b4 | B6 g2a2 | {g}f2g e4 c2 | B2A2 e2d4 | B6 edc2 | A2B4:|"
   },
   {
-    name: ""Toaton soittama"",
-    abc: "X:1\nT:"Toaton soittama"\nO:Vienan Karjala(Vuonninen), Vuonninen, Vienan Karjala\nS:Ontreini Jyrki/A. Lähteenkorva\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0062\nK:G\n|: d2B2 G2G2 | dcBA G2G2 | d2B2 G2G2 | dcBA G4:|"
+    name: "Toaton soittama",
+    abc: "X:1\nT:Toaton soittama\nO:Vienan Karjala(Vuonninen), Vuonninen, Vienan Karjala\nS:Ontreini Jyrki/A. Lähteenkorva\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0062\nK:G\n|: d2B2 G2G2 | dcBA G2G2 | d2B2 G2G2 | dcBA G4:|"
   },
   {
-    name: ""Ripatshka"",
-    abc: "X:1\nT:"Ripatshka"\nO:Suojärvi, Vuondele, Laatokan Karjala\nS:Fedja Happo/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0063\nK:G\n|: d2dc B2d2 | A2d2 B2d2 | d2dc B2d2 | A2d2 B2d2 | d2dc B2d2 | A2d2 B2d2 | d2dc B2d2 | A2d2 d4 | A2dc B2d2 | A2d2 B2d2 | A2dc B2d2 | d2d4 dc | BAG2 B2A2 | d2B2 d2dc | BAG2 B2A2 | c2B2 d2d2 | A2B2 G2A2 | c2B2 G2Ac | BAG2 B2A2 | d2B2 d2Ac | BAG2 B2A2 | d2d4 d4 | d4 A2c2 | d4 d4 | d4 A2c2 | d4 cdcB | c2d2 A2c2 | B2d2 dcB2 | d2A2 c2B2 | d2d2 dcB2 | d2A2 dcB2 | d2d2 dcB2 | d2A2 c2B2 | d2dc B2d2 | A2B2 d2dc | B2d2 A2B2 | d2dc B2d2 | A2c2 B2d2 | c2BA B2d2 | A2B2 d2c2 | BAB2 d2A2 | d4:|"
+    name: "Ripatshka",
+    abc: "X:1\nT:Ripatshka\nO:Suojärvi, Vuondele, Laatokan Karjala\nS:Fedja Happo/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0063\nK:G\n|: d2dc B2d2 | A2d2 B2d2 | d2dc B2d2 | A2d2 B2d2 | d2dc B2d2 | A2d2 B2d2 | d2dc B2d2 | A2d2 d4 | A2dc B2d2 | A2d2 B2d2 | A2dc B2d2 | d2d4 dc | BAG2 B2A2 | d2B2 d2dc | BAG2 B2A2 | c2B2 d2d2 | A2B2 G2A2 | c2B2 G2Ac | BAG2 B2A2 | d2B2 d2Ac | BAG2 B2A2 | d2d4 d4 | d4 A2c2 | d4 d4 | d4 A2c2 | d4 cdcB | c2d2 A2c2 | B2d2 dcB2 | d2A2 c2B2 | d2d2 dcB2 | d2A2 dcB2 | d2d2 dcB2 | d2A2 c2B2 | d2dc B2d2 | A2B2 d2dc | B2d2 A2B2 | d2dc B2d2 | A2c2 B2d2 | c2BA B2d2 | A2B2 d2c2 | BAB2 d2A2 | d4:|"
   },
   {
-    name: ""Rissakka"",
-    abc: "X:1\nT:"Rissakka"\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Heikki Halonen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0064\nK:g\n|: B2d2 B2d2 | ABcA G2d2 | B2d2 B2d2 | ABcA G4 | B2B2 B2dc | A2cB G2d2 | B2B2 B2dc | A2cB d4:|"
+    name: "Rissakka",
+    abc: "X:1\nT:Rissakka\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Heikki Halonen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0064\nK:g\n|: B2d2 B2d2 | ABcA G2d2 | B2d2 B2d2 | ABcA G4 | B2B2 B2dc | A2cB G2d2 | B2B2 B2dc | A2cB d4:|"
   },
   {
-    name: ""Rissakka"",
-    abc: "X:1\nT:"Rissakka"\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Heikki Halonen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0065\nK:g\n|: B2d2 d2d2 | G2AB c2c2 | B4 d2d2 | G2AB c4 | B3A G2B2 | d2G2 c4 | d3A G2B2 | d2G2 c4 | BcBA G2B2 | d2G2 c4 | BcBA G2B2 | d2G2 c4:|"
+    name: "Rissakka",
+    abc: "X:1\nT:Rissakka\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Heikki Halonen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0065\nK:g\n|: B2d2 d2d2 | G2AB c2c2 | B4 d2d2 | G2AB c4 | B3A G2B2 | d2G2 c4 | d3A G2B2 | d2G2 c4 | BcBA G2B2 | d2G2 c4 | BcBA G2B2 | d2G2 c4:|"
   },
   {
-    name: ""Ripatshka"",
-    abc: "X:1\nT:"Ripatshka"\nO:Korpiselkä(Korpiselka), Yläjärvi, Laatokan Karjala\nS:Pesha Patronen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0066\nK:G\n|: G2d2 G2d2 | GBd2 BcdB | G2d2 G2g2 | GBd2 B2A2 | B2d2 B2gB | GcdA D2dB | B2d2 B2gB | GcdA D2dB | G2dB G2dB | GcdA D2dB | G2dB G2dB | GcdA D2dB | G2d2 B2g2 | BcdB3 A2 | G2d2 B2g2 | BcdB3 A2 | B2dB G2gc | BcdB A2d2 | B2dB G2gc | BcdB A2d2 | G2dB G2gc | Bcec B2A2 | G2dB G2gc | Bcec B2A2 | B2d2 B2g2 | A2D2 G2B2 | B2d2 B2g2 | A2D2 G2B2 | G2dB G2gB | ABdA BcdB | G2B4 {d}G2 | gBAB dABc | dBG2 B2d2 | A2d2 BcgB | G2D2 B2d2 | A2d2 BcgB | G2D2 A2d2 | A2d2 A2d2 | A2d2 A2d2 | A2d2 B2d2 | B2d2 A2d2 | A2d2 A2d2 | A2d2 A2d2 | A2d2 B2d2 | B2d2 A2dA | F2dA E2dA | E2dA F2dA | F2dA B2dB | G2dA A2d2 | A2d2 A2d2 | A2d2 A2d2 | A2d2 B2d2 | B2d2 A2d2 | A2d2 A2d2 | A2d2 A2d2 | A2d2 B2d2 | B2d2 FAd2 | FAd2 FAd2 | GBd2 FAd2 | FAd2 FAd2 | GBd2 A2F2 | A2E2 A2D2 | B2G2 A2F2 | A2E2 A2D2 | B2G2 A2d2 | A2d2 A2d2 | B2d2 A2d2 | A2d2 A2d2 | B2d2 A2dA | FAdB GBdB | GBdA F2dB | FBdA FAdB | GBdA A2d2 | A2d2 A2d2 | A2d2 A2F2 | A2d2 A2d2 | A2d2 A2d2 | A2d2 A2F2 | B2A2 d8:|"
+    name: "Ripatshka",
+    abc: "X:1\nT:Ripatshka\nO:Korpiselkä(Korpiselka), Yläjärvi, Laatokan Karjala\nS:Pesha Patronen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0066\nK:G\n|: G2d2 G2d2 | GBd2 BcdB | G2d2 G2g2 | GBd2 B2A2 | B2d2 B2gB | GcdA D2dB | B2d2 B2gB | GcdA D2dB | G2dB G2dB | GcdA D2dB | G2dB G2dB | GcdA D2dB | G2d2 B2g2 | BcdB3 A2 | G2d2 B2g2 | BcdB3 A2 | B2dB G2gc | BcdB A2d2 | B2dB G2gc | BcdB A2d2 | G2dB G2gc | Bcec B2A2 | G2dB G2gc | Bcec B2A2 | B2d2 B2g2 | A2D2 G2B2 | B2d2 B2g2 | A2D2 G2B2 | G2dB G2gB | ABdA BcdB | G2B4 {d}G2 | gBAB dABc | dBG2 B2d2 | A2d2 BcgB | G2D2 B2d2 | A2d2 BcgB | G2D2 A2d2 | A2d2 A2d2 | A2d2 A2d2 | A2d2 B2d2 | B2d2 A2d2 | A2d2 A2d2 | A2d2 A2d2 | A2d2 B2d2 | B2d2 A2dA | F2dA E2dA | E2dA F2dA | F2dA B2dB | G2dA A2d2 | A2d2 A2d2 | A2d2 A2d2 | A2d2 B2d2 | B2d2 A2d2 | A2d2 A2d2 | A2d2 A2d2 | A2d2 B2d2 | B2d2 FAd2 | FAd2 FAd2 | GBd2 FAd2 | FAd2 FAd2 | GBd2 A2F2 | A2E2 A2D2 | B2G2 A2F2 | A2E2 A2D2 | B2G2 A2d2 | A2d2 A2d2 | B2d2 A2d2 | A2d2 A2d2 | B2d2 A2dA | FAdB GBdB | GBdA F2dB | FBdA FAdB | GBdA A2d2 | A2d2 A2d2 | A2d2 A2F2 | A2d2 A2d2 | A2d2 A2d2 | A2d2 A2F2 | B2A2 d8:|"
   },
   {
     name: "Maanitus",
@@ -272,20 +272,20 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Maanitus\nO:Suistamo, Koitto, Laatokan Karjala\nS:Timo Lipitshä/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0068\nK:G\n|: G3D4 B | d2B2 D2c3 | D2D4 {c}B2 | A2G3 D4 | {B}d2B2 D2c3 | D2D4 {c}B2 | A2D2 B2D2 | c2D4 d2 | B2D2 c3D2 | D4 {c}B2A2 | D2B2 D2c2 | D4 d2B2 | D2c3 D2D4 | {c}B2A2 D2G3 | D2D4 {c}B2 | B2D2 c3D2 | D6 {c}B2 | A2G2 D4 | {c}B2B2 D2c3 | D2D6 | {c}B2A2 d2D4 | {c}B2B2 D2c3 | D2D6 | {c}B2A2 d2D6 | {c}B2B2 D2c3 | D2D6 | {c}B2A2 B2D2 | c2D4 d2 | B2D2 c3D2 | D2cd4 B2 | c2D4 d2 | B2D2 c3D2 | D2cd4:|"
   },
   {
-    name: "Maanitus l. "ribatshka"",
-    abc: "X:1\nT:Maanitus l. "ribatshka"\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0069\nK:G\n|: d2dc B2cd | A2dc BcdB | d2dc B2cd | A2dc BcdB | d2gc Bce2 | D2dc BcdB | d2gc Bce2 | D2dc B2A2 | B2dc B2B2 | c2dc B2A2 | B2dc B2B2 | c2dc B2A2 | g2c2 d2B2 | c2dc B2A2 | g2c2 d2B2 | c2dc B2A2 | B2dc B2B2 | c2dc B2A2 | B2dc B2B2 | c2dc B2A2 | e2dc Bcd2 | A2dc Bcd2 | e2dc Bcd2 | A2dc Bcd2 | g2dc Bcd2 | A2dc BcdB | g2dc Bcd2 | A2dc BcdB | g2D2 {c}B2d | {B}A2d {c}B2d2 | g2D2 {c}B2d | {B}A2d {c}B2d2 | d2e2 G2d2 | A2dc BcdB | d2e2 G2d2 | A2dc BcdB | e4 d4 | c2dc B2d2 | e4 d4 | c2dc B2d2 | |: d2B2 d2cB | c2B2 A2G2 | A2B2 c2BA | B2B2 G2B2:| | c2c2 e2c2 | B2B2 d2B2 | A2B2 cBBA | G2B2 G2B2 | c2c2 e2c2 | B2B2 d2B2 | A2B2 cBBA | G2B2 d4:|"
+    name: "Maanitus l. ribatshka",
+    abc: "X:1\nT:Maanitus l. ribatshka\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0069\nK:G\n|: d2dc B2cd | A2dc BcdB | d2dc B2cd | A2dc BcdB | d2gc Bce2 | D2dc BcdB | d2gc Bce2 | D2dc B2A2 | B2dc B2B2 | c2dc B2A2 | B2dc B2B2 | c2dc B2A2 | g2c2 d2B2 | c2dc B2A2 | g2c2 d2B2 | c2dc B2A2 | B2dc B2B2 | c2dc B2A2 | B2dc B2B2 | c2dc B2A2 | e2dc Bcd2 | A2dc Bcd2 | e2dc Bcd2 | A2dc Bcd2 | g2dc Bcd2 | A2dc BcdB | g2dc Bcd2 | A2dc BcdB | g2D2 {c}B2d | {B}A2d {c}B2d2 | g2D2 {c}B2d | {B}A2d {c}B2d2 | d2e2 G2d2 | A2dc BcdB | d2e2 G2d2 | A2dc BcdB | e4 d4 | c2dc B2d2 | e4 d4 | c2dc B2d2 | |: d2B2 d2cB | c2B2 A2G2 | A2B2 c2BA | B2B2 G2B2:| | c2c2 e2c2 | B2B2 d2B2 | A2B2 cBBA | G2B2 G2B2 | c2c2 e2c2 | B2B2 d2B2 | A2B2 cBBA | G2B2 d4:|"
   },
   {
     name: "Maanitus",
     abc: "X:1\nT:Maanitus\nO:Suistamo, Muuanto, Laatokan Karjala\nS:Maksima Kyyrönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0070\nK:G\n|: D2d4 d3 | {c}B2d2 A2c2 | B2A2 d3c | B2d2 A2c2 | B2A2 d2gd | BcdB A2Dc | BcdB d2gd | BcdB A2Dc | BcdB B2DA | d2B2 A2c2 | B2A2 B2DA | d2B2 A2c2 | B2A2 B2Dc | BcdB A2Ac | B2A2 B2Dc | BcdB A2Ac | B2A2 B2c2 | d2B2 A2c2 | B2A2 B2c2 | d2B2 A2c2 | B2A2 B2c2 | d2g2 A2Ac | B2A2 B2c2 | d2g2 A2Ac | B2A2 g3c | d2g2 A2Ac | g2A2 g3c | d2g2 A2Ac | g2A2 d3c | d2g2 A2c2 | d2A2 d3c | d2g2 A2c2 | d2A2 B3c | BcdB A2Ac | BcdB B3c | BcdB A2A2 | d4 B3c | BcdB A2Ac | BcdB B3c | BcdB A2A2 | d4 g3c | BcdB A2Ac | B2A2 g3c | BcdB A2Ac | B2A2 c3c | BcdB A2Ac | BcdB c3c | BcdB A2Ac | BcdB B2gc | BcgB A2Ac | BcdB B2gc | BcgB A2Ac | BcdB d2gc | BceB A2Ac | BcdB d2gc | BceB A2Ac | BcdB B2Gc | BcdB c2Ac | B2A2 B2Gc | BcdB c2Ac | B2A2 A2E2 | A2E2 F2A2 | |: G2A2 A2E2 | A2E2 F2A2 | d4 A2EA | DAEA F2A2:| | G2A2 A2E2 | A2E2 F2A2 | d4:|"
   },
   {
-    name: "Maanitus l. "trepatshkansoitto"",
-    abc: "X:1\nT:Maanitus l. "trepatshkansoitto"\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Lösönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0071\nK:G\n|: D2d2 D2d2 | D2d2 d2dc | B2B2 c2A2 | B2A2 d2dc | B2B2 c2A2 | B2A2 B2Bc | {d}d2c2 A2B2 | A2B2 Bcdd2 | c2A2 B2A2 | d2cd e2d2 | c2A2 B2B2 | d2cd e2d2 | c2A2 B2B2 | e2ec B2B2 | c2A2 B2A2 | e2ec B2B2 | c2A2 B2A2 | c2dc B2B2 | c2A2 B2B2 | c2dc B2B2 | c2A2 d4 | d2e4 d2 | c2A2 B2A2 | d2e4 d2 | c2A2 B4 | c2ec B2d2 | A2d2 B2d2 | c2ec B2d2 | A2d2 B2d2 | D2dA D2dA | D2D2 G2B2 | D2dA D2dA | D2D2 d4 | |: d2dc B2B2 | c2A2 A4 | A2A2 e2D2 | {c}B2A2 d4:||: e2Gc e2d2 | c2B2 A4 | A2A2 d2dc | B2A2 d4:|"
+    name: "Maanitus l. trepatshkansoitto",
+    abc: "X:1\nT:Maanitus l. trepatshkansoitto\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Lösönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0071\nK:G\n|: D2d2 D2d2 | D2d2 d2dc | B2B2 c2A2 | B2A2 d2dc | B2B2 c2A2 | B2A2 B2Bc | {d}d2c2 A2B2 | A2B2 Bcdd2 | c2A2 B2A2 | d2cd e2d2 | c2A2 B2B2 | d2cd e2d2 | c2A2 B2B2 | e2ec B2B2 | c2A2 B2A2 | e2ec B2B2 | c2A2 B2A2 | c2dc B2B2 | c2A2 B2B2 | c2dc B2B2 | c2A2 d4 | d2e4 d2 | c2A2 B2A2 | d2e4 d2 | c2A2 B4 | c2ec B2d2 | A2d2 B2d2 | c2ec B2d2 | A2d2 B2d2 | D2dA D2dA | D2D2 G2B2 | D2dA D2dA | D2D2 d4 | |: d2dc B2B2 | c2A2 A4 | A2A2 e2D2 | {c}B2A2 d4:||: e2Gc e2d2 | c2B2 A4 | A2A2 d2dc | B2A2 d4:|"
   },
   {
-    name: ""Brisahka"",
-    abc: "X:1\nT:"Brisahka"\nO:Korpiselkä(Korpiselka), Kitilänvaara, Laatokan Karjala\nS:Mikko Röpeli/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0072\nK:G\n|: d2g2 B2d2 | A2d2 B2d2 | d2g2 B2d2 | A2d2 B2d2 | d2gc BcdB | A2dB GBdB | d2gc BcdB | A2dB GBdB | dcBA G2B2 | A2D2 G2B2 | dcBA G2B2 | A2D2 B4 | d2g2 Bcd2 | A2d2 B2d2 | d2g2 Bcd2 | A2d2 B2d2 | c2gc BcdB | A2dB GBdB | c2gc BcdB | A2dB GBdB | dcBA G2B2 | A2D2 G2B2 | dcBA G2B2 | A2D2 B4:|"
+    name: "Brisahka",
+    abc: "X:1\nT:Brisahka\nO:Korpiselkä(Korpiselka), Kitilänvaara, Laatokan Karjala\nS:Mikko Röpeli/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0072\nK:G\n|: d2g2 B2d2 | A2d2 B2d2 | d2g2 B2d2 | A2d2 B2d2 | d2gc BcdB | A2dB GBdB | d2gc BcdB | A2dB GBdB | dcBA G2B2 | A2D2 G2B2 | dcBA G2B2 | A2D2 B4 | d2g2 Bcd2 | A2d2 B2d2 | d2g2 Bcd2 | A2d2 B2d2 | c2gc BcdB | A2dB GBdB | c2gc BcdB | A2dB GBdB | dcBA G2B2 | A2D2 G2B2 | dcBA G2B2 | A2D2 B4:|"
   },
   {
     name: "Maanitus",
@@ -304,40 +304,40 @@ var esavelmat_kjs = [
     abc: "X:1\nT:kjs_0076\nO:Suojärvi, Hautavaara, Laatokan Karjala\nS:Iivana Brelo/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0076\nK:G\n|: d4 d4 | A2dc B2d2 | A2dc B2d2 | A2dc B2d2 | A2dc B2d2 | d2gc G2d2 | D2dc B2d2 | d2gc G2d2 | D2dc B2d2 | d2ec e2dc | A2dc B2d2 | d2ec e2dc | A2dc B2d2 | c2e2 G2dc | c2A2 B2c2 | c2e2 G2dc | c2A2 B2c2 | d2gc G2gc | e2A2 B2dB | d2gc G2gc | e2A2 B2dB | Gcec Gcec | e2A2 B2dB | Gcec Gcec | e2A2 B2dB | B2dc B2d2 | A2dc B2d2 | B2dc B2d2 | A2dc B2d2 | B2c2 B2d2 | A2d2 B2d2 | B2c2 B2d2 | A2d2 B2d2 | d4 d4 | A2dc B2d2 | d4 d4 | A2dc B2d2 | d3c B2B2 | A2dc B2d2 | d3c B2B2 | A2dc B2d2 | GcBA G2B2 | A2dc B2dB | GcBA G2B2 | A2dc B2dB | A2dc B2d2 | c2A2 B2d2 | A2dc B2d2 | c2A2 B2d2 | c2A2 B2c2 | B2A2 B2B2 | c2A2 B2c2 | B2A2 B2B2 | c2e2 B2d2 | A2dc B2d2 | c2e2 B2d2 | A2dc B2d2 | A2d2 B2GB | c2DA G2B2 | A2d2 B2GB | c2DA G2B2 | D2dA D2dA | E2F2 G2B2 | D2dA D2dA | E2F2 G2B2 | D2dA D2dA | EAFA G2dB | D2dA D2dA | EAFA G2dB | d8:|"
   },
   {
-    name: "Maanitus l. "ribatshka"",
-    abc: "X:1\nT:Maanitus l. "ribatshka"\nO:Suojärvi, Kuikkaniemi, Laatokan Karjala\nS:Vanja Trofimov/A. O. Väisänen\nM:2/4, 3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0077\nK:G\n|: d8 | d8 | d4 A2dc | |: B2d2 c2g2 | B2B2 A2dc | B2d2 c2g2 | B2B2 A2dc:| | B2d2 c2e2 | c2g2 B2B2 | A2dc B2d2 | c2e2 c2g2 | B2B2 A2dc | |: B2d2 c2ec | Gcgc Gcgc | Gcgc Gcgc | B2Bc B2A2:||: B2d2 Gcec | Gcec Gcec | Gcec Gcec | d2dc B2A2:| | B2d2 GBg2 | g2g2 A2B2 | dBGB g2g2 | g2A2 B2dB | B2GA B2c2 | e4 B2e4 | B2e4 B2 | e4 B2e4 | c2e4 Gc | e2d2 c2B2 | A6 D2 | A2D2 A2D2 | A2D2 A2DG | F2FA E2EA | D2DA G2GA | F2FA E2EA | D2DA G2GA | F2FA E2EA | D2d4 D2 | d2D2 dcBA | d8:|"
+    name: "Maanitus l. ribatshka",
+    abc: "X:1\nT:Maanitus l. ribatshka\nO:Suojärvi, Kuikkaniemi, Laatokan Karjala\nS:Vanja Trofimov/A. O. Väisänen\nM:2/4, 3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0077\nK:G\n|: d8 | d8 | d4 A2dc | |: B2d2 c2g2 | B2B2 A2dc | B2d2 c2g2 | B2B2 A2dc:| | B2d2 c2e2 | c2g2 B2B2 | A2dc B2d2 | c2e2 c2g2 | B2B2 A2dc | |: B2d2 c2ec | Gcgc Gcgc | Gcgc Gcgc | B2Bc B2A2:||: B2d2 Gcec | Gcec Gcec | Gcec Gcec | d2dc B2A2:| | B2d2 GBg2 | g2g2 A2B2 | dBGB g2g2 | g2A2 B2dB | B2GA B2c2 | e4 B2e4 | B2e4 B2 | e4 B2e4 | c2e4 Gc | e2d2 c2B2 | A6 D2 | A2D2 A2D2 | A2D2 A2DG | F2FA E2EA | D2DA G2GA | F2FA E2EA | D2DA G2GA | F2FA E2EA | D2d4 D2 | d2D2 dcBA | d8:|"
   },
   {
     name: "kjs_0078",
     abc: "X:1\nT:kjs_0078\nO:Aunuksen Karjala, Suurimäki, Vienan Karjala\nS:Vaskan Jaakoi/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0078\nK:G\n|: c2dc Bcd2 | A2dc Bcd2 | c2dc Bcd2 | A2dc Bcd2 | A4 A2B2 | A2A2 B2B2 | A4 A2B2 | A2A2 B2G2 | dcBA G2B2 | A2A2 B2B2 | dcBA G2B2 | A2A2 d4 | c2ec Bcd2 | A2dc Bcd2 | c2ec Bcd2 | A2dc Bcd2 | A4 A2B2 | A2A2 B2B2 | A4 A2B2 | A2A2 B2G2 | ecBA G2B2 | A2A2 B2B2 | ecBA G2B2 | A2A2 d4:|"
   },
   {
-    name: ""Brisatka"",
-    abc: "X:1\nT:"Brisatka"\nO:Korpiselkä(Korpiselka), Ristsalmi, Laatokan Karjala\nS:Hilppa Vornanen/A. O. Väisänen\nM:2/4, 3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0079\nK:G\n|: D2G2 d2c2 | ecB2 dBA2 | DAd2 B2c2 | ecB2 dBA2 | D2d4 d3 | cBcd2 d2A2 | G2A2 B2c2 | e2dc Bcd2 | d2A2 G2A2 | B2c2 e2dc | Bcd2 d2A2 | G2A2 d8 | c2gc B2dB | A2DA G2dB | c2ec B2dB | A2D2 d4 | d3c Bcd2 | d2A2 G2A2 | B2c2 g2dc | Bcd2 d2A2 | G2A2 B2c2 | g2dc Bcd2 | d2A2 G2A2 | d8:|"
+    name: "Brisatka",
+    abc: "X:1\nT:Brisatka\nO:Korpiselkä(Korpiselka), Ristsalmi, Laatokan Karjala\nS:Hilppa Vornanen/A. O. Väisänen\nM:2/4, 3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0079\nK:G\n|: D2G2 d2c2 | ecB2 dBA2 | DAd2 B2c2 | ecB2 dBA2 | D2d4 d3 | cBcd2 d2A2 | G2A2 B2c2 | e2dc Bcd2 | d2A2 G2A2 | B2c2 e2dc | Bcd2 d2A2 | G2A2 d8 | c2gc B2dB | A2DA G2dB | c2ec B2dB | A2D2 d4 | d3c Bcd2 | d2A2 G2A2 | B2c2 g2dc | Bcd2 d2A2 | G2A2 B2c2 | g2dc Bcd2 | d2A2 G2A2 | d8:|"
   },
   {
-    name: ""Pläshshindyvirsi"",
-    abc: "X:1\nT:"Pläshshindyvirsi"\nO:Aunuksen Karjala, Suurimäki, Vienan Karjala\nS:Patshoin Stjoppi/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0080\nK:G\n|: c2ec B2d2 | A2d2 B2d2 | c2ec B2dB | A2dA B2dB | Gcec GBdB | DcBA GBdB | Gcec GBdB | DcBA GBdB | e2dc B2B2 | A2dc B2d2 | e2dc d2d2 | d2d2 d2d2 | e2dc B2GB | A2DA B2Gd | G2e2 d2d2 | c2A2 B2d2 | c2ec G2ec | B2A2 B2d2 | F2EA D2dA | D2FA G2G2 | F2FA F3A | F3A G2EA | F2dA F2dA | F2dA G2dA | F2dA G2dA | F2dA G2dA | F2dA D2dA | D2dA E2d2 | A2EA F2EA | B2A2 G2dA | F2d2 B2d2 | c2A2 B2d2 | A2DA B2GB | FcBA B2GB | d2Gc d2G2 | A2Dc d2G2 | d2Gc d2BG | A2Dc d2G2 | d2Gc d2GB | A2Dc d2GB | d2Gc d2GB | A2D2 d4 | c2e2 B2d2 | c2A2 B2d2 | DcBA B2dB | A2dA B2dB | DcBA B2d2 | A2d2 B2d2 | c2ec Gcec | DcBA B2d2 | c2ec Gcec | Gcec Gcec | DcBA EBdB | c2ec Gcec | Gcec Gcec | DcBA d4:|"
+    name: "Pläshshindyvirsi",
+    abc: "X:1\nT:Pläshshindyvirsi\nO:Aunuksen Karjala, Suurimäki, Vienan Karjala\nS:Patshoin Stjoppi/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0080\nK:G\n|: c2ec B2d2 | A2d2 B2d2 | c2ec B2dB | A2dA B2dB | Gcec GBdB | DcBA GBdB | Gcec GBdB | DcBA GBdB | e2dc B2B2 | A2dc B2d2 | e2dc d2d2 | d2d2 d2d2 | e2dc B2GB | A2DA B2Gd | G2e2 d2d2 | c2A2 B2d2 | c2ec G2ec | B2A2 B2d2 | F2EA D2dA | D2FA G2G2 | F2FA F3A | F3A G2EA | F2dA F2dA | F2dA G2dA | F2dA G2dA | F2dA G2dA | F2dA D2dA | D2dA E2d2 | A2EA F2EA | B2A2 G2dA | F2d2 B2d2 | c2A2 B2d2 | A2DA B2GB | FcBA B2GB | d2Gc d2G2 | A2Dc d2G2 | d2Gc d2BG | A2Dc d2G2 | d2Gc d2GB | A2Dc d2GB | d2Gc d2GB | A2D2 d4 | c2e2 B2d2 | c2A2 B2d2 | DcBA B2dB | A2dA B2dB | DcBA B2d2 | A2d2 B2d2 | c2ec Gcec | DcBA B2d2 | c2ec Gcec | Gcec Gcec | DcBA EBdB | c2ec Gcec | Gcec Gcec | DcBA d4:|"
   },
   {
-    name: ""Ruskoi-peli"",
-    abc: "X:1\nT:"Ruskoi-peli"\nO:Suistamo, Koitto, Laatokan Karjala\nS:Timo Lipitshä/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0081\nK:G\n|: c2ec B2dB | A2dA G2B2 | c2ec B2dB | A2dA G2B2 | c2ec B2dB | A2A2 B2B2 | c2ec B2dB | A2A2 B2B2 | DcBA G2B2 | A2A2 G2B2 | DcBA G2B2 | A2A2 G2B2 | DcBA G2B2 | A2dA B2d2 | DcBA G2B2 | A2dA B2d2 | DcBA G2dB | A2dA G2dB | c2gc B2eB | A2dA B2d2 | d2gc B2eB | A2dA B2d2 | d2gc B2eB | A2dA B2d2 | d8:|"
+    name: "Ruskoi-peli",
+    abc: "X:1\nT:Ruskoi-peli\nO:Suistamo, Koitto, Laatokan Karjala\nS:Timo Lipitshä/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0081\nK:G\n|: c2ec B2dB | A2dA G2B2 | c2ec B2dB | A2dA G2B2 | c2ec B2dB | A2A2 B2B2 | c2ec B2dB | A2A2 B2B2 | DcBA G2B2 | A2A2 G2B2 | DcBA G2B2 | A2A2 G2B2 | DcBA G2B2 | A2dA B2d2 | DcBA G2B2 | A2dA B2d2 | DcBA G2dB | A2dA G2dB | c2gc B2eB | A2dA B2d2 | d2gc B2eB | A2dA B2d2 | d2gc B2eB | A2dA B2d2 | d8:|"
   },
   {
-    name: ""Ristakka"",
-    abc: "X:1\nT:"Ristakka"\nO:Suistamo, Koitto, Laatokan Karjala\nS:Miinan Domi/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0082\nK:G\n|: c2ec B2dB | A2D2 G2d2 | c2ec B2dB | A2D2 G2d2 | g3c Bcd2 | A2d2 G2d2 | g3c Bcd2 | A2d2 G2d2 | B2D2 {c}B2d2 | c3D2 {c}B2 | A2B2 D2cB2 | d2c3 D2c | B2A2 c2gc | B2eB A2dc | B2d2 c2gc | B2eB A2dc | B2d2 B2c2 | d2B2 c3D2 | {c}B2A2 B2c2 | d2B2 c3D2 | {c}B2A2 F2d2 | E2d2 A2EF | G2d2 F2d2 | E2d2 A2EF | G2d2 A2A2 | A2E2 A2D2 | G2d2 A2A2 | A2E2 A2D2 | G2d2 c2ec | B2dB A2F2 | G2d2 c2ec | B2dB A2F2 | G2d2 c2e2 | B2d2 c2EF | G2d2 c2e2 | B2d2 c2EF | G2d2 c2ec | BcdB A2EF | G2d2 c2ec | BcdB A2EF | G2d2 c2gc | BceB A2EF | G2d2 c2gc | BceB A2EF | G2d2 d2D2 | {c}B2d2 A2E | {F}G2d2 d2D2 | {c}B2d2 A2E | {F}G2d2 D2d6:|"
+    name: "Ristakka",
+    abc: "X:1\nT:Ristakka\nO:Suistamo, Koitto, Laatokan Karjala\nS:Miinan Domi/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0082\nK:G\n|: c2ec B2dB | A2D2 G2d2 | c2ec B2dB | A2D2 G2d2 | g3c Bcd2 | A2d2 G2d2 | g3c Bcd2 | A2d2 G2d2 | B2D2 {c}B2d2 | c3D2 {c}B2 | A2B2 D2cB2 | d2c3 D2c | B2A2 c2gc | B2eB A2dc | B2d2 c2gc | B2eB A2dc | B2d2 B2c2 | d2B2 c3D2 | {c}B2A2 B2c2 | d2B2 c3D2 | {c}B2A2 F2d2 | E2d2 A2EF | G2d2 F2d2 | E2d2 A2EF | G2d2 A2A2 | A2E2 A2D2 | G2d2 A2A2 | A2E2 A2D2 | G2d2 c2ec | B2dB A2F2 | G2d2 c2ec | B2dB A2F2 | G2d2 c2e2 | B2d2 c2EF | G2d2 c2e2 | B2d2 c2EF | G2d2 c2ec | BcdB A2EF | G2d2 c2ec | BcdB A2EF | G2d2 c2gc | BceB A2EF | G2d2 c2gc | BceB A2EF | G2d2 d2D2 | {c}B2d2 A2E | {F}G2d2 d2D2 | {c}B2d2 A2E | {F}G2d2 D2d6:|"
   },
   {
-    name: ""Ripatshka"",
-    abc: "X:1\nT:"Ripatshka"\nO:Suojärvi, Vuondele, Laatokan Karjala\nS:Pekka Happo/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0083\nK:G\n|: c2eB G2dA | D2dB G2d2 | c2eB G2dA | D2dB G4 | A3B G2GA | F2FB G2GA | F2d2 B2GA | FBG2 GAA3 | {B}G2G {A}F2F | {B}G2G {A}F2d2 | B2GA FBG2 | d2c2 eBG2 | dAD2 dBG2 | d2c2 eBG2 | dAD2 dBG4 | A2d2 B2GA | F2FB G2GA | F3B G2GA | F2FB G2GA | A3B G2GA | F2FB G2GA | F3B G2GA | F2FB G2d2:|"
+    name: "Ripatshka",
+    abc: "X:1\nT:Ripatshka\nO:Suojärvi, Vuondele, Laatokan Karjala\nS:Pekka Happo/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0083\nK:G\n|: c2eB G2dA | D2dB G2d2 | c2eB G2dA | D2dB G4 | A3B G2GA | F2FB G2GA | F2d2 B2GA | FBG2 GAA3 | {B}G2G {A}F2F | {B}G2G {A}F2d2 | B2GA FBG2 | d2c2 eBG2 | dAD2 dBG2 | d2c2 eBG2 | dAD2 dBG4 | A2d2 B2GA | F2FB G2GA | F3B G2GA | F2FB G2GA | A3B G2GA | F2FB G2GA | F3B G2GA | F2FB G2d2:|"
   },
   {
-    name: ""Ripatshka" l. " prishonkka"",
-    abc: "X:1\nT:"Ripatshka" l. " prishonkka"\nO:Korpiselkä(Korpiselka), Yläjärvi, Laatokan Karjala\nS:Mikko Patronen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0084\nK:G\n|: c2gc B2d2 | A2d2 B2d2 | Gcgc B2dB | A2d2 B2d2 | Bce2 B2dA | D2d2 B2d2 | c2gc GBdA | D2d2 B2dc | Gedc B2dA | D2d2 B2dB | c2ec GBd2 | D2A2 B2d2 | Gcec GBd2 | A2d2 B2d2 | Gcec GBd2 | A2d2 B2d2 | gcBA B2dA | D2d2 B4 | d2F2 E2AE | A2d2 B2d2 | D2E2 F2dA | D2d2 B2dA | A2A2 A2A2 | F2A2 GBAG | A2A2 A2A2 | F2A2 B2AG | DABc d2e2 | g2A2 B2d2 | DABc d2e2 | g2A2 B4 | e2Gc B2GB | A2DA B2GB | e2Gc B2GB | A2DA B2GB | A2FA A2EA | F2DA B2GB | A2FA A2EA | FAFA B2GB | A2FA A2EA | F2DA B2GB | A2FA A2EA | FAFA B4 | DABc d2e2 | g2A2 B2d2 | DABc d2e2 | g2A2 B4:|"
+    name: "Ripatshka l. prishonkka",
+    abc: "X:1\nT:Ripatshka l.  prishonkka\nO:Korpiselkä(Korpiselka), Yläjärvi, Laatokan Karjala\nS:Mikko Patronen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0084\nK:G\n|: c2gc B2d2 | A2d2 B2d2 | Gcgc B2dB | A2d2 B2d2 | Bce2 B2dA | D2d2 B2d2 | c2gc GBdA | D2d2 B2dc | Gedc B2dA | D2d2 B2dB | c2ec GBd2 | D2A2 B2d2 | Gcec GBd2 | A2d2 B2d2 | Gcec GBd2 | A2d2 B2d2 | gcBA B2dA | D2d2 B4 | d2F2 E2AE | A2d2 B2d2 | D2E2 F2dA | D2d2 B2dA | A2A2 A2A2 | F2A2 GBAG | A2A2 A2A2 | F2A2 B2AG | DABc d2e2 | g2A2 B2d2 | DABc d2e2 | g2A2 B4 | e2Gc B2GB | A2DA B2GB | e2Gc B2GB | A2DA B2GB | A2FA A2EA | F2DA B2GB | A2FA A2EA | FAFA B2GB | A2FA A2EA | F2DA B2GB | A2FA A2EA | FAFA B4 | DABc d2e2 | g2A2 B2d2 | DABc d2e2 | g2A2 B4:|"
   },
   {
-    name: ""Tripatshka"",
-    abc: "X:1\nT:"Tripatshka"\nO:Korpiselkä(Korpiselka), Yläjärvi, Laatokan Karjala\nS:Jeyssei Pyy/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0085\nK:?\n|: e2e2 d2d2 | A2A2 B2d2 | e2e2 d2d2 | A2A2 B2d2 | e2e2 d2dc | B2A2 d2B2 | e2e2 d2dc | B2A2 d2B2 | G2gc GBdB | G2A2 B2d2 | G2gc GBdB | G2A2 d4 | A2^F2 E2EA | ^F2A2 B2B2 | A2d2 A2d2 | ^F2d2 B2d2 | A2dA A2dA | ^F2d2 B2d2 | A2dA A2dA | ^F2d2 B2d2 | dcBA A2d2 | A2d2 A2d2 | B2d2 dcBA | A2d2 A2d2 | A2d2 B2d2 | B8:|"
+    name: "Tripatshka",
+    abc: "X:1\nT:Tripatshka\nO:Korpiselkä(Korpiselka), Yläjärvi, Laatokan Karjala\nS:Jeyssei Pyy/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0085\nK:?\n|: e2e2 d2d2 | A2A2 B2d2 | e2e2 d2d2 | A2A2 B2d2 | e2e2 d2dc | B2A2 d2B2 | e2e2 d2dc | B2A2 d2B2 | G2gc GBdB | G2A2 B2d2 | G2gc GBdB | G2A2 d4 | A2^F2 E2EA | ^F2A2 B2B2 | A2d2 A2d2 | ^F2d2 B2d2 | A2dA A2dA | ^F2d2 B2d2 | A2dA A2dA | ^F2d2 B2d2 | dcBA A2d2 | A2d2 A2d2 | B2d2 dcBA | A2d2 A2d2 | A2d2 B2d2 | B8:|"
   },
   {
     name: "Maanitus",
@@ -348,36 +348,36 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Maanitus\nO:Korpiselkä(Korpiselka), Ägläjärvi, Laatokan Karjala\nS:Paavila Patronen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0087\nK:G\n|: G2d2 G2g2 | G2dB G2eB | GcdA D2dB | G2dB G2eB | GcdA D2dB | |: B2dB G2d2 | cdec G2e2 | BcdB Gcd2 | A2dA D2d2:||: B2dB Gcd2 | c2ec GdeB | G2dB GcdA | DBdB A2d2:| | A2d2 D2E2 | A2dB G2d2 | A2dA D2d2 | A2d2 G2d2 | A2dA D2E2 | ABdc BcdA | D2A2 DAEA | EAF2 dABG | d2A2 DAEA | EAA2 F2B4 | A2dA D2EA | F2dB GcdA | A2dA D2EA | F2dB GcdA | G2d2 B4:|"
   },
   {
-    name: ""Ripatshka"",
-    abc: "X:1\nT:"Ripatshka"\nO:Ilomantsi, Pohjois-Karjala\nS:Everik Rähkönen/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0088\nK:g\n|: G,2d2 =B2c2 | =ec=Bc d=BA2 | =B2d2 =B2c2 | =ec=Bc d=BA2 | =B2G=B d=BG=B | gcG=B d=BA3 | G,2=BG =Bd=BG | =BgcG =Bd=BA3 | G,2=B=B cd=BA2 | ^F2=B2 G2G,2 | G,2=Bc d=BA2 | ^F2=B2 G2G,2 | G,2G2 A2=B2 | c2=e2 dc=B4 | G,2G2 A2=B2 | c2=e2 dc=B4 | G,2:|"
+    name: "Ripatshka",
+    abc: "X:1\nT:Ripatshka\nO:Ilomantsi, Pohjois-Karjala\nS:Everik Rähkönen/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0088\nK:g\n|: G,2d2 =B2c2 | =ec=Bc d=BA2 | =B2d2 =B2c2 | =ec=Bc d=BA2 | =B2G=B d=BG=B | gcG=B d=BA3 | G,2=BG =Bd=BG | =BgcG =Bd=BA3 | G,2=B=B cd=BA2 | ^F2=B2 G2G,2 | G,2=Bc d=BA2 | ^F2=B2 G2G,2 | G,2G2 A2=B2 | c2=e2 dc=B4 | G,2G2 A2=B2 | c2=e2 dc=B4 | G,2:|"
   },
   {
-    name: ""Ripatshka" l. " prissahka"",
-    abc: "X:1\nT:"Ripatshka" l. " prissahka"\nO:Suistamo, Muuanto, Laatokan Karjala\nS:Iivana Shemeikka/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0089\nK:G\n|: G,2B2 G2c2 | gcBc dBA2 | B2B2 G2c2 | gcBc dBA2 | B2GB dBGB | gcGB dBA3 | G,2BG BdBG | BgcG BdBA3 | G,2BB cdBA2 | F2B2 G2G,2 | G,2Bc dBA2 | F2B2 G2G,2 | G,2G2 A2B2 | c2e2 dcB4 | G,2G2 A2B2 | c2e2 dcB4 | G,2:|"
+    name: "Ripatshka l. prissahka",
+    abc: "X:1\nT:Ripatshka l. prissahka\nO:Suistamo, Muuanto, Laatokan Karjala\nS:Iivana Shemeikka/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0089\nK:G\n|: G,2B2 G2c2 | gcBc dBA2 | B2B2 G2c2 | gcBc dBA2 | B2GB dBGB | gcGB dBA3 | G,2BG BdBG | BgcG BdBA3 | G,2BB cdBA2 | F2B2 G2G,2 | G,2Bc dBA2 | F2B2 G2G,2 | G,2G2 A2B2 | c2e2 dcB4 | G,2G2 A2B2 | c2e2 dcB4 | G,2:|"
   },
   {
     name: "Maanitus",
     abc: "X:1\nT:Maanitus\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0090\nK:G\n|: d2dc B2A2 | B2dc BcdB | c2Ac B2A2 | d2dc B2A2 | B2dc BcdB | c2Ac B2A2 | B2Bc e2Bd | c2A2 B2A2 | B2Bc e2Bd | c2A2 B2A2 | B2d4 Bd | c2A2 BcdB | B2d4 Bd | c2A2 BcdB | d2ec BcdB | c2Ac B2A2 | d2ec BcdB | c2Ac B2A2 | d2fc BcdB | c2Ac B2B2 | d2fc BcdB | c2Ac B2B2 | dBeB GBdB | c2A2 B2B2 | dBeB GBdB | c2A2 B2B2 | d2ec BcdB | c2A2 B2d2 | d2ec BcdB | c2A2 B2d2 | d2dc BcdB | c2B2 A2G2 | F2EA DAdA | A2A2 B2A2 | d2dc BcdB | c2B2 A2G2 | F2EA DAdA | D2D2 d4:|"
   },
   {
-    name: ""Ruskoi"",
-    abc: "X:1\nT:"Ruskoi"\nO:Suistamo, Muuanto, Laatokan Karjala\nS:Iivana Shemeikka/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0091\nK:G\n|: D2GB DBGB | dBGB dBc2 | B2A2 B2A2 | EAA2 EcB2 | A2GB DBGB | dBGB dBc2 | |: B2A2 B2A2 | EAA2 EcB2 | A2d2 A2B2 | c2e2 d2c2:| | B2A2 B2A2 | EAA2 EcB2 | A2FG G,2G2 | G,2G2 B2G2 | B2c2 B2A2 | G2F2 E2A4 | FGG,2 G2G,2 | G2B2 G2B2 | c2B2 A2G2 | F2E2 A4:|"
+    name: "Ruskoi",
+    abc: "X:1\nT:Ruskoi\nO:Suistamo, Muuanto, Laatokan Karjala\nS:Iivana Shemeikka/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0091\nK:G\n|: D2GB DBGB | dBGB dBc2 | B2A2 B2A2 | EAA2 EcB2 | A2GB DBGB | dBGB dBc2 | |: B2A2 B2A2 | EAA2 EcB2 | A2d2 A2B2 | c2e2 d2c2:| | B2A2 B2A2 | EAA2 EcB2 | A2FG G,2G2 | G,2G2 B2G2 | B2c2 B2A2 | G2F2 E2A4 | FGG,2 G2G,2 | G2B2 G2B2 | c2B2 A2G2 | F2E2 A4:|"
   },
   {
-    name: ""Ruskoin peli"",
-    abc: "X:1\nT:"Ruskoin peli"\nO:Suistamo, Hodjala, Laatokan Karjala\nS:Jehki Jänönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0092\nK:G\n|: B2dc B2d2 | c2A2 B2A2 | B2dc B2d2 | c2A2 B4 | Gcec Gcgc | GBdB GBdB | Gcec Gcgc | GBdB d4 | B2dc B2d2 | c2A2 B2d2 | B2dc B2d2 | c2A2 B4 | Gcec Gcgc | GBdB GBdB | Gcec Gcgc | GBdB d4:|"
+    name: "Ruskoin peli",
+    abc: "X:1\nT:Ruskoin peli\nO:Suistamo, Hodjala, Laatokan Karjala\nS:Jehki Jänönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0092\nK:G\n|: B2dc B2d2 | c2A2 B2A2 | B2dc B2d2 | c2A2 B4 | Gcec Gcgc | GBdB GBdB | Gcec Gcgc | GBdB d4 | B2dc B2d2 | c2A2 B2d2 | B2dc B2d2 | c2A2 B4 | Gcec Gcgc | GBdB GBdB | Gcec Gcgc | GBdB d4:|"
   },
   {
-    name: ""Ruskoi"",
-    abc: "X:1\nT:"Ruskoi"\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0093\nK:G\n|: d4 B3D4 | {c}d2B2 c2B2 | A2G2 A2dA | DAec d4 | D2B2 A2B3 | D4 {c}d2B2 | c2B2 A2G2 | A2dA DAec | d4 D2B2 | A2B3 D2c | d2B2 c2B2 | A2G2 A2dA | D2g2 e2d2 | B2A2 B3D2 | {c}d2B2 c2B2 | A2G2 A2dA | D2g2 e2d2 | B2A2 d8:|"
+    name: "Ruskoi",
+    abc: "X:1\nT:Ruskoi\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0093\nK:G\n|: d4 B3D4 | {c}d2B2 c2B2 | A2G2 A2dA | DAec d4 | D2B2 A2B3 | D4 {c}d2B2 | c2B2 A2G2 | A2dA DAec | d4 D2B2 | A2B3 D2c | d2B2 c2B2 | A2G2 A2dA | D2g2 e2d2 | B2A2 B3D2 | {c}d2B2 c2B2 | A2G2 A2dA | D2g2 e2d2 | B2A2 d8:|"
   },
   {
-    name: ""Tutshkovin polska"",
-    abc: "X:1\nT:"Tutshkovin polska"\nO:Lieksa, Pohjois-Karjala\nS:M. Timonen/K. Collan\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0094\nK:G\n|: B2G2 B2G2 | c2B2 A2G2 | A2A2 G2A2 | B2G2 G4 | d2G2 d2G2 | e2d2 c2B2 | |: A2A2 G2A2 | B2G2 G4 | d4 B2AB | c2B2 A2G2:| | A2A2 G2A2 | B2G2 G4:|"
+    name: "Tutshkovin polska",
+    abc: "X:1\nT:Tutshkovin polska\nO:Lieksa, Pohjois-Karjala\nS:M. Timonen/K. Collan\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0094\nK:G\n|: B2G2 B2G2 | c2B2 A2G2 | A2A2 G2A2 | B2G2 G4 | d2G2 d2G2 | e2d2 c2B2 | |: A2A2 G2A2 | B2G2 G4 | d4 B2AB | c2B2 A2G2:| | A2A2 G2A2 | B2G2 G4:|"
   },
   {
-    name: ""Tshiizik"",
-    abc: "X:1\nT:"Tshiizik"\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0095\nK:G\n|: d2Bc d2B2 | c2B2 A2G2 | F2A2 A2Ac | B2A2 d4:||: B3D2 {c}e2 | d2c2 B2A3 | {G}F2A2 A2A | {c}B2A2 d4:|"
+    name: "Tshiizik",
+    abc: "X:1\nT:Tshiizik\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0095\nK:G\n|: d2Bc d2B2 | c2B2 A2G2 | F2A2 A2Ac | B2A2 d4:||: B3D2 {c}e2 | d2c2 B2A3 | {G}F2A2 A2A | {c}B2A2 d4:|"
   },
   {
     name: "Ristikontra",
@@ -388,20 +388,20 @@ var esavelmat_kjs = [
     abc: "X:1\nT:kjs_0097\nO:Pielisjärvi, Sutila, Pohjois-Karjala\nS:/K. Collan\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0097\nK:g\n|: g2d2 cdB2 | {d}c2B2 G2d2 | g2d2 cdB2 | {d}c2B2 G2d2 | g=ec2 g=ec2 | g=ec2 g=ec2 | g=eG2 gdG2 | gdG2 gdG2 | g=ec2 g=ec2 | g=ec2 g=ec2 | g=eG2 gdG2 | gdG2 gdG2:| | g2:|"
   },
   {
-    name: ""Ruskoi"-tanssi",
-    abc: "X:1\nT:"Ruskoi"-tanssi\nO:Suistamo, Äimäjärvi, Laatokan Karjala\nS:Iivana I. Härkönen/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0098\nK:G\n|: D4 d2B2 | |: d2B2 d2B2 | dcBA B2dB | A2A2 D2A2 | BdBA d2B2:| | B2B2 A2A2 | B2B2 dcBA | B2B2 A2A2 | B2B2 dcBA | B2B2 d2D2 | BcdB A2A2 | B2B2 d2D2 | BcdB A2A2 | d4:|"
+    name: "Ruskoi-tanssi",
+    abc: "X:1\nT:Ruskoi-tanssi\nO:Suistamo, Äimäjärvi, Laatokan Karjala\nS:Iivana I. Härkönen/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0098\nK:G\n|: D4 d2B2 | |: d2B2 d2B2 | dcBA B2dB | A2A2 D2A2 | BdBA d2B2:| | B2B2 A2A2 | B2B2 dcBA | B2B2 A2A2 | B2B2 dcBA | B2B2 d2D2 | BcdB A2A2 | B2B2 d2D2 | BcdB A2A2 | d4:|"
   },
   {
-    name: ""Ruskoi-peli"",
-    abc: "X:1\nT:"Ruskoi-peli"\nO:Suistamo, Äimäjärvi, Laatokan Karjala\nS:Iivana I. Härkönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0099\nK:G\n|: D2d6 | D2d8 | d2_B2 d2_B2 | dc_BA _B2d_B | A2A2 D2A2 | {c}_B2A G2_B2 | d2_B2 d2_B2 | dc_BA _B2d_B | A2A2 D2A2 | {c}_B2A d4 | |: c2g2 c2g2 | ec_BA _B2d_B | A2A2 D2A2 | {c}_B2A G2d2:| | dc_BA _B2G_B | A2A2 _B2_B2 | dc_BA _B2G_B | A2A2 _B2_B2 | A2d2 A2d2 | Dc_BA _B2d_B | A2d2 A2d2 | Dc_BA d4 | A2A2 E2A2 | Dc_BA _B2d_B | A2A2 E2A2 | Dc_BA d4:|"
+    name: "Ruskoi-peli",
+    abc: "X:1\nT:Ruskoi-peli\nO:Suistamo, Äimäjärvi, Laatokan Karjala\nS:Iivana I. Härkönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0099\nK:G\n|: D2d6 | D2d8 | d2_B2 d2_B2 | dc_BA _B2d_B | A2A2 D2A2 | {c}_B2A G2_B2 | d2_B2 d2_B2 | dc_BA _B2d_B | A2A2 D2A2 | {c}_B2A d4 | |: c2g2 c2g2 | ec_BA _B2d_B | A2A2 D2A2 | {c}_B2A G2d2:| | dc_BA _B2G_B | A2A2 _B2_B2 | dc_BA _B2G_B | A2A2 _B2_B2 | A2d2 A2d2 | Dc_BA _B2d_B | A2d2 A2d2 | Dc_BA d4 | A2A2 E2A2 | Dc_BA _B2d_B | A2A2 E2A2 | Dc_BA d4:|"
   },
   {
-    name: ""Brisatka"",
-    abc: "X:1\nT:"Brisatka"\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0100\nK:?\n|: A4 A2A2 | A4 A2G2 | GBA2 A2A4 | G2E2 A2G2 | GBA2 A2A2 | E2A2 G2GB | A2A2 DEA2 | G2GB A2A4 | A2G2 GBA2 | A2A4 G2 | E2A2 G2GB | A2A2 A2E2 | A2G2 GBA2 | A2DE A2G2 | GBA2 A4 | D4 d4 | d4 G4 | A2^F2 G2B2:|"
+    name: "Brisatka",
+    abc: "X:1\nT:Brisatka\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0100\nK:?\n|: A4 A2A2 | A4 A2G2 | GBA2 A2A4 | G2E2 A2G2 | GBA2 A2A2 | E2A2 G2GB | A2A2 DEA2 | G2GB A2A4 | A2G2 GBA2 | A2A4 G2 | E2A2 G2GB | A2A2 A2E2 | A2G2 GBA2 | A2DE A2G2 | GBA2 A4 | D4 d4 | d4 G4 | A2^F2 G2B2:|"
   },
   {
-    name: ""Brisatka"",
-    abc: "X:1\nT:"Brisatka"\nO:Suojärvi, Kuikkaniemi, Laatokan Karjala\nS:Vanja Trofimov/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0101\nK:G\n|: d4 B2GB | A2F2 B2G2 | d4 B2GB | A2F2 B2G2 | A2F2 A2E2 | A2F2 B2GB | A2F2 A2E2 | A2F2 B2GB | c2A2 B2GB | A2F2 B2G2 | c2A2 B2GB | A2F2 B2G2 | A2F2 A2E2 | A2F2 B2GB | A2F2 A2E2 | A2A2 d4 | e4 G2D2 | g2D2 {c}B2A2 | d2c2 e4 | G2D2 g2D2 | {c}B2A2 d4 | d4 B2GB | A2F2 B2G2 | d4 B2GB | A2F2 B2G2 | A2F2 A2E2 | A2F2 B2GB | A2F2 A2E2 | A2F2 B2GB | c2A2 B2GB | A2F2 B2G2 | c2A2 B2GB | A2F2 B2G2 | A2F2 A2E2 | A2F2 B2GB | A2F2 A2E2 | A2A2 d4 | G2ec Gcfc | GcgB GBdB | DGdB GBdB | G2ec Gcfc | GcgB GBdB | DGdB GBdB | F2dA GAdA | FAdA GAdA | F2dA GAdA | FAdA GAdA | F2dA GAdA | DAdB d4:|"
+    name: "Brisatka",
+    abc: "X:1\nT:Brisatka\nO:Suojärvi, Kuikkaniemi, Laatokan Karjala\nS:Vanja Trofimov/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0101\nK:G\n|: d4 B2GB | A2F2 B2G2 | d4 B2GB | A2F2 B2G2 | A2F2 A2E2 | A2F2 B2GB | A2F2 A2E2 | A2F2 B2GB | c2A2 B2GB | A2F2 B2G2 | c2A2 B2GB | A2F2 B2G2 | A2F2 A2E2 | A2F2 B2GB | A2F2 A2E2 | A2A2 d4 | e4 G2D2 | g2D2 {c}B2A2 | d2c2 e4 | G2D2 g2D2 | {c}B2A2 d4 | d4 B2GB | A2F2 B2G2 | d4 B2GB | A2F2 B2G2 | A2F2 A2E2 | A2F2 B2GB | A2F2 A2E2 | A2F2 B2GB | c2A2 B2GB | A2F2 B2G2 | c2A2 B2GB | A2F2 B2G2 | A2F2 A2E2 | A2F2 B2GB | A2F2 A2E2 | A2A2 d4 | G2ec Gcfc | GcgB GBdB | DGdB GBdB | G2ec Gcfc | GcgB GBdB | DGdB GBdB | F2dA GAdA | FAdA GAdA | F2dA GAdA | FAdA GAdA | F2dA GAdA | DAdB d4:|"
   },
   {
     name: "Lampaa ravia",
@@ -432,28 +432,28 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Polkka\nO:Haapavesi, Ainali, Pohjois-Pohjanmaa\nS:Antti Rantonen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0108\nK:G\n|: GBd2 d2d2 | d2dc d2d2 | GAB2 d2d2 | BcA2 d4 | ABc2 c2c2 | c2cB A2A2 | GAB2 GAB2 | A2G2 G4:||: GBd2 dBB2 | BAd2 d4 | Acc2 c2c2 | cBd2 d4 | GBd2 dBB2 | BAd2 d4 | d2dc BcAB | G2d2 G4:|"
   },
   {
-    name: ""Hopvalssi"",
-    abc: "X:1\nT:"Hopvalssi"\nO:Impilahti, Huunukka, Laatokan Karjala\nS:Juho Uimonen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0109\nK:G\n|: d4 d4 | G2A2 B2c2 | d2B2 D2d2 | G2A2 B2c2 | d2B2 d4 | G2A2 B2c2 | d2B2 d2B2 | G2A2 B2c2 | d2B2 d4 | |: e4 =f2dc | B2d2 D2B2 | A2d2 D2dc | B2d2 d4:|"
+    name: "Hopvalssi",
+    abc: "X:1\nT:Hopvalssi\nO:Impilahti, Huunukka, Laatokan Karjala\nS:Juho Uimonen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0109\nK:G\n|: d4 d4 | G2A2 B2c2 | d2B2 D2d2 | G2A2 B2c2 | d2B2 d4 | G2A2 B2c2 | d2B2 d2B2 | G2A2 B2c2 | d2B2 d4 | |: e4 =f2dc | B2d2 D2B2 | A2d2 D2dc | B2d2 d4:|"
   },
   {
     name: "Yhdeksän parin tanssi",
     abc: "X:1\nT:Yhdeksän parin tanssi\nO:Impilahti, Huunukka, Laatokan Karjala\nS:Juho Uimonen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0110\nK:G\n|: D2B2 G2B2 | D2dc Bcd2 | D2B2 G2B2 | D2dc Bcd2 | |: e4 =f2dc | B2d2 D2B2 | A2d2 D2dc | B2d2 d4:| | D2d2 G2c2 | Dcdc B2d2 | D2d2 G2c2 | Dcdc B2d2 | |: e4 =f2dc | B2d2 D2B2 | A2d2 D2dc | B2d2 d4:|"
   },
   {
-    name: ""Hof-falssi"",
-    abc: "X:1\nT:"Hof-falssi"\nO:Impilahti, Koivuselkä, Laatokan Karjala\nS:Iivana Shirgo/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0111\nK:g\n|: g4 g3A | B2c2 dcBc | d2dc B2A2 | g2c2 dcBc | d2d2 g3A | B2c2 dcBc | d2dc B2A2 | g2c2 dcBc | d4 c2c2 | e2e2 B2Bc | d2d2 A2B2 | c2dc B4 | d2d2 c2c2 | e2e2 B2Bc | d2d2 A2B2 | c2dc B4 | d2d2 G2g2 | G2g2 G2g2 | G2A2 B2c2 | dcBc d2d2 | A2A2 B2c2 | d4 d2d2 | G2A2 B2c2 | dcBc d2d2 | A2A2 B2c2 | d4 d4 | |: c2c2 e4 | B2B2 d2d2 | A2B2 c2dc | B4 G2g2:| | G2g2 G2g2 | G2g2:|"
+    name: "Hof-falssi",
+    abc: "X:1\nT:Hof-falssi\nO:Impilahti, Koivuselkä, Laatokan Karjala\nS:Iivana Shirgo/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0111\nK:g\n|: g4 g3A | B2c2 dcBc | d2dc B2A2 | g2c2 dcBc | d2d2 g3A | B2c2 dcBc | d2dc B2A2 | g2c2 dcBc | d4 c2c2 | e2e2 B2Bc | d2d2 A2B2 | c2dc B4 | d2d2 c2c2 | e2e2 B2Bc | d2d2 A2B2 | c2dc B4 | d2d2 G2g2 | G2g2 G2g2 | G2A2 B2c2 | dcBc d2d2 | A2A2 B2c2 | d4 d2d2 | G2A2 B2c2 | dcBc d2d2 | A2A2 B2c2 | d4 d4 | |: c2c2 e4 | B2B2 d2d2 | A2B2 c2dc | B4 G2g2:| | G2g2 G2g2 | G2g2:|"
   },
   {
-    name: ""hof-/fof-falssi"",
-    abc: "X:1\nT:"hof-/fof-falssi"\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0112\nK:G\n|: d4 d4 | d3A B2c2 | dcBc d2B2 | G2A2 B2c2 | e2c2 d2B2 | d2GA B2c2 | dcBc d2B2 | G2A2 B2c2 | e4 d2B2 | d2A2 B2c2 | dcBc d2B2 | G2A2 B2c2 | ecBc d2B2 | d3A B2c2 | dcBc d2B2 | G2A2 B2c2 | e2c2 d4 | c2c2 e2c2 | B2B2 d2B2 | A2B2 c2BA | G2B2 G2B2 | c2c2 e2dc | B2Bc d2dB | A2B2 cBBA | G2B2 G2B2 | c2c2 g2dc | B2B2 g2dB | A2B2 c2BA | G2B2 G2B2 | c2c2 e2c2 | B2B2 d2B2 | A2B2 c2BA | G2B2 d4:|"
+    name: "hof-/fof-falssi",
+    abc: "X:1\nT:hof-/fof-falssi\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0112\nK:G\n|: d4 d4 | d3A B2c2 | dcBc d2B2 | G2A2 B2c2 | e2c2 d2B2 | d2GA B2c2 | dcBc d2B2 | G2A2 B2c2 | e4 d2B2 | d2A2 B2c2 | dcBc d2B2 | G2A2 B2c2 | ecBc d2B2 | d3A B2c2 | dcBc d2B2 | G2A2 B2c2 | e2c2 d4 | c2c2 e2c2 | B2B2 d2B2 | A2B2 c2BA | G2B2 G2B2 | c2c2 e2dc | B2Bc d2dB | A2B2 cBBA | G2B2 G2B2 | c2c2 g2dc | B2B2 g2dB | A2B2 c2BA | G2B2 G2B2 | c2c2 e2c2 | B2B2 d2B2 | A2B2 c2BA | G2B2 d4:|"
   },
   {
-    name: ""Saksan falssi"",
-    abc: "X:1\nT:"Saksan falssi"\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0113\nK:G\n|: B2BA d2d2 | B2BA d2d2 | A2AB c2BA | G2G2 G4 | B2BA d2d2 | B2BA d2d2 | A2AB c2BA | G2G2 d2Bc | e2e2 e2dc | B2Bc d2d2 | A2AB c2BA | G2G2 d2Bc | e2c2 e2dc | B2Bc d2d2 | A2AB c2BA | G2G2 G4:|"
+    name: "Saksan falssi",
+    abc: "X:1\nT:Saksan falssi\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0113\nK:G\n|: B2BA d2d2 | B2BA d2d2 | A2AB c2BA | G2G2 G4 | B2BA d2d2 | B2BA d2d2 | A2AB c2BA | G2G2 d2Bc | e2e2 e2dc | B2Bc d2d2 | A2AB c2BA | G2G2 d2Bc | e2c2 e2dc | B2Bc d2d2 | A2AB c2BA | G2G2 G4:|"
   },
   {
-    name: ""Vanha sod´essi"",
-    abc: "X:1\nT:"Vanha sod´essi"\nO:Suistamo, Suistamo, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0114\nK:G\n|: dBdB G2GB | dBdB G2G2 | A2AB c2BA | G2B2 G2B2 | dBdB G2GB | dBdB G2G2 | A2AB c2BA | G2B2 d2dB | c2e2 e2dc | B2Bc d2d2 | A2AB c2BA | G2B2 G2GB | c2e2 e2dc | B2Bc d2d2 | A2AB c2BA | G2B2 d4:|"
+    name: "Vanha sod´essi",
+    abc: "X:1\nT:Vanha sod´essi\nO:Suistamo, Suistamo, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0114\nK:G\n|: dBdB G2GB | dBdB G2G2 | A2AB c2BA | G2B2 G2B2 | dBdB G2GB | dBdB G2G2 | A2AB c2BA | G2B2 d2dB | c2e2 e2dc | B2Bc d2d2 | A2AB c2BA | G2B2 G2GB | c2e2 e2dc | B2Bc d2d2 | A2AB c2BA | G2B2 d4:|"
   },
   {
     name: "Nyyhkytys",
@@ -464,36 +464,36 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Melkkuri\nO:Korpiselkä(Korpiselka), Yläjärvi, Laatokan Karjala\nS:Pesha Patronen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0116\nK:G\n|: g3c B2d2 | A2DA G2B2 | c2ec B2B2 | A2D2 d4 | g2e2 d2B2 | A2D2 d2B2 | c2ec d2B2 | A2D2 d4 | g3c B2d2 | A2D2 B2d2 | e2Gc B2d2 | A2D2 d4 | g3c B2d2 | A2D2 d4 | e2Gc B2d2 | A2D2 d4:|"
   },
   {
-    name: ""Potvalssi"",
-    abc: "X:1\nT:"Potvalssi"\nO:Suistamo, Koitto, Laatokan Karjala\nS:Miinan Domi/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0117\nK:G\n|: A4 A2Dc | B2G2 G2GB | A4 A2Dc | B2G2 G2GB | c2e2 c2ec | B2d2 B2dB | A2=F2 A2ec | B2A2 G2dB | c2e2 c2ec | B2d2 B2dB | A2=F2 A2ec | B2A2 d4:|"
+    name: "Potvalssi",
+    abc: "X:1\nT:Potvalssi\nO:Suistamo, Koitto, Laatokan Karjala\nS:Miinan Domi/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0117\nK:G\n|: A4 A2Dc | B2G2 G2GB | A4 A2Dc | B2G2 G2GB | c2e2 c2ec | B2d2 B2dB | A2=F2 A2ec | B2A2 G2dB | c2e2 c2ec | B2d2 B2dB | A2=F2 A2ec | B2A2 d4:|"
   },
   {
-    name: ""Ristakondra"",
-    abc: "X:1\nT:"Ristakondra"\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0118\nK:G\n|: D2d4 A2 | DADA dcB2 | G2G2 B2B2 | DADA dcB2 | G2G2 G2A2 | DADA dBG2 | B2G2 B2c2 | DADA dBG2 | B2d4 c2 | e2e2 dcBc | dcB2 cBA2 | d2c2 BAG2 | B2d2 B2c2 | e2e2 dcBc | dcB2 cBA2 | d2Dc BAG2 | B2d4:|"
+    name: "Ristakondra",
+    abc: "X:1\nT:Ristakondra\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0118\nK:G\n|: D2d4 A2 | DADA dcB2 | G2G2 B2B2 | DADA dcB2 | G2G2 G2A2 | DADA dBG2 | B2G2 B2c2 | DADA dBG2 | B2d4 c2 | e2e2 dcBc | dcB2 cBA2 | d2c2 BAG2 | B2d2 B2c2 | e2e2 dcBc | dcB2 cBA2 | d2Dc BAG2 | B2d4:|"
   },
   {
     name: "Melkutus l. siiputus",
     abc: "X:1\nT:Melkutus l. siiputus\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0119\nK:G\n|: A4 AcBA | G2B2 G2B2 | D2d2 DcBA | G2B2 d4 | d4 dcBA | G2B2 G2B2 | A4 AcBA | G2B2 d4 | c2ec Ecec | d2DB GBdB | Gcec Gcec | d2DB GBdB | c2ec Ecec | d2DB G2dB | c2ec Ecec | d2B2 d4:|"
   },
   {
-    name: ""Fof-falssi"",
-    abc: "X:1\nT:"Fof-falssi"\nO:Suistamo, Äimäjärvi, Laatokan Karjala\nS:Iivana I. Härkönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0120\nK:G/g\n|: A4 A2dc | _B2d_B G2d_B | A4 A2dc | _B2d_B d4 | c2g2 c2gc | e2d2 _B2d2 | A2_B2 c2dc | _B2d2 _B2d2 | c2g2 c2gc | e2d2 _B2d2 | A2_B2 c2dc | _B2d2 d4:|"
+    name: "Fof-falssi",
+    abc: "X:1\nT:Fof-falssi\nO:Suistamo, Äimäjärvi, Laatokan Karjala\nS:Iivana I. Härkönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0120\nK:G/g\n|: A4 A2dc | _B2d_B G2d_B | A4 A2dc | _B2d_B d4 | c2g2 c2gc | e2d2 _B2d2 | A2_B2 c2dc | _B2d2 _B2d2 | c2g2 c2gc | e2d2 _B2d2 | A2_B2 c2dc | _B2d2 d4:|"
   },
   {
-    name: ""Fotfalssi"",
-    abc: "X:1\nT:"Fotfalssi"\nO:Suistamo, Äimäjärvi, Laatokan Karjala\nS:Iivana I. Härkönen/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0121\nK:G\n|: A4 A2dc | B2d2 G2d2 | A4 A2dc | |: B2d2 G2d2 | c2e2 c2ec | d2B2 G2d2 | A2B2 c2dc:| | B2d2 G2d2:|"
+    name: "Fotfalssi",
+    abc: "X:1\nT:Fotfalssi\nO:Suistamo, Äimäjärvi, Laatokan Karjala\nS:Iivana I. Härkönen/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0121\nK:G\n|: A4 A2dc | B2d2 G2d2 | A4 A2dc | |: B2d2 G2d2 | c2e2 c2ec | d2B2 G2d2 | A2B2 c2dc:| | B2d2 G2d2:|"
   },
   {
-    name: ""Potvalssi"",
-    abc: "X:1\nT:"Potvalssi"\nO:Suistamo, Muuanto, Laatokan Karjala\nS:Iivana Shemeikka/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0122\nK:G\n|: A2d2 A2Dc | d2G2 G4 | A2d2 A2Dc | d2G2 G4 | |: c2e2 g4 | {c}c2B d4 | c2e2 g4 | {c}c2B d2D2:| | {d}B2B GBdB | A2d2 A2D2 | {d}B2B GBdB | A2d2 A2D2:|"
+    name: "Potvalssi",
+    abc: "X:1\nT:Potvalssi\nO:Suistamo, Muuanto, Laatokan Karjala\nS:Iivana Shemeikka/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0122\nK:G\n|: A2d2 A2Dc | d2G2 G4 | A2d2 A2Dc | d2G2 G4 | |: c2e2 g4 | {c}c2B d4 | c2e2 g4 | {c}c2B d2D2:| | {d}B2B GBdB | A2d2 A2D2 | {d}B2B GBdB | A2d2 A2D2:|"
   },
   {
-    name: ""Potvalssi"",
-    abc: "X:1\nT:"Potvalssi"\nO:Harlu, Läskelä, Karjalan kannas\nS:Iivana Bogdanov/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0123\nK:G\n|: G,2D2 G2B2 | A2Dc B2d2 | G,2B2 G2B2 | A2Dc B2d2 | G,2B2 G2B2 | A2Dc B2d2 | G,2B2 G2B2 | A2Dc B2d2 | G,2B2 d6 | d2c2 e2c2 | |: e2d2 D2cB2 | G4 d2c2 | g2c2 g2d2 | D2cB G4 | cdBc2 e2c2:| | e2d2 D2cB | G4 cdBc2 | g2c2 g2e2 | D2cd4:|"
+    name: "Potvalssi",
+    abc: "X:1\nT:Potvalssi\nO:Harlu, Läskelä, Karjalan kannas\nS:Iivana Bogdanov/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0123\nK:G\n|: G,2D2 G2B2 | A2Dc B2d2 | G,2B2 G2B2 | A2Dc B2d2 | G,2B2 G2B2 | A2Dc B2d2 | G,2B2 G2B2 | A2Dc B2d2 | G,2B2 d6 | d2c2 e2c2 | |: e2d2 D2cB2 | G4 d2c2 | g2c2 g2d2 | D2cB G4 | cdBc2 e2c2:| | e2d2 D2cB | G4 cdBc2 | g2c2 g2e2 | D2cd4:|"
   },
   {
-    name: ""Fof-falssi"",
-    abc: "X:1\nT:"Fof-falssi"\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Lösönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0124\nK:G\n|: d4 c4 | A2Ac B2d4 | d2c2 A4 | Acd4 d4 | c2A4 Ac | B2d4 d2 | c2A4 Ac | B2d4 d2 | c2A4 Ac | d4 d4 | e2dc ecec | B2d4 d2 | c2A4 Ac | d4 d4 | |: c2ec ecec | B2d4 d2 | c2A4 Ac | B2d4 d2:| | c2ec ecec | B2d4 d2 | c2A4 Ac | d4 d4:|"
+    name: "Fof-falssi",
+    abc: "X:1\nT:Fof-falssi\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Lösönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0124\nK:G\n|: d4 c4 | A2Ac B2d4 | d2c2 A4 | Acd4 d4 | c2A4 Ac | B2d4 d2 | c2A4 Ac | B2d4 d2 | c2A4 Ac | d4 d4 | e2dc ecec | B2d4 d2 | c2A4 Ac | d4 d4 | |: c2ec ecec | B2d4 d2 | c2A4 Ac | B2d4 d2:| | c2ec ecec | B2d4 d2 | c2A4 Ac | d4 d4:|"
   },
   {
     name: "Tanssi kuuden kesken",
@@ -528,40 +528,40 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Melkkuri\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Lösönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0132\nK:G\n|: d4 d2B2 | c2BA d2B2 | d2B2 d2B2 | c2BA d2B2 | d2B2 d2B2 | c2BA d2B2 | c2e2 c2e2 | dcBA d2B2 | c2e2 c2e2 | dcBA d4:|"
   },
   {
-    name: ""Letshka"",
-    abc: "X:1\nT:"Letshka"\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Lösönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0133\nK:G\n|: A2DA G2B2 | A2DA G2B2 | A2DA d2c2 | B2d4 A2 | DAG2 B2A2 | DAG2 B2A2 | DAd2 c2B2 | d4 c2c2 | e2c2 B2B2 | d2d2 A2DA | d2c2 B2d4 | c2c2 e2c2 | B2B2 d2d2 | A2Bc d2c2 | B2d4:|"
+    name: "Letshka",
+    abc: "X:1\nT:Letshka\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Lösönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0133\nK:G\n|: A2DA G2B2 | A2DA G2B2 | A2DA d2c2 | B2d4 A2 | DAG2 B2A2 | DAG2 B2A2 | DAd2 c2B2 | d4 c2c2 | e2c2 B2B2 | d2d2 A2DA | d2c2 B2d4 | c2c2 e2c2 | B2B2 d2d2 | A2Bc d2c2 | B2d4:|"
   },
   {
-    name: ""Letshka"",
-    abc: "X:1\nT:"Letshka"\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0134\nK:G\n|: D2d4 A2 | DAG2 B2A2 | DAG2 B2A2 | A2d2 dcB4 | d4 B2BA | G2B2 A2DA | G2B2 A2A2 | d2dc B2B2 | G2GB c2c2 | e2e2 B2B2 | d2d2 A2A2 | d2c2 B2d4 | B2Bc e2e2 | B2DB d2d2 | A2A2 d2c2 | B2d4 cD | c2e2 e2B2 | B2d2 d2A2 | A2d2 c2B2 | d4:|"
+    name: "Letshka",
+    abc: "X:1\nT:Letshka\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0134\nK:G\n|: D2d4 A2 | DAG2 B2A2 | DAG2 B2A2 | A2d2 dcB4 | d4 B2BA | G2B2 A2DA | G2B2 A2A2 | d2dc B2B2 | G2GB c2c2 | e2e2 B2B2 | d2d2 A2A2 | d2c2 B2d4 | B2Bc e2e2 | B2DB d2d2 | A2A2 d2c2 | B2d4 cD | c2e2 e2B2 | B2d2 d2A2 | A2d2 c2B2 | d4:|"
   },
   {
-    name: ""Letshka"",
-    abc: "X:1\nT:"Letshka"\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0135\nK:G\n|: D2d4 A2 | DAG2 B2A2 | DAG2 B2A2 | A2d2 dcB4 | d4 A2DA | G2B2 A2DA | G2B2 A2DA | d2dc B4 | d4 c2Ec | e2c2 B2B2 | d2d2 A2A2 | d2c2 B4 | d4 c2Ec | e2c2 B2DB | d2d2 A2DA | d2c2 B4 | d4:|"
+    name: "Letshka",
+    abc: "X:1\nT:Letshka\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0135\nK:G\n|: D2d4 A2 | DAG2 B2A2 | DAG2 B2A2 | A2d2 dcB4 | d4 A2DA | G2B2 A2DA | G2B2 A2DA | d2dc B4 | d4 c2Ec | e2c2 B2B2 | d2d2 A2A2 | d2c2 B4 | d4 c2Ec | e2c2 B2DB | d2d2 A2DA | d2c2 B4 | d4:|"
   },
   {
-    name: ""Letshka"",
-    abc: "X:1\nT:"Letshka"\nO:Suistamo, Muuanto, Laatokan Karjala\nS:Artjamei Kyyrönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0136\nK:G\n|: D4 A2BA | G2G2 A2BA | G2G2 A2A2 | d2c2 B4 | G4 A2BA | G2G2 A2BA | G2G2 A2B2 | d2c2 B4 | G4 B2c2 | d2c2 B2A2 | G2G2 A2A2 | d2c2 B4 | G4 A2B2 | d2c2 B2A2 | G2G2 A2A2 | d2c2 B4 | G4:|"
+    name: "Letshka",
+    abc: "X:1\nT:Letshka\nO:Suistamo, Muuanto, Laatokan Karjala\nS:Artjamei Kyyrönen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0136\nK:G\n|: D4 A2BA | G2G2 A2BA | G2G2 A2A2 | d2c2 B4 | G4 A2BA | G2G2 A2BA | G2G2 A2B2 | d2c2 B4 | G4 B2c2 | d2c2 B2A2 | G2G2 A2A2 | d2c2 B4 | G4 A2B2 | d2c2 B2A2 | G2G2 A2A2 | d2c2 B4 | G4:|"
   },
   {
-    name: ""Let´ska"",
-    abc: "X:1\nT:"Let´ska"\nO:Korpiselkä(Korpiselka), Ristsalmi, Laatokan Karjala\nS:Hilppa Vornanen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0137\nK:G\n|: G4 A2DA | G2G2 A2DA | G2G2 A2B2 | c2dc B4:| | G4 c2c2 | e2e2 B2B2 | d2d2 A2B2 | c2dc B4 | G4 c2c2 | e2ed B2B2 | d2d2 A2B2 | c2dc B4 | G4:|"
+    name: "Let´ska",
+    abc: "X:1\nT:Let´ska\nO:Korpiselkä(Korpiselka), Ristsalmi, Laatokan Karjala\nS:Hilppa Vornanen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0137\nK:G\n|: G4 A2DA | G2G2 A2DA | G2G2 A2B2 | c2dc B4:| | G4 c2c2 | e2e2 B2B2 | d2d2 A2B2 | c2dc B4 | G4 c2c2 | e2ed B2B2 | d2d2 A2B2 | c2dc B4 | G4:|"
   },
   {
-    name: ""Letshka"",
-    abc: "X:1\nT:"Letshka"\nO:Suistamo, Koitto, Laatokan Karjala\nS:Miinan Domi/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0138\nK:G\n|: A2DA G2GB | A2DA G2GB | A2B2 c2dc | B4 G4:| | c2c2 e2ec | B2c2 d2d2 | A2A2 d2c2 | B2A2 G2G2 | c2d2 e2ec | d2dc d2d2 | A2A2 d2dc | B2B2 G2G2 | c2c2 e2ec | B2c2 d2d2 | A2A2 d2c2 | B4 G4:|"
+    name: "Letshka",
+    abc: "X:1\nT:Letshka\nO:Suistamo, Koitto, Laatokan Karjala\nS:Miinan Domi/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0138\nK:G\n|: A2DA G2GB | A2DA G2GB | A2B2 c2dc | B4 G4:| | c2c2 e2ec | B2c2 d2d2 | A2A2 d2c2 | B2A2 G2G2 | c2d2 e2ec | d2dc d2d2 | A2A2 d2dc | B2B2 G2G2 | c2c2 e2ec | B2c2 d2d2 | A2A2 d2c2 | B4 G4:|"
   },
   {
-    name: ""Tiider letshka"",
-    abc: "X:1\nT:"Tiider letshka"\nO:Suistamo, Koitto, Laatokan Karjala\nS:Timo Lipitshä/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0139\nK:G\n|: A2DA G2B2 | A2DA G2B2 | A2DA d2dc | B4 d4 | A2DA G2B2 | A2DA G2B2 | A2A2 d2B2 | B4 d4 | |: c2G2 e2c2 | B2c2 d2B2 | A2B2 c2d2 | B4 G4:|"
+    name: "Tiider letshka",
+    abc: "X:1\nT:Tiider letshka\nO:Suistamo, Koitto, Laatokan Karjala\nS:Timo Lipitshä/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0139\nK:G\n|: A2DA G2B2 | A2DA G2B2 | A2DA d2dc | B4 d4 | A2DA G2B2 | A2DA G2B2 | A2A2 d2B2 | B4 d4 | |: c2G2 e2c2 | B2c2 d2B2 | A2B2 c2d2 | B4 G4:|"
   },
   {
-    name: ""Vanha letshka"",
-    abc: "X:1\nT:"Vanha letshka"\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0140\nK:G\n|: D2d4 A2 | D2G2 B2A2 | D2G2 B2A3 | D4 {c}d2c2 | B2A2 G2B2 | A2c2 G2B2 | A2A2 G2B2 | A3D4 c | d2c2 B2A2 | d4 c2c2 | e2e2 A3D4 | {c}d2d2 A3 | D4 {c}d2c2 | B2A2 G2B2 | c2cd e2e2 | A3D4 c | d2d2 A3D2 | {c}d2c2 B2A2 | d4:|"
+    name: "Vanha letshka",
+    abc: "X:1\nT:Vanha letshka\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0140\nK:G\n|: D2d4 A2 | D2G2 B2A2 | D2G2 B2A3 | D4 {c}d2c2 | B2A2 G2B2 | A2c2 G2B2 | A2A2 G2B2 | A3D4 c | d2c2 B2A2 | d4 c2c2 | e2e2 A3D4 | {c}d2d2 A3 | D4 {c}d2c2 | B2A2 G2B2 | c2cd e2e2 | A3D4 c | d2d2 A3D2 | {c}d2c2 B2A2 | d4:|"
   },
   {
-    name: ""Letshka"",
-    abc: "X:1\nT:"Letshka"\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0141\nK:G\n|: A2DA G2G2 | A2DA G2G2 | A2A2 d2dc | B4 G4:| | c2c2 e2e2 | B2B2 d2d2 | A2B2 c2d2 | B4 G2B2 | c2c2 e2e2 | B2B2 d2d2 | A2B2 c2d2 | B4 G4:|"
+    name: "Letshka",
+    abc: "X:1\nT:Letshka\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0141\nK:G\n|: A2DA G2G2 | A2DA G2G2 | A2A2 d2dc | B4 G4:| | c2c2 e2e2 | B2B2 d2d2 | A2B2 c2d2 | B4 G2B2 | c2c2 e2e2 | B2B2 d2d2 | A2B2 c2d2 | B4 G4:|"
   },
   {
     name: "Hoirola",
@@ -580,20 +580,20 @@ var esavelmat_kjs = [
     abc: "X:1\nT:kjs_0145\nO:Lieksa, Sutila, Pohjois-Karjala\nS:/K. Collan\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0145\nK:G\n|: A2D2 d2d2 | B2dB G2G2 | A2D2 d2d2 | A2dB B4 | AcAG F2D2 | G2d2 d2d2 | AcAG F2D2 | G2d2 d4:|"
   },
   {
-    name: ""Ruohtalaisen falssi"",
-    abc: "X:1\nT:"Ruohtalaisen falssi"\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0146\nK:G\n|: c2e2 c2ec | B2d2 B2dB | A2dA FADA | G2dB GBdB | c2ec c2e2 | B2dB GBdB | A2dA FADA | G2B2 G2B2 | {c}B2D2 {A}G2 | d2F2 D2G2 | B2cB2 D2A | G2d2 F2D2 | d4:|"
+    name: "Ruohtalaisen falssi",
+    abc: "X:1\nT:Ruohtalaisen falssi\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0146\nK:G\n|: c2e2 c2ec | B2d2 B2dB | A2dA FADA | G2dB GBdB | c2ec c2e2 | B2dB GBdB | A2dA FADA | G2B2 G2B2 | {c}B2D2 {A}G2 | d2F2 D2G2 | B2cB2 D2A | G2d2 F2D2 | d4:|"
   },
   {
-    name: ""Vanha Falshshi" l. "hotfalshshi"",
-    abc: "X:1\nT:"Vanha Falshshi" l. "hotfalshshi"\nO:Suistamo, Koitto, Laatokan Karjala\nS:Timo Lipitshä/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0147\nK:G\n|: c2e2 c2ec | B2d2 B2dB | A2d2 A2dA | G2d2 G2d2 | c2e2 c2ec | B2d2 B2dB | A2d2 A2dA | G2d2 d4 | c2ec Gcec | B2dB GBdB | A2dA DAdA | GBdB GBdB | Gcec Gcec | B2dB GBdB | A2dA DAdA | G2dB G2dB | d2B2 d2d2 | c2B2 A2G2 | A2B2 DcBA | G2B2 d4 | B2d2 B2d2 | c2B2 A2G2 | A2B2 DcBA | G2B2 d4:|"
+    name: "Vanha Falshshi l. hotfalshshi",
+    abc: "X:1\nT:Vanha Falshshi l. hotfalshshi\nO:Suistamo, Koitto, Laatokan Karjala\nS:Timo Lipitshä/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0147\nK:G\n|: c2e2 c2ec | B2d2 B2dB | A2d2 A2dA | G2d2 G2d2 | c2e2 c2ec | B2d2 B2dB | A2d2 A2dA | G2d2 d4 | c2ec Gcec | B2dB GBdB | A2dA DAdA | GBdB GBdB | Gcec Gcec | B2dB GBdB | A2dA DAdA | G2dB G2dB | d2B2 d2d2 | c2B2 A2G2 | A2B2 DcBA | G2B2 d4 | B2d2 B2d2 | c2B2 A2G2 | A2B2 DcBA | G2B2 d4:|"
   },
   {
-    name: ""Marssin tapaista"",
-    abc: "X:1\nT:"Marssin tapaista"\nO:Korpiselkä(Korpiselka), Kitilänvaara, Laatokan Karjala\nS:Mikko Röpeli/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0148\nK:G\n|: c2gc Gcg2 | B2dB GBd2 | A2dA DAd2 | B2dB GBd2 | c2gc Gcg2 | B2dB GBd2 | A2dA DAd2 | B8 | A2dA F2d2 | G2eB2 BeB | A2dA F2d2 | B2dB GBdA | F2A2 dAF2 | d2G2 {e}B2B | eBA2 dAF2 | d2B2 dBGB | dAF2 A2dA2 | AdAB2 eBE2 | eBA2 {d}A3 | d2B8:|"
+    name: "Marssin tapaista",
+    abc: "X:1\nT:Marssin tapaista\nO:Korpiselkä(Korpiselka), Kitilänvaara, Laatokan Karjala\nS:Mikko Röpeli/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0148\nK:G\n|: c2gc Gcg2 | B2dB GBd2 | A2dA DAd2 | B2dB GBd2 | c2gc Gcg2 | B2dB GBd2 | A2dA DAd2 | B8 | A2dA F2d2 | G2eB2 BeB | A2dA F2d2 | B2dB GBdA | F2A2 dAF2 | d2G2 {e}B2B | eBA2 dAF2 | d2B2 dBGB | dAF2 A2dA2 | AdAB2 eBE2 | eBA2 {d}A3 | d2B8:|"
   },
   {
-    name: ""Pläshshimized soitanda"",
-    abc: "X:1\nT:"Pläshshimized soitanda"\nO:Aunuksen Karjala, Suurimäki, Vienan Karjala\nS:Tsertin Miikkula/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0149\nK:e\n|: g2G2 e4 | |: f3g e2B2 | e2Bg e2B2 | d2Gg d2G2 | e2Bg e2B2:| | f2Bg f2B2 | f2Bg f2B2 | e2Bg e2B2 | e2Bg e2B2 | d2Gg d2G2 | d2Gg d2G2 | e2Bg e2B2 | e2Bg e2B2 | f2Gg e2Bg | d2Gg e2Bg | f2Gg e2Bg | d2Gg e2Bg | d2g2 d2g2 | d2g2 e2g2 | d2g2 d2g2 | d2g2 e2g2 | d2Gg d2Gg | d2Gg e2Bg | d2Gg d2Gg | d2Gg e2Bg | f2Bg e2Bg | d2Gg d2Gg | e2Bg e2Bg | f2Bg e2Bg | d2Gg d2Gg | e2Bg e2Bg | f2e2 d2g2 | d2G2 e2g2 | f2e2 d2g2 | d2G2 e4:|"
+    name: "Pläshshimized soitanda",
+    abc: "X:1\nT:Pläshshimized soitanda\nO:Aunuksen Karjala, Suurimäki, Vienan Karjala\nS:Tsertin Miikkula/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0149\nK:e\n|: g2G2 e4 | |: f3g e2B2 | e2Bg e2B2 | d2Gg d2G2 | e2Bg e2B2:| | f2Bg f2B2 | f2Bg f2B2 | e2Bg e2B2 | e2Bg e2B2 | d2Gg d2G2 | d2Gg d2G2 | e2Bg e2B2 | e2Bg e2B2 | f2Gg e2Bg | d2Gg e2Bg | f2Gg e2Bg | d2Gg e2Bg | d2g2 d2g2 | d2g2 e2g2 | d2g2 d2g2 | d2g2 e2g2 | d2Gg d2Gg | d2Gg e2Bg | d2Gg d2Gg | d2Gg e2Bg | f2Bg e2Bg | d2Gg d2Gg | e2Bg e2Bg | f2Bg e2Bg | d2Gg d2Gg | e2Bg e2Bg | f2e2 d2g2 | d2G2 e2g2 | f2e2 d2g2 | d2G2 e4:|"
   },
   {
     name: "Häämarssi",
@@ -676,8 +676,8 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Kiperä\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0169\nK:G\n|: D4 d4 | B2Dc d2B2 | c2A2 A4 | A2Bc e2e2 | B4 D2B4 | B2Dc d2B2 | c2A2 A4 | A2Bc e2e2 | B2B2 d4 | c2B2 A2c2 | B2A2 B2dB | A2D2 E2F2 | G2D2 B2GB | c2B2 A2c2 | B2A2 B2dB | A2D2 E2F2 | G2D2 B4:|"
   },
   {
-    name: "Riivattu l. "ristakondra"",
-    abc: "X:1\nT:Riivattu l. "ristakondra"\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0170\nK:?\n|: c2dc B2A2 | c2B2 A2B2 | c2dc B2A2 | c2B2 G2B2:| | c2e2 g2e2 | d2Bc d2d2 | e2c2 g2e2 | d2Bc d2d2 | c2e2 g4 | d2B2 d2d2 | e2c2 g2e2 | d4:|"
+    name: "Riivattu l. ristakondra",
+    abc: "X:1\nT:Riivattu l. ristakondra\nO:Suistamo, Maisu, Laatokan Karjala\nS:Teppana Jänis/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0170\nK:?\n|: c2dc B2A2 | c2B2 A2B2 | c2dc B2A2 | c2B2 G2B2:| | c2e2 g2e2 | d2Bc d2d2 | e2c2 g2e2 | d2Bc d2d2 | c2e2 g4 | d2B2 d2d2 | e2c2 g2e2 | d4:|"
   },
   {
     name: "Vanha polkka",
@@ -720,12 +720,12 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Venähen valssi\nO:Suistamo, Muuanto, Laatokan Karjala\nS:Iivana Shemeikka/A. Launis\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0180\nK:G\n|: d2B2 A2A2 | {c}B2B2 d2B2 | A2A2 {c}B2B2 | d2B2 d6 | G,2GB dBGc | ecGc gce2 | B2GB dBGc | ecGc gce2 | B2:|"
   },
   {
-    name: ""Vanha falssi"",
-    abc: "X:1\nT:"Vanha falssi"\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Lösönen/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0181\nK:G\n|: A2Ac B2A2 d2B2 | A2Ac B2A2 d2B2 | A2Ac B2A2 d4 | e4 e3c B2A2 | d2d2 c2ec ecec | B2A2 d2d2 c2ec | ecec B2A2 d4:|"
+    name: "Vanha falssi",
+    abc: "X:1\nT:Vanha falssi\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Lösönen/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0181\nK:G\n|: A2Ac B2A2 d2B2 | A2Ac B2A2 d2B2 | A2Ac B2A2 d4 | e4 e3c B2A2 | d2d2 c2ec ecec | B2A2 d2d2 c2ec | ecec B2A2 d4:|"
   },
   {
-    name: ""Vanha valssi"",
-    abc: "X:1\nT:"Vanha valssi"\nO:Suistamo, Koitto, Laatokan Karjala\nS:Miinan Domi/A. O. Väisänen\nM:2/4, 3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0182\nK:G\n|: D2d2 A2Dc | B2A2 G2d2 | A2Dc B2A2 | G2d2 c2e2 | c2gc B2A2 | G2d2 c2e2 | c2gc B2A2 | d4:|"
+    name: "Vanha valssi",
+    abc: "X:1\nT:Vanha valssi\nO:Suistamo, Koitto, Laatokan Karjala\nS:Miinan Domi/A. O. Väisänen\nM:2/4, 3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0182\nK:G\n|: D2d2 A2Dc | B2A2 G2d2 | A2Dc B2A2 | G2d2 c2e2 | c2gc B2A2 | G2d2 c2e2 | c2gc B2A2 | d4:|"
   },
   {
     name: "Lippa",
@@ -768,20 +768,20 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Valssi\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Heikki Halonen/A. O. Väisänen\nM:3/8\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0192\nK:g\n|: d2GA GA | d2GB GB | d2Ac Ac | d2GB GB | d2GA GA | d2GB GB | d2Ac Ac | d2G2 Bc | d2BG Bc | d2BG Bc | d2cA cB | d2BG Bc | d2BG Bc | d2BG Bc | d2cA cB | d4 Bc | d6:|"
   },
   {
-    name: ""Hippavalta"",
-    abc: "X:1\nT:"Hippavalta"\nO:Haapavesi, Ainali, Pohjois-Pohjanmaa\nS:Antti Rantonen/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0193\nK:G\n|: G2B2 d4 d4 | c2B2 d2c2 A2B2 | G2A2 c2B2 d4 | d2B2 G2c2 A2B2:| | G2A2 B2G2 A2B2 | c2A2 c2B2 d2B2 | G2A2 B2G2 A2B2 | c2A2 c2B2 d2B2 | G4 A2B2 c2A2 | d2c2 B2c2 A2B2 | G2A2 B2c2 A4 | d2B2 G2A2 B2c2 | A4 d4 G4:|"
+    name: "Hippavalta",
+    abc: "X:1\nT:Hippavalta\nO:Haapavesi, Ainali, Pohjois-Pohjanmaa\nS:Antti Rantonen/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0193\nK:G\n|: G2B2 d4 d4 | c2B2 d2c2 A2B2 | G2A2 c2B2 d4 | d2B2 G2c2 A2B2:| | G2A2 B2G2 A2B2 | c2A2 c2B2 d2B2 | G2A2 B2G2 A2B2 | c2A2 c2B2 d2B2 | G4 A2B2 c2A2 | d2c2 B2c2 A2B2 | G2A2 B2c2 A4 | d2B2 G2A2 B2c2 | A4 d4 G4:|"
   },
   {
     name: "Masurkka",
     abc: "X:1\nT:Masurkka\nO:Haapavesi, Ainali, Pohjois-Pohjanmaa\nS:Antti Rantonen/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0194\nK:G\n|: G3B d4 d4 | G3B d4 d4 | d3c A4 A3B | d3B G4 G4 | G3B d4 d4 | G3B d4 d4 | d3c A4 A3B | d3B G8 | BcA A3B d4 | BcA A3B d4 | BcA A3B A3A | d3B G4 B4 | BcA A3B d4 | BcA A3B d4 | BcA A3B B3A | d3B G8:|"
   },
   {
-    name: ""Tilu tallaan"",
-    abc: "X:1\nT:"Tilu tallaan"\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Heikki Halonen/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0195\nK:g\n|: d3B G4 B4 | d3B G4 B4 | d3c A4 c4 | d3c A4 c4 | d3B G4 B4 | d3B G4 B4 | d3c A4 c4 | d3B G8 | d3B G2B2 G2B2 | d3B G2B2 G2B2 | d3c A2c2 A2c2 | d3c A2c2 A2c2 | d3B G2B2 G2B2 | d3B G2B2 G2B2 | d3c A2c2 A2c2 | d3B G8:|"
+    name: "Tilu tallaan",
+    abc: "X:1\nT:Tilu tallaan\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Heikki Halonen/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0195\nK:g\n|: d3B G4 B4 | d3B G4 B4 | d3c A4 c4 | d3c A4 c4 | d3B G4 B4 | d3B G4 B4 | d3c A4 c4 | d3B G8 | d3B G2B2 G2B2 | d3B G2B2 G2B2 | d3c A2c2 A2c2 | d3c A2c2 A2c2 | d3B G2B2 G2B2 | d3B G2B2 G2B2 | d3c A2c2 A2c2 | d3B G8:|"
   },
   {
-    name: ""Tilu tallaan"",
-    abc: "X:1\nT:"Tilu tallaan"\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Heikki Halonen/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0196\nK:g\n|: G3B d4 B4 | G3B d4 B4 | G3A c4 A4 | G3A c4 A4 | G3B d4 B4 | G3B d4 B4 | G3A c4 A4 | G3B d8 | G3B d2B2 d2B2 | G3B d2B2 d2B2 | G3A c2A2 c2A2 | G3A c2A2 c2A2 | G3B d2B2 d2B2 | G3B d2B2 d2B2 | G3A c2A2 c2A2 | G3B d8:|"
+    name: "Tilu tallaan",
+    abc: "X:1\nT:Tilu tallaan\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Heikki Halonen/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0196\nK:g\n|: G3B d4 B4 | G3B d4 B4 | G3A c4 A4 | G3A c4 A4 | G3B d4 B4 | G3B d4 B4 | G3A c4 A4 | G3B d8 | G3B d2B2 d2B2 | G3B d2B2 d2B2 | G3A c2A2 c2A2 | G3A c2A2 c2A2 | G3B d2B2 d2B2 | G3B d2B2 d2B2 | G3A c2A2 c2A2 | G3B d8:|"
   },
   {
     name: "Maaherran polska",
@@ -808,8 +808,8 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Suojärveläistä\nO:Suojärvi, Savihauta, Laatokan Karjala\nS:Grigo Bomba/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0202\nK:G\n|: B2A2 {B}c2B2 | A4 A,2D2 | d4 A,2D2 | d2d2 {e}f2e2 | d4 A,2D2 | g4 A,2D2 | g2f2 e2d2 | {e}f2e2 d4 | A,2D2 f2e2 | d2c2 {d}e2d2 | B4 B2A2 | {B}c2B2 A4 | A,2D2 d4 | A,2D2 d2d2 | {e}f2e2 d4 | A,2D2 g4 | A,2D2 g2f2 | e2d2 {e}f2e2 | d4 A,2D2 | f2e2 d2c2 | {d}e2d2 B4:|"
   },
   {
-    name: ""Sodíesi"",
-    abc: "X:1\nT:"Sodíesi"\nO:Suojärvi, Savihauta, Laatokan Karjala\nS:Grigo Bomba/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0203\nK:G\n|: BAGF AGFE | FEDF B2B2 | c2cB A2A2:|"
+    name: "Sodíesi",
+    abc: "X:1\nT:Sodíesi\nO:Suojärvi, Savihauta, Laatokan Karjala\nS:Grigo Bomba/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0203\nK:G\n|: BAGF AGFE | FEDF B2B2 | c2cB A2A2:|"
   },
   {
     name: "Kaputus",
@@ -824,8 +824,8 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Polkka\nO:Kitee, Huikkola, Pohjois-Karjala\nS:Jaakko Lonkainen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0206\nK:g\n|: G2A2 B2c2 | d4 G,2D2 | d4 G,2D2 | b2a2 g2d2 | {e}f2D6 | e2d4 D2:| | G2A2 B2c2 | d2D2 {d}d2D2 | {d}b2a2 g2d2 | {e}f2D6 | e2d4 D2 | g2g2 f2e2 | d4 G,2D2 | G2A2 B2A2 | {B}c2B2 A2G2 | G4 f2g2 | f2e2 d4 | G,2D2 G2A2 | B2A2 {B}c2B2 | A4 D2G4:|"
   },
   {
-    name: ""Sodíesi"",
-    abc: "X:1\nT:"Sodíesi"\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0207\nK:G\n|: e2eD4 f | g2fD2 {e}d2 | D2BD4 c | d2d2 A2A2 | {B}c2c2 {d}e2 | d4 G2e2 | {e}D4 {f}g2 | {f}D2e d2D2 | {B}D4 {c}d2 | d2A2 A2Bc2 | c2de2 d4 | G2B2 B2AG | ABcd2 D6 | ged2 d2e2 | e2dc2 D4 | BAG2 D2G2 | G4 B2B2 | AGAB {c}d2D6 | ged2 d2e2 | {e}D4 {d}c2 | {B}D2A G2D2 | G2G4:|"
+    name: "Sodíesi",
+    abc: "X:1\nT:Sodíesi\nO:Suistamo, Leppäsyrjä, Laatokan Karjala\nS:Iivana Mishukka/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0207\nK:G\n|: e2eD4 f | g2fD2 {e}d2 | D2BD4 c | d2d2 A2A2 | {B}c2c2 {d}e2 | d4 G2e2 | {e}D4 {f}g2 | {f}D2e d2D2 | {B}D4 {c}d2 | d2A2 A2Bc2 | c2de2 d4 | G2B2 B2AG | ABcd2 D6 | ged2 d2e2 | e2dc2 D4 | BAG2 D2G2 | G4 B2B2 | AGAB {c}d2D6 | ged2 d2e2 | {e}D4 {d}c2 | {B}D2A G2D2 | G2G4:|"
   },
   {
     name: "Lippa",
@@ -892,8 +892,8 @@ var esavelmat_kjs = [
     abc: "X:1\nT:kjs_0223\nO:Kesälahti, Humuvaara, Pohjois-Karjala\nS:/K. Collan\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0223\nK:a\n|: e3B c3d | e3c A3B | e3B c3d | e4 c4 | e3B c3d | e3c A3B | c2c2 B2cB | A4 A4:|"
   },
   {
-    name: ""Voi minuu, polone poiga"",
-    abc: "X:1\nT:"Voi minuu, polone poiga"\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0224\nK:G\n|: G2G2 c2BA | G2B2 A2Bd | c2BA B2c2 | A2B2 G2G2 | G2AB c2BA | G2B2 A2Bd | c2BA B2dc2 | |: A2B2 G2G2 | G2G2 c2d2 | ecdB dcA2 | BcdA dcB2:| | A2B2 G2G2 | G2G2:|"
+    name: "Voi minuu, polone poiga",
+    abc: "X:1\nT:Voi minuu, polone poiga\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0224\nK:G\n|: G2G2 c2BA | G2B2 A2Bd | c2BA B2c2 | A2B2 G2G2 | G2AB c2BA | G2B2 A2Bd | c2BA B2dc2 | |: A2B2 G2G2 | G2G2 c2d2 | ecdB dcA2 | BcdA dcB2:| | A2B2 G2G2 | G2G2:|"
   },
   {
     name: "Kakkuri",
@@ -936,8 +936,8 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Laulu\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0234\nK:G\n|: G2G2 G2AB | c2dB c2A2 | cBBc2 A2B2 | c2A2 A2A2 | Bcd2 d2d2 | B2c2 A2Bc | {d}B2A BcAD | G2D2 G2G2 | ABc2 cBc2 | A2cB ABc2 | A2B2 D3c2 | A2A2 A2A2 | A2Bc d2d2 | d2B2 {d}c2A2 | BcdB2 ABc | {A}G2G2 G2:|"
   },
   {
-    name: "Kakkunashshi"",
-    abc: "X:1\nT:Kakkunashshi"\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0235\nK:G\n|: d2dD3 {c}B2 | B2D2 c2D2 | A2d4 e2 | {e}D3 {c}d2d | D2cB2 D2A2 | G4 B2c2 | d2G2 A2BB | G2A2 {B}D3 | cdBc2 A2G4 | B2c2 d4 | G2A2 BBG2 | A2BD3 cd | {B}c2A2 G4:|"
+    name: "Kakkunashshi",
+    abc: "X:1\nT:Kakkunashshi\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0235\nK:G\n|: d2dD3 {c}B2 | B2D2 c2D2 | A2d4 e2 | {e}D3 {c}d2d | D2cB2 D2A2 | G4 B2c2 | d2G2 A2BB | G2A2 {B}D3 | cdBc2 A2G4 | B2c2 d4 | G2A2 BBG2 | A2BD3 cd | {B}c2A2 G4:|"
   },
   {
     name: "Pajatus",
@@ -968,28 +968,28 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Maanitus\nO:Impilahti, Hunttila, Laatokan Karjala\nS:Juho Vaittinen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0242\nK:nan\n|: d2dD4 B | c2dD2 {c}B2 | D2cD4 B | A2A2 e2c2 | D4 B2GD2 | {B}B2D2 {c}D4 | {B}A2A D2cB2 | D2cD4 A | B2G2 B2cd | {B}G2B D2cB2 | D2cD4 A | B2G2 D2BD2 | cdD6 | {B}G4 B2c | D4 {A}B2G2 | D2BD2 cdD6 | {B}G4 c2c2 | {A}B2c d2BG2 | G2D2 {B}D2c | d2Bc2 A2B2 | cdBG2 GGd2 | ddd2 d2cB2 | c2BA2 AAd2 | A2D4 d2 | {A}D2c B2D2 | {c}D4 {B}A2 | A2D2 d2D2 | A2D4 e2 | {d}D2c B2D2 | {c}D4 {B}A2 | A2D2 d2D2 | A2D4 G2 | B2D2 {B}D3 | cBG4 c4 | c2e2 {c}B2G | G4 {A}D2B | c2D2 c4 | {e}D2c B2D2 | B4 B2D2 | A2D2 AAd2 | AAd2 d2cB2 | ccD2 {B}A2D2 | A2D4 d2 | ddd2 c2D4 | B2cD2 {B}A3 | D3A B3B | c3c d3d | A3A3 {D}D2 | {B}D2c G2D2 | G2D4 e2 | cBB2 {c}A2D4 | B2B2 A2AA | B2BB c2A2 | B2d2 G2G4 | B2c2 e2ce | D4 cece | D4 cecB2 | G4 {A}D2B | c2D4 ec | {e}D4 cec | B2dD4 B3 | {d}D2B A2D2 | A2D4 d2 | A2e2 {d}D4 | {c}B2c D2BA2 | D2A2 D4 | d2A2 e2dD4 | {c}B2c D2BA2 | D2A2 D4 | d2A2 D2e2 | D2dc B2cB | A2AA B2BB | c2c2 d2d2 | A2A4 {B}D2 | {c}d2D2 {d}D4 | {e}d2c D2Bc | D2BA2 D4 | BGG2 D2A2 | D2G4:|"
   },
   {
-    name: ""Trepatshka"",
-    abc: "X:1\nT:"Trepatshka"\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0243\nK:nan\n|: d4 A2d2 | D4 B2dD2 | {B}c2D2 {d}D4 | cBcd2 D2A2 | D2d2 D4 | B2dD2 {B}c2 | D2dD4 c | Bcd2 D2A2 | D2d2 D4 | G2d2 D2c2 | D2d2 D4 | B2d2 D2A2 | D2d2 D4 | G2dD2 {B}c2 | D2dD5 | {c}B2c dDA2 | D2d2 D4 | G2d2 D2c2 | D2dD4 c | B2cB A2AA | A2Bc d2d2 | d2e2 d2c2 | B2A2 B2AB | c2AA B2G2 | A2AA A2AA | A2AA A2Bc | d2d2 d2e2 | d2c2 B2A2 | B2AB c2AA | B2G2 A2AA | A2AA A2AA | A2Bc d2d2 | d2e2 d2c2 | B2A2 B2AB | c2AA d2B2 | A4 G2B2 | D4 c2d2 | D2B2 D2d2 | D4 A2d2 | D2G2 D2dD4 | {B}c2d D2cB2 | D3c {d}D3 | A2d2 D2G2 | D2d2 D4 | c2dD2 cBD2 | {c}d2D4 A2 | d2D2 G2D2 | d2D4 c2 | {d}D2c B2D2 | {c}D4 {B}A2 | {B}D2A G2D2 | {A}D4 {B}c2 | {d}D2c B2D2 | {d}D4 {B}A2 | {B}D2A G2D2 | {A}D4 {B}c2 | {d}D2c B2D2 | cBA2 AAA2 | AAA2 Bcd2 | d2d2 e2d2 | c2B2 A2B2 | ABc2 AAB2 | G2A2 AAA2 | AAA2 AAA2 | Bcd2 d2d2 | e2d2 c2B2 | A2B2 ABc2 | AAd2 B2A2 | A2G2:|"
+    name: "Trepatshka",
+    abc: "X:1\nT:Trepatshka\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0243\nK:nan\n|: d4 A2d2 | D4 B2dD2 | {B}c2D2 {d}D4 | cBcd2 D2A2 | D2d2 D4 | B2dD2 {B}c2 | D2dD4 c | Bcd2 D2A2 | D2d2 D4 | G2d2 D2c2 | D2d2 D4 | B2d2 D2A2 | D2d2 D4 | G2dD2 {B}c2 | D2dD5 | {c}B2c dDA2 | D2d2 D4 | G2d2 D2c2 | D2dD4 c | B2cB A2AA | A2Bc d2d2 | d2e2 d2c2 | B2A2 B2AB | c2AA B2G2 | A2AA A2AA | A2AA A2Bc | d2d2 d2e2 | d2c2 B2A2 | B2AB c2AA | B2G2 A2AA | A2AA A2AA | A2Bc d2d2 | d2e2 d2c2 | B2A2 B2AB | c2AA d2B2 | A4 G2B2 | D4 c2d2 | D2B2 D2d2 | D4 A2d2 | D2G2 D2dD4 | {B}c2d D2cB2 | D3c {d}D3 | A2d2 D2G2 | D2d2 D4 | c2dD2 cBD2 | {c}d2D4 A2 | d2D2 G2D2 | d2D4 c2 | {d}D2c B2D2 | {c}D4 {B}A2 | {B}D2A G2D2 | {A}D4 {B}c2 | {d}D2c B2D2 | {d}D4 {B}A2 | {B}D2A G2D2 | {A}D4 {B}c2 | {d}D2c B2D2 | cBA2 AAA2 | AAA2 Bcd2 | d2d2 e2d2 | c2B2 A2B2 | ABc2 AAB2 | G2A2 AAA2 | AAA2 AAA2 | Bcd2 d2d2 | e2d2 c2B2 | A2B2 ABc2 | AAd2 B2A2 | A2G2:|"
   },
   {
-    name: ""Rissantka"",
-    abc: "X:1\nT:"Rissantka"\nO:Sortavala, Laatokan Karjala\nS:Pekka Lamberg/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0244\nK:nan\n|: d8 | B2D4 e2 | d2B2 c2Ac | B2G,4 e2 | d2B2 ccAc | B2G,4 e2 | d2B2 ccAc | B4 d4 | A2d2 B2d2 | B2d2 c2Ac | B2d2 A2d2 | B2d2 c2Ac | B2d2 A2d2 | B2d2 c2Ac | B2G,4 A2 | B2B2 dccB2 | G,4 A2B2 | B2dc {c}B2G,4 | A2B2 d2c2 | AcB4 D4 | G,2A2 B2d2 | c2Ac B4 | D4 G,2A2 | B2B2 c2Ac | B4 d4 | B2d4 d2 | dedB c2Ac | B2d4 d2 | dedB c2Ac | B2G,4 A2 | B2AB c2Ac | B2G,4 A2 | B2AB c2Ac | B2G,4 A2 | B2AB cBAc | B2G,4 A2 | B2AB cBAc | B4 d4 | A2d2 B2d2 | c2Ac B2G,2 | A2d2 B2d2 | c2Ac B2G,2 | G,2A2 B2B2 | cBAc B2G,2 | G,2A2 B2B2 | cBAc B4 | A4 G,4:|"
+    name: "Rissantka",
+    abc: "X:1\nT:Rissantka\nO:Sortavala, Laatokan Karjala\nS:Pekka Lamberg/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0244\nK:nan\n|: d8 | B2D4 e2 | d2B2 c2Ac | B2G,4 e2 | d2B2 ccAc | B2G,4 e2 | d2B2 ccAc | B4 d4 | A2d2 B2d2 | B2d2 c2Ac | B2d2 A2d2 | B2d2 c2Ac | B2d2 A2d2 | B2d2 c2Ac | B2G,4 A2 | B2B2 dccB2 | G,4 A2B2 | B2dc {c}B2G,4 | A2B2 d2c2 | AcB4 D4 | G,2A2 B2d2 | c2Ac B4 | D4 G,2A2 | B2B2 c2Ac | B4 d4 | B2d4 d2 | dedB c2Ac | B2d4 d2 | dedB c2Ac | B2G,4 A2 | B2AB c2Ac | B2G,4 A2 | B2AB c2Ac | B2G,4 A2 | B2AB cBAc | B2G,4 A2 | B2AB cBAc | B4 d4 | A2d2 B2d2 | c2Ac B2G,2 | A2d2 B2d2 | c2Ac B2G,2 | G,2A2 B2B2 | cBAc B2G,2 | G,2A2 B2B2 | cBAc B4 | A4 G,4:|"
   },
   {
-    name: ""Tshiizhik"",
-    abc: "X:1\nT:"Tshiizhik"\nO:Impilahti, Hunttila, Laatokan Karjala\nS:Juho Vaittinen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0245\nK:nan\n|: G4 d2dd | d2dd d2dc | c2BB A2AA | A2A2 {c}B2c | BAG2 {B}D2c | d2D2 {d}D4 | {B}d2d2 D2e2 | D2dD4 c2 | BcD2 {B}A2D2 | A2A2 c2:|"
+    name: "Tshiizhik",
+    abc: "X:1\nT:Tshiizhik\nO:Impilahti, Hunttila, Laatokan Karjala\nS:Juho Vaittinen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0245\nK:nan\n|: G4 d2dd | d2dd d2dc | c2BB A2AA | A2A2 {c}B2c | BAG2 {B}D2c | d2D2 {d}D4 | {B}d2d2 D2e2 | D2dD4 c2 | BcD2 {B}A2D2 | A2A2 c2:|"
   },
   {
-    name: ""Tshiizhik"",
-    abc: "X:1\nT:"Tshiizhik"\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0246\nK:nan\n|: d2Bc d2BB | e2d2 c2B2 | A2G2 A2AA | BcBA B2G2:||: B2BB B2BB | c2B2 A2G2 | A2G2 A2AA | BcBA B2G2:|"
+    name: "Tshiizhik",
+    abc: "X:1\nT:Tshiizhik\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0246\nK:nan\n|: d2Bc d2BB | e2d2 c2B2 | A2G2 A2AA | BcBA B2G2:||: B2BB B2BB | c2B2 A2G2 | A2G2 A2AA | BcBA B2G2:|"
   },
   {
-    name: ""Hof-falssi"",
-    abc: "X:1\nT:"Hof-falssi"\nO:Impilahti, Hunttila, Laatokan Karjala\nS:Juho Vaittinen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0247\nK:nan\n|: G2A2 D3B2 | c2d2 dGd2 | d2G2 A2D3 | B2c2 d2dG | d2d2 e2e4 | e2D2 d2D2 | d4 {c}D2B | A2D2 A2D3 | c2BD2 {A}G2 | D2B2 D3G2 | {c}D2d e2D2 | e4 e2D2 | d2D2 {d}D3 | {c}d2c D2dA2 | D2A2 dcBA | G2B2 D3G2 | cde2 e4 | e2D2 d2D2 | {d}D3 {c}d2c | D2dA2 D2A2 | dcBA G2G2 | G2:|"
+    name: "Hof-falssi",
+    abc: "X:1\nT:Hof-falssi\nO:Impilahti, Hunttila, Laatokan Karjala\nS:Juho Vaittinen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0247\nK:nan\n|: G2A2 D3B2 | c2d2 dGd2 | d2G2 A2D3 | B2c2 d2dG | d2d2 e2e4 | e2D2 d2D2 | d4 {c}D2B | A2D2 A2D3 | c2BD2 {A}G2 | D2B2 D3G2 | {c}D2d e2D2 | e4 e2D2 | d2D2 {d}D3 | {c}d2c D2dA2 | D2A2 dcBA | G2B2 D3G2 | cde2 e4 | e2D2 d2D2 | {d}D3 {c}d2c | D2dA2 D2A2 | dcBA G2G2 | G2:|"
   },
   {
-    name: ""Hop-valssi"",
-    abc: "X:1\nT:"Hop-valssi"\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4, 3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0248\nK:nan\n|: G2A2 D3B2 | c2dc Bcd2 | e2D2 d2D2 | A2D3 B2c2 | dcBc d2e2 | d2A2 D3B2 | c2dc Bcd2 | e2d2 A2B2 | c2d4 G2 | B2D3 d2d | D2Bc2 D2c2 | D3e2 c2D2 | B2D2 {c}D3 | d3d B:|"
+    name: "Hop-valssi",
+    abc: "X:1\nT:Hop-valssi\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4, 3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0248\nK:nan\n|: G2A2 D3B2 | c2dc Bcd2 | e2D2 d2D2 | A2D3 B2c2 | dcBc d2e2 | d2A2 D3B2 | c2dc Bcd2 | e2d2 A2B2 | c2d4 G2 | B2D3 d2d | D2Bc2 D2c2 | D3e2 c2D2 | B2D2 {c}D3 | d3d B:|"
   },
   {
     name: "Hoppavalssi",
@@ -1012,12 +1012,12 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Kiperä\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0253\nK:nan\n|: G2d4 B2 | c2BA2 A2A2 | A2cD4 d | e2:|"
   },
   {
-    name: ""Letshka"",
-    abc: "X:1\nT:"Letshka"\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0254\nK:nan\n|: A4 G2B2 | D4 A2B2 | G2B2 D4 | A2BB c2d2 | B2D4 d2 | G2B2 D4 | A2B2 G2B2 | D4 A2BB | c2d2 B2D4 | d2c2 dcB2 | d2G4 c2 | cce2 eeB2 | ccd2 d2A2 | A2d2 dcB2 | AAG2 ABc2 | c4 e2D2 | B2D2 c2D4 | d2dd A2AA | d2cc B2AA | G2AB c2c4 | e2D2 B2D2 | c2D4 d2 | ddA2 AAd2 | ccB2 A2G4 | A4 G2:|"
+    name: "Letshka",
+    abc: "X:1\nT:Letshka\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0254\nK:nan\n|: A4 G2B2 | D4 A2B2 | G2B2 D4 | A2BB c2d2 | B2D4 d2 | G2B2 D4 | A2B2 G2B2 | D4 A2BB | c2d2 B2D4 | d2c2 dcB2 | d2G4 c2 | cce2 eeB2 | ccd2 d2A2 | A2d2 dcB2 | AAG2 ABc2 | c4 e2D2 | B2D2 c2D4 | d2dd A2AA | d2cc B2AA | G2AB c2c4 | e2D2 B2D2 | c2D4 d2 | ddA2 AAd2 | ccB2 A2G4 | A4 G2:|"
   },
   {
-    name: ""Let´ska"",
-    abc: "X:1\nT:"Let´ska"\nO:Impilahti, Hunttila, Laatokan Karjala\nS:Juho Vaittinen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0255\nK:nan\n|: G4 A4 | D6 G2 | B2D2 A2D2 | {B}D4 {A}G2 | B2D2 A2D2 | {B}D4 {c}d2 | d2B4 G4 | A4 D6 | G2B2 D2A2 | D2BD4 A | G2B2 D2A2 | D2BD4 c | d2d2 B4 | |: G4 c2c2 | D4 e2e2 | D2B2 D2B2 | D4 d2d2 | D2A2 D2A2 | D4 d2dD2 | {c}B4 D4:| | G4:|"
+    name: "Let´ska",
+    abc: "X:1\nT:Let´ska\nO:Impilahti, Hunttila, Laatokan Karjala\nS:Juho Vaittinen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0255\nK:nan\n|: G4 A4 | D6 G2 | B2D2 A2D2 | {B}D4 {A}G2 | B2D2 A2D2 | {B}D4 {c}d2 | d2B4 G4 | A4 D6 | G2B2 D2A2 | D2BD4 A | G2B2 D2A2 | D2BD4 c | d2d2 B4 | |: G4 c2c2 | D4 e2e2 | D2B2 D2B2 | D4 d2d2 | D2A2 D2A2 | D4 d2dD2 | {c}B4 D4:| | G4:|"
   },
   {
     name: "Hoilola",
@@ -1040,8 +1040,8 @@ var esavelmat_kjs = [
     abc: "X:1\nT:Nyyhkytys\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0260\nK:nan\n|: d2dD3 {c}B2 | G2D2 d2D2 | {d}D3 {c}B2G2 | D2A2 D2B2 | c2c2 D2dD2 | cBD3 {A}B2 | G2D2 d2D2 | {d}D3 {c}B2G2 | D2d2 D2dD3 | {c}B2G2 D2A2 | D2B2 c2c2 | D2dD2 cBD3 | {A}B2G2 D2c2 | D2c2 e2c2 | D2d2 D2dD3 | {c}B2G2 D2A2 | D2B2 D3c2 | c2D2 {d}D2c | {B}D3 {A}B2G2 | c2c2 e2c2 | D2d2 D2dD3 | {c}B2G2 D2A2 | D2B2 D3c2 | c2D2 {d}D2c | {B}D3 {A}B2G2:|"
   },
   {
-    name: ""Vikker´tanssi"",
-    abc: "X:1\nT:"Vikker´tanssi"\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0261\nK:nan\n|: d4 d2d2 | D2e2 D2B2 | c2D4 e2 | d2c2 B2A2 | {B}c4 B2c2 | d4 d2d2 | D2e2 D2B2 | c2D4 e2 | d2c2 B2A2 | {B}c4 B4 | c2B2 D4 | A2c2 D2B2 | D2A2 D4 | G2B2 D2A2 | D2c2 D4 | B2A2 G4 | A2D4 B2 | c2B2 D4 | A2c2 D2B2 | D2A2 D4 | G2B2 D2A2 | D2c2 D4 | B2A2 G4 | G2:|"
+    name: "Vikker´tanssi",
+    abc: "X:1\nT:Vikker´tanssi\nO:Impilahti, Koirinoja, Laatokan Karjala\nS:Feodor Pratshu/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0261\nK:nan\n|: d4 d2d2 | D2e2 D2B2 | c2D4 e2 | d2c2 B2A2 | {B}c4 B2c2 | d4 d2d2 | D2e2 D2B2 | c2D4 e2 | d2c2 B2A2 | {B}c4 B4 | c2B2 D4 | A2c2 D2B2 | D2A2 D4 | G2B2 D2A2 | D2c2 D4 | B2A2 G4 | A2D4 B2 | c2B2 D4 | A2c2 D2B2 | D2A2 D4 | G2B2 D2A2 | D2c2 D4 | B2A2 G4 | G2:|"
   },
   {
     name: "Viipurilaista",
@@ -1084,8 +1084,8 @@ var esavelmat_kjs = [
     abc: "X:1\nT:kjs_0271\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Antti Halonen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0271\nK:nan\n|: dc_B2 d2A2 | d2G2 G2_B2 | dc_B2 d2A2 | d2G2 G2A2 | d4 c2A2 | d2G2 G2A2 | d2_B2 c2A2 | d2G2 d4:|"
   },
   {
-    name: ""Paholaisen marssi"",
-    abc: "X:1\nT:"Paholaisen marssi"\nO:Helsinki, Uusimaa\nS:J. Laitila/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0272\nK:nan\n|: d2dc _B2_B2 | A2A_B d2d2 | d2dc _B2_B2 | A2A_B d2d2 | c2c2 c2d2 | d2d_B d2d2 | c2c2 c2d2 | d2d_B d2d2 | GA_Bc dc_BG | A2_BA G2G2 | GA_Bc dc_BG | A2_BA G2G2:|"
+    name: "Paholaisen marssi",
+    abc: "X:1\nT:Paholaisen marssi\nO:Helsinki, Uusimaa\nS:J. Laitila/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0272\nK:nan\n|: d2dc _B2_B2 | A2A_B d2d2 | d2dc _B2_B2 | A2A_B d2d2 | c2c2 c2d2 | d2d_B d2d2 | c2c2 c2d2 | d2d_B d2d2 | GA_Bc dc_BG | A2_BA G2G2 | GA_Bc dc_BG | A2_BA G2G2:|"
   },
   {
     name: "kjs_0273",
@@ -1096,8 +1096,8 @@ var esavelmat_kjs = [
     abc: "X:1\nT:kjs_0274\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Antti Halonen/A. O. Väisänen\nM:2/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0274\nK:nan\n|: d2A_B c_BAG | d2A_B d2d2 | d2A_B c_BAG | d2A_B d2d2 | c2dA c_BAG | d2A_B d2d2 | c2dA c_BAG | d2A_B d2d2:|"
   },
   {
-    name: ""Hyvä ilta, minun kyyhkysein"",
-    abc: "X:1\nT:"Hyvä ilta, minun kyyhkysein"\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Antti Halonen/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0275\nK:nan\n|: G2A2 _B3A _B2c2 | d3c d8 | A3_B c4 c4 | |: d4 d8 | d3_B c4 d4 | _B3c d4 G4 | G2A2 d4 A2G2:| | d4 d8:|"
+    name: "Hyvä ilta, minun kyyhkysein",
+    abc: "X:1\nT:Hyvä ilta, minun kyyhkysein\nO:Lapinlahti, Akkala, Pohjois-Savo\nS:Antti Halonen/A. O. Väisänen\nM:3/4\nL:1/16\nR:Nuotti-kirja\nB:eSävelmät kjs_0275\nK:nan\n|: G2A2 _B3A _B2c2 | d3c d8 | A3_B c4 c4 | |: d4 d8 | d3_B c4 d4 | _B3c d4 G4 | G2A2 d4 A2G2:| | d4 d8:|"
   },
   {
     name: "kjs_0276",
