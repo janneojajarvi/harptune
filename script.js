@@ -14,6 +14,7 @@ async function loadGistData() {
     const urls = [
         "sessionSet01.js",
         "esavelmat_kansantanssit.js",
+        "esavelmat_kjs.js",
     "sessionSet05.js",
     "sessionSet06.js",
     "sessionSet07.js",
