@@ -34,6 +34,8 @@ async function loadGistData() {
     "esavelmat_rs1.js",
         "esavelmat_rs2.js",
          "suomitest3.js",
+        "richardrobinsonbook.js",
+        "sekalaista01.js",
     "fsfolkdiktning01.js",
     "fsfolkdiktning02.js",
     "folkwikiSet1.js",
