@@ -5,11 +5,11 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3335",
-    abc: "X:1\nT:ls4_3335\nO:Rautalampi, Pohjois-Savo\nS:I. Krohn\nM:3/4, 2/4\nL:1/16\nR:\nN:C III b 7\nZ:\nB:eSävelmät ls4_3335\nK:C\n|: G3G E4 c4 | G3F E4 D4 | c3c B4 d4 | A4 G8:| | G4 e4 d4 | c2B2 A4 B4 | c4 A4 c3c | B4 d4 A4 | G8 G4 | e4 d4 c2B2 | A4 B4 c4 | A4 c3c B4 | d4 A4 G8:|"
+    abc: "X:1\nT:ls4_3335\nO:Rautalampi, Pohjois-Savo\nS:I. Krohn\nM:3/4 ja 2/4\nL:1/16\nR:\nN:C III b 7\nZ:\nB:eSävelmät ls4_3335\nK:C\n|: G3G E4 c4 | G3F E4 D4 | c3c B4 d4 | A4 G8:| | G4 e4 d4 | c2B2 A4 B4 | c4 A4 c3c | B4 d4 A4 | G8 G4 | e4 d4 c2B2 | A4 B4 c4 | A4 c3c B4 | d4 A4 G8:|"
   },
   {
     name: "ls4_3336",
-    abc: "X:1\nT:ls4_3336\nO:Joroinen, Etelä-Savo\nS:E. Hynninen\nM:3/4, 2/4\nL:1/16\nR:\nN:C III b 7\nZ:\nB:eSävelmät ls4_3336\nK:C\n|: G2G2 E4 c4 | G2F2 E4 D4 | c2c2 B4 d4 | A4 G8 | e2d2 c2B2 A2B2 | c4 A4 e2d2 | c2B2 A2B2 c4 | A4 c2c2 B4 | d2d2 A4 G4:|"
+    abc: "X:1\nT:ls4_3336\nO:Joroinen, Etelä-Savo\nS:E. Hynninen\nM:3/4 ja 2/4\nL:1/16\nR:\nN:C III b 7\nZ:\nB:eSävelmät ls4_3336\nK:C\n|: G2G2 E4 c4 | G2F2 E4 D4 | c2c2 B4 d4 | A4 G8 | e2d2 c2B2 A2B2 | c4 A4 e2d2 | c2B2 A2B2 c4 | A4 c2c2 B4 | d2d2 A4 G4:|"
   },
   {
     name: "ls4_3337",
@@ -33,7 +33,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3342",
-    abc: "X:1\nT:ls4_3342\nO:Paltamo, Kainuu\nS:E. Levon\nM:3/4, 2/4\nL:1/16\nR:\nN:C III b 7\nZ:\nB:eSävelmät ls4_3342\nK:C\n|: c4 G4 G4 | G4 E8 | F4 D4 F4 | A4 G8 | G4 c4 c4 | B4 B4 B4 | A4 F4 A4 | d4 c4 c4 | c4 B4 B4 | B4 A4 F4 | A4 G4:|"
+    abc: "X:1\nT:ls4_3342\nO:Paltamo, Kainuu\nS:E. Levon\nM:3/4 ja 2/4\nL:1/16\nR:\nN:C III b 7\nZ:\nB:eSävelmät ls4_3342\nK:C\n|: c4 G4 G4 | G4 E8 | F4 D4 F4 | A4 G8 | G4 c4 c4 | B4 B4 B4 | A4 F4 A4 | d4 c4 c4 | c4 B4 B4 | B4 A4 F4 | A4 G4:|"
   },
   {
     name: "ls4_3343",
@@ -69,7 +69,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3351",
-    abc: "X:1\nT:ls4_3351\nO:Narvusi (Inkeri)(Narvusi), Inkeri\nS:A. Launis\nM:2/4, 2/8\nL:1/16\nR:\nN:C III c 3\nZ:\nB:eSävelmät ls4_3351\nK:C\n|: G4 G2c2 | G4 G4 | F4 F2A2 | |: G4 G4 | c2c2 c2c2 | G2G2 G2G2 | A2G2 F2E2:| | G4 G4:|"
+    abc: "X:1\nT:ls4_3351\nO:Narvusi (Inkeri)(Narvusi), Inkeri\nS:A. Launis\nM:2/4 ja 2/8\nL:1/16\nR:\nN:C III c 3\nZ:\nB:eSävelmät ls4_3351\nK:C\n|: G4 G2c2 | G4 G4 | F4 F2A2 | |: G4 G4 | c2c2 c2c2 | G2G2 G2G2 | A2G2 F2E2:| | G4 G4:|"
   },
   {
     name: "ls4_3352",
@@ -221,15 +221,15 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3389",
-    abc: "X:1\nT:ls4_3389\nO:-()\nS:A. Väätänen\nM:3/4, 2/8\nL:1/16\nR:\nN:C III d 2\nZ:\nB:eSävelmät ls4_3389\nK:C\n|: G2G2 E4 c4 | G2G2 E4 D4 | c2c2 B4 d4 | A4 G8 | e2c2 c2BB A2B2 | c2G2 e2c2 c2BB | A2B2 c2G2 c2c2 | B4 d4 A4 | G4:|"
+    abc: "X:1\nT:ls4_3389\nO:-()\nS:A. Väätänen\nM:3/4 ja 2/8\nL:1/16\nR:\nN:C III d 2\nZ:\nB:eSävelmät ls4_3389\nK:C\n|: G2G2 E4 c4 | G2G2 E4 D4 | c2c2 B4 d4 | A4 G8 | e2c2 c2BB A2B2 | c2G2 e2c2 c2BB | A2B2 c2G2 c2c2 | B4 d4 A4 | G4:|"
   },
   {
     name: "ls4_3390",
-    abc: "X:1\nT:ls4_3390\nO:Kuusamo, Pohjois-Pohjanmaa\nS:E. Levon\nM:3/4, 2/8\nL:1/16\nR:\nN:C III d 2\nZ:\nB:eSävelmät ls4_3390\nK:C\n|: G2G2 E4 c4 | G2G2 E4 D4 | c4 B2B2 d2A2 | A4 G8 | e2d2 c2B2 A2B2 | c2G2 e2d2 c2B2 | A2B2 c2G2 c4 | B2c2 d2A2 A4 | G4:|"
+    abc: "X:1\nT:ls4_3390\nO:Kuusamo, Pohjois-Pohjanmaa\nS:E. Levon\nM:3/4 ja 2/8\nL:1/16\nR:\nN:C III d 2\nZ:\nB:eSävelmät ls4_3390\nK:C\n|: G2G2 E4 c4 | G2G2 E4 D4 | c4 B2B2 d2A2 | A4 G8 | e2d2 c2B2 A2B2 | c2G2 e2d2 c2B2 | A2B2 c2G2 c4 | B2c2 d2A2 A4 | G4:|"
   },
   {
     name: "ls4_3391",
-    abc: "X:1\nT:ls4_3391\nO:Karjala, Karjalan kannas\nS:A. Valmari\nM:3/4, 2/8\nL:1/16\nR:\nN:C III d 2\nZ:\nB:eSävelmät ls4_3391\nK:C\n|: G3G E4 c4 | G3G E4 D4 | c3c B4 d4 | A4 G8 | e3d c3B A3B | c3G e3d c3B | A3B c3G c3c | B4 d4 A4 | G4 c3c B4 | d4 A4 G4:|"
+    abc: "X:1\nT:ls4_3391\nO:Karjala, Karjalan kannas\nS:A. Valmari\nM:3/4 ja 2/8\nL:1/16\nR:\nN:C III d 2\nZ:\nB:eSävelmät ls4_3391\nK:C\n|: G3G E4 c4 | G3G E4 D4 | c3c B4 d4 | A4 G8 | e3d c3B A3B | c3G e3d c3B | A3B c3G c3c | B4 d4 A4 | G4 c3c B4 | d4 A4 G4:|"
   },
   {
     name: "ls4_3392",
@@ -285,7 +285,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3405",
-    abc: "X:1\nT:ls4_3405\nO:Puolanka, Kainuu\nS:E. Levon\nM:2/4, 5/4\nL:1/16\nR:\nN:C III d 2\nZ:\nB:eSävelmät ls4_3405\nK:a\n|: E2E2 A2A2 | A2G2 E2G2 | B4 G4 | A4 B2B2 | e4 B2A2 | G2E2 ^F2G2 | E8 | E4 B6 | G2B2 c2d2 | e2^f2 g2e4 | e4 A4 | B4 e4 | B2A2 G2E2 | ^F2G2 E8 | E4:|"
+    abc: "X:1\nT:ls4_3405\nO:Puolanka, Kainuu\nS:E. Levon\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C III d 2\nZ:\nB:eSävelmät ls4_3405\nK:a\n|: E2E2 A2A2 | A2G2 E2G2 | B4 G4 | A4 B2B2 | e4 B2A2 | G2E2 ^F2G2 | E8 | E4 B6 | G2B2 c2d2 | e2^f2 g2e4 | e4 A4 | B4 e4 | B2A2 G2E2 | ^F2G2 E8 | E4:|"
   },
   {
     name: "ls4_3406",
@@ -557,7 +557,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3473",
-    abc: "X:1\nT:ls4_3473\nO:Häme, Karjalan kannas\nS:L. Björkbom ja T. Vallenius\nM:2/4, 5/4\nL:1/16\nR:\nN:C III d 4\nZ:\nB:eSävelmät ls4_3473\nK:C\n|: G2G2 G2E2 | C4 E2^F2 | G4 G4 | D4 G2A2 | c2c2 c2c2 | c4 _B4 | G8 | G8 | D4 ^F2A2 | c4 c2A2 | d8 | d2_B2 G4 | G4 D4 | ^F2A2 c4 | A4 G8 | G8:|"
+    abc: "X:1\nT:ls4_3473\nO:Häme, Karjalan kannas\nS:L. Björkbom ja T. Vallenius\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C III d 4\nZ:\nB:eSävelmät ls4_3473\nK:C\n|: G2G2 G2E2 | C4 E2^F2 | G4 G4 | D4 G2A2 | c2c2 c2c2 | c4 _B4 | G8 | G8 | D4 ^F2A2 | c4 c2A2 | d8 | d2_B2 G4 | G4 D4 | ^F2A2 c4 | A4 G8 | G8:|"
   },
   {
     name: "ls4_3474",
@@ -589,7 +589,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3481",
-    abc: "X:1\nT:ls4_3481\nO:Askola, Itä-Uusimaa\nS:J. Relander\nM:2/4, 3/4\nL:1/16\nR:\nN:C III d 4\nZ:\nB:eSävelmät ls4_3481\nK:C\n|: G4 c4 | B2B2 A2A2 | G2E2 E4 | D4 G2B2 | d4 d4 | c2B2 A2G2 | c4 B4 | G4 c4 | B2B2 A2G2 | G2E2 E4 | D4 G2B2 | d2d2 c2^F2 | A4 G4 | d8 | c4 B4 | A4 c4 | B4 A4 | G4 A2A2 | G2^F2 G2A2 | _B4 A8 | G4 d8 | c4 B4 | A4 c4 | B4 A4 | G4 A2A2 | G2^F2 G2A2 | _B4 A8 | G4:|"
+    abc: "X:1\nT:ls4_3481\nO:Askola, Itä-Uusimaa\nS:J. Relander\nM:2/4 ja 3/4\nL:1/16\nR:\nN:C III d 4\nZ:\nB:eSävelmät ls4_3481\nK:C\n|: G4 c4 | B2B2 A2A2 | G2E2 E4 | D4 G2B2 | d4 d4 | c2B2 A2G2 | c4 B4 | G4 c4 | B2B2 A2G2 | G2E2 E4 | D4 G2B2 | d2d2 c2^F2 | A4 G4 | d8 | c4 B4 | A4 c4 | B4 A4 | G4 A2A2 | G2^F2 G2A2 | _B4 A8 | G4 d8 | c4 B4 | A4 c4 | B4 A4 | G4 A2A2 | G2^F2 G2A2 | _B4 A8 | G4:|"
   },
   {
     name: "ls4_3482",
@@ -633,7 +633,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3492",
-    abc: "X:1\nT:ls4_3492\nO:Pieksämäki, Etelä-Savo\nS:M. Nyberg\nM:2/4, 3/4\nL:1/16\nR:\nN:C III d 4\nZ:\nB:eSävelmät ls4_3492\nK:a\n|: E4 E2^F2 | G4 E2E2 | A6 B2 | c4 B4 | A2A2 G2G2 | E2E2 D4 | ^F4 E8 | E8:|"
+    abc: "X:1\nT:ls4_3492\nO:Pieksämäki, Etelä-Savo\nS:M. Nyberg\nM:2/4 ja 3/4\nL:1/16\nR:\nN:C III d 4\nZ:\nB:eSävelmät ls4_3492\nK:a\n|: E4 E2^F2 | G4 E2E2 | A6 B2 | c4 B4 | A2A2 G2G2 | E2E2 D4 | ^F4 E8 | E8:|"
   },
   {
     name: "ls4_3493",
@@ -773,7 +773,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3527",
-    abc: "X:1\nT:ls4_3527\nO:Yhinmäki (Inkeri)(Yhimäki), Inkeri\nS:E. Levon\nM:3/8, 5/8\nL:1/16\nR:\nN:C III d 4\nZ:\nB:eSävelmät ls4_3527\nK:a\n|: B2e4 | B2d4 | A2B2 c2 | B4 G^F | E2G2 A2 | B4 _E2 | E6 | B2e4 | B2d4 | A2c2 d2 | B4 G2 | E2G2 A2 | B4 _E2 | E6:|"
+    abc: "X:1\nT:ls4_3527\nO:Yhinmäki (Inkeri)(Yhimäki), Inkeri\nS:E. Levon\nM:3/8 ja 5/8\nL:1/16\nR:\nN:C III d 4\nZ:\nB:eSävelmät ls4_3527\nK:a\n|: B2e4 | B2d4 | A2B2 c2 | B4 G^F | E2G2 A2 | B4 _E2 | E6 | B2e4 | B2d4 | A2c2 d2 | B4 G2 | E2G2 A2 | B4 _E2 | E6:|"
   },
   {
     name: "ls4_3528",
@@ -1021,7 +1021,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3589",
-    abc: "X:1\nT:ls4_3589\nO:Häme, Karjalan kannas\nS:L. Björkbom ja T. Vallenius\nM:2/4, 5/4\nL:1/16\nR:\nN:C III d 4\nZ:\nB:eSävelmät ls4_3589\nK:d\n|: d8 | c2c2 G2G2 | c4 B2B2 | A4 E4 | F4 G4 | A8 | A4 c4 | B4 A8 | A8:||: d4 G2G2 | c4 B4 | A4 E2E2 | F4 G4 | A4 A4 | c4 B4 | A8 | A8:|"
+    abc: "X:1\nT:ls4_3589\nO:Häme, Karjalan kannas\nS:L. Björkbom ja T. Vallenius\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C III d 4\nZ:\nB:eSävelmät ls4_3589\nK:d\n|: d8 | c2c2 G2G2 | c4 B2B2 | A4 E4 | F4 G4 | A8 | A4 c4 | B4 A8 | A8:||: d4 G2G2 | c4 B4 | A4 E2E2 | F4 G4 | A4 A4 | c4 B4 | A8 | A8:|"
   },
   {
     name: "ls4_3590",
@@ -1113,7 +1113,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3612",
-    abc: "X:1\nT:ls4_3612\nO:Pohjanmaa, Pohjanmaa\nS:Juho Ranta\nM:2/4, 3/4\nL:1/16\nR:\nN:C III g 4\nZ:\nB:eSävelmät ls4_3612\nK:d\n|: F4 A4 | A2=B2 A4 | A4 G4 | G2E2 C2C2 | C2E2 G4 | G2F2 D4 | F4 A8 | A4 F4 | A4 A2=B2 | A4 A4 | G4 G2E2 | C2C2 C2E2 | G4 G2F2 | D4 F4 | A8 | |: A4 F4 | A4 A4 | c4 c2c2 | d4 A2=B2 | c4 c4 | d4 d2d2 | c4 =B4 | A4 A4:| | A4:|"
+    abc: "X:1\nT:ls4_3612\nO:Pohjanmaa, Pohjanmaa\nS:Juho Ranta\nM:2/4 ja 3/4\nL:1/16\nR:\nN:C III g 4\nZ:\nB:eSävelmät ls4_3612\nK:d\n|: F4 A4 | A2=B2 A4 | A4 G4 | G2E2 C2C2 | C2E2 G4 | G2F2 D4 | F4 A8 | A4 F4 | A4 A2=B2 | A4 A4 | G4 G2E2 | C2C2 C2E2 | G4 G2F2 | D4 F4 | A8 | |: A4 F4 | A4 A4 | c4 c2c2 | d4 A2=B2 | c4 c4 | d4 d2d2 | c4 =B4 | A4 A4:| | A4:|"
   },
   {
     name: "ls4_3613",
@@ -1125,7 +1125,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3615",
-    abc: "X:1\nT:ls4_3615\nO:Lammi, Kanta-Häme\nS:K. Kalliola\nM:3/4, 2/8\nL:1/16\nR:\nN:C III h 1\nZ:\nB:eSävelmät ls4_3615\nK:C\n|: G3G c4 e4 | c3B A4 d4 | c3c E4 F4 | A4 G4 G3G | c4 e4 c3B | A4 d4 c3c | E4 F4 A4 | G4 e2d2 ccBB | A2B2 c2G2 e2d2 | ccBB A2B2 c2G2 | c3B A4 d4 | A4 G4 e2d2 | ccBB A2B2 c2G2 | e2d2 ccBB A2B2 | c2G2 c3B A4 | d4 A4 G4:|"
+    abc: "X:1\nT:ls4_3615\nO:Lammi, Kanta-Häme\nS:K. Kalliola\nM:3/4 ja 2/8\nL:1/16\nR:\nN:C III h 1\nZ:\nB:eSävelmät ls4_3615\nK:C\n|: G3G c4 e4 | c3B A4 d4 | c3c E4 F4 | A4 G4 G3G | c4 e4 c3B | A4 d4 c3c | E4 F4 A4 | G4 e2d2 ccBB | A2B2 c2G2 e2d2 | ccBB A2B2 c2G2 | c3B A4 d4 | A4 G4 e2d2 | ccBB A2B2 c2G2 | e2d2 ccBB A2B2 | c2G2 c3B A4 | d4 A4 G4:|"
   },
   {
     name: "ls4_3616",
@@ -1241,7 +1241,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3647",
-    abc: "X:1\nT:ls4_3647\nO:Isokyrö, Pohjanmaa\nS:M. Rinta\nM:2/4, 5/4\nL:1/16\nR:\nN:C IV a 4\nZ:\nB:eSävelmät ls4_3647\nK:a\n|: B2B2 B2B2 | B4 E2^F2 | G4 E4 | A8 | A4 A2A2 | A4 ^F2^F2 | G4 A4 | B8 | B4 B2c2 | d4 d2B2 | e4 e4 | B8 | B4 G2G2 | G2G2 ^F2^F2 | G2^F2 E4 | E4 E4:|"
+    abc: "X:1\nT:ls4_3647\nO:Isokyrö, Pohjanmaa\nS:M. Rinta\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C IV a 4\nZ:\nB:eSävelmät ls4_3647\nK:a\n|: B2B2 B2B2 | B4 E2^F2 | G4 E4 | A8 | A4 A2A2 | A4 ^F2^F2 | G4 A4 | B8 | B4 B2c2 | d4 d2B2 | e4 e4 | B8 | B4 G2G2 | G2G2 ^F2^F2 | G2^F2 E4 | E4 E4:|"
   },
   {
     name: "ls4_3648",
@@ -1297,7 +1297,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3661",
-    abc: "X:1\nT:ls4_3661\nO:Rääk, Pohjois-Karjala\nS:L. Soini\nM:2/4, 2/8\nL:1/16\nR:\nN:C IV a 4\nZ:\nB:eSävelmät ls4_3661\nK:a\n|: B4 E4 | G4 A4 | B2B2 A2AA | d2d2 B2e2 | B4 d2eB4 | c3B B2^F2 | G2EE G2^F2 | B2F2 E4 | E4:|"
+    abc: "X:1\nT:ls4_3661\nO:Rääk, Pohjois-Karjala\nS:L. Soini\nM:2/4 ja 2/8\nL:1/16\nR:\nN:C IV a 4\nZ:\nB:eSävelmät ls4_3661\nK:a\n|: B4 E4 | G4 A4 | B2B2 A2AA | d2d2 B2e2 | B4 d2eB4 | c3B B2^F2 | G2EE G2^F2 | B2F2 E4 | E4:|"
   },
   {
     name: "ls4_3662",
@@ -1369,7 +1369,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3679",
-    abc: "X:1\nT:ls4_3679\nO:Tottijärvi, Pirkanmaa\nS:J. Rekola\nM:3/4, 2/8\nL:1/16\nR:\nN:C IV b 2\nZ:\nB:eSävelmät ls4_3679\nK:F\n|: c3d c4 A4 | F2G2 A2B2 G4 | c4 B3A G2B2 | d2c2 B2AA G2dd | c2B2 c4 c4:|"
+    abc: "X:1\nT:ls4_3679\nO:Tottijärvi, Pirkanmaa\nS:J. Rekola\nM:3/4 ja 2/8\nL:1/16\nR:\nN:C IV b 2\nZ:\nB:eSävelmät ls4_3679\nK:F\n|: c3d c4 A4 | F2G2 A2B2 G4 | c4 B3A G2B2 | d2c2 B2AA G2dd | c2B2 c4 c4:|"
   },
   {
     name: "ls4_3680",
@@ -1397,7 +1397,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3686",
-    abc: "X:1\nT:ls4_3686\nO:Karjala, Karjalan kannas\nS:T. Matilainen\nM:2/4, 5/4\nL:1/16\nR:\nN:C IV b 2\nZ:\nB:eSävelmät ls4_3686\nK:a\n|: E4 A4 | G2^F2 E4 | E4 A4 | G2A2 c4 | B2c2 d4 | B4 c4 | d2c2 B8 | B4 e4 | ^f4 g4 | ^f4 e4 | d4 c4 | B4 e4 | B4 ^F2A2 | G4 ^F4 | E4:|"
+    abc: "X:1\nT:ls4_3686\nO:Karjala, Karjalan kannas\nS:T. Matilainen\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C IV b 2\nZ:\nB:eSävelmät ls4_3686\nK:a\n|: E4 A4 | G2^F2 E4 | E4 A4 | G2A2 c4 | B2c2 d4 | B4 c4 | d2c2 B8 | B4 e4 | ^f4 g4 | ^f4 e4 | d4 c4 | B4 e4 | B4 ^F2A2 | G4 ^F4 | E4:|"
   },
   {
     name: "ls4_3687",
@@ -1421,7 +1421,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3692",
-    abc: "X:1\nT:ls4_3692\nO:Sotkamo, Kainuu\nS:A. Launis\nM:3/8, 6/8\nL:1/16\nR:\nN:C IV b 3\nZ:\nB:eSävelmät ls4_3692\nK:F\n|: A2A2 A2 | A4 A2 | A4 G2 | F4 F2 | B4 A2 | G4 E2 | G4 E2 | C4 E2 | G6 | E4 E2 | E6 | D4 D2 | G6 | D6 | C6:|"
+    abc: "X:1\nT:ls4_3692\nO:Sotkamo, Kainuu\nS:A. Launis\nM:3/8 ja 6/8\nL:1/16\nR:\nN:C IV b 3\nZ:\nB:eSävelmät ls4_3692\nK:F\n|: A2A2 A2 | A4 A2 | A4 G2 | F4 F2 | B4 A2 | G4 E2 | G4 E2 | C4 E2 | G6 | E4 E2 | E6 | D4 D2 | G6 | D6 | C6:|"
   },
   {
     name: "ls4_3693",
@@ -1501,7 +1501,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3712",
-    abc: "X:1\nT:ls4_3712\nO:-()\nS:L. Björkbom ja T. Vallenius\nM:2/4, 3/4\nL:1/16\nR:\nN:C IV b 4\nZ:\nB:eSävelmät ls4_3712\nK:a\n|: E4 E2E2 | E4 E2D2 | E4 A4 | c4 B2A2 | A4 G4 | c4 B4 | G8 | E8:||: B2A2 d2d2 | B2B2 c4 | A2A2 B4 | G4 E4 | C2E2 G4 | G2D2 ^F4 | A4 E8 | E8:|"
+    abc: "X:1\nT:ls4_3712\nO:-()\nS:L. Björkbom ja T. Vallenius\nM:2/4 ja 3/4\nL:1/16\nR:\nN:C IV b 4\nZ:\nB:eSävelmät ls4_3712\nK:a\n|: E4 E2E2 | E4 E2D2 | E4 A4 | c4 B2A2 | A4 G4 | c4 B4 | G8 | E8:||: B2A2 d2d2 | B2B2 c4 | A2A2 B4 | G4 E4 | C2E2 G4 | G2D2 ^F4 | A4 E8 | E8:|"
   },
   {
     name: "ls4_3713",
@@ -1553,7 +1553,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3725",
-    abc: "X:1\nT:ls4_3725\nO:Taivalkoski, Pohjois-Pohjanmaa\nS:E. Levon\nM:5/4, 2/4\nL:1/16\nR:\nN:C IV b 4\nZ:\nB:eSävelmät ls4_3725\nK:a\n|: E8 e4 e4 B2^c2 | d4 ^c4 B4 A2A2 ^G4 | A4 B2^c2 d2^c2 B8 | B4 E4 A2A2 A4 G2^F2 | E4 G2A2 B4 d4 c4 | B2A2 G4 ^F4 E8 | E4 E4 A2A2 A4 G2^F2 | E4 G2A2 B4 d4 c4 | B2A2 G4 ^F4 E8 | E4:|"
+    abc: "X:1\nT:ls4_3725\nO:Taivalkoski, Pohjois-Pohjanmaa\nS:E. Levon\nM:5/4 ja 2/4\nL:1/16\nR:\nN:C IV b 4\nZ:\nB:eSävelmät ls4_3725\nK:a\n|: E8 e4 e4 B2^c2 | d4 ^c4 B4 A2A2 ^G4 | A4 B2^c2 d2^c2 B8 | B4 E4 A2A2 A4 G2^F2 | E4 G2A2 B4 d4 c4 | B2A2 G4 ^F4 E8 | E4 E4 A2A2 A4 G2^F2 | E4 G2A2 B4 d4 c4 | B2A2 G4 ^F4 E8 | E4:|"
   },
   {
     name: "ls4_3726",
@@ -1637,7 +1637,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3746",
-    abc: "X:1\nT:ls4_3746\nO:Laihia, Pohjanmaa\nS:S. Seppälä\nM:2/4, 5/4\nL:1/16\nR:\nN:C IV b 5\nZ:\nB:eSävelmät ls4_3746\nK:a\n|: E2E2 C2D2 | E4 E4 | A4 B4 | c4 B2A2 | c4 B2A2 | c4 B2A2 | G8 | |: E4 E2c4 | A2A2 A4 | B2A2 G8 | E2D2 C2C2 | E2E2 A8 | G2G2 F4 | D4 E8:| | E4:|"
+    abc: "X:1\nT:ls4_3746\nO:Laihia, Pohjanmaa\nS:S. Seppälä\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C IV b 5\nZ:\nB:eSävelmät ls4_3746\nK:a\n|: E2E2 C2D2 | E4 E4 | A4 B4 | c4 B2A2 | c4 B2A2 | c4 B2A2 | G8 | |: E4 E2c4 | A2A2 A4 | B2A2 G8 | E2D2 C2C2 | E2E2 A8 | G2G2 F4 | D4 E8:| | E4:|"
   },
   {
     name: "ls4_3747",
@@ -1917,7 +1917,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3816",
-    abc: "X:1\nT:ls4_3816\nO:Lemi, Etelä-Karjala\nS:H. Kouvo\nM:2/2, 2/4\nL:1/16\nR:\nN:C IV d 2\nZ:\nB:eSävelmät ls4_3816\nK:a\n|: B8 B8 | B8 G8 | A4 A4 B4 B4 | d4 d4 B4 B4 | c8 B8 | G8 B8 | c4 A4 A4 A4 | G4 G4 ^F4 ^F4 | E8 E8:|"
+    abc: "X:1\nT:ls4_3816\nO:Lemi, Etelä-Karjala\nS:H. Kouvo\nM:2/2 ja 2/4\nL:1/16\nR:\nN:C IV d 2\nZ:\nB:eSävelmät ls4_3816\nK:a\n|: B8 B8 | B8 G8 | A4 A4 B4 B4 | d4 d4 B4 B4 | c8 B8 | G8 B8 | c4 A4 A4 A4 | G4 G4 ^F4 ^F4 | E8 E8:|"
   },
   {
     name: "ls4_3817",
@@ -1925,7 +1925,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3818",
-    abc: "X:1\nT:ls4_3818\nO:Puolanka, Kainuu\nS:E. Levon\nM:2/4, 5/4\nL:1/16\nR:\nN:C IV d 2\nZ:\nB:eSävelmät ls4_3818\nK:a\n|: E2E2 E2^F2 | G4 ^F4 | E4 E4 | G2G2 B2B2 | e8 | B2c2 d4 | e4 B8 | B4 G4 | B8 | B2c2 d4 | e2d2 A4 | A2B2 c4 | B4 G4 | E2E2 ^F4 | G4 E8 | E8:|"
+    abc: "X:1\nT:ls4_3818\nO:Puolanka, Kainuu\nS:E. Levon\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C IV d 2\nZ:\nB:eSävelmät ls4_3818\nK:a\n|: E2E2 E2^F2 | G4 ^F4 | E4 E4 | G2G2 B2B2 | e8 | B2c2 d4 | e4 B8 | B4 G4 | B8 | B2c2 d4 | e2d2 A4 | A2B2 c4 | B4 G4 | E2E2 ^F4 | G4 E8 | E8:|"
   },
   {
     name: "ls4_3819",
@@ -1945,7 +1945,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3823",
-    abc: "X:1\nT:ls4_3823\nO:Pälkäne, Pirkanmaa\nS:E. Alanen\nM:2/4, 3/4\nL:1/16\nR:\nN:C IV d 2\nZ:\nB:eSävelmät ls4_3823\nK:a\n|: E6 E2 | B4 B4 | G6 ^F2 | E4 E4 | B4 c4 | B4 A4 | B4 B4 | B2e4 e4 | d6 c2 | A4 c4 | e6 B2 | G4 G4 | ^F4 E4:|"
+    abc: "X:1\nT:ls4_3823\nO:Pälkäne, Pirkanmaa\nS:E. Alanen\nM:2/4 ja 3/4\nL:1/16\nR:\nN:C IV d 2\nZ:\nB:eSävelmät ls4_3823\nK:a\n|: E6 E2 | B4 B4 | G6 ^F2 | E4 E4 | B4 c4 | B4 A4 | B4 B4 | B2e4 e4 | d6 c2 | A4 c4 | e6 B2 | G4 G4 | ^F4 E4:|"
   },
   {
     name: "ls4_3824",
@@ -2093,7 +2093,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3860",
-    abc: "X:1\nT:ls4_3860\nO:-()\nS:tuntematon\nM:2/4, 3/4\nL:1/16\nR:\nN:C IV d 3\nZ:\nB:eSävelmät ls4_3860\nK:a\n|: A4 A4 | d4 B2B2 | c4 c4 | d8 | A4 B4 | c4 A2A2 | d8 | G8 | A4 A4 | d4 B2B2 | c4 c4 | d4 d4 | A4 B4 | c4 A2A2 | d8 | G8 | |: A2B2 c2A2 | B2G2 A4 | ^F4 G4 | ^F4 E4 | D4 ^F2G2 | A4 G4:|"
+    abc: "X:1\nT:ls4_3860\nO:-()\nS:tuntematon\nM:2/4 ja 3/4\nL:1/16\nR:\nN:C IV d 3\nZ:\nB:eSävelmät ls4_3860\nK:a\n|: A4 A4 | d4 B2B2 | c4 c4 | d8 | A4 B4 | c4 A2A2 | d8 | G8 | A4 A4 | d4 B2B2 | c4 c4 | d4 d4 | A4 B4 | c4 A2A2 | d8 | G8 | |: A2B2 c2A2 | B2G2 A4 | ^F4 G4 | ^F4 E4 | D4 ^F2G2 | A4 G4:|"
   },
   {
     name: "ls4_3861",
@@ -2141,11 +2141,11 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3872",
-    abc: "X:1\nT:ls4_3872\nO:Kymi, Kymenlaakso\nS:A. Metso\nM:3/4, 2/4\nL:1/16\nR:\nN:C IV d 3\nZ:\nB:eSävelmät ls4_3872\nK:a\n|: B4 B2B2 B2B2 | e4 B4 B4 | A4 B4 G4 | G4 A4 B4 | G2G2 G4 A4 | B4 A4 G2G2 | ^F4 G4 E4:|"
+    abc: "X:1\nT:ls4_3872\nO:Kymi, Kymenlaakso\nS:A. Metso\nM:3/4 ja 2/4\nL:1/16\nR:\nN:C IV d 3\nZ:\nB:eSävelmät ls4_3872\nK:a\n|: B4 B2B2 B2B2 | e4 B4 B4 | A4 B4 G4 | G4 A4 B4 | G2G2 G4 A4 | B4 A4 G2G2 | ^F4 G4 E4:|"
   },
   {
     name: "ls4_3873",
-    abc: "X:1\nT:ls4_3873\nO:Hyrynsalmi, Kainuu\nS:A. Launis\nM:3/4, 2/4\nL:1/16\nR:\nN:C IV d 3\nZ:\nB:eSävelmät ls4_3873\nK:a\n|: E2^F2 G2G2 A2A2 | B4 ^F2^F2 G4 | B4 e4 d2d2 | c2c2 B2B2 G4 | A2A2 B4 ^F4 | E4 E2G2 B8 | ^F2G2 A4 G4 | ^F4 E8:|"
+    abc: "X:1\nT:ls4_3873\nO:Hyrynsalmi, Kainuu\nS:A. Launis\nM:3/4 ja 2/4\nL:1/16\nR:\nN:C IV d 3\nZ:\nB:eSävelmät ls4_3873\nK:a\n|: E2^F2 G2G2 A2A2 | B4 ^F2^F2 G4 | B4 e4 d2d2 | c2c2 B2B2 G4 | A2A2 B4 ^F4 | E4 E2G2 B8 | ^F2G2 A4 G4 | ^F4 E8:|"
   },
   {
     name: "ls4_3874",
@@ -2229,7 +2229,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3894",
-    abc: "X:1\nT:ls4_3894\nO:Vuole (Inkeri)(Vuole), Inkeri\nS:T. Suomalainen\nM:2/2, 2/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3894\nK:F\n|: G8 C8 | A4 A2A2 G4 E4 | F4 G4 A4 F4 | A4 A4 G8 | E6 F2G8 | A4 F4 G6 E2 | D4 E4 F4 E4 | D4 D4 C8 | C8:|"
+    abc: "X:1\nT:ls4_3894\nO:Vuole (Inkeri)(Vuole), Inkeri\nS:T. Suomalainen\nM:2/2 ja 2/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3894\nK:F\n|: G8 C8 | A4 A2A2 G4 E4 | F4 G4 A4 F4 | A4 A4 G8 | E6 F2G8 | A4 F4 G6 E2 | D4 E4 F4 E4 | D4 D4 C8 | C8:|"
   },
   {
     name: "ls4_3895",
@@ -2365,7 +2365,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3928",
-    abc: "X:1\nT:ls4_3928\nO:Isokyrö, Pohjanmaa\nS:M. Rinta\nM:2/4, 5/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3928\nK:F\n|: C4 F4 | F4 E2D2 | C4 E4 | G4 G4 | c8 | c2c2 c4 | B4 A4 | A2G2 A4 | G4 C4 | F4 F4 | E2D2 C4 | E4 G4 | G4 A6 | G2F2 E2D4 | G4 C8 | C8:|"
+    abc: "X:1\nT:ls4_3928\nO:Isokyrö, Pohjanmaa\nS:M. Rinta\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3928\nK:F\n|: C4 F4 | F4 E2D2 | C4 E4 | G4 G4 | c8 | c2c2 c4 | B4 A4 | A2G2 A4 | G4 C4 | F4 F4 | E2D2 C4 | E4 G4 | G4 A6 | G2F2 E2D4 | G4 C8 | C8:|"
   },
   {
     name: "ls4_3929",
@@ -2405,7 +2405,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3938",
-    abc: "X:1\nT:ls4_3938\nO:Karjala, Karjalan kannas\nS:E. Sivori\nM:2/4, 2/8\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3938\nK:F\n|: G4 A3=B | c4 G4 | A3A G2E2 | F3D E2F2 | G4 G4:| | F2A2 A2A2 | F2A2 G2E2 | F2F2 E2F2 | G4 G4 | F2A2 A2A2 | F2A2 G2E2 | F2F2 E2D2 | C4 C4:|"
+    abc: "X:1\nT:ls4_3938\nO:Karjala, Karjalan kannas\nS:E. Sivori\nM:2/4 ja 2/8\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3938\nK:F\n|: G4 A3=B | c4 G4 | A3A G2E2 | F3D E2F2 | G4 G4:| | F2A2 A2A2 | F2A2 G2E2 | F2F2 E2F2 | G4 G4 | F2A2 A2A2 | F2A2 G2E2 | F2F2 E2D2 | C4 C4:|"
   },
   {
     name: "ls4_3939",
@@ -2425,7 +2425,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3943",
-    abc: "X:1\nT:ls4_3943\nO:Puolanka, Kainuu\nS:E. Levon\nM:2/4, 2/8\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3943\nK:F\n|: C2D2 E2FF | G4 c4 | A4 G4 | {C}D2D {D}C2E2 | G4 c4 | c2G2 E2G2 | A2F2 E2G2 | G2E2 C2D2 | F2E2 D2E2 | F4 =B,4 | C4:|"
+    abc: "X:1\nT:ls4_3943\nO:Puolanka, Kainuu\nS:E. Levon\nM:2/4 ja 2/8\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3943\nK:F\n|: C2D2 E2FF | G4 c4 | A4 G4 | {C}D2D {D}C2E2 | G4 c4 | c2G2 E2G2 | A2F2 E2G2 | G2E2 C2D2 | F2E2 D2E2 | F4 =B,4 | C4:|"
   },
   {
     name: "ls4_3944",
@@ -2541,7 +2541,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3972",
-    abc: "X:1\nT:ls4_3972\nO:Puolanka, Kainuu\nS:E. Levon\nM:2/4, 5/4,\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3972\nK:a\n|: E2E2 E2E2 | A4 G2A2 | c2B2 A4 | G4 E4 | E2E2 E2E2 | A4 G2A2 | B4 c2B2 | A4 G2A2 | B4 GGG2 | G2G2 G2^F2 | E2_E2 E2^F2 | ^F2A2 A2E4 | E4:|"
+    abc: "X:1\nT:ls4_3972\nO:Puolanka, Kainuu\nS:E. Levon\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3972\nK:a\n|: E2E2 E2E2 | A4 G2A2 | c2B2 A4 | G4 E4 | E2E2 E2E2 | A4 G2A2 | B4 c2B2 | A4 G2A2 | B4 GGG2 | G2G2 G2^F2 | E2_E2 E2^F2 | ^F2A2 A2E4 | E4:|"
   },
   {
     name: "ls4_3973",
@@ -2557,7 +2557,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3976",
-    abc: "X:1\nT:ls4_3976\nO:Impilahti, Laatokan Karjala\nS:A. Pantsu\nM:2/4, 5/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3976\nK:a\n|: E8 | A4 B4 | G4 E2^F2 | G4 ^F4 | E8 | G2A2 B3B3 | B3c3 B3 | A3B8 | G8 | A8 | B4 A4 | G4 E2^F2 | G4 ^F4 | E8 | E4 G4 | {G}A4 B8 | G4 ^F2A2 | G2^F2 E4 | E4:|"
+    abc: "X:1\nT:ls4_3976\nO:Impilahti, Laatokan Karjala\nS:A. Pantsu\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3976\nK:a\n|: E8 | A4 B4 | G4 E2^F2 | G4 ^F4 | E8 | G2A2 B3B3 | B3c3 B3 | A3B8 | G8 | A8 | B4 A4 | G4 E2^F2 | G4 ^F4 | E8 | E4 G4 | {G}A4 B8 | G4 ^F2A2 | G2^F2 E4 | E4:|"
   },
   {
     name: "ls4_3977",
@@ -2593,7 +2593,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_3985",
-    abc: "X:1\nT:ls4_3985\nO:Karttula, Pohjois-Savo\nS:K. Kontio\nM:2/2, 2/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3985\nK:a\n|: B8 E4 G4 | B8 A8 | d4 d4 A4 B2c2 | d4 d2d2 e4 d4 | B8 G4 G4 | B8 E6 ^F2 | G4 ^F4 E4 ^F4 | G4 ^F2G2 A4 G4 | E8 E8:|"
+    abc: "X:1\nT:ls4_3985\nO:Karttula, Pohjois-Savo\nS:K. Kontio\nM:2/2 ja 2/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_3985\nK:a\n|: B8 E4 G4 | B8 A8 | d4 d4 A4 B2c2 | d4 d2d2 e4 d4 | B8 G4 G4 | B8 E6 ^F2 | G4 ^F4 E4 ^F4 | G4 ^F2G2 A4 G4 | E8 E8:|"
   },
   {
     name: "ls4_3986",
@@ -2689,7 +2689,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4009",
-    abc: "X:1\nT:ls4_4009\nO:Karttula, Pohjois-Savo\nS:T. Matilainen\nM:2/4, 3/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4009\nK:a\n|: E3E A3A | A3A A3G | E2^G2 B4 | ^G4 B3B | d4 B3B | e4 c4 | B4 c3B | A3A A3A | A3G E2^G2 | B4 ^G4 | ^F3^F E4 | B3B _E4 | ^F4 E4:|"
+    abc: "X:1\nT:ls4_4009\nO:Karttula, Pohjois-Savo\nS:T. Matilainen\nM:2/4 ja 3/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4009\nK:a\n|: E3E A3A | A3A A3G | E2^G2 B4 | ^G4 B3B | d4 B3B | e4 c4 | B4 c3B | A3A A3A | A3G E2^G2 | B4 ^G4 | ^F3^F E4 | B3B _E4 | ^F4 E4:|"
   },
   {
     name: "ls4_4010",
@@ -2717,7 +2717,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4016",
-    abc: "X:1\nT:ls4_4016\nO:Pirkkala, Pirkanmaa\nS:E. Alanen\nM:2/4, 3/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4016\nK:a\n|: E4 E2G2 | B4 B4 | A4 A2c2 | B4 B2^F2 | G4 G3G | ^F4 E4 | B4 B4 | c4 c3B | A4 A3c | B2B2 B2B2 | G2G2 E2G2 | B4 B4 | A4 ^F3G | E4 E4:|"
+    abc: "X:1\nT:ls4_4016\nO:Pirkkala, Pirkanmaa\nS:E. Alanen\nM:2/4 ja 3/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4016\nK:a\n|: E4 E2G2 | B4 B4 | A4 A2c2 | B4 B2^F2 | G4 G3G | ^F4 E4 | B4 B4 | c4 c3B | A4 A3c | B2B2 B2B2 | G2G2 E2G2 | B4 B4 | A4 ^F3G | E4 E4:|"
   },
   {
     name: "ls4_4017",
@@ -2865,7 +2865,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4053",
-    abc: "X:1\nT:ls4_4053\nO:Karjala?(Karjala), Karjalan kannas\nS:L. Soini\nM:2/4, 2/2\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4053\nK:a\n|: B4 G2^F2 | E4 E2E2 | B2B2 G2G2 | E4 E2E2 | B4 B4 | c4 A4 | B8 | B8 | B8 | e8 | d8 | B8 | B4 G4 | E4 ^F4 | G4 A2A2 | G4 ^F4 | E8 | E8:|"
+    abc: "X:1\nT:ls4_4053\nO:Karjala?(Karjala), Karjalan kannas\nS:L. Soini\nM:2/4 ja 2/2\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4053\nK:a\n|: B4 G2^F2 | E4 E2E2 | B2B2 G2G2 | E4 E2E2 | B4 B4 | c4 A4 | B8 | B8 | B8 | e8 | d8 | B8 | B4 G4 | E4 ^F4 | G4 A2A2 | G4 ^F4 | E8 | E8:|"
   },
   {
     name: "ls4_4054",
@@ -2881,7 +2881,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4057",
-    abc: "X:1\nT:ls4_4057\nO:Hyrynsalmi, Kainuu\nS:A. Launis\nM:2/4, 3/2\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4057\nK:a\n|: B4 A2A2 | G4 E4 | A4 G4 | ^F2^F2 E2E2 | c4 c2B2 | A4 G2A2 | B8 | B8 | B2B2 G2B2 | e4 d4 | B2B2 G2B2 | e8 | d8 | B2B2 G2B2 | d8 | B4 A4 | G2G2 G2A2 | ^F4 ^F2G2 | E8 | E8:|"
+    abc: "X:1\nT:ls4_4057\nO:Hyrynsalmi, Kainuu\nS:A. Launis\nM:2/4 ja 3/2\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4057\nK:a\n|: B4 A2A2 | G4 E4 | A4 G4 | ^F2^F2 E2E2 | c4 c2B2 | A4 G2A2 | B8 | B8 | B2B2 G2B2 | e4 d4 | B2B2 G2B2 | e8 | d8 | B2B2 G2B2 | d8 | B4 A4 | G2G2 G2A2 | ^F4 ^F2G2 | E8 | E8:|"
   },
   {
     name: "ls4_4058",
@@ -2893,7 +2893,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4060",
-    abc: "X:1\nT:ls4_4060\nO:Karttula, Pohjois-Savo\nS:K. Kontio\nM:2/4, 2/2\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4060\nK:a\n|: B4 B4 | A4 G2A2 | B4 G4 | E4 E2E2 | B4 B4 | A4 A4 | B8 | B8 | B8 | e8 | d8 | A8 | c4 B2B2 | A2A2 A4 | G4 E4 | G2G2 A2A2 | G4 ^F2^F2 | E8 | E8:|"
+    abc: "X:1\nT:ls4_4060\nO:Karttula, Pohjois-Savo\nS:K. Kontio\nM:2/4 ja 2/2\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4060\nK:a\n|: B4 B4 | A4 G2A2 | B4 G4 | E4 E2E2 | B4 B4 | A4 A4 | B8 | B8 | B8 | e8 | d8 | A8 | c4 B2B2 | A2A2 A4 | G4 E4 | G2G2 A2A2 | G4 ^F2^F2 | E8 | E8:|"
   },
   {
     name: "ls4_4061",
@@ -2901,7 +2901,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4062",
-    abc: "X:1\nT:ls4_4062\nO:Kiihtelysvaara, Pohjois-Karjala\nS:L. Soini\nM:2/4, 3/2\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4062\nK:a\n|: B2B2 B2B2 | A2A2 A2A2 | B4 G4 | E4 E4 | B4 B2B2 | A4 A4 | B8 | B8 | B4 G2B2 | e8 | d8 | A4 c4 | B4 B2A2 | G4 G2E2 | ^F4 ^F4 | E8 | E8:|"
+    abc: "X:1\nT:ls4_4062\nO:Kiihtelysvaara, Pohjois-Karjala\nS:L. Soini\nM:2/4 ja 3/2\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4062\nK:a\n|: B2B2 B2B2 | A2A2 A2A2 | B4 G4 | E4 E4 | B4 B2B2 | A4 A4 | B8 | B8 | B4 G2B2 | e8 | d8 | A4 c4 | B4 B2A2 | G4 G2E2 | ^F4 ^F4 | E8 | E8:|"
   },
   {
     name: "ls4_4063",
@@ -3037,7 +3037,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4096",
-    abc: "X:1\nT:ls4_4096\nO:Sulkava, Inkeri\nS:E. Sivori\nM:2/2, 2/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4096\nK:a\n|: B8 g8 | ^f8 e8 | e4 d4 B4 c4 | d4 d4 e4 c4 | B8 B4 c2c2 | A2A2 A4 c4 e4 | B4 G4 G2G2 B4 | A4 ^F4 ^F4 E8 | E4:|"
+    abc: "X:1\nT:ls4_4096\nO:Sulkava, Inkeri\nS:E. Sivori\nM:2/2 ja 2/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4096\nK:a\n|: B8 g8 | ^f8 e8 | e4 d4 B4 c4 | d4 d4 e4 c4 | B8 B4 c2c2 | A2A2 A4 c4 e4 | B4 G4 G2G2 B4 | A4 ^F4 ^F4 E8 | E4:|"
   },
   {
     name: "ls4_4097",
@@ -3093,7 +3093,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4110",
-    abc: "X:1\nT:ls4_4110\nO:Kuusamo, Pohjois-Pohjanmaa\nS:E. Levon\nM:2/4, 5/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4110\nK:a\n|: E4 E2E2 | A4 c4 | B4 B4 | B2c2 d4 | e4 e2e2 | ^f4 e4 | d8 | B4 d2d2 | d4 c2B2 | A4 c2c2 | B8 | G4 E8 | G4 G2G2 | A2G2 E4 | E8 | E8:|"
+    abc: "X:1\nT:ls4_4110\nO:Kuusamo, Pohjois-Pohjanmaa\nS:E. Levon\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4110\nK:a\n|: E4 E2E2 | A4 c4 | B4 B4 | B2c2 d4 | e4 e2e2 | ^f4 e4 | d8 | B4 d2d2 | d4 c2B2 | A4 c2c2 | B8 | G4 E8 | G4 G2G2 | A2G2 E4 | E8 | E8:|"
   },
   {
     name: "ls4_4111",
@@ -3125,7 +3125,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4118",
-    abc: "X:1\nT:ls4_4118\nO:-()\nS:A. Kondula\nM:3/4, 2/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4118\nK:a\n|: e2e2 e2^f2 g6 | ^f2e4 d8 | d2c2 B4 B4 | c2d4 ^F2G2 A4 | G2A2 B8 | d4 e2e2 e2^f2 | g6 ^f2e4 | d8 d2c2 | B4 B4 c2d4 | ^F2G2 A4 G2A2 | B8 d4 | |: G8 A2B2 | B4 B4 A4 | A2G2 B4 ^F2G4 | G2^F2 A4 G2^F2 | E8 E4:|"
+    abc: "X:1\nT:ls4_4118\nO:-()\nS:A. Kondula\nM:3/4 ja 2/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4118\nK:a\n|: e2e2 e2^f2 g6 | ^f2e4 d8 | d2c2 B4 B4 | c2d4 ^F2G2 A4 | G2A2 B8 | d4 e2e2 e2^f2 | g6 ^f2e4 | d8 d2c2 | B4 B4 c2d4 | ^F2G2 A4 G2A2 | B8 d4 | |: G8 A2B2 | B4 B4 A4 | A2G2 B4 ^F2G4 | G2^F2 A4 G2^F2 | E8 E4:|"
   },
   {
     name: "ls4_4119",
@@ -3277,7 +3277,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4156",
-    abc: "X:1\nT:ls4_4156\nO:Häme, Karjalan kannas\nS:L. Björkbom ja T. Vallenius\nM:2/4, 5/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4156\nK:a\n|: E4 E2^F2 | G4 G2E2 | B4 B4 | G4 E4 | B4 B2c2 | d4 d2B2 | e4 e4 | B4 G2B2 | d2d2 d2d2 | c4 B4 | A8 | B8 | A4 G2G2 | G2G2 G4 | ^F4 E8 | E8:|"
+    abc: "X:1\nT:ls4_4156\nO:Häme, Karjalan kannas\nS:L. Björkbom ja T. Vallenius\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C IV d 4\nZ:\nB:eSävelmät ls4_4156\nK:a\n|: E4 E2^F2 | G4 G2E2 | B4 B4 | G4 E4 | B4 B2c2 | d4 d2B2 | e4 e4 | B4 G2B2 | d2d2 d2d2 | c4 B4 | A8 | B8 | A4 G2G2 | G2G2 G4 | ^F4 E8 | E8:|"
   },
   {
     name: "ls4_4157",
@@ -3377,7 +3377,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4181",
-    abc: "X:1\nT:ls4_4181\nO:Rantasalmi, Etelä-Savo\nS:V. Vesterlund\nM:2/4, 2/8\nL:1/16\nR:\nN:C IV d 6\nZ:\nB:eSävelmät ls4_4181\nK:a\n|: e4 e2B2 | d4 d2B2 | c4 e2e2 | B4 B4 | c2cc B2B2 | A2A2 G2G2 | c2c2 d2d2 | e4 e4:|"
+    abc: "X:1\nT:ls4_4181\nO:Rantasalmi, Etelä-Savo\nS:V. Vesterlund\nM:2/4 ja 2/8\nL:1/16\nR:\nN:C IV d 6\nZ:\nB:eSävelmät ls4_4181\nK:a\n|: e4 e2B2 | d4 d2B2 | c4 e2e2 | B4 B4 | c2cc B2B2 | A2A2 G2G2 | c2c2 d2d2 | e4 e4:|"
   },
   {
     name: "ls4_4182",
@@ -3473,7 +3473,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4205",
-    abc: "X:1\nT:ls4_4205\nO:Taivalkoski, Pohjois-Pohjanmaa\nS:E. Levon\nM:2/4, 5/4\nL:1/16\nR:\nN:C V d 3\nZ:\nB:eSävelmät ls4_4205\nK:a\n|: A2A2 A2A2 | G4 E4 | B4 B2A2 | G4 E4 | e2e2 e2e2 | d4 B4 | d4 d2B2 | c4 G2G2 | c8 | B4 A4 | G4 E8 | E4:|"
+    abc: "X:1\nT:ls4_4205\nO:Taivalkoski, Pohjois-Pohjanmaa\nS:E. Levon\nM:2/4 ja 5/4\nL:1/16\nR:\nN:C V d 3\nZ:\nB:eSävelmät ls4_4205\nK:a\n|: A2A2 A2A2 | G4 E4 | B4 B2A2 | G4 E4 | e2e2 e2e2 | d4 B4 | d4 d2B2 | c4 G2G2 | c8 | B4 A4 | G4 E8 | E4:|"
   },
   {
     name: "ls4_4206",
@@ -3489,7 +3489,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4209",
-    abc: "X:1\nT:ls4_4209\nO:Rautalampi, Pohjois-Savo\nS:I. Krohn\nM:2/4, 3/4\nL:1/16\nR:\nN:C VI c 4\nZ:\nB:eSävelmät ls4_4209\nK:a\n|: E4 E2E2 | E2^F2 G4 | G2^F2 E4 | E2E2 E2E4 | E2^F2 G4 | G2^F2 G4 | G2G2 G2c4 | c2B2 A2A2 | A4 G4 | G2^F2 E4 | E2^F2 G4 | ^F2D2 ^F4 | ^F4 E8:|"
+    abc: "X:1\nT:ls4_4209\nO:Rautalampi, Pohjois-Savo\nS:I. Krohn\nM:2/4 ja 3/4\nL:1/16\nR:\nN:C VI c 4\nZ:\nB:eSävelmät ls4_4209\nK:a\n|: E4 E2E2 | E2^F2 G4 | G2^F2 E4 | E2E2 E2E4 | E2^F2 G4 | G2^F2 G4 | G2G2 G2c4 | c2B2 A2A2 | A4 G4 | G2^F2 E4 | E2^F2 G4 | ^F2D2 ^F4 | ^F4 E8:|"
   },
   {
     name: "ls4_4210",
@@ -3533,7 +3533,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4220",
-    abc: "X:1\nT:ls4_4220\nO:Rääk, Pohjois-Karjala\nS:L. Soini\nM:2/2, 2/4\nL:1/16\nR:\nN:C VII b 6\nZ:\nB:eSävelmät ls4_4220\nK:a\n|: c8 B6 c2 | A8 A8 | A4 A4 E4 E4 | ^G4 A4 B4 B4 | A8 F8 | C4 E4 G8 | G2G2 G2G2 G8 | D4 E4 F4 F4 | E8 E8:|"
+    abc: "X:1\nT:ls4_4220\nO:Rääk, Pohjois-Karjala\nS:L. Soini\nM:2/2 ja 2/4\nL:1/16\nR:\nN:C VII b 6\nZ:\nB:eSävelmät ls4_4220\nK:a\n|: c8 B6 c2 | A8 A8 | A4 A4 E4 E4 | ^G4 A4 B4 B4 | A8 F8 | C4 E4 G8 | G2G2 G2G2 G8 | D4 E4 F4 F4 | E8 E8:|"
   },
   {
     name: "ls4_4221",
@@ -3565,27 +3565,27 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4228",
-    abc: "X:1\nT:ls4_4228\nO:Sotkamo, Kainuu\nS:A. Launis\nM:2/4, 2/8\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4228\nK:F\n|: F4 C2F2 | A6 F2 | G2F2 E2E2 | F4 C4:||: F2E2 D2C2 | D2C2 D2E2 | F2D2 F2F2 | E4 C4:|"
+    abc: "X:1\nT:ls4_4228\nO:Sotkamo, Kainuu\nS:A. Launis\nM:2/4 ja 2/8\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4228\nK:F\n|: F4 C2F2 | A6 F2 | G2F2 E2E2 | F4 C4:||: F2E2 D2C2 | D2C2 D2E2 | F2D2 F2F2 | E4 C4:|"
   },
   {
     name: "ls4_4229",
-    abc: "X:1\nT:ls4_4229\nO:Satakunta, Satakunta\nS:K. Grönholm\nM:2/8, 2/4\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4229\nK:F\n|: G2c3 | {c}c3 | {c}C4 | F2Gc3 | {c}c3 | {c}C4 | F2GG3 | {G}G3 | {G}F3 | {E}D3 | {E}E4 | D4 | C4:|"
+    abc: "X:1\nT:ls4_4229\nO:Satakunta, Satakunta\nS:K. Grönholm\nM:2/8 ja 2/4\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4229\nK:F\n|: G2c3 | {c}c3 | {c}C4 | F2Gc3 | {c}c3 | {c}C4 | F2GG3 | {G}G3 | {G}F3 | {E}D3 | {E}E4 | D4 | C4:|"
   },
   {
     name: "ls4_4230",
-    abc: "X:1\nT:ls4_4230\nO:Iisalmi, Pohjois-Savo\nS:L. Soini\nM:2/8, 2/4\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4230\nK:C\n|: c4 | G4 | E2D2 | C4 | F2F2 | F2F2 | E2D2 | C4 | c2c2 | B2c2 | d4 | G2A2 | _B4 | A2A2 | G4:|"
+    abc: "X:1\nT:ls4_4230\nO:Iisalmi, Pohjois-Savo\nS:L. Soini\nM:2/8 ja 2/4\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4230\nK:C\n|: c4 | G4 | E2D2 | C4 | F2F2 | F2F2 | E2D2 | C4 | c2c2 | B2c2 | d4 | G2A2 | _B4 | A2A2 | G4:|"
   },
   {
     name: "ls4_4231",
-    abc: "X:1\nT:ls4_4231\nO:Paltamo, Kainuu\nS:A. Launis\nM:2/8, 2/4\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4231\nK:C\n|: c4 | G4 | E2EE | C4 | F2F2 | FFA2 | G2E2 | C4 | c4 | c2e2 | d4 | G2A2 | _B4 | A4 | G4:|"
+    abc: "X:1\nT:ls4_4231\nO:Paltamo, Kainuu\nS:A. Launis\nM:2/8 ja 2/4\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4231\nK:C\n|: c4 | G4 | E2EE | C4 | F2F2 | FFA2 | G2E2 | C4 | c4 | c2e2 | d4 | G2A2 | _B4 | A4 | G4:|"
   },
   {
     name: "ls4_4232",
-    abc: "X:1\nT:ls4_4232\nO:Pieksämäki, Etelä-Savo\nS:H. Tepponen\nM:2/8, 2/4\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4232\nK:C\n|: c4 | G4 | E2E2 | C4 | c2c2 | G2G2 | E2E2 | C4 | B,2D2 | E2F2 | G4 | c3B | A4 | B4 | G8:|"
+    abc: "X:1\nT:ls4_4232\nO:Pieksämäki, Etelä-Savo\nS:H. Tepponen\nM:2/8 ja 2/4\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4232\nK:C\n|: c4 | G4 | E2E2 | C4 | c2c2 | G2G2 | E2E2 | C4 | B,2D2 | E2F2 | G4 | c3B | A4 | B4 | G8:|"
   },
   {
     name: "ls4_4233",
-    abc: "X:1\nT:ls4_4233\nO:Joroinen, Etelä-Savo\nS:I. Krohn\nM:2/8, 2/4\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4233\nK:C\n|: c4 | G4 | E2G2 | C4 | c2c2 | G4 | E2G2 | C4 | |: C2D2 | E2F2 | G4 | c4 | B2B2 | A2A2 | G4:|"
+    abc: "X:1\nT:ls4_4233\nO:Joroinen, Etelä-Savo\nS:I. Krohn\nM:2/8 ja 2/4\nL:1/16\nR:\nN:D II b 4\nZ:\nB:eSävelmät ls4_4233\nK:C\n|: c4 | G4 | E2G2 | C4 | c2c2 | G4 | E2G2 | C4 | |: C2D2 | E2F2 | G4 | c4 | B2B2 | A2A2 | G4:|"
   },
   {
     name: "ls4_4234",
@@ -3641,23 +3641,23 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4247",
-    abc: "X:1\nT:ls4_4247\nO:Ilomantsi, Pohjois-Karjala\nS:L. Soini\nM:2/8, 2/4\nL:1/16\nR:\nN:D III a 4\nZ:\nB:eSävelmät ls4_4247\nK:a\n|: B2e2 | e2c2 | B2A4 | A2B2 | c2B2 | G2E4 | E2G4 | E2G2 | B4 | ^F2A2 | G2E2 | ^F2G2 | E4:|"
+    abc: "X:1\nT:ls4_4247\nO:Ilomantsi, Pohjois-Karjala\nS:L. Soini\nM:2/8 ja 2/4\nL:1/16\nR:\nN:D III a 4\nZ:\nB:eSävelmät ls4_4247\nK:a\n|: B2e2 | e2c2 | B2A4 | A2B2 | c2B2 | G2E4 | E2G4 | E2G2 | B4 | ^F2A2 | G2E2 | ^F2G2 | E4:|"
   },
   {
     name: "ls4_4248",
-    abc: "X:1\nT:ls4_4248\nO:Pornainen, Uusimaa\nS:R. Mäkinen\nM:2/8, 2/4\nL:1/16\nR:\nN:D III a 4\nZ:\nB:eSävelmät ls4_4248\nK:a\n|: B2e3 | {e}d2c2 | A4 | E2c3 | {c}B3 | {A}E4 | D4 | D3D | G4 | A3A | B3B | A3G | E4:|"
+    abc: "X:1\nT:ls4_4248\nO:Pornainen, Uusimaa\nS:R. Mäkinen\nM:2/8 ja 2/4\nL:1/16\nR:\nN:D III a 4\nZ:\nB:eSävelmät ls4_4248\nK:a\n|: B2e3 | {e}d2c2 | A4 | E2c3 | {c}B3 | {A}E4 | D4 | D3D | G4 | A3A | B3B | A3G | E4:|"
   },
   {
     name: "ls4_4249",
-    abc: "X:1\nT:ls4_4249\nO:Joutsa, Keski-Suomi\nS:E. Sivori\nM:2/8, 2/4\nL:1/16\nR:\nN:D III a 4\nZ:\nB:eSävelmät ls4_4249\nK:a\n|: B2e3 | {e}d3 | {c}A4 | E2c3 | {d}B3 | {A}E4 | D4 | G2A2 | B4 | E2G2 | B3B | A3G | E4:|"
+    abc: "X:1\nT:ls4_4249\nO:Joutsa, Keski-Suomi\nS:E. Sivori\nM:2/8 ja 2/4\nL:1/16\nR:\nN:D III a 4\nZ:\nB:eSävelmät ls4_4249\nK:a\n|: B2e3 | {e}d3 | {c}A4 | E2c3 | {d}B3 | {A}E4 | D4 | G2A2 | B4 | E2G2 | B3B | A3G | E4:|"
   },
   {
     name: "ls4_4250",
-    abc: "X:1\nT:ls4_4250\nO:Valkeala, Kymenlaakso\nS:L. Soini\nM:2/8, 2/4\nL:1/16\nR:\nN:D III a 4\nZ:\nB:eSävelmät ls4_4250\nK:a\n|: B2e3 | {e}d2c2 | A4 | B2c3 | {d}B2G2 | E4 | D4 | G2A2 | B4 | E4 | B3B | A2G2 | E4:|"
+    abc: "X:1\nT:ls4_4250\nO:Valkeala, Kymenlaakso\nS:L. Soini\nM:2/8 ja 2/4\nL:1/16\nR:\nN:D III a 4\nZ:\nB:eSävelmät ls4_4250\nK:a\n|: B2e3 | {e}d2c2 | A4 | B2c3 | {d}B2G2 | E4 | D4 | G2A2 | B4 | E4 | B3B | A2G2 | E4:|"
   },
   {
     name: "ls4_4251",
-    abc: "X:1\nT:ls4_4251\nO:Asikkala, Päijät-Häme\nS:J. Kröger\nM:2/8, 2/4\nL:1/16\nR:\nN:D III a 4\nZ:\nB:eSävelmät ls4_4251\nK:a\n|: B2e3 | {e}d3 | {c}A4 | A2c3 | {c}B2G2 | E4 | E2G4 | D3D | G4 | A3A | B3A | ^F3G | E4:|"
+    abc: "X:1\nT:ls4_4251\nO:Asikkala, Päijät-Häme\nS:J. Kröger\nM:2/8 ja 2/4\nL:1/16\nR:\nN:D III a 4\nZ:\nB:eSävelmät ls4_4251\nK:a\n|: B2e3 | {e}d3 | {c}A4 | A2c3 | {c}B2G2 | E4 | E2G4 | D3D | G4 | A3A | B3A | ^F3G | E4:|"
   },
   {
     name: "ls4_4252",
@@ -3721,7 +3721,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4267",
-    abc: "X:1\nT:ls4_4267\nO:Juva, Etelä-Savo\nS:A. Väätänen\nM:3/4, 2/8\nL:1/16\nR:\nN:D IV b 6\nZ:\nB:eSävelmät ls4_4267\nK:a\n|: A4 A2B2 A2B2 | c4 c2d2 c2d2 | e4 e2d2 c2B2 | A4 A2G2 E4 | e2e2 e2e2 g4 | e2e2 d4 c2B2 | c4 c2c2 e4 | c2c2 B4 G2E2:|"
+    abc: "X:1\nT:ls4_4267\nO:Juva, Etelä-Savo\nS:A. Väätänen\nM:3/4 ja 2/8\nL:1/16\nR:\nN:D IV b 6\nZ:\nB:eSävelmät ls4_4267\nK:a\n|: A4 A2B2 A2B2 | c4 c2d2 c2d2 | e4 e2d2 c2B2 | A4 A2G2 E4 | e2e2 e2e2 g4 | e2e2 d4 c2B2 | c4 c2c2 e4 | c2c2 B4 G2E2:|"
   },
   {
     name: "ls4_4268",
@@ -3729,7 +3729,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4269",
-    abc: "X:1\nT:ls4_4269\nO:Impilahti, Laatokan Karjala\nS:E. Sivori\nM:3/4, 2/4\nL:1/16\nR:\nN:D IV c 3\nZ:\nB:eSävelmät ls4_4269\nK:a\n|: E4 A4 B2G2 | ^F2G2 A2D2 E4 | G2A2 B4 B4 | c2A2 B4 G4 | A4 c4 B2A2 | G2E2 ^F4 _E4 | E2E2 E4 G4 | A4 B4 G2G2 | A4 c4 B4 | E4:|"
+    abc: "X:1\nT:ls4_4269\nO:Impilahti, Laatokan Karjala\nS:E. Sivori\nM:3/4 ja 2/4\nL:1/16\nR:\nN:D IV c 3\nZ:\nB:eSävelmät ls4_4269\nK:a\n|: E4 A4 B2G2 | ^F2G2 A2D2 E4 | G2A2 B4 B4 | c2A2 B4 G4 | A4 c4 B2A2 | G2E2 ^F4 _E4 | E2E2 E4 G4 | A4 B4 G2G2 | A4 c4 B4 | E4:|"
   },
   {
     name: "ls4_4270",
@@ -3789,7 +3789,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4284",
-    abc: "X:1\nT:ls4_4284\nO:Kaprio (Inkeri)(Kaprio), Inkeri\nS:A. Launis\nM:3/4, 5/8\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4284\nK:F\n|: C2CC F4 F2A2 | c2A2 G4 E2D2 | C2C2 F4 F2A2 | c2A2 G6 E2 | G2GG F2E2 D2F2 | F2G4 C4 D2 | E2F2 E2D2 D2F2 | E2C8:|"
+    abc: "X:1\nT:ls4_4284\nO:Kaprio (Inkeri)(Kaprio), Inkeri\nS:A. Launis\nM:3/4 ja 5/8\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4284\nK:F\n|: C2CC F4 F2A2 | c2A2 G4 E2D2 | C2C2 F4 F2A2 | c2A2 G6 E2 | G2GG F2E2 D2F2 | F2G4 C4 D2 | E2F2 E2D2 D2F2 | E2C8:|"
   },
   {
     name: "ls4_4285",
@@ -3821,7 +3821,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4292",
-    abc: "X:1\nT:ls4_4292\nO:Kurkijoki, Laatokan Karjala\nS:A. Gripenberg\nM:2/4, 2/8\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4292\nK:a\n|: E4 G4 | A6 G2 | B2B2 G2B2 | B2G2 A2B2 | G2^F2 E2E4 | G4 A6 | G2B2 B2G2 | B2B2 G2A2 | B2G2 ^F2E2 | A4 A4 | G6 E2 | G2G2 E2E2 | _E2_E2 E2^F2 | G2^F2 E2G2 | A4 A4 | G6 E2 | G2G2 E2E2 | _E2_E2 E2^F2 | G4 E4:|"
+    abc: "X:1\nT:ls4_4292\nO:Kurkijoki, Laatokan Karjala\nS:A. Gripenberg\nM:2/4 ja 2/8\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4292\nK:a\n|: E4 G4 | A6 G2 | B2B2 G2B2 | B2G2 A2B2 | G2^F2 E2E4 | G4 A6 | G2B2 B2G2 | B2B2 G2A2 | B2G2 ^F2E2 | A4 A4 | G6 E2 | G2G2 E2E2 | _E2_E2 E2^F2 | G2^F2 E2G2 | A4 A4 | G6 E2 | G2G2 E2E2 | _E2_E2 E2^F2 | G4 E4:|"
   },
   {
     name: "ls4_4293",
@@ -3861,7 +3861,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4302",
-    abc: "X:1\nT:ls4_4302\nO:Latikan, Inkeri\nS:E. Levon\nM:3/8, 5/8\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4302\nK:a\n|: G2^F2 E4 | G2B4 | e2e4 | c2B2 A2 | G4 B2 | ^F4 G2 | E4 G2 | ^F2E4 | G2B4 | e2e4 | c2B2 A2 | G4 B2 | ^F4 G2 | E4:|"
+    abc: "X:1\nT:ls4_4302\nO:Latikan, Inkeri\nS:E. Levon\nM:3/8 ja 5/8\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4302\nK:a\n|: G2^F2 E4 | G2B4 | e2e4 | c2B2 A2 | G4 B2 | ^F4 G2 | E4 G2 | ^F2E4 | G2B4 | e2e4 | c2B2 A2 | G4 B2 | ^F4 G2 | E4:|"
   },
   {
     name: "ls4_4303",
@@ -3877,7 +3877,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4306",
-    abc: "X:1\nT:ls4_4306\nO:Kuopio, Pohjois-Savo\nS:K. Collan\nM:2/8, 3/4\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4306\nK:a\n|: G2^F2 | E4 | G2B4 | e2e4 | c2B2 | A2G4 | B2^F4 | G2E4:|"
+    abc: "X:1\nT:ls4_4306\nO:Kuopio, Pohjois-Savo\nS:K. Collan\nM:2/8 ja 3/4\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4306\nK:a\n|: G2^F2 | E4 | G2B4 | e2e4 | c2B2 | A2G4 | B2^F4 | G2E4:|"
   },
   {
     name: "ls4_4307",
@@ -3929,7 +3929,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4319",
-    abc: "X:1\nT:ls4_4319\nO:Pohjois-Karjala, Pohjois-Karjala\nS:A. Lappalainen\nM:2/8, 2/4\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4319\nK:a\n|: e4 | e2B2 | d4 | d2B2 | c2c2 | e2c2 | B4 | B4:| | e2A2 | A2A2 | G2^F2 | E2F2 | G2G2 | A2A2 | e4 | e4 | e2A2 | A2A2 | G2^F2 | E2F2 | G2G2 | A2^F2 | E4 | E4:|"
+    abc: "X:1\nT:ls4_4319\nO:Pohjois-Karjala, Pohjois-Karjala\nS:A. Lappalainen\nM:2/8 ja 2/4\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4319\nK:a\n|: e4 | e2B2 | d4 | d2B2 | c2c2 | e2c2 | B4 | B4:| | e2A2 | A2A2 | G2^F2 | E2F2 | G2G2 | A2A2 | e4 | e4 | e2A2 | A2A2 | G2^F2 | E2F2 | G2G2 | A2^F2 | E4 | E4:|"
   },
   {
     name: "ls4_4320",
@@ -3969,7 +3969,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4329",
-    abc: "X:1\nT:ls4_4329\nO:Ruokolahti, Etelä-Karjala\nS:E. Sivori\nM:2/4, 3/4\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4329\nK:a\n|: e4 e4 | d6 B2 | c2d2 e4 | B4 e4 | e4 d6 | B2c2 d2e4 | B4 e4 | A2B2 c2c2 | B2A2 ^G2E2 | ^G2A2 B4 | E4 e4 | A2B2 c2c2 | B2A2 ^G2E2 | ^G2A2 B4 | E4:|"
+    abc: "X:1\nT:ls4_4329\nO:Ruokolahti, Etelä-Karjala\nS:E. Sivori\nM:2/4 ja 3/4\nL:1/16\nR:\nN:D IV d 4\nZ:\nB:eSävelmät ls4_4329\nK:a\n|: e4 e4 | d6 B2 | c2d2 e4 | B4 e4 | e4 d6 | B2c2 d2e4 | B4 e4 | A2B2 c2c2 | B2A2 ^G2E2 | ^G2A2 B4 | E4 e4 | A2B2 c2c2 | B2A2 ^G2E2 | ^G2A2 B4 | E4:|"
   },
   {
     name: "ls4_4330",
@@ -3993,7 +3993,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4335",
-    abc: "X:1\nT:ls4_4335\nO:Kivennapa, Karjalan kannas\nS:E. Sivori\nM:2/4, 5/8\nL:1/16\nR:\nN:E I b 4\nZ:\nB:eSävelmät ls4_4335\nK:a\n|: B4 B2c2 | B4 ^G4 | A4 E4 | A4 c4 | B4 B2c2 | B4 ^G4 | A8 | A4 c4 | B4 B2c2 | B4 ^G4 | A4 E4 | ^G4 B4 | B4 e4 | d8 | B4 c4 | A4 B8:|"
+    abc: "X:1\nT:ls4_4335\nO:Kivennapa, Karjalan kannas\nS:E. Sivori\nM:2/4 ja 5/8\nL:1/16\nR:\nN:E I b 4\nZ:\nB:eSävelmät ls4_4335\nK:a\n|: B4 B2c2 | B4 ^G4 | A4 E4 | A4 c4 | B4 B2c2 | B4 ^G4 | A8 | A4 c4 | B4 B2c2 | B4 ^G4 | A4 E4 | ^G4 B4 | B4 e4 | d8 | B4 c4 | A4 B8:|"
   },
   {
     name: "ls4_4336",
@@ -4009,11 +4009,11 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4339",
-    abc: "X:1\nT:ls4_4339\nO:Puolanka, Kainuu\nS:E. Levon\nM:3/4, 2/4\nL:1/16\nR:\nN:E II b 4\nZ:\nB:eSävelmät ls4_4339\nK:F\n|: C4 F4 F2F2 | G2A2 F4 C4 | C4 F4 F2F2 | G2A2 F4 C4 | C4 B4 A2G2 | A4 F2G2 A4 | G4:|"
+    abc: "X:1\nT:ls4_4339\nO:Puolanka, Kainuu\nS:E. Levon\nM:3/4 ja 2/4\nL:1/16\nR:\nN:E II b 4\nZ:\nB:eSävelmät ls4_4339\nK:F\n|: C4 F4 F2F2 | G2A2 F4 C4 | C4 F4 F2F2 | G2A2 F4 C4 | C4 B4 A2G2 | A4 F2G2 A4 | G4:|"
   },
   {
     name: "ls4_4340",
-    abc: "X:1\nT:ls4_4340\nO:Oulu, Pohjois-Pohjanmaa\nS:K. Haataja\nM:3/4, 2/4\nL:1/16\nR:\nN:E II b 4\nZ:\nB:eSävelmät ls4_4340\nK:F\n|: C2F2 F4 F2F2 | G2A2 F4 C4 | C2E2 G4 G2G2 | G2A2 F4 C4 | C2C2 B4 B2B2 | A4 F2G2 A4 | G4:|"
+    abc: "X:1\nT:ls4_4340\nO:Oulu, Pohjois-Pohjanmaa\nS:K. Haataja\nM:3/4 ja 2/4\nL:1/16\nR:\nN:E II b 4\nZ:\nB:eSävelmät ls4_4340\nK:F\n|: C2F2 F4 F2F2 | G2A2 F4 C4 | C2E2 G4 G2G2 | G2A2 F4 C4 | C2C2 B4 B2B2 | A4 F2G2 A4 | G4:|"
   },
   {
     name: "ls4_4341",
@@ -4021,7 +4021,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4342",
-    abc: "X:1\nT:ls4_4342\nO:Sakkola, Karjalan kannas\nS:P. Pitkänen\nM:2/4, 2/8\nL:1/16\nR:\nN:E II d 4\nZ:\nB:eSävelmät ls4_4342\nK:F\n|: G4 A2=B2 | c4 G4 | A2A2 G2E2 | F2D2 E2F2 | G4 A4:| | G2G2 G2E2 | F2FF E2GG | F2D2 E2F2 | G4 G4:|"
+    abc: "X:1\nT:ls4_4342\nO:Sakkola, Karjalan kannas\nS:P. Pitkänen\nM:2/4 ja 2/8\nL:1/16\nR:\nN:E II d 4\nZ:\nB:eSävelmät ls4_4342\nK:F\n|: G4 A2=B2 | c4 G4 | A2A2 G2E2 | F2D2 E2F2 | G4 A4:| | G2G2 G2E2 | F2FF E2GG | F2D2 E2F2 | G4 G4:|"
   },
   {
     name: "ls4_4343",
@@ -4037,7 +4037,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4346",
-    abc: "X:1\nT:ls4_4346\nO:Sotkamo, Kainuu\nS:A. Launis\nM:3/4, 2/4\nL:1/16\nR:\nN:E III b 2\nZ:\nB:eSävelmät ls4_4346\nK:d\n|: A2A2 A4 F4 | A2A2 A4 F4 | A2B2 c4 G4 | B2B2 A4 A2A2 | A2G2 F2E2 D4 | F2E2 D4 A4 | D2F2 E4:|"
+    abc: "X:1\nT:ls4_4346\nO:Sotkamo, Kainuu\nS:A. Launis\nM:3/4 ja 2/4\nL:1/16\nR:\nN:E III b 2\nZ:\nB:eSävelmät ls4_4346\nK:d\n|: A2A2 A4 F4 | A2A2 A4 F4 | A2B2 c4 G4 | B2B2 A4 A2A2 | A2G2 F2E2 D4 | F2E2 D4 A4 | D2F2 E4:|"
   },
   {
     name: "ls4_4347",
@@ -4069,7 +4069,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4354",
-    abc: "X:1\nT:ls4_4354\nO:Lammi, Kanta-Häme\nS:A. Saario\nM:5/4, 2/4\nL:1/16\nR:\nN:E III d 4\nZ:\nB:eSävelmät ls4_4354\nK:a\n|: A2A2 B2B2 d8 e2^f2 | g6 e2d4 B4 d4 | c2B2 G2G2 E2_E2 ^F4 E4 | E4 c6 A2G2 G2F4 | A6 B2d4 d4 c2d2 | c2B2 A2A2 A2G2 B4 B4 | B4:|"
+    abc: "X:1\nT:ls4_4354\nO:Lammi, Kanta-Häme\nS:A. Saario\nM:5/4 ja 2/4\nL:1/16\nR:\nN:E III d 4\nZ:\nB:eSävelmät ls4_4354\nK:a\n|: A2A2 B2B2 d8 e2^f2 | g6 e2d4 B4 d4 | c2B2 G2G2 E2_E2 ^F4 E4 | E4 c6 A2G2 G2F4 | A6 B2d4 d4 c2d2 | c2B2 A2A2 A2G2 B4 B4 | B4:|"
   },
   {
     name: "ls4_4355",
@@ -4221,7 +4221,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4392",
-    abc: "X:1\nT:ls4_4392\nO:Kuusamo, Pohjois-Pohjanmaa\nS:E. Levon\nM:2/4, 5/8\nL:1/16\nR:\nN:E IV d 2\nZ:\nB:eSävelmät ls4_4392\nK:a\n|: B4 B4 | c4 B4 | A4 G2A2 | B4 B4 | e8 | d4 c4 | B4 B4 | A4 B4 | B4 B4 | c4 B4 | A4 G2A2 | B4 B4 | e8 | d4 d4 | c4 B4 | A4 B4 | |: B4 e4 | e4 d4 | G4 B4 | B4 c4 | A2A2 G4 | G2G2 ^F4 | ^F4 E2^F2 | G2A2 B4:|"
+    abc: "X:1\nT:ls4_4392\nO:Kuusamo, Pohjois-Pohjanmaa\nS:E. Levon\nM:2/4 ja 5/8\nL:1/16\nR:\nN:E IV d 2\nZ:\nB:eSävelmät ls4_4392\nK:a\n|: B4 B4 | c4 B4 | A4 G2A2 | B4 B4 | e8 | d4 c4 | B4 B4 | A4 B4 | B4 B4 | c4 B4 | A4 G2A2 | B4 B4 | e8 | d4 d4 | c4 B4 | A4 B4 | |: B4 e4 | e4 d4 | G4 B4 | B4 c4 | A2A2 G4 | G2G2 ^F4 | ^F4 E2^F2 | G2A2 B4:|"
   },
   {
     name: "ls4_4393",
@@ -4333,7 +4333,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4420",
-    abc: "X:1\nT:ls4_4420\nO:Tyrö (Inkeri)(Tyrö), Inkeri\nS:E. Levon\nM:2/4, 2/8\nL:1/16\nR:\nN:E IV d 4\nZ:\nB:eSävelmät ls4_4420\nK:a\n|: e4 d2B2 | c4 B2B2 | A4 ^G2^G2 | |: A4 B4 | c2cc B2B2 | A2A2 B2B2 | E2EE ^G2^G2:| | A4 B4:|"
+    abc: "X:1\nT:ls4_4420\nO:Tyrö (Inkeri)(Tyrö), Inkeri\nS:E. Levon\nM:2/4 ja 2/8\nL:1/16\nR:\nN:E IV d 4\nZ:\nB:eSävelmät ls4_4420\nK:a\n|: e4 d2B2 | c4 B2B2 | A4 ^G2^G2 | |: A4 B4 | c2cc B2B2 | A2A2 B2B2 | E2EE ^G2^G2:| | A4 B4:|"
   },
   {
     name: "ls4_4421",
@@ -4417,7 +4417,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4441",
-    abc: "X:1\nT:ls4_4441\nO:Kerimäki, Etelä-Savo\nS:L. Soini\nM:2/4, 5/4\nL:1/16\nR:\nN:E IV d 4\nZ:\nB:eSävelmät ls4_4441\nK:d\n|: E2E2 A4 | A4 G4 | E2F2 G4 | F4 E4 | ^C2D4 F2 | F2G4 E2 | F2G4 F4 | E8 | E2E2 A4 | A4 G4 | E2F2 G4 | F4 E4 | ^C2E4 F2 | F2G4 E2 | F2G4 F4 | E8:|"
+    abc: "X:1\nT:ls4_4441\nO:Kerimäki, Etelä-Savo\nS:L. Soini\nM:2/4 ja 5/4\nL:1/16\nR:\nN:E IV d 4\nZ:\nB:eSävelmät ls4_4441\nK:d\n|: E2E2 A4 | A4 G4 | E2F2 G4 | F4 E4 | ^C2D4 F2 | F2G4 E2 | F2G4 F4 | E8 | E2E2 A4 | A4 G4 | E2F2 G4 | F4 E4 | ^C2E4 F2 | F2G4 E2 | F2G4 F4 | E8:|"
   },
   {
     name: "ls4_4442",
@@ -4457,7 +4457,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4451",
-    abc: "X:1\nT:ls4_4451\nO:Anjala, Kymenlaakso\nS:S. Juurila\nM:2/4, 3/4\nL:1/16\nR:\nN:E VII h 4\nZ:\nB:eSävelmät ls4_4451\nK:F\n|: G4 G4 | A4 A2G2 | F4 E4 | G4 D4 | G4 G4 | A6 G2 | F4 E4 | G4 D4 | c4 d6 | c2B4 A4 | G4 A2B2 | c4 A2A2 | B4 A4 | G8 | G4:|"
+    abc: "X:1\nT:ls4_4451\nO:Anjala, Kymenlaakso\nS:S. Juurila\nM:2/4 ja 3/4\nL:1/16\nR:\nN:E VII h 4\nZ:\nB:eSävelmät ls4_4451\nK:F\n|: G4 G4 | A4 A2G2 | F4 E4 | G4 D4 | G4 G4 | A6 G2 | F4 E4 | G4 D4 | c4 d6 | c2B4 A4 | G4 A2B2 | c4 A2A2 | B4 A4 | G8 | G4:|"
   },
   {
     name: "ls4_4452",
@@ -4493,7 +4493,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4460",
-    abc: "X:1\nT:ls4_4460\nO:Joutsa, Keski-Suomi\nS:E. Sivori\nM:2/4, 2/2\nL:1/16\nR:\nN:F II b 2\nZ:\nB:eSävelmät ls4_4460\nK:F, d\n|: A4 A2A2 | G4 _B4 | A4 A4 | F2F2 D4 | C4 C2C2 | F4 G4 | A8 | A4 A8 | F4 A4 | d8 | c8 | E2G2 _B4 | A4 G2G2 | F4 D2D2 | C4 A4 | D8 | D4:|"
+    abc: "X:1\nT:ls4_4460\nO:Joutsa, Keski-Suomi\nS:E. Sivori\nM:2/4 ja 2/2\nL:1/16\nR:\nN:F II b 2\nZ:\nB:eSävelmät ls4_4460\nK:F, d\n|: A4 A2A2 | G4 _B4 | A4 A4 | F2F2 D4 | C4 C2C2 | F4 G4 | A8 | A4 A8 | F4 A4 | d8 | c8 | E2G2 _B4 | A4 G2G2 | F4 D2D2 | C4 A4 | D8 | D4:|"
   },
   {
     name: "ls4_4461",
@@ -4517,7 +4517,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4466",
-    abc: "X:1\nT:ls4_4466\nO:Ilomantsi, Pohjois-Karjala\nS:E. Sivori\nM:2/2, 2/4\nL:1/16\nR:\nN:F II b 5\nZ:\nB:eSävelmät ls4_4466\nK:F, d\n|: F8 C8 | F8 C8 | C4 C4 F4 A4 | c4 _B4 G4 _B4 | A8 F8:| | A8 D8 | A8 G4 _B4 | _B4 A4 A4 D4 | F4 F4 F4 E4 | D8 D8:|"
+    abc: "X:1\nT:ls4_4466\nO:Ilomantsi, Pohjois-Karjala\nS:E. Sivori\nM:2/2 ja 2/4\nL:1/16\nR:\nN:F II b 5\nZ:\nB:eSävelmät ls4_4466\nK:F, d\n|: F8 C8 | F8 C8 | C4 C4 F4 A4 | c4 _B4 G4 _B4 | A8 F8:| | A8 D8 | A8 G4 _B4 | _B4 A4 A4 D4 | F4 F4 F4 E4 | D8 D8:|"
   },
   {
     name: "ls4_4467",
@@ -4637,7 +4637,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4496",
-    abc: "X:1\nT:ls4_4496\nO:Oulu, Pohjois-Pohjanmaa\nS:K. Haataja\nM:2/8, 2/4\nL:1/16\nR:\nN:F IV d 3\nZ:\nB:eSävelmät ls4_4496\nK:C, a\n|: c3B | c2d2 | B4 | G2G2 | B3B | A3G | G4 | D4 | A6 | G2E4 | ^F4 | G4 | A2B2 | c2d2 | e3d | c2Ac | B2^G2 | A4:|"
+    abc: "X:1\nT:ls4_4496\nO:Oulu, Pohjois-Pohjanmaa\nS:K. Haataja\nM:2/8 ja 2/4\nL:1/16\nR:\nN:F IV d 3\nZ:\nB:eSävelmät ls4_4496\nK:C, a\n|: c3B | c2d2 | B4 | G2G2 | B3B | A3G | G4 | D4 | A6 | G2E4 | ^F4 | G4 | A2B2 | c2d2 | e3d | c2Ac | B2^G2 | A4:|"
   },
   {
     name: "ls4_4497",
@@ -4685,7 +4685,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4508",
-    abc: "X:1\nT:ls4_4508\nO:Nurmijärvi, Uusimaa\nS:O. Selander\nM:2/4, 3/4\nL:1/16\nR:\nN:G IV d 6\nZ:\nB:eSävelmät ls4_4508\nK:a\n|: E3E E3^F | G4 G3E | A4 A2c2 | B4 B4:||: B4 d4 | A4 c3B | G4 A2B2 | G4 G4:|"
+    abc: "X:1\nT:ls4_4508\nO:Nurmijärvi, Uusimaa\nS:O. Selander\nM:2/4 ja 3/4\nL:1/16\nR:\nN:G IV d 6\nZ:\nB:eSävelmät ls4_4508\nK:a\n|: E3E E3^F | G4 G3E | A4 A2c2 | B4 B4:||: B4 d4 | A4 c3B | G4 A2B2 | G4 G4:|"
   },
   {
     name: "ls4_4509",
@@ -4825,7 +4825,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4543",
-    abc: "X:1\nT:ls4_4543\nO:Ilmajoki, Etelä-Pohjanmaa\nS:S. Pirilä\nM:2/4, 3/4\nL:1/16\nR:\nN:J a C III\nZ:\nB:eSävelmät ls4_4543\nK:F\n|: c4 c4 | c2B2 A2c2 | f2f2 c4 | c2A2 F4 | G2G2 B2B2 | B2A2 G6 | A2d4 A4 | F4 G6 | G2G4 A2 | G2G4 e4 | e4 f4 | d4 c6 | G2c4 f4 | d4 c4 | c2c4 c4 | c2B2 A2c2 | f2f2 c4 | c2A2 F4 | G4 B2B2 | B2A2 G6 | A2d2 d2A4 | F4 G4 | G2C2 G2e4 | f2d2 =B6 | G2c4 d2 | d2e2 e2G2 | c2e4 d4 | c6 c2:|"
+    abc: "X:1\nT:ls4_4543\nO:Ilmajoki, Etelä-Pohjanmaa\nS:S. Pirilä\nM:2/4 ja 3/4\nL:1/16\nR:\nN:J a C III\nZ:\nB:eSävelmät ls4_4543\nK:F\n|: c4 c4 | c2B2 A2c2 | f2f2 c4 | c2A2 F4 | G2G2 B2B2 | B2A2 G6 | A2d4 A4 | F4 G6 | G2G4 A2 | G2G4 e4 | e4 f4 | d4 c6 | G2c4 f4 | d4 c4 | c2c4 c4 | c2B2 A2c2 | f2f2 c4 | c2A2 F4 | G4 B2B2 | B2A2 G6 | A2d2 d2A4 | F4 G4 | G2C2 G2e4 | f2d2 =B6 | G2c4 d2 | d2e2 e2G2 | c2e4 d4 | c6 c2:|"
   },
   {
     name: "ls4_4544",
@@ -4865,7 +4865,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4553",
-    abc: "X:1\nT:ls4_4553\nO:Leppävirta, Pohjois-Savo\nS:L. Pääkkönen\nM:2/2, 2/4\nL:1/16\nR:\nN:J a C III\nZ:\nB:eSävelmät ls4_4553\nK:a\n|: B8 E6 ^F2 | G8 E6 E2 | B4 B4 A4 A2A2 | d4 d4 e4 d2c2 | B8 A8 | c2B16 | E6 ^F2G6 ^F2 | E4 E4 G4 G4 | A4 G2^F2 E8 | E8 B8 | E6 ^F2G8 | E6 E2B4 B4 | A4 A2A2 d4 d4 | e4 d2c2 B8 | A8 c2B16 | E6 ^F2G6 ^F2 | E4 E4 G4 G4 | A4 G2^F2 E8 | E8 B8 | E6 ^F2G8 | E6 E2B4 B4 | A4 A2A2 d4 d2d2 | c4 e2e2 B4 B4 | A4 c2c2 B16 | E12 ^F2G8 | E6 ^F2G6 ^F2 | E4 E4 G4 G4 | A4 G2^F2 E8 | E8:|"
+    abc: "X:1\nT:ls4_4553\nO:Leppävirta, Pohjois-Savo\nS:L. Pääkkönen\nM:2/2 ja 2/4\nL:1/16\nR:\nN:J a C III\nZ:\nB:eSävelmät ls4_4553\nK:a\n|: B8 E6 ^F2 | G8 E6 E2 | B4 B4 A4 A2A2 | d4 d4 e4 d2c2 | B8 A8 | c2B16 | E6 ^F2G6 ^F2 | E4 E4 G4 G4 | A4 G2^F2 E8 | E8 B8 | E6 ^F2G8 | E6 E2B4 B4 | A4 A2A2 d4 d4 | e4 d2c2 B8 | A8 c2B16 | E6 ^F2G6 ^F2 | E4 E4 G4 G4 | A4 G2^F2 E8 | E8 B8 | E6 ^F2G8 | E6 E2B4 B4 | A4 A2A2 d4 d2d2 | c4 e2e2 B4 B4 | A4 c2c2 B16 | E12 ^F2G8 | E6 ^F2G6 ^F2 | E4 E4 G4 G4 | A4 G2^F2 E8 | E8:|"
   },
   {
     name: "ls4_4554",
@@ -5085,7 +5085,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4608",
-    abc: "X:1\nT:ls4_4608\nO:Karjala, Karjalan kannas\nS:E. Sivori\nM:2/4, 2/8\nL:1/16\nR:\nN:K a B II a\nZ:\nB:eSävelmät ls4_4608\nK:F\n|: c2B2 A2B2 | B2A2 B2d2 | c8 | A8 | A4 G2A2 | B4 G4 | c8 | G4 G2A2 | B4 G4 | F8 | c2cc c2d2 | c2B2 A2AA2 | G2A2 B2A2 | G2A2 B2c8 | d6 A2 | c4 B4 | A6 A2 | A2G2 A2B2 | A2G2 A2B2 | A4 G4 | F8 | c2cc c2d2 | c2B2 A2B2 | c2c2 c2d2 | c2B2 A2B2 | c2c2 c2d2 | c2B2 A2B2 | A2A2 A2B2 | A2G2 A2F2 | c8 | d6 A2 | c4 B4 | A6 A2 | A2G2 A2B2 | A2G2 A2B2 | A4 G4 | F4:|"
+    abc: "X:1\nT:ls4_4608\nO:Karjala, Karjalan kannas\nS:E. Sivori\nM:2/4 ja 2/8\nL:1/16\nR:\nN:K a B II a\nZ:\nB:eSävelmät ls4_4608\nK:F\n|: c2B2 A2B2 | B2A2 B2d2 | c8 | A8 | A4 G2A2 | B4 G4 | c8 | G4 G2A2 | B4 G4 | F8 | c2cc c2d2 | c2B2 A2AA2 | G2A2 B2A2 | G2A2 B2c8 | d6 A2 | c4 B4 | A6 A2 | A2G2 A2B2 | A2G2 A2B2 | A4 G4 | F8 | c2cc c2d2 | c2B2 A2B2 | c2c2 c2d2 | c2B2 A2B2 | c2c2 c2d2 | c2B2 A2B2 | A2A2 A2B2 | A2G2 A2F2 | c8 | d6 A2 | c4 B4 | A6 A2 | A2G2 A2B2 | A2G2 A2B2 | A4 G4 | F4:|"
   },
   {
     name: "Huokaus soittoon kyllästyessä",
@@ -5301,7 +5301,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4663",
-    abc: "X:1\nT:ls4_4663\nO:Lammi, Kanta-Häme\nS:K. Kalliola\nM:3/2, 2/4\nL:1/16\nR:\nN:K b A II a\nZ:\nB:eSävelmät ls4_4663\nK:F\n|: C4 F4 C4 A,12 | C4 F4 E4 D8 B2B2 | A4 G4 D4 E4 F8 | c8 A8 B6 c2 | d8 B8 G8 | A6 B2c4 C2C2 F4 C4 | A,12 C4 F4 E4 | D12 B2B2 A4 G4 | F4 E4 F8:|"
+    abc: "X:1\nT:ls4_4663\nO:Lammi, Kanta-Häme\nS:K. Kalliola\nM:3/2 ja 2/4\nL:1/16\nR:\nN:K b A II a\nZ:\nB:eSävelmät ls4_4663\nK:F\n|: C4 F4 C4 A,12 | C4 F4 E4 D8 B2B2 | A4 G4 D4 E4 F8 | c8 A8 B6 c2 | d8 B8 G8 | A6 B2c4 C2C2 F4 C4 | A,12 C4 F4 E4 | D12 B2B2 A4 G4 | F4 E4 F8:|"
   },
   {
     name: "ls4_4665",
@@ -5397,7 +5397,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4688",
-    abc: "X:1\nT:ls4_4688\nO:Koski, Päijät-Häme\nS:J. Kröger\nM:3/4, 3/2,\nL:1/16\nR:\nN:K b A II c\nZ:\nB:eSävelmät ls4_4688\nK:F\n|: C3E G4 G4 | C3E G4 G4 | C4 E2G2 C4 | E2G2 F4 C2C2 | F2A2 C4 C2C2 | F4 F2A2 C4 | D4 D2F2 =B,4 | =B,2D2 C4 A2c6 | c2c4 c4 d4 | d2c2 B4 A2G6 | G2E2 E2C2 C2F4 | A4 F4 F2E4 | G2G2 D4 E4 | F8 A4 | c6 c2c4 | c4 d4 d2c2 | B4 A2G6 | G2E2 E2C2 C2F4 | A4 F4 F2E4 | G2G2 D4 E4 | F8:|"
+    abc: "X:1\nT:ls4_4688\nO:Koski, Päijät-Häme\nS:J. Kröger\nM:3/4 ja 3/2\nL:1/16\nR:\nN:K b A II c\nZ:\nB:eSävelmät ls4_4688\nK:F\n|: C3E G4 G4 | C3E G4 G4 | C4 E2G2 C4 | E2G2 F4 C2C2 | F2A2 C4 C2C2 | F4 F2A2 C4 | D4 D2F2 =B,4 | =B,2D2 C4 A2c6 | c2c4 c4 d4 | d2c2 B4 A2G6 | G2E2 E2C2 C2F4 | A4 F4 F2E4 | G2G2 D4 E4 | F8 A4 | c6 c2c4 | c4 d4 d2c2 | B4 A2G6 | G2E2 E2C2 C2F4 | A4 F4 F2E4 | G2G2 D4 E4 | F8:|"
   },
   {
     name: "ls4_4689",
@@ -5569,7 +5569,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4731",
-    abc: "X:1\nT:ls4_4731\nO:Juva, Etelä-Savo\nS:K. Kontio\nM:3/8, 6/8\nL:1/16\nR:\nN:K b A III c\nZ:\nB:eSävelmät ls4_4731\nK:C\n|: E2G4 | GGc4 | E2G6 | C4 C2 | E4 EE | F4 E2 | D6 | C2B,4 | C2D4 | F2A4 | A2A4 | G2_B4 | A2G6 | G2e4 | e2c4 | E2F4 | E2F4 | B2d4 | d2c4 | c2G6 | c2B4 | A2G4 | A2F4 | E2D4 | D2G6 | B,6 | C6 | G2e4 | e2c4 | E2F4 | E2F4 | B2d4 | d2c4 | c2G6 | c2B4 | A2G4 | A2F4 | E2D4 | D2G6 | B,6 | C6:|"
+    abc: "X:1\nT:ls4_4731\nO:Juva, Etelä-Savo\nS:K. Kontio\nM:3/8 ja 6/8\nL:1/16\nR:\nN:K b A III c\nZ:\nB:eSävelmät ls4_4731\nK:C\n|: E2G4 | GGc4 | E2G6 | C4 C2 | E4 EE | F4 E2 | D6 | C2B,4 | C2D4 | F2A4 | A2A4 | G2_B4 | A2G6 | G2e4 | e2c4 | E2F4 | E2F4 | B2d4 | d2c4 | c2G6 | c2B4 | A2G4 | A2F4 | E2D4 | D2G6 | B,6 | C6 | G2e4 | e2c4 | E2F4 | E2F4 | B2d4 | d2c4 | c2G6 | c2B4 | A2G4 | A2F4 | E2D4 | D2G6 | B,6 | C6:|"
   },
   {
     name: "ls4_4732",
@@ -5593,7 +5593,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4737",
-    abc: "X:1\nT:ls4_4737\nO:Laihia, Pohjanmaa\nS:S. Seppälä\nM:3/4, 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4737\nK:C\n|: c4 G4 G4 | G3F D3F G4 | c4 B2c2 d4 | B2G2 c4 c4:| | B2e2 d6 c2 | B2e2 d6 c2 | B2e2 d6 c2 | B2A2 G8 | c2B2 A2A2 A2A2 | A2B2 c8 | B2c2 d4 B2G2 | c4 c4 c2B2 | A2A2 A2A2 A2B2 | c8 B2c2 | d4 B2G2 c4 | c4:|"
+    abc: "X:1\nT:ls4_4737\nO:Laihia, Pohjanmaa\nS:S. Seppälä\nM:3/4 ja 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4737\nK:C\n|: c4 G4 G4 | G3F D3F G4 | c4 B2c2 d4 | B2G2 c4 c4:| | B2e2 d6 c2 | B2e2 d6 c2 | B2e2 d6 c2 | B2A2 G8 | c2B2 A2A2 A2A2 | A2B2 c8 | B2c2 d4 B2G2 | c4 c4 c2B2 | A2A2 A2A2 A2B2 | c8 B2c2 | d4 B2G2 c4 | c4:|"
   },
   {
     name: "ls4_4738",
@@ -5601,7 +5601,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4739",
-    abc: "X:1\nT:ls4_4739\nO:-()\nS:K. Kalliola\nM:3/4, 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4739\nK:C\n|: G4 G4 G4 | G3F E3F G4 | c2c2 B2c2 d4 | B2G2 c4 c4 | c3e d6 B2 | c3e d6 B2 | c3e d6 c2 | B3A G4 G3G | E2G2 c2B2 A3A | A4 B3c d4 | B2G2 c4 c4:|"
+    abc: "X:1\nT:ls4_4739\nO:-()\nS:K. Kalliola\nM:3/4 ja 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4739\nK:C\n|: G4 G4 G4 | G3F E3F G4 | c2c2 B2c2 d4 | B2G2 c4 c4 | c3e d6 B2 | c3e d6 B2 | c3e d6 c2 | B3A G4 G3G | E2G2 c2B2 A3A | A4 B3c d4 | B2G2 c4 c4:|"
   },
   {
     name: "ls4_4740",
@@ -5609,7 +5609,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4741",
-    abc: "X:1\nT:ls4_4741\nO:Isokyrö, Pohjanmaa\nS:M. Rinta\nM:3/4, 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4741\nK:C\n|: c4 G4 G4 | G2F2 E2F2 G4 | c4 B2c2 d4 | B2G2 c4 c4 | c2e2 d6 c2 | B2e2 d4 c2B2 | e2d6 c2B2 | A2G4 c2B2 A2 | A2A2 A2A2 B2c4 | B2c2 d4 B2G2 | c4 c8:|"
+    abc: "X:1\nT:ls4_4741\nO:Isokyrö, Pohjanmaa\nS:M. Rinta\nM:3/4 ja 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4741\nK:C\n|: c4 G4 G4 | G2F2 E2F2 G4 | c4 B2c2 d4 | B2G2 c4 c4 | c2e2 d6 c2 | B2e2 d4 c2B2 | e2d6 c2B2 | A2G4 c2B2 A2 | A2A2 A2A2 B2c4 | B2c2 d4 B2G2 | c4 c8:|"
   },
   {
     name: "ls4_4742",
@@ -5617,15 +5617,15 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4743",
-    abc: "X:1\nT:ls4_4743\nO:Helsinki, Uusimaa\nS:L. Soini\nM:3/4, 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4743\nK:C\n|: c4 G4 G4 | G2F2 E2F2 G4 | c2c2 B2c2 d4 | B2G2 c4 c4 | c3e d6 B2 | c3e d4 B2c3 | {e}d6 c2B3 | {A}G4 G2F2 E2G2 | c2B2 A2A2 A8 | B2c2 d4 B2G2 | c4 c4:|"
+    abc: "X:1\nT:ls4_4743\nO:Helsinki, Uusimaa\nS:L. Soini\nM:3/4 ja 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4743\nK:C\n|: c4 G4 G4 | G2F2 E2F2 G4 | c2c2 B2c2 d4 | B2G2 c4 c4 | c3e d6 B2 | c3e d4 B2c3 | {e}d6 c2B3 | {A}G4 G2F2 E2G2 | c2B2 A2A2 A8 | B2c2 d4 B2G2 | c4 c4:|"
   },
   {
     name: "ls4_4744",
-    abc: "X:1\nT:ls4_4744\nO:Kiukainen, Satakunta\nS:K. Pastell\nM:3/4, 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4744\nK:C\n|: c4 G4 G4 | G3F E3F G4 | c4 B2c2 d4 | B2G2 c4 c4 | c3e d6 B2 | c3e d8 | c3e d6 c2 | B2A2 G8 | |: G3G E3E c3B | A3A A8 | B3B d4 B3G | c4 c8:|"
+    abc: "X:1\nT:ls4_4744\nO:Kiukainen, Satakunta\nS:K. Pastell\nM:3/4 ja 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4744\nK:C\n|: c4 G4 G4 | G3F E3F G4 | c4 B2c2 d4 | B2G2 c4 c4 | c3e d6 B2 | c3e d8 | c3e d6 c2 | B2A2 G8 | |: G3G E3E c3B | A3A A8 | B3B d4 B3G | c4 c8:|"
   },
   {
     name: "ls4_4745",
-    abc: "X:1\nT:ls4_4745\nO:Tottijärvi, Pirkanmaa\nS:J. Rekola\nM:3/4, 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4745\nK:C\n|: c4 G4 G4 | G3F E3F G4 | c4 B3c d4 | B3G c4 c4:| | c3e d6 B2 | c3e d4 c3e | d6 c2B3 A | G4 c3B A3A | A3A A3A A4 | B3B d4 B3G | c4 c4 c3B | A3A A3A A3A | A4 B3B d4 | B3G c4 c4:|"
+    abc: "X:1\nT:ls4_4745\nO:Tottijärvi, Pirkanmaa\nS:J. Rekola\nM:3/4 ja 2/4\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4745\nK:C\n|: c4 G4 G4 | G3F E3F G4 | c4 B3c d4 | B3G c4 c4:| | c3e d6 B2 | c3e d4 c3e | d6 c2B3 A | G4 c3B A3A | A3A A3A A4 | B3B d4 B3G | c4 c4 c3B | A3A A3A A3A | A4 B3B d4 | B3G c4 c4:|"
   },
   {
     name: "ls4_4746",
@@ -5637,7 +5637,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4748",
-    abc: "X:1\nT:ls4_4748\nO:Taivalkoski, Pohjois-Pohjanmaa\nS:E. Levon\nM:4/4, 12/8,\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4748\nK:F\n|: C2C2 F2F2 A4 C4 | C2C2 F2F2 A4 G4 | G2A2 B2c2 d2c2 c2c2 | c4 F2E2 F8 | c4 F2F4 E2E4 | D2E4 G2c4 F2F4 | E2E4 D2D4 C2C4 | C2E4 E2G4 G2c12 | B4 A2G4 F2D4 | E2F12:|"
+    abc: "X:1\nT:ls4_4748\nO:Taivalkoski, Pohjois-Pohjanmaa\nS:E. Levon\nM:4/4 ja 12/8\nL:1/16\nR:\nN:K b A IV a\nZ:\nB:eSävelmät ls4_4748\nK:F\n|: C2C2 F2F2 A4 C4 | C2C2 F2F2 A4 G4 | G2A2 B2c2 d2c2 c2c2 | c4 F2E2 F8 | c4 F2F4 E2E4 | D2E4 G2c4 F2F4 | E2E4 D2D4 C2C4 | C2E4 E2G4 G2c12 | B4 A2G4 F2D4 | E2F12:|"
   },
   {
     name: "ls4_4749",
@@ -5825,7 +5825,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4795",
-    abc: "X:1\nT:ls4_4795\nO:Nurmes, Pohjois-Karjala\nS:E. Sivori\nM:2/4, 2/8\nL:1/16\nR:\nN:K b B II b\nZ:\nB:eSävelmät ls4_4795\nK:C\n|: C4 E4 | G4 G2G2 | A4 G4 | G4 D4 | F4 F4 | F4 F4 | G4 F4 | E4 C4 | |: C2E2 G2G2 | A2B2 c2G2 | A2FF A2AA | G2F2 E2C2:| | c4 B4 | A2A2 G4 | F2F2 A2F2 | E2E2 G2E2 | DDDD F2F2 | E4 E4:|"
+    abc: "X:1\nT:ls4_4795\nO:Nurmes, Pohjois-Karjala\nS:E. Sivori\nM:2/4 ja 2/8\nL:1/16\nR:\nN:K b B II b\nZ:\nB:eSävelmät ls4_4795\nK:C\n|: C4 E4 | G4 G2G2 | A4 G4 | G4 D4 | F4 F4 | F4 F4 | G4 F4 | E4 C4 | |: C2E2 G2G2 | A2B2 c2G2 | A2FF A2AA | G2F2 E2C2:| | c4 B4 | A2A2 G4 | F2F2 A2F2 | E2E2 G2E2 | DDDD F2F2 | E4 E4:|"
   },
   {
     name: "ls4_4796",
@@ -5873,7 +5873,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4807",
-    abc: "X:1\nT:ls4_4807\nO:Pälkäne, Pirkanmaa\nS:E. Alanen\nM:3/8, 3/4\nL:1/16\nR:\nN:K b B IV b\nZ:\nB:eSävelmät ls4_4807\nK:a\n|: E2A3 A | A3A A2 | B2c3 c | c3c c2 | d2e3 e | e2e3 d | B3c A2 | e3e e2 | e2gf3 | {e}e2d2 d3 | {d}d2d3 | dedc2 c3 | {B}^G6 | E2A3 A | A3A A2 | B2c3 c | c3c c2 | d2e3 e | e2e3 d | B3c A2:|"
+    abc: "X:1\nT:ls4_4807\nO:Pälkäne, Pirkanmaa\nS:E. Alanen\nM:3/8 ja 3/4\nL:1/16\nR:\nN:K b B IV b\nZ:\nB:eSävelmät ls4_4807\nK:a\n|: E2A3 A | A3A A2 | B2c3 c | c3c c2 | d2e3 e | e2e3 d | B3c A2 | e3e e2 | e2gf3 | {e}e2d2 d3 | {d}d2d3 | dedc2 c3 | {B}^G6 | E2A3 A | A3A A2 | B2c3 c | c3c c2 | d2e3 e | e2e3 d | B3c A2:|"
   },
   {
     name: "ls4_4808",
@@ -5885,11 +5885,11 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4810",
-    abc: "X:1\nT:ls4_4810\nO:Kuortane, Etelä-Pohjanmaa\nS:H. Klemetti\nM:3/4, 2/4\nL:1/16\nR:\nN:K b B V b\nZ:\nB:eSävelmät ls4_4810\nK:F\n|: C4 F4 G4 | A3A G6 F2 | E2G2 c4 B4 | A3G B2A2 G4 | F2E2 F8 | G4 F4 D8 | C4 F4 F4 | G6 F2G4 | c4 B4 A6 | G2B2 A2G4 F2 | E2F8 G4 | F4 D8 | A4 B4 c4 | d6 e2f2 e2 | d2c2 B2A2 G8 | B3A F4 A4 | c8 d4 | c4 B4 A8 | B2A2 G4 G4 | F6 E2C4 | F2A2 c4 d2c2 | B4 A4 G6 | F2G4 F4 D8:|"
+    abc: "X:1\nT:ls4_4810\nO:Kuortane, Etelä-Pohjanmaa\nS:H. Klemetti\nM:3/4 ja 2/4\nL:1/16\nR:\nN:K b B V b\nZ:\nB:eSävelmät ls4_4810\nK:F\n|: C4 F4 G4 | A3A G6 F2 | E2G2 c4 B4 | A3G B2A2 G4 | F2E2 F8 | G4 F4 D8 | C4 F4 F4 | G6 F2G4 | c4 B4 A6 | G2B2 A2G4 F2 | E2F8 G4 | F4 D8 | A4 B4 c4 | d6 e2f2 e2 | d2c2 B2A2 G8 | B3A F4 A4 | c8 d4 | c4 B4 A8 | B2A2 G4 G4 | F6 E2C4 | F2A2 c4 d2c2 | B4 A4 G6 | F2G4 F4 D8:|"
   },
   {
     name: "ls4_4811",
-    abc: "X:1\nT:ls4_4811\nO:Lammi, Kanta-Häme\nS:J. Kröger\nM:2/4, 3/4\nL:1/16\nR:\nN:K b C I c\nZ:\nB:eSävelmät ls4_4811\nK:C\n|: G2c2 e4 | e2d2 c4 | c2E2 G2G2 | D4 d8 | B4 d4 | G8 | G2c2 e4 | e2d2 c4 | c2E2 G4 | G4 D4 | D2D2 G4 | G2G2 A4 | B2B2 c2c2 | A2A2 G4 | D4 G2G2 | G2G2 A2A2 | B2B2 c4 | c4 c4 | c2B4 B4 | B2B2 G2B2 | d4 d4 | d4 B4 | d4 d4 | d4 d4 | G8:|"
+    abc: "X:1\nT:ls4_4811\nO:Lammi, Kanta-Häme\nS:J. Kröger\nM:2/4 ja 3/4\nL:1/16\nR:\nN:K b C I c\nZ:\nB:eSävelmät ls4_4811\nK:C\n|: G2c2 e4 | e2d2 c4 | c2E2 G2G2 | D4 d8 | B4 d4 | G8 | G2c2 e4 | e2d2 c4 | c2E2 G4 | G4 D4 | D2D2 G4 | G2G2 A4 | B2B2 c2c2 | A2A2 G4 | D4 G2G2 | G2G2 A2A2 | B2B2 c4 | c4 c4 | c2B4 B4 | B2B2 G2B2 | d4 d4 | d4 B4 | d4 d4 | d4 d4 | G8:|"
   },
   {
     name: "ls4_4812",
@@ -5909,7 +5909,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4816",
-    abc: "X:1\nT:ls4_4816\nO:Tottijärvi, Pirkanmaa\nS:J. Rekola\nM:2/8, 2/4\nL:1/16\nR:\nN:K b C IV a\nZ:\nB:eSävelmät ls4_4816\nK:F, C\n|: C2C3 | {C}C3 | {C}_B4 | A3G | C3C | C3C | A4 | G3F | E3D | E3G | c3c | _B3G | D4 | E4 | F4 | C2C3 | {C}C3 | {C}_B4 | A3G | C3C | C3C | A4 | G3F | E3D | E3G | c3c | _B3G | D4 | E4 | F4 | |: c3F | F3F | E3D | E3G:| | C3E | D3F | E3G | c4 | B3A | G4 | B,4 | D3D | C4:|"
+    abc: "X:1\nT:ls4_4816\nO:Tottijärvi, Pirkanmaa\nS:J. Rekola\nM:2/8 ja 2/4\nL:1/16\nR:\nN:K b C IV a\nZ:\nB:eSävelmät ls4_4816\nK:F, C\n|: C2C3 | {C}C3 | {C}_B4 | A3G | C3C | C3C | A4 | G3F | E3D | E3G | c3c | _B3G | D4 | E4 | F4 | C2C3 | {C}C3 | {C}_B4 | A3G | C3C | C3C | A4 | G3F | E3D | E3G | c3c | _B3G | D4 | E4 | F4 | |: c3F | F3F | E3D | E3G:| | C3E | D3F | E3G | c4 | B3A | G4 | B,4 | D3D | C4:|"
   },
   {
     name: "ls4_4817",
@@ -5925,7 +5925,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4820",
-    abc: "X:1\nT:ls4_4820\nO:Kajaani, Kainuu\nS:I. Krohn\nM:3/8, 2/4\nL:1/16\nR:\nN:K b C IV b\nZ:\nB:eSävelmät ls4_4820\nK:a\n|: C2C3 C | C3C _B4 | A3G C3 | {C}C3 {C}A4 | G3F E3 | {D}E3 {G}c3 | {c}_B3 {G}D4 | E4 F4 | c3F F3 | {F}E3 {D}E3 | {G}c3 {F}F3 | {F}E3 {D}E3 | {G}C3 {E}D3 | {F}E3 {G}c4 | B3A G4 | B,4 D3 | {D}C4:|"
+    abc: "X:1\nT:ls4_4820\nO:Kajaani, Kainuu\nS:I. Krohn\nM:3/8 ja 2/4\nL:1/16\nR:\nN:K b C IV b\nZ:\nB:eSävelmät ls4_4820\nK:a\n|: C2C3 C | C3C _B4 | A3G C3 | {C}C3 {C}A4 | G3F E3 | {D}E3 {G}c3 | {c}_B3 {G}D4 | E4 F4 | c3F F3 | {F}E3 {D}E3 | {G}c3 {F}F3 | {F}E3 {D}E3 | {G}C3 {E}D3 | {F}E3 {G}c4 | B3A G4 | B,4 D3 | {D}C4:|"
   },
   {
     name: "ls4_4821",
@@ -5993,11 +5993,11 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4837",
-    abc: "X:1\nT:ls4_4837\nO:Mouhijärvi, Pirkanmaa\nS:V. Sarkki\nM:2/8, 3/4\nL:1/16\nR:\nN:K b F II a\nZ:\nB:eSävelmät ls4_4837\nK:F, d\n|: C2C2 | D2EE | F2FF | E2D2 | C2C2 | D2EE | F2F2 | F2C2 | C2D2 | EEF2 | FFE2 | D2C2 | C2D2 | EEF2 | F2F2 | F2G2 | A2A2 | |: G2G2 | A4 | F2A2 | c2c2:| | G2G2 | A4 | F4 | F2E2 | D2^C2 | D3E | F4 | E4 | F2E2 | D3E | F2G2 | A4 | A8 | D3D | A4 | A2G2 | F2E2 | D4 | D4:|"
+    abc: "X:1\nT:ls4_4837\nO:Mouhijärvi, Pirkanmaa\nS:V. Sarkki\nM:2/8 ja 3/4\nL:1/16\nR:\nN:K b F II a\nZ:\nB:eSävelmät ls4_4837\nK:F, d\n|: C2C2 | D2EE | F2FF | E2D2 | C2C2 | D2EE | F2F2 | F2C2 | C2D2 | EEF2 | FFE2 | D2C2 | C2D2 | EEF2 | F2F2 | F2G2 | A2A2 | |: G2G2 | A4 | F2A2 | c2c2:| | G2G2 | A4 | F4 | F2E2 | D2^C2 | D3E | F4 | E4 | F2E2 | D3E | F2G2 | A4 | A8 | D3D | A4 | A2G2 | F2E2 | D4 | D4:|"
   },
   {
     name: "ls4_4838",
-    abc: "X:1\nT:ls4_4838\nO:Laihia, Pohjanmaa\nS:S. Seppälä\nM:2/4, 5/4\nL:1/16\nR:\nN:K b F IV c\nZ:\nB:eSävelmät ls4_4838\nK:C, a\n|: c4 c4 | E4 G4 | c4 c4 | B4 c4 | d4 c4 | B4 A4 | A4 G4 | G4 G2G4 | d4 f4 | f4 e4 | d4 e4 | e2e2 G4 | B4 d4 | d4 d4 | B4 d4 | d2d2 G4 | c4 c4 | c4 c4 | B4 B4 | c4 d8 | c4 B4 | A4 A4 | G4 G4 | d4 c4 | B4 A4 | A4 A4 | A4 G2G4 | d4 f4 | f4 e4 | d4 e4 | e2e2 G4 | B4 d4 | d4 d4 | B4 d4 | d2d2 G4 | c4 c4 | c4 c4 | B4 B4 | c4 d8 | c4 B4 | A4 A4 | G4 G4 | d4 c4 | B4 A4 | A4 A4 | A4:|"
+    abc: "X:1\nT:ls4_4838\nO:Laihia, Pohjanmaa\nS:S. Seppälä\nM:2/4 ja 5/4\nL:1/16\nR:\nN:K b F IV c\nZ:\nB:eSävelmät ls4_4838\nK:C, a\n|: c4 c4 | E4 G4 | c4 c4 | B4 c4 | d4 c4 | B4 A4 | A4 G4 | G4 G2G4 | d4 f4 | f4 e4 | d4 e4 | e2e2 G4 | B4 d4 | d4 d4 | B4 d4 | d2d2 G4 | c4 c4 | c4 c4 | B4 B4 | c4 d8 | c4 B4 | A4 A4 | G4 G4 | d4 c4 | B4 A4 | A4 A4 | A4 G2G4 | d4 f4 | f4 e4 | d4 e4 | e2e2 G4 | B4 d4 | d4 d4 | B4 d4 | d2d2 G4 | c4 c4 | c4 c4 | B4 B4 | c4 d8 | c4 B4 | A4 A4 | G4 G4 | d4 c4 | B4 A4 | A4 A4 | A4:|"
   },
   {
     name: "ls4_4839",
@@ -6021,7 +6021,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4844",
-    abc: "X:1\nT:ls4_4844\nO:Tottijärvi, Pirkanmaa\nS:J. Rekola\nM:2/4, 3/4\nL:1/16\nR:\nN:L a D IV\nZ:\nB:eSävelmät ls4_4844\nK:F\n|: G4 G2G2 | G2G2 F2F2 | E4 D2D2 | C4 E4 | G4 G2G2 | G4 F4 | E4 D4 | C8 | F4 F4 | F2F2 F2F2 | F4 A4 | c8 | B4 A4 | G2G2 F2F2 | E4 D4 | C8 | G4 G2G2 | G2G2 F2F2 | E4 D2D2 | C4 E4 | G4 G2G2 | G4 F4 | E4 D4 | C8 | F6 E2 | G2F2 F6 | E2G3 {F}F6 | E2G2 F2F6 | E2G3 {F}F4 | F4 F2F2 | F2F2 F4 | A4 c8 | B4 A4 | G2G2 F2F2 | E4 D4 | C8:|"
+    abc: "X:1\nT:ls4_4844\nO:Tottijärvi, Pirkanmaa\nS:J. Rekola\nM:2/4 ja 3/4\nL:1/16\nR:\nN:L a D IV\nZ:\nB:eSävelmät ls4_4844\nK:F\n|: G4 G2G2 | G2G2 F2F2 | E4 D2D2 | C4 E4 | G4 G2G2 | G4 F4 | E4 D4 | C8 | F4 F4 | F2F2 F2F2 | F4 A4 | c8 | B4 A4 | G2G2 F2F2 | E4 D4 | C8 | G4 G2G2 | G2G2 F2F2 | E4 D2D2 | C4 E4 | G4 G2G2 | G4 F4 | E4 D4 | C8 | F6 E2 | G2F2 F6 | E2G3 {F}F6 | E2G2 F2F6 | E2G3 {F}F4 | F4 F2F2 | F2F2 F4 | A4 c8 | B4 A4 | G2G2 F2F2 | E4 D4 | C8:|"
   },
   {
     name: "ls4_4845",
@@ -6029,7 +6029,7 @@ var esavelmat_ls4 = [
   },
   {
     name: "ls4_4846",
-    abc: "X:1\nT:ls4_4846\nO:Rääk, Pohjois-Karjala\nS:L. Soini\nM:2/8, 2/4,\nL:1/16\nR:\nN:L z A I\nZ:\nB:eSävelmät ls4_4846\nK:F\n|: F3G | A3B | c3d | c4 | A3B | c3d | c4 | A4 | |: B4 | G2G2 | A4 | F4:| | F3G | A3B | c3d | c4 | A3B | c3c | c3d | c4 | B3A | F4 | E4 | F4 | F3G | A3B | c3d | c4 | A3B | c3c | c3d | c4 | B3A | G4 | A3G | F4 | G3G | c3E | |: G4 | F4 | C3C | F4 | B4 | A3G | A4 | F4 | F3A | c4 | E4:| | G4 | |: F4 | f4 | c6 | B2A3 | {G}A4:| | F4 | C3C | B4 | B3B | A3G | A4 | F4 | G3G | c4 | E2E2 | G4 | F4:|"
+    abc: "X:1\nT:ls4_4846\nO:Rääk, Pohjois-Karjala\nS:L. Soini\nM:2/8 ja 2/4\nL:1/16\nR:\nN:L z A I\nZ:\nB:eSävelmät ls4_4846\nK:F\n|: F3G | A3B | c3d | c4 | A3B | c3d | c4 | A4 | |: B4 | G2G2 | A4 | F4:| | F3G | A3B | c3d | c4 | A3B | c3c | c3d | c4 | B3A | F4 | E4 | F4 | F3G | A3B | c3d | c4 | A3B | c3c | c3d | c4 | B3A | G4 | A3G | F4 | G3G | c3E | |: G4 | F4 | C3C | F4 | B4 | A3G | A4 | F4 | F3A | c4 | E4:| | G4 | |: F4 | f4 | c6 | B2A3 | {G}A4:| | F4 | C3C | B4 | B3B | A3G | A4 | F4 | G3G | c4 | E2E2 | G4 | F4:|"
   },
   {
     name: "ls4_4847",
