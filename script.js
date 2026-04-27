@@ -36,6 +36,7 @@ async function loadGistData() {
          "suomitest3.js",
         "richardrobinsonbook.js",
         "sekalaista01.js",
+        "FinnishTunes.js",
     "fsfolkdiktning01.js",
     "fsfolkdiktning02.js",
     "folkwikiSet1.js",
