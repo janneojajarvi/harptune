@@ -33,6 +33,7 @@ async function loadGistData() {
     "sessionSet17.js",
     "sessionSet18.js",
     "extrasetti5.js",
+        "esavelmat_ls1.js",
     "esavelmat_rs1.js",
         "esavelmat_rs2.js",
          "suomitest3.js",
