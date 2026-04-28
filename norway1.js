@@ -269,7 +269,7 @@ var norway1 = [
   },
   {
     name: "Reinl\ander i D",
-    abc: "X:1\nT: Reinl\\"ander i D\nO: Norway\nM: C\nL: 1/8\nK: D\n|: D2 d2 A2 f2 | f2 ed e2 GF |1,3 EF GA B2 cd | ed cB AG FE \\n                            :|2,4 EF GA BA fe | d2 d2 d4 :|[K:=c=f]\nK: Am\n|: e2- ed cB A2 | e2- ed cB A2 |1,2 E2 ^GB A2 cA | B2 e2 e4 \\n                              :|2,4 E2 ^GB cB AG | A2 A2 A4 :|"
+    abc: "X:1\nT: Reinlander i D\nO: Norway\nM: C\nL: 1/8\nK: D\n|: D2 d2 A2 f2 | f2 ed e2 GF |1,3 EF GA B2 cd | ed cB AG FE \\n                            :|2,4 EF GA BA fe | d2 d2 d4 :|[K:=c=f]\nK: Am\n|: e2- ed cB A2 | e2- ed cB A2 |1,2 E2 ^GB A2 cA | B2 e2 e4 \\n                              :|2,4 E2 ^GB cB AG | A2 A2 A4 :|"
   },
   {
     name: "Reinlendar fr\aa R\/orostraktene",
