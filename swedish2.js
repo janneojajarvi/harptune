@@ -12,8 +12,8 @@ var swedish2 = [
     abc: "X:1\nT:The 92nd Gordon Highlanders' March\nM:C|\nL:1/8\nQ:80\nC:\nS:2/4 March\nK:HP\n|: {g}e/2d/2 | \\n{gcd}c{e}A{gef}e{g}A | \\n{gcd}c{e}B3/4{d}c/4{g}A{g}e3/4d/4 |\n{gcd}c{e}A{gef}e{g}A | \\n{g}B3/4c/4{g}d3/4B/4{g}G{g}e3/4d/4{gcd}c{e}A{gef}e{g}A | \\n{gBd}B{g}A/4{d}G3/4{gf}g{a}f3/4g/4 |\n{ag}ag3/4f/4{gf}ge3/4d/4 | \\n{g}B3/4c/4{g}d3/4B/4{g}G :: \\n{g}e/2d/2 |\n{gcd}ce{g}e3/4A/4{g}e3/4A/4 | \\n{gcd}ce{g}e{ag}a | \\n{cd}ce{g}e3/4A/4{g}e3/4A/4 |\n{g}B3/4c/4{g}d3/4B/4{g}G{g}e3/4d/4{gcd}ce{g}e3/4A/4{g}e3/4A/4 | \\n{gBd}B{g}A/4{d}G3/4{gf}g{a}f3/4g/4 | \\n{ag}ag3/4f/4{gf}ge3/4d/4 |\n{g}B3/4c/4{g}d3/4B/4{g}G :: \\n{gf}g | \\n{ag}aA/2{GAG}A/2{g}eA/2{GAG}A/2 |\n{gcd}c{e}B3/4{d}c/4{g}A{gf}g | \\n{ag}aA/2{GAG}A/2{g}eA/2{GAG}A/2 | \\n{g}B3/4c/4{g}d3/4B/4{g}G{gf}g{ag}aA/2{GAG}A/2{g}eA/2{GAG}A/2 |\n{gBd}B{g}A/4{d}G3/4{gf}g{a}f3/4g/4 | \\n{ag}ag3/4f/4{gf}ge3/4d/4 | \\n{g}B3/4c/4{g}d3/4B/4{g}G :|"
   },
   {
-    name: "ÄA Jenta å ja   G",
-    abc: "X:1\nT: ÄA Jenta å ja   G\nR: hambo-polska\nM: 3/4\nL: 1/8\nK: G\n|: B2 A>B G2 | B2 A>B G2 | A2 A>G F>G | A>G F>E D2 \\n|  B2 A>B G2 | B2 A>B G2 | A2 A>G F>G | A2 G4 :|\n|: G>B d2 d2 | c>d e>d c>B | A>B c2 c2 | B>c d>c B>A \\n| G>A B2 B2 | A>B c>B A>G | F>G A>D E>F | A2 G4 :|"
+    name: "Å Jenta å ja   G",
+    abc: "X:1\nT: Å Jenta å ja   G\nR: hambo-polska\nM: 3/4\nL: 1/8\nK: G\n|: B2 A>B G2 | B2 A>B G2 | A2 A>G F>G | A>G F>E D2 \\n|  B2 A>B G2 | B2 A>B G2 | A2 A>G F>G | A2 G4 :|\n|: G>B d2 d2 | c>d e>d c>B | A>B c2 c2 | B>c d>c B>A \\n| G>A B2 B2 | A>B c>B A>G | F>G A>D E>F | A2 G4 :|"
   },
   {
     name: "Accordion & Fiddles",
@@ -64,8 +64,8 @@ var swedish2 = [
     abc: "X:1\nT: ärmland\nR: march\nS: http://www.folksweden.com/files/_rtemarschen.pdf [Tim Rued]\nZ: 2021 John Chambers <jc:trillian.mit.edu>\nM: 2/4\nL: 1/16\nK: D\nA2 |\\nd2f2 f2ed | d4 c2ef | g2g2 g2fe | a3f d2A2 || d2f2 f2ed |\nd4 c2ef | g2ba g2ec | d6 ::  ga | b2b2 b2fg | a2a2 a2ef | g2g2 g2fe |\na3f d2ga || b2b2 b2fg | a2a2 a2gf | e2ba g2ec | d6 :|"
   },
   {
-    name: "ÄAttamannadans från Ödsmål",
-    abc: "X:1\nT: ÄAttamannadans från \GDGD7GD7GGAmCD7GG\"G2G2 G4 :|"
+    name: "Åttamannadans från Ödsmål",
+    abc: "X:1\nT: Åttamannadans från \GDGD7GD7GGAmCD7GG\"G2G2 G4 :|"
   },
   {
     name: "Båtsman Däck",
@@ -596,8 +596,8 @@ var swedish2 = [
     abc: "X:1\nT: Hejsan Grabbar\nN: See also Sköjtelöberdans (Skaters' Shottish)\nC: Trad\nO: Sweden\nR: shottish\nM: 4/4\nL: 1/8\nK: G\n|::: D>G BA G2 G2 |    B>c dc B4 | A>B cA F>D EF |1,3 G>A BG D4 :|2,4 G2 G2 G4 :|\n|::: e2  c2 e2 e2 | d>B GB d4 | c>B AG F>D EF |1,3 G>A Bc d4 :|2,4 G2 B2 G4 :|"
   },
   {
-    name: "HEM FRÄAN GESUNDA efter Olov",
-    abc: "X:1\nT: HEM FRÄAN GESUNDA efter Olov\nO: Sweden 1992\nR: hambl-polska\nN: handwritten MS labelled \nM: 3/4\nL: 1/16\nK: Am\n\\n|: [E4C4] ([E3A,3]E) [A3E3]c | (B^G3) (E3G) B3d | ~d4 (e3c) A3B | Tc4 (B^G3) E3E |\n|  (C3E)  ([E3A,3]E) [A3E3]c | (B^G3) (E3G) B3d | ~d4 (e3c) A3B | ^G4 [A8E8] :|\n\\n|: (a2~g2) (eA3) [d3D3]d | (Tc2A2) [B6E6] ((3EF^G | A3)(B cBcd) e3c | TB4 A^G3 [A3E3]a |\n|  (a2~g2) (eA3) [d3D3]d | (cd)cA  [B6E6] ((3EF^G | A3)(B cBcd) e3c |1 B^G3 [A8E8] :|2 (Bc)B^G [A6E6] ((3BcB ||\n\\n|: A^G3) (E3F) D3E | (CD3) (B,2G,2) A,4- | [E4A,4] (A3c) e3c | Tc4 (Be)B^G E2 ((3BcB |\n|  A^G3) (E3F) D3E | (CD3) (B,2G,2) A,4- | [E4A,4] (A3c) e3c |1 TB2A^G [A6E6] ((3BcB :|2 TB2A^G [A8E8] |]"
+    name: "HEM FRÅN GESUNDA efter Olov",
+    abc: "X:1\nT: HEM FRÅN GESUNDA efter Olov\nO: Sweden 1992\nR: hambl-polska\nN: handwritten MS labelled \nM: 3/4\nL: 1/16\nK: Am\n\\n|: [E4C4] ([E3A,3]E) [A3E3]c | (B^G3) (E3G) B3d | ~d4 (e3c) A3B | Tc4 (B^G3) E3E |\n|  (C3E)  ([E3A,3]E) [A3E3]c | (B^G3) (E3G) B3d | ~d4 (e3c) A3B | ^G4 [A8E8] :|\n\\n|: (a2~g2) (eA3) [d3D3]d | (Tc2A2) [B6E6] ((3EF^G | A3)(B cBcd) e3c | TB4 A^G3 [A3E3]a |\n|  (a2~g2) (eA3) [d3D3]d | (cd)cA  [B6E6] ((3EF^G | A3)(B cBcd) e3c |1 B^G3 [A8E8] :|2 (Bc)B^G [A6E6] ((3BcB ||\n\\n|: A^G3) (E3F) D3E | (CD3) (B,2G,2) A,4- | [E4A,4] (A3c) e3c | Tc4 (Be)B^G E2 ((3BcB |\n|  A^G3) (E3F) D3E | (CD3) (B,2G,2) A,4- | [E4A,4] (A3c) e3c |1 TB2A^G [A6E6] ((3BcB :|2 TB2A^G [A8E8] |]"
   },
   {
     name: "Himlens polska   (Em)",
@@ -925,7 +925,7 @@ var swedish2 = [
   },
   {
     name: "Mazurka",
-    abc: "X:1\nT: Mazurka\nO: efter Lovisa Olsson, ÄAsarna, J\GD7GCAmD7D7GD7GfineGD7GGCFDmG7FG7G7C\"c2 c4 |]"
+    abc: "X:1\nT: Mazurka\nO: efter Lovisa Olsson, Åsarna, J\GD7GCAmD7D7GD7GfineGD7GGCFDmG7FG7G7C\"c2 c4 |]"
   },
   {
     name: "Midnight Sun",
@@ -1020,12 +1020,12 @@ var swedish2 = [
     abc: "X:1\nT: Our Gang (Gång Glåt)\nC: Paul Milde 2010\nR: ganglat, march\nZ: 2010 John Chambers <jc:trillian.mit.edu>\nM: 4/4\nL: 1/8\nK: G\nd2 \\n| gfga b2g2 | d4 B2G2 \\n| c2Bc e2c2 | A6 G2 \\n| F3G A2B2 | c2A2 F2D2 \\n| GFGA B2c2 | d2B2 G2d2 |\n| gfga b2a2 | g2d2 B2d2 \\n| e3d c2B2 | A6 G2 \\n| F3G A2B2 | c2A2 F2A2 \\n| G3G FGAF | G6 :|\n|: B2 \\n| d2ed B2ed | B2G2 A2G2 \\n| g2ag e2ge | d6 B2 \\n| c3d e2c2 | BABc d3B \\n| c2A2 FGAF | G2A2 B2c2 |\n| d2ed B2ed | B2G2 A2G2 \\n| g2ag e2ge | d6 B2 \\n| cBcd e2c2 | BABc d3B \\n| c2A2 FGAF | G6 :|"
   },
   {
-    name: "Polska = ÄA herre Gud nå je va brud",
+    name: "Polska = Å herre Gud nå je va brud",
     abc: "X:1\nT: Polska = \nO: Boda\nM: 3/4\nL: 1/8\nZ: 2009 John Chambers <jc:trillian.mit.edu>\nS: handwritten MS by JC from the 1970s\nK: G\nd/ \\n|: d>g b2- b>g | a>f g2- g>d \\n| B>d g>f a>g | f2 e4 \\n| A>c a2 a>g | f>e d2- d>g |\n|1,3 f>e d>e d>c | c2 B4 \\n:|2,4 f>e d>d e>g | fa g4 :|\\nd/- \\n|: g2 Bd B>d | g2 Bd B>d |\n| (3gfg a2- a>g \\n|1 f2 AB A>B | c2 AB A>B | (3aga b2- b>a \\n:|2 f>e d>d e>g | fa g4 |]"
   },
   {
     name: "Polska från Älvdalen",
-    abc: "X:1\nT: Polska från Älvdalen\nT: efter Evert W. ÄAhs\nO: Sweden\nM: 3/4\nL: 1/16\n%%slurgraces 1\nK: Ddor\n|:{AB}A3(^c d3)e {g}f3a | (g2b2) a7 (g \\n|     e3)(g f>gfe) d3^c |1,3 d2f2 e2T^c2 A4 :|2,4 ^c4 d8 :|\n|: {A}d3(f a3)(g e2)^c2 | (e2g2) (e2f2) d4- \\n|     d3(f a3)(g e2)^c2 | (e2g2) (e2f2) d4- \\n|    d3(^c A3)c e3c | B2{cB}^G2 [A8A8] :|"
+    abc: "X:1\nT: Polska från Älvdalen\nT: efter Evert W. Åhs\nO: Sweden\nM: 3/4\nL: 1/16\n%%slurgraces 1\nK: Ddor\n|:{AB}A3(^c d3)e {g}f3a | (g2b2) a7 (g \\n|     e3)(g f>gfe) d3^c |1,3 d2f2 e2T^c2 A4 :|2,4 ^c4 d8 :|\n|: {A}d3(f a3)(g e2)^c2 | (e2g2) (e2f2) d4- \\n|     d3(f a3)(g e2)^c2 | (e2g2) (e2f2) d4- \\n|    d3(^c A3)c e3c | B2{cB}^G2 [A8A8] :|"
   },
   {
     name: "Polska från Boda efter Anders Sparf",
@@ -1101,7 +1101,7 @@ var swedish2 = [
   },
   {
     name: "Polska från Möklinta",
-    abc: "X:1\nT: Polska från Mästmanland\nD: SWÄAP: [sic]\nZ: id:hn-sp-52\nM: 3/4\nL: 1/16\nK: D\n|: A2d2 cdec d4   | A2f2 efge f4   | a2gf g2fe f2ed | cdcB ABAG FGFE |\n|  D2d2 cdec d4   | A2f2 efge f4   | a2gf e2d2 c2B2 | cBA^G A8      :|\n|: A2e2 a2gf g2ed | B2f2 g2fe f2ed | c2a2 B2g2 A2f2 | efed cdcB A4   |\n|  A2d2 cdec d4   | A2f2 efge f4   | a2gf g2fe f2ed | cdec d8       :|"
+    abc: "X:1\nT: Polska från Mästmanland\nD: SWÅP: [sic]\nZ: id:hn-sp-52\nM: 3/4\nL: 1/16\nK: D\n|: A2d2 cdec d4   | A2f2 efge f4   | a2gf g2fe f2ed | cdcB ABAG FGFE |\n|  D2d2 cdec d4   | A2f2 efge f4   | a2gf e2d2 c2B2 | cBA^G A8      :|\n|: A2e2 a2gf g2ed | B2f2 g2fe f2ed | c2a2 B2g2 A2f2 | efed cdcB A4   |\n|  A2d2 cdec d4   | A2f2 efge f4   | a2gf g2fe f2ed | cdec d8       :|"
   },
   {
     name: "Polska från Möklinta",
@@ -1425,7 +1425,7 @@ var swedish2 = [
   },
   {
     name: "Gm Schottische from Malung",
-    abc: "X:1\nT: Gm Schottische from Malung\nN: See also Gm Shottish av ÄAker Erland Jonsson\nO: Sweden\nR: shottish\nZ: 2017 John Chambers <jc:trillian.mit.edu>\nM: 4/4\nL: 1/8\nK: Gm\n|:\\ng^fga g2d2 | d^cde d2B2 | A2Ac BAG^F |\\n[1,3 G^FGA Bcd^f :|[2,4 G2G2 G4 :|\n|:\\nG2GA G^FD2 | B2Bc BAG2 |d2de dcBA |\\n[1,3 GABA G2D2 :|[2,4 G2G2 G4 :|"
+    abc: "X:1\nT: Gm Schottische from Malung\nN: See also Gm Shottish av Åker Erland Jonsson\nO: Sweden\nR: shottish\nZ: 2017 John Chambers <jc:trillian.mit.edu>\nM: 4/4\nL: 1/8\nK: Gm\n|:\\ng^fga g2d2 | d^cde d2B2 | A2Ac BAG^F |\\n[1,3 G^FGA Bcd^f :|[2,4 G2G2 G4 :|\n|:\\nG2GA G^FD2 | B2Bc BAG2 |d2de dcBA |\\n[1,3 GABA G2D2 :|[2,4 G2G2 G4 :|"
   },
   {
     name: "Schottisch från Norbotten",
@@ -1629,7 +1629,7 @@ var swedish2 = [
   },
   {
     name: "Turklåten",
-    abc: "X:1\nT: \nT: Polska efter lars ÄAhs, Älfdalen\nO: Dalarna\nS: Lena Jonsson, workshop in Arlington, Massachusetts, Oct 2008\nR: polska\nZ: 2008 John Chambers <jc:trillian.mit.edu>\nM: 3/4\nL: 1/8\nK: Ador\nz | aa Tg2 (eg) | aa Tg2 (ef) | d2 e3 :|\n|: (B \\n| c)>d e<f g>a | Tfe/d/ e2 (c2 | B)>(d c<B) AG |1 ((3GBG) A3 :|2 A2 A4 |]\n[| aa g2 (ef) | d2 e2 (c2 | B)>(d c<B) AG | A2 A4 |]"
+    abc: "X:1\nT: \nT: Polska efter lars Åhs, Älfdalen\nO: Dalarna\nS: Lena Jonsson, workshop in Arlington, Massachusetts, Oct 2008\nR: polska\nZ: 2008 John Chambers <jc:trillian.mit.edu>\nM: 3/4\nL: 1/8\nK: Ador\nz | aa Tg2 (eg) | aa Tg2 (ef) | d2 e3 :|\n|: (B \\n| c)>d e<f g>a | Tfe/d/ e2 (c2 | B)>(d c<B) AG |1 ((3GBG) A3 :|2 A2 A4 |]\n[| aa g2 (ef) | d2 e2 (c2 | B)>(d c<B) AG | A2 A4 |]"
   },
   {
     name: "Tv slngpolskor efter John-Erik Mattson",
