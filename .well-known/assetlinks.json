@@ -1,1 +1,8 @@
-
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.janneojajarvi.harptune",
+        "sha256_cert_fingerprints": ["E0:FE:42:5F:E5:90:52:84:20:B6:90:80:17:EF:89:A6:9C:5D:87:48:74:64:5A:8D:95:88:F9:88:84:4F:5B:C6"]
+      }
+    }]
