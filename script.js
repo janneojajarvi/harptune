@@ -17,7 +17,6 @@ async function loadGistData() {
         "esavelmat_kansantanssit2.js",
         "esavelmat_kjs.js",
         "chinese1.js",
-        "france.js",
     "sessionSet05.js",
     "sessionSet06.js",
     "sessionSet07.js",
