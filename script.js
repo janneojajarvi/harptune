@@ -1036,17 +1036,11 @@ favoritesSelect.onchange = () => {
                 favoritesSelect.value = ""; // Nollaa valinnan takaisin placeholderiin
             }
 
-            // Lisätään tulos listaan, jos se läpäisee suodattimen
-            if (!hasBends || filterMode === "all") {
-                foundCount++;
-                const row = document.createElement('div');
-                row.className = "search-item";
-                // 1. Luodaan laajennettu nimi metatietojen perusteella
+            // Tarkistetaan nimen laajennus sääntöjen mukaan
         let extraInfo = "";
         const abc = tune.abc || "";
         const nameUpper = tune.name.toUpperCase();
 
-        // Apufunktio kentän hakemiseen ABC-tekstistä
         const getField = (field) => {
             const m = abc.match(new RegExp(`^${field}:\\s*(.*)`, "m"));
             return m ? m[1].trim() : "";
@@ -1074,13 +1068,11 @@ favoritesSelect.onchange = () => {
 
         const displayName = extraInfo ? `${tune.name} (${extraInfo})` : tune.name;
 
-        // 2. Luodaan hakutulosrivi
+        // Luodaan hakutulosrivi jos se läpäisee filtterin
         if (!hasBends || filterMode === "all") {
             foundCount++;
             const row = document.createElement('div');
             row.className = "search-item";
-            
-            // Käytetään tässä displayName-muuttujaa tune.namin sijasta
             row.innerHTML = `🏠 ${hasBends ? "🪗 " : "✅ "} <b>${displayName}</b>`;
             
             row.onclick = () => {
