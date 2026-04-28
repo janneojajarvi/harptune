@@ -1041,25 +1041,65 @@ favoritesSelect.onchange = () => {
                 foundCount++;
                 const row = document.createElement('div');
                 row.className = "search-item";
-                row.innerHTML = `🏠 ${hasBends ? "🪗 " : "✅ "} <b>${tune.name}</b>`;
-                
-                row.onclick = () => {
-                    abcInput.value = displayAbc;
-                    userHasSelectedHarp = false;
-                    processAbc();
-                    analyzeKey(displayAbc);
-                    resDiv.style.display = "none";
-                };
-                resDiv.appendChild(row);
-            }
-        });
+                // 1. Luodaan laajennettu nimi metatietojen perusteella
+        let extraInfo = "";
+        const abc = tune.abc || "";
+        const nameUpper = tune.name.toUpperCase();
 
-        if (foundCount === 0) {
-            resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFound || "Ei sopivia tuloksia"}</div>`;
+        // Apufunktio kentän hakemiseen ABC-tekstistä
+        const getField = (field) => {
+            const m = abc.match(new RegExp(`^${field}:\\s*(.*)`, "m"));
+            return m ? m[1].trim() : "";
+        };
+
+        if (nameUpper.startsWith("KT1") || nameUpper.startsWith("RS1") || nameUpper.startsWith("RS2")) {
+            const m = getField("M");
+            const o = getField("O");
+            extraInfo = [m, o].filter(Boolean).join(", ");
+        } 
+        else if (nameUpper.startsWith("HS1")) {
+            const n = getField("N");
+            const o = getField("O");
+            extraInfo = [n, o].filter(Boolean).join(", ");
+        } 
+        else if (/^(LS1|LS2|LS3|LS4)/i.test(nameUpper)) {
+            const o = getField("O");
+            extraInfo = "laulusävelmä" + (o ? ", " + o : "");
+        } 
+        else if (nameUpper.startsWith("VIA")) {
+            const r = getField("R");
+            const s = getField("S");
+            extraInfo = [r, s].filter(Boolean).join(", ");
         }
-        
-        statusDisplay.innerText = t.msgSearchDone || "Haku valmis";
-    };
+
+        const displayName = extraInfo ? `${tune.name} (${extraInfo})` : tune.name;
+
+        // 2. Luodaan hakutulosrivi
+        if (!hasBends || filterMode === "all") {
+            foundCount++;
+            const row = document.createElement('div');
+            row.className = "search-item";
+            
+            // Käytetään tässä displayName-muuttujaa tune.namin sijasta
+            row.innerHTML = `🏠 ${hasBends ? "🪗 " : "✅ "} <b>${displayName}</b>`;
+            
+            row.onclick = () => {
+                abcInput.value = displayAbc;
+                userHasSelectedHarp = false;
+                processAbc();
+                analyzeKey(displayAbc);
+                resDiv.style.display = "none";
+            };
+            resDiv.appendChild(row);
+        }
+    });
+
+    if (foundCount === 0) {
+        resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFound || "Ei sopivia tuloksia"}</div>`;
+    }
+    
+    statusDisplay.innerText = t.msgSearchDone || "Haku valmis";
+};
 
   
       // --- GENRE-HAKU ---
