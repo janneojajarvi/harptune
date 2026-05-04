@@ -47,6 +47,7 @@ async function loadGistData() {
     "fsfolkdiktning02.js",
     "swedish2.js",
     "norway1.js",
+        "dansk1.js",
         "esavelmat_hs1.js",
         "folkwikiExtra.js",
     "folkwikiSet1.js",
