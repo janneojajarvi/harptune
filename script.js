@@ -562,6 +562,22 @@ if (titleDisplay) {
 
     abcInput.value.split('\n').forEach(line => {
         if (line.startsWith('Q:')) return; 
+        
+        // --- KORJAUS TÄSSÄ ---
+        // Jos rivi alkaa K: (sävellaji), päivitetään etumerkit mutta ei yritetä lisätä tabeja
+        if (line.startsWith('K:')) {
+            const keyMatch = line.match(/^K:\s*([A-G][#b]?)([A-Za-z0-9]*)/);
+            if (keyMatch) {
+                let root = keyMatch[1].replace('H', 'B');
+                let mode = keyMatch[2] ? keyMatch[2].toLowerCase() : "";
+                let equivRoot = getModeEquivalent(root, mode);
+                let visualData = keyData[equivRoot] || { acc: {} };
+                currentKeyAccidentals = visualData.acc;
+            }
+            finalAbc += line + "\n" + `Q:1/4=${tempoRange.value}\n`;
+            return;
+        }
+        
         if (/^[A-Z]:/.test(line) || line.trim() === "") { 
             finalAbc += line + "\n";
             if (line.startsWith('K:')) {
