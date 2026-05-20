@@ -1,4 +1,4 @@
-var esavelmat_rs1_laaja = [
+var esavelmat_rs2_laaja = [
   {
     id: "rs2_0001",
     name: "rs2_0001",
