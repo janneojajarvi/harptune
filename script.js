@@ -829,51 +829,52 @@ if (titleDisplay) {
         }
     };
 
-    // --- AUDIO JA TALLENNUS ---
-playBtn.onclick = async () => {
-    // Herätetään selaimen äänimoottori
-    await Tone.start();
+   // --- AUDIO JA TALLENNUS ---
+    playBtn.onclick = async () => {
+        // Herätetään selaimen äänimoottori unesta
+        await Tone.start();
 
-    document.getElementById('audio-interface').style.display = "block";
-    
-    // Lisätään responsive: "resize", jotta nuotti ei kutistu vaan täyttää tilan
-    const visualObj = ABCJS.renderAbc("paper", getFinalAbc(), { 
-        visualTranspose: (octaveOffset * 12) + transposeOffset, 
-        responsive: "resize" 
-    })[0];
-
-    if (synthControl) {
-        try { await synthControl.pause(); } catch(e) {}
-    }
-    
-    synthControl = new ABCJS.synth.SynthController();
-    
-    await synthControl.load("#audio-control", null, { 
-        displayPlay: true, 
-        displayProgress: true, 
-        displayRestart: true 
-        soundFontUrl: "" // Tämä estää abcjs-pianosoundien lataamisen ja soittamisen!
-    });
-    
-    // Kytketään Tone.js soittamaan nuotit silloin, kun abcjs-kursori liikkuu niiden yli
-    await synthControl.setTune(visualObj, false, {
-        onEvent: (event) => {
-            if (event && event.notes && event.notes.length > 0) {
-                event.notes.forEach(note => {
-                    // Muutetaan midi-pitch Tone.js:n ymmärtämäksi nimeksi (esim. 60 -> "C4")
-                    const noteName = Tone.Frequency(note.pitch, "midi").toNote();
-                    // Lasketaan kesto sekunteina
-                    const duration = event.duration;
-                    // Laukaisen huuliharppusoundin!
-                    harmonicaSampler.triggerAttackRelease(noteName, duration);
-                });
-            }
+        document.getElementById('audio-interface').style.display = "block";
+        
+        // Renderöidään nuotit
+        const visualObj = ABCJS.renderAbc("paper", getFinalAbc(), { 
+            visualTranspose: (octaveOffset * 12) + transposeOffset,
+            responsive: "resize" 
+        })[0];
+        
+        if (synthControl) { 
+            try { await synthControl.pause(); } catch(e) {} 
         }
-    });
-
-    const startElem = document.querySelector('.abcjs-midi-start');
-    if(startElem) startElem.click();
-};
+        
+        synthControl = new ABCJS.synth.SynthController();
+        
+        // Ladataan kontrolleri ja estetään vanhan pianosoundin lataus (soundFontUrl: "")
+        await synthControl.load("#audio-control", null, { 
+            displayPlay: true, 
+            displayProgress: true, 
+            displayRestart: true,
+            soundFontUrl: ""
+        });
+        
+        // Kytketään Tone.js soittamaan nuotit, kun abcjs-kursori liikkuu
+        await synthControl.setTune(visualObj, false, {
+            onEvent: (event) => {
+                if (event && event.notes && event.notes.length > 0) {
+                    event.notes.forEach(note => {
+                        // Muutetaan MIDI-numero nuotin nimeksi (esim. 60 -> "C4")
+                        const noteName = Tone.Frequency(note.pitch, "midi").toNote();
+                        // Haetaan kesto sekunteina
+                        const duration = event.duration;
+                        // Soitetaan huuliharppusample
+                        harmonicaSampler.triggerAttackRelease(noteName, duration);
+                    });
+                }
+            }
+        });
+        
+        const startElem = document.querySelector('.abcjs-midi-start');
+        if(startElem) startElem.click();
+    };
 
     stopBtn.onclick = async () => {
         if (synthControl) {
