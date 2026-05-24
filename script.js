@@ -1,19 +1,6 @@
 // Copyright: Janne Ojajärvi
 // www.huuliharppu.fi
 // www.janneojajarvi.com
-// Alustetaan huuliharppusampleri projektin alkuun
-const harmonicaSampler = new Tone.Sampler({
-  urls: {
-    "A2": "harp_a2.mp3", "B2": "harp_b.mp3", 
-    "C4": "harp_c.mp3",  "D4": "harp_d.mp3", "E4": "harp_e.mp3", "G4": "harp_g.mp3",
-    "A3": "harp_a3.mp3", "B3": "harp_b2.mp3", "C5": "harp_c2.mp3", "D5": "harp_d2.mp3",
-    "E5": "harp_e2.mp3", "F5": "harp_f2.mp3", "G5": "harp_g2.mp3",
-    "C6": "harp_c3.mp3", "D6": "harp_d3.mp3", "E6": "harp_e3.mp3", "F6": "harp_f3.mp3", "G6": "harp_g3.mp3",
-    "C7": "harp_c4.mp3"
-  },
-  baseUrl: "https://janneojajarvi.github.io/harptune/harpaudio/",
-  onload: () => { console.log("Huuliharppusoundit valmiina!"); }
-}).toDestination();
 window.harpLibrary = [];
 
 async function loadGistData() {
@@ -829,52 +816,32 @@ if (titleDisplay) {
         }
     };
 
-   // --- AUDIO JA TALLENNUS ---
+    // --- AUDIO JA TALLENNUS ---
     playBtn.onclick = async () => {
-        // Herätetään selaimen äänimoottori unesta
-        await Tone.start();
+    document.getElementById('audio-interface').style.display = "block";
+    
+    // Lisätään responsive: "resize", jotta nuotti ei kutistu vaan täyttää tilan
+    const visualObj = ABCJS.renderAbc("paper", getFinalAbc(), { 
+        visualTranspose: (octaveOffset * 12) + transposeOffset,
+        responsive: "resize" // TÄMÄ estää pienenemisen
+    })[0];
 
-        document.getElementById('audio-interface').style.display = "block";
-        
-        // Renderöidään nuotit
-        const visualObj = ABCJS.renderAbc("paper", getFinalAbc(), { 
-            visualTranspose: (octaveOffset * 12) + transposeOffset,
-            responsive: "resize" 
-        })[0];
-        
-        if (synthControl) { 
-            try { await synthControl.pause(); } catch(e) {} 
-        }
-        
-        synthControl = new ABCJS.synth.SynthController();
-        
-        // Ladataan kontrolleri ja estetään vanhan pianosoundin lataus (soundFontUrl: "")
-        await synthControl.load("#audio-control", null, { 
-            displayPlay: true, 
-            displayProgress: true, 
-            displayRestart: true,
-            soundFontUrl: ""
-        });
-        
-        // Kytketään Tone.js soittamaan nuotit, kun abcjs-kursori liikkuu
-        await synthControl.setTune(visualObj, false, {
-            onEvent: (event) => {
-                if (event && event.notes && event.notes.length > 0) {
-                    event.notes.forEach(note => {
-                        // Muutetaan MIDI-numero nuotin nimeksi (esim. 60 -> "C4")
-                        const noteName = Tone.Frequency(note.pitch, "midi").toNote();
-                        // Haetaan kesto sekunteina
-                        const duration = event.duration;
-                        // Soitetaan huuliharppusample
-                        harmonicaSampler.triggerAttackRelease(noteName, duration);
-                    });
-                }
-            }
-        });
-        
-        const startElem = document.querySelector('.abcjs-midi-start');
-        if(startElem) startElem.click();
-    };
+    if (synthControl) { try { await synthControl.pause(); } catch(e) {} }
+    
+    synthControl = new ABCJS.synth.SynthController();
+    
+    // Tässä on mukana displayProgress: true edistymispalkkia varten
+    await synthControl.load("#audio-control", null, { 
+        displayPlay: true, 
+        displayProgress: true, 
+        displayRestart: true 
+    });
+    
+    await synthControl.setTune(visualObj, false);
+    
+    const startElem = document.querySelector('.abcjs-midi-start');
+    if(startElem) startElem.click();
+};
 
     stopBtn.onclick = async () => {
         if (synthControl) {
