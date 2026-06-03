@@ -975,11 +975,77 @@ favoritesSelect.onchange = () => {
     }
 });
     
-    
+    // Apufunktio TheSession.org-hakutulosten hakemiseen ja käsittelyyn
+async function fetchFromTheSession(query, resDiv, filterMode, t) {
+    try {
+        const r = await fetch(`https://thesession.org/tunes/search?q=${query}&format=json`);
+        const d = await r.json();
+        if (!d || !d.tunes) return 0;
+
+        let sessionFoundCount = 0;
+        // Otetaan maksimissaan 15 parasta tulosta
+        for (let tuneItem of d.tunes.slice(0, 15)) {
+            const tr = await fetch(`https://thesession.org/tunes/${tuneItem.id}?format=json`);
+            const td = await tr.json();
+            if (!td.settings || td.settings.length === 0) continue;
+
+            // Muunnetaan TheSessionin rakenne sovellukselle sopivaksi ABC-koodiksi
+            let testAbc = `X:${td.id}\nT:${td.name}\nR:${td.type}\nS:https://thesession.org/tunes/${td.id}\nM:${td.settings[0].meter}\nK:${td.settings[0].key}\n${td.settings[0].abc.replace(/!/g, '\n')}`;
+            
+            let hasBends = false;
+            if (filterMode === "easy") {
+                const oldAbc = abcInput.value;
+                abcInput.value = testAbc;
+                if (typeof analyzeKey === "function") analyzeKey(testAbc);
+                if (typeof autoOptimize === "function") autoOptimize();
+                
+                let optimizedAbc = abcInput.value;
+                let harpShift = parseInt(harpKeySelect.value);
+
+                optimizedAbc.split('\n').forEach(line => {
+                    if (/^[A-Z]:/.test(line) || line.trim() === "") return;
+                    line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
+                        let absPitch = getPitchValue(acc, note, octs);
+                        let relPitch = absPitch - harpShift + ((window.octaveOffset || 0) * 12);
+                        const tab = harpMap[relPitch.toString()] || "";
+                        if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
+                    });
+                });
+                abcInput.value = oldAbc;
+                testAbc = optimizedAbc;
+            }
+
+            if (!hasBends || filterMode === "all") {
+                // Jos listassa oli "Ei löytynyt" -ilmoitus, tyhjennetään se ensimmäisen osuman kohdalla
+                if (resDiv.innerHTML.includes(t.msgNotFoundSrch || "Ei löytynyt")) {
+                    resDiv.innerHTML = "";
+                }
+                sessionFoundCount++;
+                const row = document.createElement('div');
+                row.className = "search-item";
+                row.innerHTML = `🌐 ${hasBends ? "🪗 " : "✅ "} <b>${td.name}</b> (${td.settings[0].key})`;
+                
+                row.onclick = () => {
+                    abcInput.value = testAbc;
+                    userHasSelectedHarp = false;
+                    processAbc();
+                    analyzeKey(testAbc);
+                    resDiv.style.display = "none";
+                };
+                resDiv.appendChild(row);
+            }
+        }
+        return sessionFoundCount;
+    } catch (e) {
+        console.error("Virhe TheSession-haussa:", e);
+        return 0;
+    }
+}
+
     // --- HAKU  ---
      
       
-    document.getElementById('searchBtn').onclick = () => {
+    document.getElementById('searchBtn').onclick = async () => {
     const q = document.getElementById('searchInput').value.toLowerCase();
     const filterMode = document.getElementById('filterSelect').value;
     const resDiv = document.getElementById('searchResults');
@@ -1107,11 +1173,16 @@ favoritesSelect.onchange = () => {
         }
     });
 
+    // Haetaan tulokset myös TheSessionista lennosta
+    const sessionCount = await fetchFromTheSession(q, resDiv, filterMode, t);
+    foundCount += sessionCount;
+
     if (foundCount === 0) {
-        resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFound || "Ei sopivia tuloksia"}</div>`;
+        resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFoundSrch || "Ei löytynyt"}</div>`;
+        statusDisplay.innerText = t.msgNotFoundSrch || "Ei löytynyt";
+    } else {
+        statusDisplay.innerText = t.msgSearchDone || "Haku valmis";
     }
-    
-    statusDisplay.innerText = t.msgSearchDone || "Haku valmis";
 };
 
   
@@ -1191,13 +1262,19 @@ if (genre === "Waltz") {
             }
         });
 
-        if (foundCount === 0) {
-            resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFound}</div>`;
-        }
-        statusDisplay.innerText = t.msgSearchDone || "Haku valmis";
+        // Haetaan genren mukaiset tulokset myös TheSessionista
+        const sessionCount = await fetchFromTheSession(genre, resDiv, filterMode, t);
+        foundCount += sessionCount;
 
-// Skrollataan hakutuloksiin automaattisesti, jotta käyttäjä näkee ne heti
-resDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (foundCount === 0) {
+            resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFoundSrch || "Ei löytynyt"}</div>`;
+            statusDisplay.innerText = t.msgNotFoundSrch || "Ei löytynyt";
+        } else {
+            statusDisplay.innerText = t.msgSearchDone || "Haku valmis";
+        }
+
+        // Skrollataan hakutuloksiin automaattisesti, jotta käyttäjä näkee ne heti
+        resDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     };
 
