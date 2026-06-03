@@ -1065,11 +1065,11 @@ async function fetchFromTheSession(query, resDiv, filterMode, t) {
 });
 
      
-        if (matches.length === 0) {
-            resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFoundSrch || "Ei löytynyt"}</div>`;
-            statusDisplay.innerText = t.msgNotFoundSrch || "Ei löytynyt";
-            return;
-        }
+      //      if (matches.length === 0) {
+       //         resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFoundSrch || "Ei löytynyt"}</div>`;
+          //      statusDisplay.innerText = t.msgNotFoundSrch || "Ei löytynyt";
+       //         return;
+     //       }
 
         let foundCount = 0;
 
@@ -1190,10 +1190,10 @@ if (genre === "Waltz") {
   return content.includes(genre.toLowerCase());
     });
 
-        if (matches.length === 0) {
-            resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFoundSrch || "Ei löytynyt"}</div>`;
-            return;
-        }
+      //      if (matches.length === 0) {
+       //         resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFoundSrch || "Ei löytynyt"}</div>`;
+         //       return;
+      //      }
 
         let foundCount = 0;
 
