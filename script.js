@@ -954,26 +954,7 @@ favoritesSelect.onchange = () => {
     // Copyright: Janne Ojajärvi www.huuliharppu.fi
     
     
-    document.getElementById('shareAppBtn').addEventListener('click', async () => {
-    const t = translations[currentLang];
-
-    const shareData = {
-        title: t.shareTitle,
-        text: t.shareText,
-        url: 'https://codepen.io/Janne-Ojaj-rvi/full/MYjXBLV'
-    };
-
-    if (navigator.share) {
-        try {
-            await navigator.share(shareData);
-        } catch (err) {
-            console.log('Share dismissed');
-        }
-    } else {
-        navigator.clipboard.writeText(shareData.url);
-        alert(t.shareCopy);
-    }
-});
+    
     
     // Apufunktio TheSession.org-hakutulosten hakemiseen ja käsittelyyn
 async function fetchFromTheSession(query, resDiv, filterMode, t) {
@@ -1187,7 +1168,7 @@ async function fetchFromTheSession(query, resDiv, filterMode, t) {
 
   
       // --- GENRE-HAKU ---
-const fetchAndFilter = (genre) => {
+const fetchAndFilter = async (genre) => {
     const filterMode = document.getElementById('filterSelect').value;
     const resDiv = document.getElementById('searchResults');
     const currentLang = localStorage.getItem('prefLang') || 'fi';
