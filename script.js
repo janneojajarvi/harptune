@@ -1,1435 +1,2407 @@
-// Copyright: Janne Ojajärvi
-// www.huuliharppu.fi
-// www.janneojajarvi.com
 window.harpLibrary = [];
+window.currentOctave = 0;
+window.currentTranspose = 0;
+// Sallitut sävelet D-pitkähuilulle
+var harmonicOpen = [0, 7, 12, 16, 19, 22, 24];
+var harmonicClosed = [4, 10, 14, 18, 21, 23];
+var harmonicHalf = [6, 11, 15];
 
+// Yhdistetty lista analyysiä varten
+var allowedD = [...new Set(
+  harmonicOpen.concat(harmonicClosed, harmonicHalf)
+)];
+
+var lastOriginalAbc = "";
+var visualObj = null;
+var synthControl = null;
+var synth = null;      
+// D-pitkähuilun sallitut nuottiarvot (yläsävelsarja d1-d3)  
+// var allowedD = [0, 4, 6, 7, 9, 10, 11, 12, 14, 15, 16, 18, 19, 21, 22, 23, 24, 25, 26, 28, 29, 31, 33, 34, 35, 36];  
+
+// 1. Datan lataus pyydetyistä lähteistä
 async function loadGistData() {
+var urls = [
+	{ type: "Tarkistusnuotit", url: "tarkistusnuotit9.js" },
+        { type: "Tarkistusnuotit", url: "korjaustsekki3.js" },
+	{ type: "Tarkistusnuotit", url: "richardrobinsonbook.js" },
+	{ type: "Tarkistusnuotit", url: "FinnishTunes.js" },
+	{ type: "Tarkistusnuotit", url: "sekalaista01.js" },
+        { type: "Sessionsetit", url: "sessionSet01.js" },
+        { type: "Sessionsetit", url: "sessionSet02.js" },
+        { type: "Sessionsetit", url: "sessionSet03.js" },
+        { type: "Sessionsetit", url: "sessionSet04.js" },
+        { type: "Sessionsetit", url: "sessionSet05.js" },
+        { type: "Sessionsetit", url: "sessionSet06.js" },
+        { type: "Sessionsetit", url: "sessionSet07.js" },
+        { type: "Sessionsetit", url: "sessionSet08.js" },
+        { type: "Sessionsetit", url: "sessionSet09.js" },
+        { type: "Sessionsetit", url: "sessionSet10.js" },
+        { type: "Sessionsetit", url: "sessionSet11.js" },
+        { type: "Sessionsetit", url: "sessionSet12.js" },
+        { type: "Sessionsetit", url: "sessionSet13.js" },
+        { type: "Sessionsetit", url: "sessionSet14.js" },
+        { type: "Sessionsetit", url: "sessionSet15.js" },
+        { type: "Sessionsetit", url: "sessionSet16.js" },
+        { type: "Sessionsetit", url: "sessionSet17.js" },
+        { type: "Sessionsetit", url: "sessionSet18.js" },
+        { type: "Tarkistusnuotit", url: "extrasetti5.js" },
+	{ type: "Sekalaiset", url: "esavelmat_hs1.js" },
+	{ type: "Sekalaiset", url: "esavelmat_ls1.js" },
+	{ type: "Sekalaiset", url: "esavelmat_ls2.js" },
+	{ type: "Sekalaiset", url: "esavelmat_ls3.js" },
+	{ type: "Sekalaiset", url: "esavelmat_ls4.js" },
+	{ type: "Sekalaiset", url: "FinnishTunes2.js" },
+	{ type: "Sekalaiset", url: "swedish2.js" },
+	{ type: "Sekalaiset", url: "norway1.js" },
+	{ type: "Sekalaiset", url: "norway1.js" },
+	{ type: "Sekalaiset", url: "dansk1.js" },
+	{ type: "Sekalaiset", url: "dansk2.js" },
+	{ type: "Sekalaiset", url: "nordbeck.js" },
+	{ type: "Sekalaiset", url: "richardrobinsonbook.js" },
+	{ type: "Folkwikisetit", url: "folkwikiExtra.js" },
+        { type: "Folkwikisetit", url: "folkwikiSet1.js" },
+        { type: "Folkwikisetit", url: "folkwikiSet2.js" },
+        { type: "Folkwikisetit", url: "folkwikiSet3.js" },
+	    { type: "VPS", url: "esavelmat_kansantanssit.js" },
+	{ type: "KJS", url: "esavelmat_kjs.js" },
+	{ type: "Runonlaulumelodiat", url: "esavelmat_rs1.js" },
+	{ type: "Runonlaulumelodiat", url: "esavelmat_rs2.js" },
+        { type: "FsFolkdiktningit", url: "fsfolkdiktning02.js" },
+        { type: "FsFolkdiktningit", url: "fsfolkdiktning01.js" }
+];
 
-    const loaderContainer = document.getElementById("loader-container");
-    const loaderBar = document.getElementById("loader-bar");
-    const loaderPercent = document.getElementById("loader-percent");
-
-    loaderContainer.style.display = "block";
-// Haetaan nuotit tietokannoista session.org ja FolkWiki
-    const urls = [
-        "sessionSet01.js",
-        "esavelmat_kansantanssit.js",
-        "esavelmat_kansantanssit2.js",
-        "esavelmat_kjs.js",
-        "chinese1.js",
-    "sessionSet05.js",
-    "sessionSet06.js",
-    "sessionSet07.js",
-    "sessionSet08.js",
-    "sessionSet09.js",
-    "sessionSet10.js",
-    "sessionSet11.js",
-    "sessionSet12.js",
-    "sessionSet13.js",
-    "sessionSet14.js",
-    "sessionSet15.js",
-    "sessionSet16.js",
-    "sessionSet17.js",
-    "sessionSet18.js",
-    "extrasetti5.js",
-        "esavelmat_ls1.js",
-        "esavelmat_ls2.js",
-        "esavelmat_ls3.js",
-        "esavelmat_ls4.js",
-    "esavelmat_rs1.js",
-        "esavelmat_rs2.js",
-        "esavelmat_rs2_laaja.js",
-         "suomitest3.js",
-        "richardrobinsonbook.js",
-        "sekalaista01.js",
-        "FinnishTunes.js",
-        "FinnishTunes2.js",
-    "fsfolkdiktning01.js",
-    "fsfolkdiktning02.js",
-    "swedish2.js",
-    "norway1.js",
-        "dansk1.js",
-        "dansk2.js",
-        "dansk3.js",
-        "hardanger.js",
-        "nordbeck.js",
-        "esavelmat_hs1.js",
-        "folkwikiExtra.js",
-    "folkwikiSet1.js",
-    "folkwikiSet2.js",
-    "folkwikiSet3.js"
-    ];
-
-    let loaded = 0;
-    const total = urls.length;
-    let allData = [];
-    let favorites = [];
-    try {
-    const saved = localStorage.getItem('myFavorites');
-    
-    const parsed = JSON.parse(saved);
-    if (Array.isArray(parsed)) {
-        favorites = parsed;
+for (var i = 0; i < urls.length; i++) {  
+    try {  
+        var response = await fetch(urls[i].url);
+        if (!response.ok) throw new Error("Palvelin vastasi: " + response.status);  
+        var text = await response.text();  
+        var startIdx = text.indexOf('[');  
+        var endIdx = text.lastIndexOf(']');  
+        
+        if (startIdx !== -1 && endIdx !== -1) {  
+            var rawList = text.substring(startIdx, endIdx + 1);  
+            var data = new Function('return ' + rawList)();  
+            
+            if (Array.isArray(data)) {
+                    data.forEach(item => {
+                        item.sourceGroup = urls[i].type;
+                        // Varmistetaan että abc-kenttä löytyy
+                        item.abc = item.abc || item.notation || item.content || "";
+                    });
+                    window.harpLibrary = window.harpLibrary.concat(data);
+                }  
+            }  
+        } catch (err) { 
+            console.error("Latausvirhe linkissä: " + urls[i].url, err); 
+        }  
     }
-} catch (e) {
-    console.error("Suosikkien lataus epäonnistui, alustetaan tyhjäksi.");
-    favorites = [];
-}
-
-    const promises = urls.map(url =>
-        fetch(url)
-            .then(res => res.text())
-            .then(text => {
-
-                const startIdx = text.indexOf('[');
-                const endIdx = text.lastIndexOf(']');
-
-                if (startIdx !== -1 && endIdx !== -1) {
-
-                    const rawList = text.substring(startIdx, endIdx + 1);
-                    const data = eval(rawList);
-
-                    allData = allData.concat(data);
-                }
-
-                loaded++;
-
-                const percent = Math.round((loaded / total) * 100);
-                loaderBar.style.width = percent + "%";
-                loaderPercent.innerText = percent + "%";
-
-            })
-            .catch(err => {
-                console.error("Virhe ladattaessa:", url, err);
-            })
-    );
-
-    await Promise.all(promises);
-
-    window.harpLibrary = allData;
-
-    loaderPercent.innerText = "Valmis! / Ready!";
-
-    setTimeout(() => {
-        loaderContainer.style.display = "none";
-    }, 800);
-
     console.log("KAIKKI LADATTU:", window.harpLibrary.length);
 }
-
 
 loadGistData();
 
 window.onload = function() {
-    console.log("Sivu ladattu, haku valmiina heti kun Gistit saapuvat.");
-    
-     // --- KIELIPAKETTI ---
-    const translations = {
-        fi: {
-        settings: "Säädöt & Toiminnot",  
-        filter: "Suodatus:",
-        filterEasy: "Ilman taivutuksia (✅)",
-        filterAll: "Kaikki kappaleet (sis. taivutukset)",
-        searchPlaceholder: "Hae biisiä...",
-        play: "Soita",
-        favPlaceholder: "-- Omat suosikit ❤️ --",
-        modalTitle: "Huuliharpun tabulatuurien lukuohje",
-        modalFooter: "Varmista, että käytät oikeaa harppua (esim. C-duuri), jotta numerot täsmäävät melodiaan. Kaikki tämän työkalun suositellut harput ovat duuriharppuja",
-        instr: [
-            "<strong>Plusmerkki (+4):</strong> Puhalla kyseiseen reikään.",
-            "<strong>Miinusmerkki (-4):</strong> Ime kyseisestä reiästä.",
-            "<strong>Heittomerkki (-4'):</strong> Puolisävelaskeleen taivutus (bend).",
-            "<strong>2 tai 3 heittomerkkiä (-3'' tai 3'''):</strong> Kokosävelaskeleen tai 1,5 sävelaskeleen taivutus.",
-            "<strong>o-kirjain (+4o):</strong> Ylitaivutus."
-        ],
-        msgSearching: "Haetaan...",  
-            statusKey: "Sävellaji", 
-            statusRec: "Suositus", 
-            statusHarpSuffix: "-harppu", 
-            msgRandomizing: "Arvotaan sopivaa kappaletta...",
-        msgNotFound: "Ei löytynyt puhdasta biisiä, kokeile uudestaan.",
-        msgNotFoundSrch: "Ei löytynyt sopivia kappaleita.",
-        msgDone: "Valmis!",
-        msgSearchDone: "Haku valmis!",
-        msgError: "Virhe.",
-        msgDeleteConfirm: "Poistetaanko",
-        msgAnalyzing: "Analysoidaan tuloksia...",
-            lib: "Kirjasto & Haku",
-            sources: "Lähteet: TheSession & FolkWiki",
-            search: "Etsi",
-            random: "🎲 Arvo",
-            harp: "Huuliharppu",
-            tempo: "Tempo (BPM)",
-            delete: "Poista",
-            info: "ℹ️ Ohje",
-            placeholder: "Kirjoita tai liitä ABC-koodi tähän...",
-            statusKey: "Sävellaji",
-            statusRec: "Suositus",
-            shareBtn: "🔗 Jaa",
-        shareTitle: "HarpTuneFinder",
-        shareText: "Löysin kätevän työkalun huuliharppukappaleiden etsintään tabulatuurien kera!",
-        shareCopy: "Linkki kopioitu leikepöydälle!",
-        statusKey: "Sävellaji",
-        statusRec: "Suositus"
-        },
-        en: {
-        settings: "Settings & Functions",
-        filter: "Filter:",
-        filterEasy: "No bends (✅)",
-        filterAll: "All songs (incl. bends)",
-        searchPlaceholder: "Search tune...",
-        play: "Play",
-        favPlaceholder: "-- My Saved Tunes 💟 --",
-        modalTitle: "How to Read Harmonica Tabs",
-        modalFooter: "Make sure you use the correct harp (e.g., C major) so the numbers match the melody. All recommended harps in this tool are in major key.",
-        instr: [
-            "<strong>Plus sign (+4):</strong> Blow into the hole.",
-            "<strong>Minus sign (-4):</strong> Draw from the hole.",
-            "<strong>Apostrophe (-4'):</strong> Half-step bend.",
-            "<strong>Two apostrophes (-3''):</strong> Whole-step bend.",
-            "<strong>Three apostrophes (-3'''):</strong> 1,5-step bend.",
-            "<strong>Letter o (+4o):</strong> Overbend."
-        ],
-        msgSearching: "Searching...",
-        statusKey: "Key", 
-            statusRec: "Recommended", 
-            statusHarpSuffix: " harp",
-        msgRandomizing: "Picking a random song...",
-        msgNotFound: "No clean song found, try again.",
-        msgNotFoundSrch: "No matching songs found.",
-        msgDone: "Done!",
-        msgSearchDone: "Search done!",
-        msgError: "Error.",
-        msgDeleteConfirm: "Delete",
-        msgAnalyzing: "Analyzing results...",
-            lib: "Library & Search",
-            sources: "Sources: TheSession & FolkWiki",
-            search: "Search",
-            random: "🎲 Random",
-            harp: "Harmonica",
-            tempo: "Tempo (BPM)",
-            delete: "Delete",
-            info: "ℹ️ Info",
-            placeholder: "Type or paste ABC code here...",
-            statusKey: "Key",
-            statusRec: "Recommended",
-            shareBtn: "🔗 Share",
-        shareTitle: "HarpTuneFinder",
-        shareText: "Check out this handy tool for harmonica tabs and sheet music!",
-        shareCopy: "Link copied to clipboard!",
-        statusKey: "Key",
-        statusRec: "Recommended"
-        }
-    };
-    
-    // Copyright: Janne Ojajärvi www.huuliharppu.fi
+var abcInput = document.getElementById('abcInput');
+var warningDiv = document.getElementById('warnings');
+var octaveDisplay = document.getElementById('octaveDisplay');
+var transposeDisplay = document.getElementById('transposeDisplay');
+var tempoSlider = document.getElementById('tempoSlider');
+var tempoDisplay = document.getElementById('tempoDisplay');
+var resultsDiv = document.getElementById('searchResults');
+var baseNoteSelect = document.getElementById('baseNote');
 
-    function updateLanguage(lang) {
-        const t = translations[lang];
-                
-        localStorage.setItem('prefLang', lang);
-        
-        if(document.getElementById('labelSettings')) document.getElementById('labelSettings').innerText = t.settings;
-        if(document.getElementById('labelFilter')) document.getElementById('labelFilter').innerHTML = `<strong>${t.filter}</strong>`;
-        if(document.getElementById('playBtn')) document.getElementById('playBtn').innerText = t.play;
-        if(document.getElementById('labelLibrary')) document.getElementById('labelLibrary').innerText = t.lib;
-        if(document.getElementById('labelSources')) 
-    document.getElementById('labelSources').innerText = t.sources;
-        if(document.getElementById('searchInput')) document.getElementById('searchInput').placeholder = t.searchPlaceholder;
-        if(document.getElementById('modalTitle')) document.getElementById('modalTitle').innerText = t.modalTitle;
-        if(document.getElementById('modalFooter')) document.getElementById('modalFooter').innerText = t.modalFooter;
-        if(document.getElementById('searchBtn')) document.getElementById('searchBtn').innerText = t.search;
-        if(document.getElementById('randomBtn')) document.getElementById('randomBtn').innerText = t.random;
-        if(document.getElementById('labelHarp')) document.getElementById('labelHarp').innerText = t.harp;
-        if(document.getElementById('labelTempo')) document.getElementById('labelTempo').innerText = t.tempo;
-        if(document.getElementById('deleteFavBtn')) document.getElementById('deleteFavBtn').innerText = t.delete;
-        if(document.getElementById('infoBtn')) document.getElementById('infoBtn').innerText = t.info;
-        if(document.getElementById('shareAppBtn')) {
-    // Käytetään t.shareBtn, joka sisältää jo ikonisi (🔗 Jaa / 🔗 Share)
-    document.getElementById('shareAppBtn').innerText = t.shareBtn;
+// APUFUNKTIOT
+function getPitchValue(noteName) {  
+    var baseMap = { 'C': 0, 'D': 2, 'E': 4, 'F': 5, 'G': 7, 'A': 9, 'B': 11 };  
+    var val = baseMap[noteName.toUpperCase()] || 0;  
+    if (noteName === noteName.toLowerCase()) val += 12;   
+    return val;  
+}  
+
+function getFilteredLibrary() {
+    var filterValue = document.getElementById('sourceFilter').value;
+    if (filterValue === "Kaikki") return window.harpLibrary;
+    return window.harpLibrary.filter(item => item.sourceGroup === filterValue);
 }
-        if(document.getElementById('abcInput')) document.getElementById('abcInput').placeholder = t.placeholder;
 
-// Alasvetovalikot (Select options)
-    const fs = document.getElementById('filterSelect');
-    if(fs) {
-        fs.options[0].text = t.filterEasy;
-        fs.options[1].text = t.filterAll;
-    }
+function getRelativeMajor(root, mode){
+var semitones = {'C':0,'C#':1,'Db':1,'D':2,'D#':3,'Eb':3,'E':4,'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11};
+var reverse = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'];
+
+var val = semitones[root];
+if (val === undefined) return root;
+if (mode.includes("min") || mode === "m") val += 3;
+if (mode.includes("dor")) val -= 2;
+if (mode.includes("mix")) val -= 7;
+if (mode.includes("lyd")) val -= 5;
+
+val = (val + 120) % 12;
+
+return reverse[val];
+}
+  
+function getKeyAccidentals(key, mode) {
+    mode = (mode || "").toLowerCase().trim();
+    var k = key.toUpperCase();
+
+    // Muunnettaan sävellaji vastaavaksi duuriksi ylennysten laskemista varten
+    var relativeMajorKey = getRelativeMajor(k, mode);
     
-    const favs = document.getElementById('favoritesSelect');
-    if(favs) favs.options[0].text = t.favPlaceholder;
+    var accidentals = {};
+    var sharpsOrder = ['F', 'C', 'G', 'D', 'A', 'E', 'B'];
+    var flatsOrder = ['B', 'E', 'A', 'D', 'G', 'C', 'F'];
 
-    
-    const list = document.getElementById('instructionsList');
-    if(list) {
-        list.innerHTML = t.instr.map(item => `<li>${item}</li>`).join('');
-    }
+    var sharpCounts = { 'G': 1, 'D': 2, 'A': 3, 'E': 4, 'B': 5, 'F#': 6, 'C#': 7 };
+    var flatCounts = { 'F': 1, 'Bb': 2, 'Eb': 3, 'Ab': 4, 'Db': 5, 'Gb': 6, 'Cb': 7 };
 
-
-      
-    }
-
-    // Kytketään napit
-    document.getElementById('langFi').onclick = () => updateLanguage('fi');
-    document.getElementById('langEn').onclick = () => updateLanguage('en');
-
-    // Ladataan tallennettu kieli tai oletus
-    const savedLang = localStorage.getItem('prefLang') || 'fi';
-    updateLanguage(savedLang);
-
-    // --- ELEMENTTIEN HAKU ---
-    const abcInput = document.getElementById('abcInput');
-   const statusDisplay = document.querySelector('.status-bar');
-    const harpKeySelect = document.getElementById('harpKey');
-    const octaveDisplay = document.getElementById('octaveDisplay');
-    const tempoRange = document.getElementById('tempoRange');
-    const tempoDisplay = document.getElementById('tempoDisplay');
-    const playBtn = document.getElementById('playBtn');
-    const stopBtn = document.getElementById('stopBtn');
-    const favoritesSelect = document.getElementById('favoritesSelect');
-    const randomBtn = document.getElementById('randomBtn');
-      // --- OHJE-IKKUNAN LOGIIKKA ---
-    const modal = document.getElementById("infoModal");
-    const infoBtn = document.getElementById("infoBtn");
-    const closeSpan = document.getElementsByClassName("close")[0];
-
-    // Avaa ikkuna
-    infoBtn.onclick = () => { modal.style.display = "block"; }
-
-    // Sulje ikkuna ruksista
-    closeSpan.onclick = () => { modal.style.display = "none"; }
-
-    // Sulje ikkuna klikkaamalla muualta kuin laatikosta
-    window.onclick = (event) => {
-        if (event.target == modal) {
-            modal.style.display = "none";
+    if (sharpCounts[relativeMajorKey]) {
+        for (var i = 0; i < sharpCounts[relativeMajorKey]; i++) {
+            accidentals[sharpsOrder[i]] = 1;
+        }
+    } else if (flatCounts[relativeMajorKey]) {
+        for (var i = 0; i < flatCounts[relativeMajorKey]; i++) {
+            accidentals[flatsOrder[i]] = -1;
         }
     }
     
-    // --- JAA-NAPIN TOIMINNALLISUUS ---
-    const shareBtn = document.getElementById('shareAppBtn');
-    if (shareBtn) {
-        shareBtn.onclick = async () => {
-            // Haetaan nykyinen kieli tallennetusta tiedosta tai oletuksesta
-            const currentLang = localStorage.getItem('prefLang') || 'fi';
-            const t = translations[currentLang];
+    return accidentals;
+}
 
-            const shareData = {
-                title: t.shareTitle,
-                text: t.shareText,
-                url: 'https://codepen.io/Janne-Ojaj-rvi/full/MYjXBLV'
-            };
+function getTargetTranspositions(mode) {
+    var targets = [];
+    mode = mode.toLowerCase();
 
-            // Yritetään käyttää selaimen omaa jakoa (mobiili)
-            if (navigator.share) {
-                try {
-                    await navigator.share(shareData);
-                } catch (err) {
-                    console.log("Jako peruutettiin");
-                }
-            } else {
-                // Varajärjestelmä (tietokone): Kopioidaan linkki leikepöydälle
-                try {
-                    await navigator.clipboard.writeText(shareData.url);
-                    alert(t.shareCopy);
-                } catch (err) {
-                    // Jos kopiointi epäonnistuu (esim. vanha selain)
-                    alert("Kopioi tämä linkki: " + shareData.url);
-                }
-            }
-        };
+    if (mode.includes("lyd") && !mode.includes("mix")) {
+        targets = [2];
+    } else if (mode.includes("mix")) {
+        targets = [4];
+    } else if (mode.includes("dor")) {
+        targets = [9, 7]; // A ja F#
+    } else if (mode.includes("min") || mode === "m") {
+        targets = [2, 9, 11]; // Dm Am Hm
+    } else {
+        targets = [2, 9]; // D tai A
     }
+    return targets;
+}
 
-      // --- DARK MODE LOGIIKKA ---
-    const darkModeBtn = document.getElementById('darkModeToggle');
-    
-    // Tarkista onko käyttäjä jo aiemmin valinnut yötilan
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-        darkModeBtn.innerText = "☀️";
-    }
+function autoTransposeFromKey(abc) {
+// console.log("----- AUTO TRANSPOSE DEBUG -----");
+var preferD = true;
+var keyMatch = abc.match(/^K:\s*([A-G][b#]?)\s*([a-zA-Z]*)/m);
+if (!keyMatch) return;
 
-    darkModeBtn.onclick = () => {
-        document.body.classList.toggle('dark-mode');
-        const isDark = document.body.classList.contains('dark-mode');
-        
-        // Tallennetaan valinta muistiin
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        darkModeBtn.innerText = isDark ? "☀️" : "🌙";
-        
-        // Päivitetään nuotit, jotta värit asettuvat oikein
-        processAbc();
-    };
-// --- TULOSTUSLOGIIKKA ---
-    const printBtn = document.getElementById('printBtn');
-    
-    printBtn.onclick = () => {
-        // 1. Tarkistetaan onko yötila päällä
-        const wasDarkMode = document.body.classList.contains('dark-mode');
-        
-        // 2. Jos oli yötila, poistetaan se hetkeksi
-        if (wasDarkMode) {
-            document.body.classList.remove('dark-mode');
-            processAbc(); // Päivitetään nuotit vaaleiksi
-        }
-        
-        // 3. Pieni viive, jotta selain ehtii piirtää vaaleat nuotit ennen tulostusikkunaa
-        setTimeout(() => {
-            window.print();
+var semitones = {'C':0,'C#':1,'Db':1,'D':2,'D#':3,'Eb':3,'E':4,'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11};
+
+var startNote = keyMatch[1];
+var mode = (keyMatch[2] || "").toLowerCase().trim();
+var startVal = semitones[startNote] || 0;
+
+// console.log("Start key:", startNote, "mode:", mode);
+
+// KÄYTETÄÄN YHTEISTÄ FUNKTIOTA TÄSSÄ
+    var targets = getTargetTranspositions(mode);
+
+// Asetetaan aluksi erittäin korkea virheaste
+var bestScore = 999;
+    var bestOct = 0;
+    var bestTrans = 0;
+
+    targets.forEach(targetVal => {
+    // Kokeillaan kahta eri transponointisuuntaa jokaiselle kohteelle
+    // Esim. G (7) -> D (2) voi olla joko -5 tai +7
+    var transOptions = [
+        targetVal - startVal,          // Alaspäin/Suoraan (esim. -5)
+        (targetVal - startVal) + 12,   // Ylöspäin (esim. +7)
+        (targetVal - startVal) - 12    // Vielä alemmas (esim. -17)
+    ];
+
+    transOptions.forEach(trans => {
+        [-1, 0, 1].forEach(oct => {
+            var rate = countErrorRate(abc, trans, oct);
             
-            // 4. Palautetaan yötila takaisin tulostusikkunan avaamisen jälkeen
-            if (wasDarkMode) {
-                document.body.classList.add('dark-mode');
-                processAbc(); // Päivitetään nuotit takaisin tummiksi
+            console.log(
+"Target:", targetVal,
+"trans:", trans,
+"oct:", oct,
+"rate:", rate
+);
+            
+         
+
+            // Lisätään pieni sakko (0.1) korkeammille oktaaveille ja kauemmas 
+            // meneville transponoinneille, jotta suositaan luonnollista aluetta.
+            var penalty = ((oct + 1) * 0.1) + (Math.abs(trans) * 0.01);
+
+if (targetVal === 2) penalty -= 0.05; // suosii D-sävellajeja
+            var currentScore = rate + penalty;
+            
+            console.log(
+"Target:", targetVal,
+"trans:", trans,
+"oct:", oct,
+"rate:", rate,
+"penalty:", penalty,
+"score:", currentScore
+);
+
+            if (currentScore < bestScore || (preferD && targetVal === 2 && rate === bestScore)) {
+                bestScore = currentScore;
+                bestOct = oct;
+                bestTrans = trans;
             }
-        }, 100);
-    };
-  
-
-    // Copyright: Janne Ojajärvi www.huuliharppu.fi
-    
-    // --- MUUTTUJAT ---
-    let octaveOffset = 0;
-    let transposeOffset = 0;
-    let lastProcessedAbc = "";
-    let currentKeyAccidentals = {};
-    let synthControl = null;
-    let userHasSelectedHarp = false; // Estää automaattisen ylikirjoituksen
-
-  
-        // Optimointifunktio
-    function autoOptimize() {
-        let bestOctave = 0;
-        let minScore = 999999;
-        let harpShift = parseInt(harpKeySelect.value);
-
-        // Testataan oktaavit -2, -1, 0, 1, 2
-        [-2, -1, 0, 1, 2].forEach(testOffset => {
-            let score = 0;
-            abcInput.value.split('\n').forEach(line => {
-                if (/^[A-Z]:/.test(line) || line.trim() === "") return;
-                
-                line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
-                    let absPitch = getPitchValue(acc, note, octs);
-                    // Laskenta suhteessa testattavaan oktaaviin
-                    let relPitch = absPitch - harpShift + transposeOffset + (testOffset * 12);
-                    const tab = harpMap[relPitch.toString()] || "";
-                    
-                    if (tab === "") {
-                        score += 100; 
-                    } else {
-                        let bends = (tab.match(/'/g) || []).length;
-                        let overblows = (tab.match(/o/g) || []).length;
-                        score += (bends * 1) + (overblows * 2);
-                    }
-                });
-            });
-
-            if (score < minScore) {
-                minScore = score;
-                bestOctave = testOffset;
-            }
+            console.log("BEST RESULT:",
+"transpose:", bestTrans,
+"octave:", bestOct,
+"score:", bestScore
+);
         });
+    });
+});
 
-        // Päivitetään globaali muuttuja
-        octaveOffset = bestOctave;
-    }
-
-    
-  
-    const harpMap = {
-        "-5": "-2", "-4": "-3'''", "-3": "-3''", "-2": "-3'", "-1": "-3",
-        "0": "+4", "1": "-4'", "2": "-4", "3": "-4o", "4": "+5", "5": "-5", 
-        "6": "+5o", "7": "+6", "8": "-6'", "9": "-6", "10": "-7'", "11": "-7",
-        "12": "+7", "13": "-7o", "14": "-8", "15": "+8'", "16": "+8", "17": "-9",
-        "18": "+9'", "19": "+9", "20": "-10", "21": "+10''", "22": "+10'", "23": "+10"
-    };
-
-    // Moodien "perussävellajit"
-    const keyData = {
-        'C': { acc: {}, hName: 'C', val: 12 }, 'Am': { acc: {}, hName: 'C', val: 12 },
-        'B': { acc: {'F':1, 'C':1, 'G':1, 'D':1, 'A':1}, hName: 'B (H)', val: 11 }, // (B tai H-duuri)
-        'G': { acc: {'F':1}, hName: 'G', val: 7 }, 'Em': { acc: {'F':1}, hName: 'G', val: 7 },
-        'D': { acc: {'F':1, 'C':1}, hName: 'D', val: 14 }, 'Bm': { acc: {'F':1, 'C':1}, hName: 'D', val: 14 },
-        'A': { acc: {'F':1, 'C':1, 'G':1}, hName: 'A', val: 9 }, 'F#m': { acc: {'F':1, 'C':1, 'G':1}, hName: 'A', val: 9 },
-        'E': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16 }, 'C#m': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16 },
-        'F': { acc: {'B':-1}, hName: 'F', val: 17 }, 'Dm': { acc: {'B':-1}, hName: 'F', val: 17 },
-        'Bb': { acc: {'B':-1, 'E':-1}, hName: 'Bb', val: 10 }, 'Gm': { acc: {'B':-1, 'E':-1}, hName: 'Bb', val: 10 },
-        'B': { acc: {'F':1, 'C':1, 'G':1, 'D':1, 'A':1}, hName: 'B', val: 11 }, 
-        'Bm': { acc: {'F':1, 'C':1}, hName: 'D', val: 14 }, // H-molli (vastaa D-duuria)
-        'Eb': { acc: {'B':-1, 'E':-1, 'A':-1}, hName: 'Eb', val: 15 }
-    };
-
-    // Apufunktio moodien muuntamiseen vastaavaksi duuriksi etumerkkien osalta
-    function getModeEquivalent(root, mode) {
-    root = root.replace('H', 'B'); // Muuttaa H:n B:ksi (esim. Hm -> Bm)
-        const notes = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B'];
-        let idx = notes.indexOf(root.replace('m', '')); // Poistetaan m-kirjain vertailua varten
-        if (idx === -1) return root;
-
-        if (mode.includes("dor")) {
-            return notes[(idx - 2 + 12) % 12];
-        }
-        if (mode.includes("mix")) {
-            return notes[(idx - 7 + 12) % 12];
-        }
-        // Luonnollinen molli (m, min tai jos sävelessä on m-pääte)
-        if ((mode.includes("m") && !mode.includes("maj")) || mode === "min" || mode === "minor" || root.endsWith("m")) {
-            return notes[(idx + 3) % 12];
-        }
-        return root;
-    }
-
-    function analyzeKey(abcText) {
-    
-    // Poimitaan biisin nimi (T: -rivi) ja näytetään se
-const titleMatch = abcText.match(/^T:\s*(.*)/m);
-const titleDisplay = document.getElementById('tuneTitleDisplay');
-if (titleDisplay) {
-    titleDisplay.innerText = titleMatch ? titleMatch[1].trim() : "";
+    window.currentOctave = bestOct;
+    window.currentTranspose = bestTrans;
 }
 
+function processAbc() {
+var raw = abcInput.value;
+var baseShift = 2; // Kiinteä D-vire
+
+if (octaveDisplay) octaveDisplay.innerText = window.currentOctave;  
+if (transposeDisplay) transposeDisplay.innerText = window.currentTranspose;  
+if (tempoDisplay) tempoDisplay.innerText = tempoSlider.value;  
+  
+var hasErrors = false;  
+var finalAbc = "";  
+
+
+
+// Yhdistetty lista analyysiä varten
+var allowedD = harmonicOpen
+  .concat(harmonicClosed)
+  .concat(harmonicHalf);
+  
+  
+
+// Sävellajien etumerkit (mitkä nuotit ylennetään/alennetaan automaattisesti)  
+var keyAccidentals = {}; 
+var barAccidentals = {}; 
+  
+var lines = raw.split('\n');  
+for (var i = 0; i < lines.length; i++) {  
+    var line = lines[i];  
+    
+    
+    if (line.trim().startsWith('w:')) continue;  
       
-        const keyMatch = abcText.match(/^K:\s*([A-G][#b]?)([A-Za-z0-9]*)/m);
-        if (!keyMatch) return;
-
-        let root = keyMatch[1].trim();
-        let mode = keyMatch[2] ? keyMatch[2].toLowerCase().trim() : "";
-        root = root.replace('H', 'B');
+    if (/^[A-Z]:/.test(line) && !line.startsWith('|:')) {  
+    if (line.startsWith("Q:")) {
+    finalAbc += "Q:1/4=" + tempoSlider.value + "\n";
+    continue;
+}  
+        if (line.startsWith('K:')) {  
         
-        // 1. Etsitään etumerkit (accidentals) moodin mukaan
-        let equivRoot = getModeEquivalent(root, mode);
-        let visualData = keyData[equivRoot] || { acc: {} };
-        currentKeyAccidentals = visualData.acc;
-
-        // 2. Lasketaan suositusharppu alkuperäisen juuren mukaan
-        // Lasketaan suositusharppu kappaleen sävellajin ja moodin perusteella
-        // 2. Lasketaan suositusharppu asemien mukaan
-        const notes = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B'];
-        let rootIdx = notes.indexOf(root.replace('m', ''));
-        if (rootIdx === -1) rootIdx = 0; 
-
-        let targetVal = 0;
-
-        if (mode.includes("mix")) {
-            targetVal = (rootIdx - 7 + 12) % 12; // 2. asema (Position 2)
-        } 
-        else if (mode.includes("dor")) {
-            targetVal = (rootIdx - 2 + 12) % 12; // 3. asema (Position 3)
-        } 
-        // Tarkistetaan m-kirjain vain, jos se ei ole osa "major" tai "maj" sanaa
-        else if ((mode.includes("m") && !mode.includes("maj")) || root.endsWith("m") || mode === "minor") {
-            targetVal = (rootIdx - 9 + 12) % 12; // 4. asema (Position 4)
-        } 
-        else {
-            // Kaikki muut (Major, Maj, tyhjä mode) menevät 1. asemaan
-            targetVal = rootIdx; 
-        }
-
-        const options = Array.from(harpKeySelect.options).map(o => ({
-            val: parseInt(o.value),
-            semitone: parseInt(o.value) % 12
-        }));
-
-        let bestOption = options.reduce((prev, curr) => 
-            Math.abs(curr.semitone - targetVal) < Math.abs(prev.semitone - targetVal) ? curr : prev
-        );
-
-        let closest = bestOption.val;
-        
-        const optText = Array.from(harpKeySelect.options).find(o => parseInt(o.value) === closest).text;
-        let recommendedHarpName = optText.split(' ')[0];
-
-        // ------
-    const currentLang = localStorage.getItem('prefLang') || 'fi';
-    const t = translations[currentLang];
-    
-    // -------------
-  statusDisplay.innerHTML = `<span>${t.statusKey}: ${root}${mode}</span> &nbsp;&nbsp; <span>${t.statusRec}: ${recommendedHarpName}${t.statusHarpSuffix || ""}</span>`;
-     
-     // -------------------------------------------------------------
-    
-        if (abcText !== lastProcessedAbc || !userHasSelectedHarp) {
-            harpKeySelect.value = closest;
-            lastProcessedAbc = abcText;
-            userHasSelectedHarp = false;
-        }
-    }
-
-    
-            function getFinalAbc() {
-    let harpShift = parseInt(harpKeySelect.value);
-    let finalAbc = "";
-    
-    // Tallennetaan sävellajin alkuperäiset etumerkit
-    const defaultAccidentals = JSON.stringify(currentKeyAccidentals);
-
-    abcInput.value.split('\n').forEach(line => {
-        if (line.startsWith('Q:')) return; 
-        
-        // --- KORJAUS TÄSSÄ ---
-        // Jos rivi alkaa K: (sävellaji), päivitetään etumerkit mutta ei yritetä lisätä tabeja
-        if (line.startsWith('K:')) {
-            const keyMatch = line.match(/^K:\s*([A-G][#b]?)([A-Za-z0-9]*)/);
+            // Tunnistetaan sävellaji (esim. D, G, Am, Dmaj)  
+            var keyMatch = line.match(/^K:\s*([A-G][b#]?)\s*(.*)/i);  
             if (keyMatch) {
-                let root = keyMatch[1].replace('H', 'B');
-                let mode = keyMatch[2] ? keyMatch[2].toLowerCase() : "";
-                let equivRoot = getModeEquivalent(root, mode);
-                let visualData = keyData[equivRoot] || { acc: {} };
-                currentKeyAccidentals = visualData.acc;
+       var keyBase = keyMatch[1];         // Esim. "E"
+        var modeStr = keyMatch[2].trim();   // Esim. "min"
+               
+                keyAccidentals = getKeyAccidentals(keyBase, modeStr);
+            }  
+            
+
+finalAbc += line.trim() + " octave=" + window.currentOctave + "\n";
+} else {
+finalAbc += line + "\n";
+}
+continue;
+}
+
+var wLine = "w:";  
+    var foundNotes = false;  
+    // if (line.includes('|')) barAccidentals = {};
+    var noteRegex = /([|])|([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g;  
+    var match;  
+      
+    while ((match = noteRegex.exec(line)) !== null) {  
+        foundNotes = true;  
+        // Jos kyseessä on tahtiviiva (match[1]), nollataan etumerkit
+    if (match[1] === '|') {
+        barAccidentals = {};
+        continue; // Siirrytään seuraavaan merkkiin
+    }
+        
+        var acc = match[2]; 
+   		var noteName = match[3]; 
+    	var octs = match[4];  
+          
+        var v = getPitchValue(noteName);  
+          
+        // 1. Käytetään sävellajin etumerkkiä, JOS nuotilla ei ole omaa tilapäismerkkiä (^, _, =)  
+        var stepInOctave = noteName.toUpperCase();
+
+if (acc === '^') {
+    v++;
+    barAccidentals[stepInOctave] = 1;
+}
+else if (acc === '_') {
+    v--;
+    barAccidentals[stepInOctave] = -1;
+}
+else if (acc === '=') {
+    barAccidentals[stepInOctave] = 0;
+}
+else {
+
+    if (barAccidentals.hasOwnProperty(stepInOctave)) {
+        v += barAccidentals[stepInOctave];
+    }
+    else if (keyAccidentals[stepInOctave]) {
+        v += keyAccidentals[stepInOctave];
+    }
+
+}  
+
+        for (var j = 0; j < octs.length; j++) {  
+            if (octs[j] === ',') v -= 12; if (octs[j] === "'") v += 12;  
+        }  
+          
+        var step = v + (window.currentOctave * 12) + window.currentTranspose - baseShift;  
+          
+        var sym = "×";  
+        if (harmonicOpen.indexOf(step) !== -1) sym = "◯";  
+        else if (harmonicClosed.indexOf(step) !== -1) sym = "⬤";  
+        else if (harmonicHalf.indexOf(step) !== -1) sym = "◒";  
+
+        if (sym === "×") hasErrors = true;  
+        wLine += " " + sym;  
+    }  
+    finalAbc += line + "\n";  
+    if (foundNotes) finalAbc += wLine + "\n";  
+}  
+
+if (!finalAbc.includes("Q:")) {
+    finalAbc = finalAbc.replace(/M:[^\n]*/, function(m){
+        return m + "\nQ:1/4=" + tempoSlider.value;
+    });
+}
+
+
+
+
+
+if (window.ABCJS) {  
+
+visualObj = ABCJS.renderAbc("paper", finalAbc, {  
+    responsive: 'resize',  
+    scale: 0.8,          // Pienentää yleisskaalaa hieman, jotta footer mahtuu
+    staffwidth: 740, // Tämä on kriittinen: A4-leveys
+     paddingbottom: 0,   // Jättää tilaa tabulatuureille SVG:n sisällä
+    paddingtop: 20,      // Jättää tilaa yläpuolelle
+    add_classes: true,  
+    visualTranspose: window.currentTranspose,  
+    boostOctave: window.currentOctave,  
+    wrap: {
+        minSpacing: 1.5,
+        maxSpacing: 2.5,
+        preferredMeasuresPerLine: 4 // Yrittää pitää 4 tahtia per rivi
+    }
+})[0];  
+
+if (synthControl && visualObj) {  
+    
+    // Haetaan asetukset valikon mukaan (huilulle polut ja kaiku, pianolle tyhjä eli alkuperäinen)
+    var audioParams = window.getAudioOptions();
+var ctx = new (window.AudioContext || window.webkitAudioContext)();
+	// JOS valittuna on huilu (program 73), rakennetaan kaiku ja "huijataan" abcjs:ää
+    if (audioParams.program === 73) {
+        var realDestination = ctx.destination;
+        var masterBus = ctx.createGain(); // Tämä toimii meidän "valekaiuttimena"
+        
+        var convolver = ctx.createConvolver();
+        var reverbGain = ctx.createGain();
+        
+        // SÄÄDÄ KAIKUA TÄSTÄ: 0.6 = 60% kaiku. Nosta tai laske makusi mukaan!
+        reverbGain.gain.value = 0.6; 
+        
+        // Generoidaan kaunis digitaalinen huonekaiku
+        var rate = ctx.sampleRate;
+        var length = rate * 2.5; // Kaiun pituus 2.5 sekuntia
+        var impulse = ctx.createBuffer(2, length, rate);
+        var left = impulse.getChannelData(0);
+        var right = impulse.getChannelData(1);
+        for (var i = 0; i < length; i++) {
+            var decay = Math.exp(-i / (rate * 0.8)); 
+            left[i] = (Math.random() * 2 - 1) * decay;
+            right[i] = (Math.random() * 2 - 1) * decay;
+        }
+        convolver.buffer = impulse;
+
+        // Kytkennät: MasterBus jakaantuu suoraan ääneen ja kaikuun
+        masterBus.connect(realDestination);      // Suora ääni (Dry)
+        masterBus.connect(convolver);            // Signaali kaikulaitteeseen
+        convolver.connect(reverbGain);           // Kaikulaitteesta äänenvoimakkuuden säätöön
+        reverbGain.connect(realDestination);     // Kaiku ulos oikeista kaiuttimista (Wet)
+
+        // HUIJAUS: Korvataan AudioContextin alkuperäinen ulostulo meidän mikserillämme!
+        Object.defineProperty(ctx, 'destination', {
+            value: masterBus,
+            writable: false
+        });
+    }
+	
+    // Ladataan soittimen moottori asetuksilla
+    synth.init({  
+        audioContext: ctx,  
+        visualObj: visualObj,
+        options: audioParams 
+    }).then(function() {  
+        
+        // Asetetaan transponointi myös visuaaliselle soittimen ohjaimelle
+        synthControl.setTune(visualObj, true, audioParams).then(function() {
+            synthControl.restart(); 
+        });  
+        
+    }).catch(function(err) {
+        console.warn("Soittimen alustus odottaa klikkausta:", err);
+    });
+}
+
+
+}
+if (warningDiv) {
+warningDiv.innerHTML = hasErrors ? "⚠️ Sisältää outoja säveliä" : "✅ Kaikki sävelet sopivat huilulle";
+}
+updateAbcDownload(finalAbc);
+}
+
+// --- Ohjaimet ---  
+document.getElementById('octaveUp').onclick = function() { window.currentOctave++; processAbc(); };  
+document.getElementById('octaveDown').onclick = function() { window.currentOctave--; processAbc(); };  
+document.getElementById('transposeUp').onclick = function() { window.currentTranspose++; processAbc(); };  
+document.getElementById('transposeDown').onclick = function() { window.currentTranspose--; processAbc(); };  
+if (baseNoteSelect) baseNoteSelect.onchange = processAbc;   
+
+
+
+document.getElementById('octaveUp').onclick = function() { window.currentOctave++; processAbc(); };  
+
+
+
+// --- UUSI ÄLYKÄS KORJAUSFUNKTIO ---
+function replaceTransposedNotesSmart(conditionFn, shiftFn) {
+    var abcInput = document.getElementById('abcInput');
+    if (!abcInput) return;
+    
+    // Tallennetaan kumoa-toimintoa varten
+    window.lastOriginalAbc = abcInput.value;
+    if (typeof showUndo === "function") showUndo();
+
+    var pitchNames = ['C','^C','D','^D','E','F','^F','G','^G','A','^A','B'];
+    var lines = abcInput.value.split('\n');
+
+    var fixedLines = lines.map(function(line) {
+        if (/^[A-Z]:/.test(line) || line.trim().startsWith('w:')) return line;
+
+        return line.replace(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g, function(match, acc, note, octs, dur) {
+            
+            // 1. Lasketaan mikä nuotti on ruudulla (transponoituna)
+            var v = getPitchValue(note);
+            if (acc === '^') v++;
+            if (acc === '_') v--;
+            for (var j = 0; j < octs.length; j++) {
+                if (octs[j] === ',') v -= 12;
+                if (octs[j] === "'") v += 12;
             }
-            finalAbc += line + "\n" + `Q:1/4=${tempoRange.value}\n`;
-            return;
+            
+            var currentTransposedStep = v + (window.currentOctave * 12) + window.currentTranspose - 2;
+            
+            // Lasketaan sävelluokka 0-11 (D=0. Eli D=0, G=5, A=7, Bb=8, B=9)
+            var pitchClass = ((currentTransposedStep % 12) + 12) % 12;
+
+            // 2. Osuuko nuotti asettamaamme ehtoon?
+            if (conditionFn(currentTransposedStep, pitchClass)) {
+                
+                // 3. Lasketaan uusi haluttu korkeus
+                var newTransposedStep = shiftFn(currentTransposedStep, pitchClass);
+                
+                // 4. Luodaan uusi ABC-teksti (sama kaava kuin fixNotesBtn2:ssa!)
+                var newPitch = (newTransposedStep + 2) - (window.currentOctave * 12) - window.currentTranspose;
+                var absPitch = ((newPitch % 12) + 12) % 12;
+                var octShift = Math.floor(newPitch / 12);
+                var rawName = pitchNames[absPitch];
+                
+                var finalAcc = "";
+                if (rawName.startsWith('^')) { 
+                    finalAcc = "^"; 
+                    rawName = rawName.substring(1); 
+                } else {
+                    // Pakotetaan palautusmerkki, jos muutetaan korotetusta/alennetusta puhtaaksi
+                    if (acc === '_' || acc === '^') finalAcc = "=";
+                }
+                
+                if (octShift > 0) { 
+                    rawName = rawName.toLowerCase(); 
+                    octShift--; 
+                }
+                var octaveMarks = (octShift > 0) ? "'".repeat(octShift) : (octShift < 0 ? ",".repeat(Math.abs(octShift)) : "");
+                
+                return finalAcc + rawName + octaveMarks + dur;
+            }
+            
+            return match; // Jos ehto ei täyty, palauta alkuperäinen
+        });
+    });
+
+    abcInput.value = fixedLines.join('\n');
+    if (typeof processAbc === "function") processAbc();
+}
+
+// --- NAPPIEN KYTKENNÄT ---
+
+// 1. B ja Bb -> A
+const btnBtoA = document.getElementById('fixBtoA');
+if (btnBtoA) {
+    btnBtoA.onclick = function() { 
+        replaceTransposedNotesSmart(
+            // Ehto: Nuotti on Bb (pitchClass 8) tai B (pitchClass 9)
+            function(step, pClass) { return pClass === 8 || pClass === 9; },
+            
+            // Muutos: Siirrä A:han (pitchClass 7). 
+            // Jos se on B (9), pudotetaan 2. Jos Bb (8), pudotetaan 1.
+            function(step, pClass) { return pClass === 9 ? step - 2 : step - 1; }
+        );
+    };
+}
+
+// 2. B ja Bb -> d
+const btnBtoD = document.getElementById('fixBtoD');
+if (btnBtoD) {
+    btnBtoD.onclick = function() { 
+        replaceTransposedNotesSmart(
+            // Ehto: Nuotti on Bb (pitchClass 8) tai B (pitchClass 9)
+            function(step, pClass) { return pClass === 8 || pClass === 9; },
+            
+            // Muutos: Nosta ylempään d:hen (+3 tai +4 puoliaskelta).
+            // D on seuraavassa oktaavissa nolla, mihin on B:stä matkaa 3.
+            function(step, pClass) { return pClass === 9 ? step + 3 : step + 4; }
+        );
+    };
+}
+
+// 3. g -> g#
+const btnGtoGsharp = document.getElementById('fixGtoGsharp');
+if (btnGtoGsharp) {
+    btnGtoGsharp.onclick = function() { 
+        replaceTransposedNotesSmart(
+            // Ehto: Nuotti on G (pitchClass 5). 
+            // HUOM: Tämä korjaa nyt sekä matalan että korkean G:n g#-nuotiksi!
+            function(step, pClass) { return pClass === 5; },
+            
+            // Muutos: Nosta puoli sävelaskelta
+            function(step, pClass) { return step + 1; }
+        );
+    };
+}
+
+// Arvonta 3 (randomStrictSearchLimited)
+document.getElementById('randomStrictLimitedBtn').onclick = function() {
+    hideUndo();
+    randomStrictSearchLimited();
+};
+
+// Haku (smartSearch false)
+document.getElementById('searchBtn').onclick = function() { 
+    hideUndo();
+    smartSearch(false); 
+};
+  
+// Arvonta 2 (randomStrictSearch)
+var randomStrictBtn = document.getElementById('randomStrictBtn');
+if (randomStrictBtn) {
+    randomStrictBtn.onclick = function() {
+        hideUndo();
+        randomStrictSearch();
+    };
+}
+  
+document.getElementById('randomBtn').onclick = function() {   
+hideUndo();
+smartSearch(true);
+
+};
+
+document.getElementById('printBtn').onclick = function() {
+    window.print();
+};
+
+// Lisää tämä window.onloadin sisään:
+var errorRateSlider = document.getElementById('errorRateSlider');
+var errorValDisplay = document.getElementById('errorValDisplay');
+
+if (errorRateSlider && errorValDisplay) {
+    errorRateSlider.oninput = function() {
+        errorValDisplay.innerText = this.value;
+    };
+}
+
+// Ja varmista että nappi on kytketty:
+var randomStrictLimitedBtn = document.getElementById('randomStrictLimitedBtn');
+if (randomStrictLimitedBtn) {
+    randomStrictLimitedBtn.onclick = function() {
+        hideUndo(); // Piilottaa kumoa-napin
+        randomStrictSearchLimited(); // Suorittaa itse haun
+    };
+}
+
+document.getElementById('randomStrictFixBtn').onclick = function() {
+    // 1. Aloitetaan puhtaalta pöydältä
+    hideUndo();
+
+    // 2. Suoritetaan haku (Arvonta 3)
+    randomStrictSearchLimited();
+
+    // 3. Korjausvaihe viiveellä
+    setTimeout(function() {
+        var abcInput = document.getElementById('abcInput');
+        
+        // Tallennetaan alkuperäinen kumoa-toimintoa varten
+        lastOriginalAbc = abcInput.value;
+        
+        // 4. Suoritetaan Korjaa sävelet 2
+        var fixBtn = document.getElementById('fixNotesBtn2');
+        if (fixBtn) {
+            fixBtn.onclick();
         }
         
-        if (/^[A-Z]:/.test(line) || line.trim() === "") { 
-            finalAbc += line + "\n";
-            if (line.startsWith('K:')) {
-                finalAbc += `Q:1/4=${tempoRange.value}\n`;
-            }
-            return; 
+        if (typeof processAbc === "function") processAbc();
+
+        // --- UUSI OSA: AUTOMAATTINEN SOITTO PELKISTETYSSÄ TILASSA ---
+        // Tarkistetaan onko "focus-mode" päällä
+        if (document.body.classList.contains('focus-mode')) {
+            // Annetaan soittimelle pieni hetki päivittää nuotit sisäisesti
+            setTimeout(function() {
+                if (synthControl) {
+                    // Kutsutaan abcjs-soittimen omaa play-toimintoa
+                    synthControl.play();
+                }
+            }, 100); // 100ms viive riittää yleensä nuottien päivitykseen
         }
-
-        currentKeyAccidentals = JSON.parse(defaultAccidentals);
-
-        // Käydään rivin nuotit läpi ja lisätään tabit suoraan nuottien eteen
-        let modifiedLine = line.replace(/([|])|([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, bar, acc, note, octs) => {
-            if (bar) {
-                currentKeyAccidentals = JSON.parse(defaultAccidentals);
-                return match; // Palautetaan tahtiviiva sellaisenaan
-            }
-
-            let absPitch = getPitchValue(acc, note, octs);
-            
-            if (acc) {
-                let nU = note.toUpperCase();
-                if (acc === '^') currentKeyAccidentals[nU] = 1;
-                else if (acc === '_') currentKeyAccidentals[nU] = -1;
-                else if (acc === '=') currentKeyAccidentals[nU] = 0;
-            }
-
-            let relPitch = absPitch - harpShift + (octaveOffset * 12);
-            const tab = harpMap[relPitch.toString()] || "";
-            
-            // LISÄTTY ALAVIIVA (_): '"_' siirtää tabin nuotin alapuolelle.
-            // Jos haluat ne myöhemmin takaisin ylös, poista vain tuo alaviiva.
-            if (tab !== "") {
-                return '"_' + tab + '"' + match;
-            } else {
-                return match;
-            }
-        });
-
-        finalAbc += modifiedLine + "\n";
-    });
-
-    currentKeyAccidentals = JSON.parse(defaultAccidentals);
-    return finalAbc;
-}
+    }, 70); 
+};
 
 
-    
-        function processAbc() {
-    if (!abcInput.value) return;
-    
-    const isNewSong = (abcInput.value !== lastProcessedAbc);
-    analyzeKey(abcInput.value);
 
-    if (isNewSong) {
-         autoOptimize();
-         lastProcessedAbc = abcInput.value;
+// --- SUOSIKKIEN HALLINTA ---
+
+// Apufunktio datan turvalliseen lukemiseen
+function getSafeFavorites() {
+    try {
+        var data = JSON.parse(localStorage.getItem('harpFavorites') || '[]');
+        return Array.isArray(data) ? data : [];
+    } catch(e) {
+        console.error("Suosikkien luku epäonnistui, nollataan lista.");
+        return [];
     }
-
-    octaveDisplay.innerText = octaveOffset;
-    tempoDisplay.innerText = tempoRange.value;
-    
-    const originalValue = abcInput.value;
-    
-    // 1. Puhdistetaan syöte (soinnut, kaaret, koristenuotit)
-    abcInput.value = originalValue
-     //   .replace(/"[^"]*"/g, "")      
-        .replace(/[()]/g, "")         
-        .replace(/\{[^}]*\}/g, "");
-    
-    let originalAbc = getFinalAbc(); 
-    abcInput.value = originalValue; 
-
-    // --- TÄSMÄKORJAUS ISLAND OF WOODS -TYYPPISIIN MAALEIHIN ---
-    // Poistetaan KAIKKI tyhjä tila ja rivinvaihdot tahtiviivan ja maalin väliltä.
-    // Tämä regex puree muotoihin "|[1", ":|[1" ja "|1".
-    originalAbc = originalAbc.replace(/([|:][|]?)[\s\n]*(\[?[12])/g, "$1$2");
-    
-    // 3. Näkymän valinta: Mobiili vs. Työpöytä
-    const isMobile = window.innerWidth <= 800;
-    const dynamicWidth = (!isMobile) ? 740 : 740;
-
-    // 4. ABC-muotoilu tulostusta ja rivitystä varten
-    const abcWithFormatting = `%%abc-2.1
-%%pagewidth 21cm
-%%leftmargin 1cm
-%%rightmargin 1cm
-%%barsperstaff 4
-%%stretchlast 1
-` + originalAbc;
-    
-    ABCJS.renderAbc("paper", abcWithFormatting, {
-        responsive: 'resize',
-        staffwidth: dynamicWidth,
-        wrap: {
-            preferredMeasuresPerLine: 4,
-            minSpacing: 1.3, // Lasketaan välistystä, jotta 4 tahtia mahtuu varmasti
-            maxSpacing: 2.5
-        },
-        justified: true,
-        visualTranspose: (octaveOffset * 12) + transposeOffset,
-        add_classes: true,
-        paddingtop: 35, 
-        paddingbottom: 30 // Tärkeä tila C, D, E ja F -harpuille [cite: 2026-03-22]
-    });
 }
 
-  
-            function getPitchValue(acc, note, octs) {
-        const baseMap = { 'C': 0, 'D': 2, 'E': 4, 'F': 5, 'G': 7, 'A': 9, 'B': 11, 'H': 11 };
-        let nU = note.toUpperCase();
-        let v = baseMap[nU];
+// Lisää suosikki
+document.getElementById('addFavBtn').onclick = function() {
+    var currentName = "Nimetön kappale";
+    var titleMatch = abcInput.value.match(/^T:\s*(.*)/m);
+    if (titleMatch) currentName = titleMatch[1].trim();
 
-        if (acc === '^') {
-            v += 1; // Ylennys
-        } else if (acc === '_') {
-            v -= 1; // Alennus
-        } else if (acc === '=') {
-            // Palautusmerkki: käytetään baseMap-arvoa sellaisenaan (ei lisätä sävellajin etumerkkejä)
-        } else if (currentKeyAccidentals[nU]) {
-            // Jos ei tilapäistä etumerkkiä, käytetään sävellajin etumerkkiä
-            v += currentKeyAccidentals[nU];
-        }
-
-        if (note === note.toLowerCase()) v += 12;
-        if (octs) {
-            for (let c of octs) {
-                if (c === ',') v -= 12;
-                if (c === "'") v += 12;
-            }
-        }
-        return v;
-    }
-
-    // Copyright: Janne Ojajärvi www.huuliharppu.fi
+    var favorites = getSafeFavorites();
     
-    // --- OHJAIMET ---
-    document.getElementById('octaveUp').onclick = () => { octaveOffset++; processAbc(); };
-    document.getElementById('octaveDown').onclick = () => { octaveOffset--; processAbc(); };
-    
-    
-    tempoRange.oninput = () => { 
-        tempoDisplay.innerText = tempoRange.value; 
-        processAbc(); 
-    };
-    
-    // Kun käyttäjä vaihtaa harppua itse, asetetaan lippu päälle
-    harpKeySelect.onchange = () => { 
-        userHasSelectedHarp = true; 
-        processAbc(); 
-    };
-
-    abcInput.oninput = () => {
-        userHasSelectedHarp = false; // Jos tekstiä muokataan käsin, sallitaan taas auto-analyysi
-        processAbc();
-    };
-    
-    function countMeasures(abc) {
-    // Haetaan vain nuottirivit (ne jotka eivät ala kirjaimella ja kaksoispisteellä)
-    const musicLines = abc.split('\n').filter(line => 
-        line.trim() !== "" && !/^[A-Z]:/.test(line)
-    ).join(' ');
-    
-    // Lasketaan tahtiviivat, mutta vältetään tuplalaskentaa lopetusmerkeissä || tai |]
-    const measures = musicLines.split(/\|+/).length - 1;
-    return measures;
-}
-
-    // --- ARVONTA ---
-    randomBtn.onclick = () => {
-    const currentLang = localStorage.getItem('prefLang') || 'fi';
-    const t = translations[currentLang];
-    const filterMode = document.getElementById('filterSelect').value;
-
-    if (window.harpLibrary.length === 0) {
-        statusDisplay.innerText = " ";
+    if (favorites.some(f => f.abc === abcInput.value)) {
+        alert("Kappale on jo suosikeissasi!");
         return;
     }
 
-    statusDisplay.innerText = t.msgRandomizing;
-    let selected = null;
-    let attempts = 0;
-    const maxAttempts = 100; // Nostettu yrityskertoja, koska ehto on tiukempi
-
-    while (!selected && attempts < maxAttempts) {
-        let tempTune = harpLibrary[Math.floor(Math.random() * harpLibrary.length)];
-        
-        // --- UUSI EHTO: Tarkistetaan tahtien määrä (vähintään 4) ---
-        if (countMeasures(tempTune.abc) < 4) {
-            attempts++;
-            continue; 
-        }
-
-        if (filterMode === "all") {
-            selected = tempTune;
-        } else {
-            // "Ei taivutuksia" -logiikka (sisältää oktaavioptimoinnin testauksen)
-            const oldAbc = abcInput.value;
-            abcInput.value = tempTune.abc;
-                if (typeof analyzeKey === "function") analyzeKey(tempTune.abc);
-                if (typeof autoOptimize === "function") autoOptimize();
-                
-                let hasBends = false;
-                let harpShift = parseInt(harpKeySelect.value);
-                let currentAbc = abcInput.value; 
-
-                currentAbc.split('\n').forEach(line => {
-                    if (/^[A-Z]:/.test(line) || line.trim() === "") return;
-                    line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
-                        let absPitch = getPitchValue(acc, note, octs);
-                        let relPitch = absPitch - harpShift + ((window.octaveOffset || 0) * 12);
-                        const tab = harpMap[relPitch.toString()] || "";
-                        // Jos tabulatuuria ei löydy tai se on bend/overblow
-                        if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
-                    });
-                });
-
-                if (!hasBends) {
-                selected = { abc: currentAbc };
-            } else {
-                abcInput.value = oldAbc; // Palautetaan jos ei kelvannut
-                attempts++;
-            }
-        }
-    }
-
-        if (selected) {
-            abcInput.value = selected.abc;
-            favoritesSelect.value = ""; // Nollaa suosikkivalikko
-            userHasSelectedHarp = false;
-            processAbc();
-            analyzeKey(selected.abc);
-        } else {
-            statusDisplay.innerText = t.msgNotFound;
-        }
-    };
-
-    // --- AUDIO JA TALLENNUS ---
-    playBtn.onclick = async () => {
-    document.getElementById('audio-interface').style.display = "block";
-    
-    // Lisätään responsive: "resize", jotta nuotti ei kutistu vaan täyttää tilan
-    const visualObj = ABCJS.renderAbc("paper", getFinalAbc(), { 
-        visualTranspose: (octaveOffset * 12) + transposeOffset,
-        responsive: "resize" // TÄMÄ estää pienenemisen
-    })[0];
-
-    if (synthControl) { try { await synthControl.pause(); } catch(e) {} }
-    
-    synthControl = new ABCJS.synth.SynthController();
-    
-    // Tässä on mukana displayProgress: true edistymispalkkia varten
-    await synthControl.load("#audio-control", null, { 
-        displayPlay: true, 
-        displayProgress: true, 
-        displayRestart: true 
-    });
-    
-    await synthControl.setTune(visualObj, false);
-    
-    const startElem = document.querySelector('.abcjs-midi-start');
-    if(startElem) startElem.click();
-};
-
-    stopBtn.onclick = async () => {
-        if (synthControl) {
-            await synthControl.pause();
-            document.getElementById('audio-interface').style.display = "none";
-        }
-    };
-    
-    
-
-   // --- 1. SUOSIKKIEN LATAUS ---
-function loadFavorites() {
-    const favoritesSelect = document.getElementById('favoritesSelect');
-    if (!favoritesSelect) return;
-
-    // Haetaan kieli (oletus 'en') ja vastaavat käännökset
-    const currentLang = localStorage.getItem('prefLang') || 'en';
-    const t = translations[currentLang] || translations['en'];
-
-    favoritesSelect.innerHTML = "";
-    
-    const defaultOpt = document.createElement('option');
-    defaultOpt.value = "";
-    defaultOpt.innerText = t.favPlaceholder || "-- Saved Songs --";
-    favoritesSelect.appendChild(defaultOpt);
-
-    let favs = {};
-    try {
-        const stored = localStorage.getItem('harpFavorites');
-        const parsed = JSON.parse(stored || '{}');
-        // Varmistetaan, että kyseessä on objekti eikä taulukko
-        if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
-            favs = parsed;
-        }
-    } catch (e) {
-        console.error("Virhe suosikkien latauksessa:", e);
-        favs = {};
-    }
-
-    // Aakkosjärjestys ja listan rakennus
-    Object.keys(favs).sort().forEach(name => {
-        if (name) { // Estetään tyhjät rivit
-            const opt = document.createElement('option');
-            opt.value = name;
-            opt.innerText = name;
-            favoritesSelect.appendChild(opt);
-        }
-    });
-}
-
-// --- 2. SUOSIKKIEN TALLENNUS ---
-document.getElementById('saveFavBtn').onclick = () => {
-    if (!abcInput || !abcInput.value) return;
-
-    // Haetaan kappaleen nimi T-kentästä
-    const nameMatch = abcInput.value.match(/^T:\s*(.*)/m);
-    const name = nameMatch ? nameMatch[1].trim() : "Song " + new Date().toLocaleTimeString();
-
-    let favs = {};
-    try {
-        const stored = localStorage.getItem('harpFavorites');
-        const parsed = JSON.parse(stored || '{}');
-        if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
-            favs = parsed;
-        }
-    } catch (e) {
-        favs = {};
-    }
-
-    // Tallennetaan ABC-koodi (sisältäen mahdolliset harppukohtaiset oktaavimuutokset)
-    favs[name] = abcInput.value;
-    localStorage.setItem('harpFavorites', JSON.stringify(favs));
-    
-    loadFavorites();
-    
-    // Asetetaan juuri tallennettu biisi valituksi
-    setTimeout(() => { favoritesSelect.value = name; }, 10);
-};
-
-// --- 3. SUOSIKIN VALINTA LISTASTA ---
-favoritesSelect.onchange = () => {
-    const val = favoritesSelect.value;
-    if (!val) return;
-
-    let favs = {};
-    try {
-        favs = JSON.parse(localStorage.getItem('harpFavorites') || '{}');
-    } catch (e) {
-        favs = {};
-    }
-
-    if (favs[val]) {
-        abcInput.value = favs[val];
-        
-        // Estetään automaattista harpun vaihtoa ylikirjoittamasta ladattua nuottia
-        if (typeof userHasSelectedHarp !== 'undefined') {
-            userHasSelectedHarp = true; 
-        }
-        
-        // Renderöidään nuotit (processAbc sisältää logiikan harpun vireen näyttämiseen)
-        if (typeof processAbc === 'function') {
-            processAbc();
-        }
-    }
-};
-
-
-    // Copyright: Janne Ojajärvi www.huuliharppu.fi
-    
-    
-    
-    
-    // Apufunktio TheSession.org-hakutulosten hakemiseen ja käsittelyyn
-async function fetchFromTheSession(query, resDiv, filterMode, t) {
-    try {
-        const r = await fetch(`https://thesession.org/tunes/search?q=${query}&format=json`);
-        const d = await r.json();
-        if (!d || !d.tunes) return 0;
-
-        let sessionFoundCount = 0;
-        // Otetaan maksimissaan 15 parasta tulosta
-        for (let tuneItem of d.tunes.slice(0, 15)) {
-            const tr = await fetch(`https://thesession.org/tunes/${tuneItem.id}?format=json`);
-            const td = await tr.json();
-            if (!td.settings || td.settings.length === 0) continue;
-
-            // Muunnetaan TheSessionin rakenne sovellukselle sopivaksi ABC-koodiksi
-            let testAbc = `X:${td.id}\nT:${td.name}\nR:${td.type}\nS:https://thesession.org/tunes/${td.id}\nM:${td.settings[0].meter}\nK:${td.settings[0].key}\n${td.settings[0].abc.replace(/!/g, '\n')}`;
-            
-            let hasBends = false;
-            if (filterMode === "easy") {
-                const oldAbc = abcInput.value;
-                abcInput.value = testAbc;
-                if (typeof analyzeKey === "function") analyzeKey(testAbc);
-                if (typeof autoOptimize === "function") autoOptimize();
-                
-                let optimizedAbc = abcInput.value;
-                let harpShift = parseInt(harpKeySelect.value);
-
-                optimizedAbc.split('\n').forEach(line => {
-                    if (/^[A-Z]:/.test(line) || line.trim() === "") return;
-                    line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
-                        let absPitch = getPitchValue(acc, note, octs);
-                        let relPitch = absPitch - harpShift + ((window.octaveOffset || 0) * 12);
-                        const tab = harpMap[relPitch.toString()] || "";
-                        if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
-                    });
-                });
-                abcInput.value = oldAbc;
-                testAbc = optimizedAbc;
-            }
-
-            if (!hasBends || filterMode === "all") {
-                // Jos listassa oli "Ei löytynyt" -ilmoitus, tyhjennetään se ensimmäisen osuman kohdalla
-                if (resDiv.innerHTML.includes(t.msgNotFoundSrch || "Ei löytynyt")) {
-                    resDiv.innerHTML = "";
-                }
-                sessionFoundCount++;
-                const row = document.createElement('div');
-                row.className = "search-item";
-                row.innerHTML = `🌐 ${hasBends ? "🪗 " : "✅ "} <b>${td.name}</b> (${td.settings[0].key})`;
-                
-                row.onclick = () => {
-                    abcInput.value = testAbc;
-                    userHasSelectedHarp = false;
-                    processAbc();
-                    analyzeKey(testAbc);
-                    resDiv.style.display = "none";
-                };
-                resDiv.appendChild(row);
-            }
-        }
-        return sessionFoundCount;
-    } catch (e) {
-        console.error("Virhe TheSession-haussa:", e);
-        return 0;
-    }
-}
-
-    // --- HAKU  ---
-     
-      
-    document.getElementById('searchBtn').onclick = async () => {
-    const q = document.getElementById('searchInput').value.toLowerCase();
-    const filterMode = document.getElementById('filterSelect').value;
-    const resDiv = document.getElementById('searchResults');
-    const currentLang = localStorage.getItem('prefLang') || 'fi';
-    const t = translations[currentLang];
-
-    if (!q) return;
-
-    resDiv.innerHTML = ""; // Tyhjennetään vanhat tulokset
-    resDiv.style.display = "block";
-    statusDisplay.innerText = t.msgSearching;
-
-    // 1. Suodatetaan kirjastosta osumat nimen ja metatietojen (O, R, S) perusteella
-    const matches = (window.harpLibrary || []).filter(tune => {
-    // Muutetaan hakusana q muotoon, jossa ei ole väliviivoja (esim. "bysscalle")
-    const cleanQ = q.replace(/[-]/g, "");
-    const abc = tune.abc || "";
-    
-    // Apufunktio, joka puhdistaa tekstin vertailua varten
-    const cleanText = (text) => text.toLowerCase().replace(/[-]/g, "");
-
-    const nameMatch = cleanText(tune.name).includes(cleanQ);
-    
-    // Haetaan metatiedot
-    const origin = (abc.match(/^O:\s*(.*)/m) || ["", ""])[1];
-    const rhythm = (abc.match(/^R:\s*(.*)/m) || ["", ""])[1];
-    const source = (abc.match(/^S:\s*(.*)/m) || ["", ""])[1];
-    const disco = (abc.match(/^D:\s*(.*)/m) || ["", ""])[1];
-
-    // Tarkistetaan löytyykö puhdistettu hakusana mistään kentästä
-    return nameMatch || 
-           cleanText(origin).includes(cleanQ) || 
-           cleanText(rhythm).includes(cleanQ) || 
-           cleanText(source).includes(cleanQ) || 
-           cleanText(disco).includes(cleanQ);
-});
-
-     
-      //      if (matches.length === 0) {
-       //         resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFoundSrch || "Ei löytynyt"}</div>`;
-          //      statusDisplay.innerText = t.msgNotFoundSrch || "Ei löytynyt";
-       //         return;
-     //       }
-
-        let foundCount = 0;
-
-        // 2. Käydään läpi osumat ja tarkistetaan suodatus
-        matches.forEach(tune => {
-            let displayAbc = tune.abc;
-            let hasBends = false;
-
-            if (filterMode === "easy") {
-                // Testataan optimointia "lennosta"
-                const oldAbc = abcInput.value;
-                abcInput.value = tune.abc;
-                
-                if (typeof analyzeKey === "function") analyzeKey(tune.abc);
-                if (typeof autoOptimize === "function") autoOptimize();
-                
-                let optimizedAbc = abcInput.value;
-                let harpShift = parseInt(harpKeySelect.value);
-
-                optimizedAbc.split('\n').forEach(line => {
-                    if (/^[A-Z]:/.test(line) || line.trim() === "") return;
-                    line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
-                        let absPitch = getPitchValue(acc, note, octs);
-                        let relPitch = absPitch - harpShift + ((window.octaveOffset || 0) * 12);
-                        const tab = harpMap[relPitch.toString()] || "";
-                        if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
-                    });
-                });
-
-                abcInput.value = oldAbc; // Palautetaan alkuperäinen teksti
-                displayAbc = optimizedAbc; // Jos valitaan, käytetään optimoitua versiota
-                favoritesSelect.value = ""; // Nollaa valinnan takaisin placeholderiin
-            }
-
-            // Tarkistetaan nimen laajennus sääntöjen mukaan
-        let extraInfo = "";
-        const abc = tune.abc || "";
-        const nameUpper = tune.name.toUpperCase();
-
-        const getField = (field) => {
-            const m = abc.match(new RegExp(`^${field}:\\s*(.*)`, "m"));
-            return m ? m[1].trim() : "";
-        };
-
-        if (nameUpper.startsWith("KT1") || nameUpper.startsWith("RS1") || nameUpper.startsWith("RS2")) {
-            const m = getField("M");
-            const o = getField("O");
-            extraInfo = [m, o].filter(Boolean).join(", ");
-        } 
-        else if (nameUpper.startsWith("HS1")) {
-            const n = getField("N");
-            const o = getField("O");
-            extraInfo = [n, o].filter(Boolean).join(", ");
-        } 
-        else if (/^(LS1|LS2|LS3|LS4)/i.test(nameUpper)) {
-            const o = getField("O");
-            extraInfo = "laulusävelmä" + (o ? ", " + o : "");
-        } 
-        else if (nameUpper.startsWith("VIA")) {
-            const r = getField("R");
-            const s = getField("S");
-            extraInfo = [r, s].filter(Boolean).join(", ");
-        }
-
-        const displayName = extraInfo ? `${tune.name} (${extraInfo})` : tune.name;
-
-        // Luodaan hakutulosrivi jos se läpäisee filtterin
-        if (!hasBends || filterMode === "all") {
-            foundCount++;
-            const row = document.createElement('div');
-            row.className = "search-item";
-            row.innerHTML = `🏠 ${hasBends ? "🪗 " : "✅ "} <b>${displayName}</b>`;
-            
-            row.onclick = () => {
-                abcInput.value = displayAbc;
-                userHasSelectedHarp = false;
-                processAbc();
-                analyzeKey(displayAbc);
-                resDiv.style.display = "none";
-            };
-            resDiv.appendChild(row);
-        }
+    favorites.push({
+        name: currentName,
+        abc: abcInput.value,
+        trans: window.currentTranspose || 0,
+        oct: window.currentOctave || 0
     });
 
-    // Haetaan tulokset myös TheSessionista lennosta
-    const sessionCount = await fetchFromTheSession(q, resDiv, filterMode, t);
-    foundCount += sessionCount;
+    localStorage.setItem('harpFavorites', JSON.stringify(favorites));
+    alert("⭐ Tallennettu suosikkeihin!");
+};
 
-    if (foundCount === 0) {
-        resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFoundSrch || "Ei löytynyt"}</div>`;
-        statusDisplay.innerText = t.msgNotFoundSrch || "Ei löytynyt";
+// Poista suosikki
+document.getElementById('remFavBtn').onclick = function() {
+    var favorites = getSafeFavorites();
+    var initialLength = favorites.length;
+    
+    favorites = favorites.filter(f => f.abc !== abcInput.value);
+
+    if (favorites.length === initialLength) {
+        alert("Tätä kappaletta ei löytynyt suosikeista.");
     } else {
-        statusDisplay.innerText = t.msgSearchDone || "Haku valmis";
+        localStorage.setItem('harpFavorites', JSON.stringify(favorites));
+        alert("🗑️ Poistettu suosikeista.");
     }
 };
 
+// Näytä suosikit
+document.getElementById('showFavsBtn').onclick = function() {
+hideUndo();
+    var favorites = getSafeFavorites();
+    var resultsDiv = document.getElementById('searchResults');
+    
+    if (favorites.length === 0) {
+        resultsDiv.innerHTML = "<div style='padding:20px;'>Suosikkilistasi on tyhjä.</div>";
+        resultsDiv.style.display = "block";
+        return;
+    }
+
+    var formattedFavs = favorites.map(f => ({
+        item: { 
+            name: "⭐ " + (f.name || "Nimetön"), 
+            abc: f.abc 
+        },
+        trans: f.trans || 0,
+        oct: f.oct || 0,
+        info: "Suosikki"
+    }));
+
+    resultsDiv.style.display = "block";
+    renderResults(formattedFavs);
+};
+
+
+tempoSlider.oninput = processAbc;  
+abcInput.oninput = processAbc;  
   
-      // --- GENRE-HAKU ---
-const fetchAndFilter = async (genre) => {
-    const filterMode = document.getElementById('filterSelect').value;
-    const resDiv = document.getElementById('searchResults');
-    const currentLang = localStorage.getItem('prefLang') || 'fi';
-    const t = translations[currentLang];
+// 1. Varmistetaan, että undoFix on globaalisti saatavilla
+window.undoFix = function() {
+    if (lastOriginalAbc) {
+        document.getElementById('abcInput').value = lastOriginalAbc;
+        processAbc(); // Päivittää nuotit ja soittimen
+        document.getElementById('undoBtn').style.display = 'none'; // Piilottaa napin
+    }
+};
 
-    resDiv.innerHTML = ""; 
-    resDiv.style.display = "block";
-    statusDisplay.innerText = t.msgSearching;
+// 2. Kytketään Kumoa-nappi tapahtumakuuntelijaan (lisää tämä muiden onclick-kytkentöjen joukkoon)
+document.getElementById('undoBtn').onclick = window.undoFix;
 
-    // MUUTOS TÄSSÄ: Lisätty window. eteen ja varmistus || []
-    const matches = (window.harpLibrary || []).filter(tune => {
-        const content = (tune.name + " " + tune.abc).toLowerCase();
-         // ERIKOISSÄÄNTÖ VALSSILLE:
-if (genre === "Waltz") {
-            return content.includes("waltz") || content.includes("vals");
+// 3. Päivitetään showUndo-funktio varmuuden vuoksi
+function showUndo() {
+    var btn = document.getElementById('undoBtn');
+    if (btn) btn.style.display = 'inline-block';
+}
+
+function hideUndo() {
+    var btn = document.getElementById('undoBtn');
+    if (btn) btn.style.display = 'none';
+}
+
+
+// --- SÄVELTEN KORJAUS ---  
+document.getElementById('fixNotesBtn').onclick = function() {  
+
+lastOriginalAbc = abcInput.value; 
+
+showUndo(); 
+
+var playable = allowedD; 
+
+var pitchNames = ['C','^C','D','^D','E','F','^F','G','^G','A','^A','B'];  
+
+var lines = abcInput.value.split('\n');  
+
+var fixedLines = lines.map(function(line){  
+
+    if (/^[A-Z]:/.test(line) || line.trim().startsWith('w:')) return line;  
+
+    return line.replace(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g,  
+    function(match, acc, note, octs, dur){  
+
+        var v = getPitchValue(note);  
+
+        if (acc === '^') v++;  
+        if (acc === '_') v--;  
+
+        for (var j=0;j<octs.length;j++){  
+            if (octs[j]===',') v-=12;  
+            if (octs[j]==="'") v+=12;  
+        }  
+
+        var step = v + (window.currentOctave*12) + window.currentTranspose - 2;
+
+// ERIKOISSÄÄNTÖ: korkea g to g#
+if (step === 17) {
+    return "^g" + dur;
+}
+
+if (playable.indexOf(step) !== -1) return match;  
+
+        var nearest = playable.reduce(function(prev,curr){  
+            return Math.abs(curr-step) < Math.abs(prev-step) ? curr : prev;  
+        });  
+
+        var newPitch = (nearest + 2) - (window.currentOctave*12) - window.currentTranspose;  
+
+        var octave = Math.floor(newPitch/12);  
+        var pitch = ((newPitch%12)+12)%12;  
+
+        var noteName = pitchNames[pitch];  
+
+        var octaveMarks = "";  
+
+        if (octave > 0) octaveMarks = "'".repeat(octave);  
+        if (octave < 0) octaveMarks = ",".repeat(-octave);  
+
+        return noteName + octaveMarks + dur;  
+    });  
+
+});  
+
+abcInput.value = fixedLines.join('\n');  
+
+processAbc();
+
+};
+
+
+// 2. UUSI "Korjaa2"-nappi (Musikaalinen logiikka)
+document.getElementById('fixNotesBtn2').onclick = function() {
+    // 1. TALLENNETAAN KUMOA-TIETO HETI
+    lastOriginalAbc = document.getElementById('abcInput').value;
+     showUndo();
+    
+    var abcInput = document.getElementById('abcInput');
+    var playable = allowedD;
+    var pitchNames = ['C','^C','D','^D','E','F','^F','G','^G','A','^A','B'];
+    var lines = abcInput.value.split('\n');
+    
+    // 2. KERÄTÄÄN KAIKKI NUOTIT TRANSPONOITUNA (Globaali lista koko biisistä)
+    var allNotesTransposed = [];
+    lines.forEach(line => {
+        if (/^[A-Z]:/.test(line) || line.trim().startsWith('w:')) return;
+        var m;
+        var noteRegex = /([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g;
+        while ((m = noteRegex.exec(line)) !== null) {
+            var v = getPitchValue(m[2]);
+            if (m[1] === '^') v++;
+            if (m[1] === '_') v--;
+            for (var j=0; j<m[3].length; j++){
+                if (m[3][j] === ',') v -= 12;
+                if (m[3][j] === "'") v += 12;
+            }
+            allNotesTransposed.push(v + (window.currentOctave*12) + window.currentTranspose - 2);
         }
-        
-        // Muut genret normaalisti:
-  return content.includes(genre.toLowerCase());
     });
 
-      //      if (matches.length === 0) {
-       //         resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFoundSrch || "Ei löytynyt"}</div>`;
-         //       return;
-      //      }
+    var globalNoteCounter = 0;
+    var lastStep = null;
 
-        let foundCount = 0;
+    // 3. KÄSITELLÄÄN RIVIT
+    var fixedLines = lines.map(function(line){
+        if (/^[A-Z]:/.test(line) || line.trim().startsWith('w:')) return line;
 
-        matches.forEach(tune => {
-            let displayAbc = tune.abc;
-            let hasBends = false;
+        return line.replace(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g, function(match, acc, note, octs, dur){
+            var v = getPitchValue(note);
+            if (acc === '^') v++;
+            if (acc === '_') v--;
+            for (var j=0; j<octs.length; j++){
+                if (octs[j] === ',') v -= 12;
+                if (octs[j] === "'") v += 12;
+            }
 
-            if (filterMode === "easy") {
-                const oldAbc = abcInput.value;
-                abcInput.value = tune.abc;
+            var step = v + (window.currentOctave*12) + window.currentTranspose - 2;
+            
+            // Haetaan seuraavan nuotin ennustettu arvo
+            var nextStepInSong = allNotesTransposed[globalNoteCounter + 1];
+            globalNoteCounter++;
+
+            // Jos nuotti on jo soitettavissa, ei muuteta
+            if (playable.indexOf(step) !== -1) {
+                lastStep = step;
+                return match;
+            }
+
+            // Valitaan paras korvaaja
+            var bestReplacement = playable.reduce(function(prev, curr) {
+                var scorePrev = Math.abs(prev - step);
+                var scoreCurr = Math.abs(curr - step);
+
+                // BONUKSET JA SAKOT
                 
-                if (typeof analyzeKey === "function") analyzeKey(tune.abc);
-                if (typeof autoOptimize === "function") autoOptimize();
-                
-                let optimizedAbc = abcInput.value;
-                let harpShift = parseInt(harpKeySelect.value);
+                // Melodian suunta
+                if (lastStep !== null) {
+                    var originalDir = step - lastStep; 
+                    var newDir = curr - lastStep;
+                    if ((originalDir > 0 && newDir > 0) || (originalDir < 0 && newDir < 0)) scoreCurr -= 1.0;
+                }
 
-                optimizedAbc.split('\n').forEach(line => {
-                    if (/^[A-Z]:/.test(line) || line.trim() === "") return;
-                    line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
-                        let absPitch = getPitchValue(acc, note, octs);
-                        let relPitch = absPitch - harpShift + (octaveOffset * 12);
-                        const tab = harpMap[relPitch.toString()] || "";
-                        if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
-                    });
+                // Toiston esto (Anti-repeteetio)
+                if (nextStepInSong !== undefined && curr === nextStepInSong) {
+                    if (step !== nextStepInSong) scoreCurr += 10.0; // Jättisakko toistolle
+                }
+
+                // Perussävelten veto
+                if (curr % 12 === 7) scoreCurr -= 1.0; // A
+                if (curr % 12 === 0) scoreCurr -= 0.8; // D
+
+                // Ylennysten välttely
+                if (curr % 12 === 8 || curr % 12 === 1) scoreCurr += 1.5;
+
+                return scoreCurr < scorePrev ? curr : prev;
+            });
+
+            lastStep = bestReplacement;
+
+            // Muunnos takaisin ABC:ksi
+            var newPitch = (bestReplacement + 2) - (window.currentOctave*12) - window.currentTranspose;
+            var absPitch = ((newPitch % 12) + 12) % 12;
+            var octShift = Math.floor(newPitch / 12);
+            var rawName = pitchNames[absPitch];
+            
+            var finalAcc = "";
+            if (rawName.startsWith('^')) { finalAcc = "^"; rawName = rawName.substring(1); }
+            
+            if (octShift > 0) {
+                rawName = rawName.toLowerCase();
+                octShift--;
+            }
+            var octaveMarks = (octShift > 0) ? "'".repeat(octShift) : (octShift < 0 ? ",".repeat(Math.abs(octShift)) : "");
+            
+            return finalAcc + rawName + octaveMarks + dur;
+        });
+    });
+
+    // 4. PÄIVITETÄÄN RUUTU JA RENDERÖINTI
+    abcInput.value = fixedLines.join('\n');
+    if (typeof processAbc === "function") processAbc();
+};
+
+
+
+document.getElementById('fixNotesBtn3').onclick = function() {
+    lastOriginalAbc = document.getElementById('abcInput').value;
+    showUndo();
+    
+    var abcInput = document.getElementById('abcInput');
+    var playable = allowedD;
+    var pitchNames = ['C','^C','D','^D','E','F','^F','G','^G','A','^A','B'];
+    var lines = abcInput.value.split('\n');
+    
+    var allNotesTransposed = [];
+    lines.forEach(line => {
+        if (/^[A-Z]:/.test(line) || line.trim().startsWith('w:')) return;
+        var m;
+        var noteRegex = /([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g;
+        while ((m = noteRegex.exec(line)) !== null) {
+            var v = getPitchValue(m[2]);
+            if (m[1] === '^') v++;
+            if (m[1] === '_') v--;
+            for (var j=0; j<m[3].length; j++){
+                if (m[3][j] === ',') v -= 12;
+                if (m[3][j] === "'") v += 12;
+            }
+            allNotesTransposed.push(v + (window.currentOctave*12) + window.currentTranspose - 2);
+        }
+    });
+
+    var globalNoteCounter = 0;
+    var lastStep = null;
+
+    var fixedLines = lines.map(function(line){
+        if (/^[A-Z]:/.test(line) || line.trim().startsWith('w:')) return line;
+
+        return line.replace(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g, function(match, acc, note, octs, dur){
+            var v = getPitchValue(note);
+            
+            // POISTETTU: Sävellajin automaattinen ylennys. 
+            // Luotetaan vain siihen, mitä koodissa lukee (+ mahdolliset ^ tai _ merkit)
+            if (acc === '^') v++;
+            if (acc === '_') v--;
+            
+            for (var j=0; j<octs.length; j++){
+                if (octs[j] === ',') v -= 12;
+                if (octs[j] === "'") v += 12;
+            }
+
+            var step = v + (window.currentOctave*12) + window.currentTranspose - 2;
+            var nextStepInSong = allNotesTransposed[globalNoteCounter + 1];
+            globalNoteCounter++;
+
+            // --- ERITYISET PITKÄHUILU-PAKOTUKSET ---
+            
+            // 1. c#2 (11) -> c2 (10)
+            if (step === 11) step = 10;
+            
+            // 2. g2 (5) -> g#2 (6)
+            if (step === 5) step = 6;
+
+            // Jos nuotti on soitettavissa, palautetaan se heti
+            if (playable.indexOf(step) !== -1) {
+                lastStep = step;
+                return convertToAbc(step, dur, pitchNames);
+            }
+
+            // Muuten etsitään musikaalisesti järkevin vaihtoehto
+            var bestReplacement = playable.reduce(function(prev, curr) {
+                var scorePrev = Math.abs(prev - step);
+                var scoreCurr = Math.abs(curr - step);
+                
+                if (lastStep !== null) {
+                    var originalDir = step - lastStep; 
+                    var newDir = curr - lastStep;
+                    if ((originalDir > 0 && newDir > 0) || (originalDir < 0 && newDir < 0)) scoreCurr -= 1.0;
+                }
+                
+                if (nextStepInSong !== undefined && curr === nextStepInSong) {
+                    if (step !== nextStepInSong) scoreCurr += 10.0;
+                }
+                
+                if (curr % 12 === 7) scoreCurr -= 1.0; 
+                if (curr % 12 === 0) scoreCurr -= 0.8; 
+                if (curr % 12 === 8 || curr % 12 === 1) scoreCurr += 1.5;
+                
+                return scoreCurr < scorePrev ? curr : prev;
+            });
+
+            lastStep = bestReplacement;
+            return convertToAbc(bestReplacement, dur, pitchNames);
+        });
+    });
+
+    function convertToAbc(pitchNum, dur, names) {
+        var newPitch = (pitchNum + 2) - (window.currentOctave*12) - window.currentTranspose;
+        var absPitch = ((newPitch % 12) + 12) % 12;
+        var octShift = Math.floor(newPitch / 12);
+        var rawName = names[absPitch];
+        var finalAcc = "";
+        
+        // Lisätään palautusmerkki vain, jos se on tarpeen (C ja G nuoteille, jotta ne erottuvat D-duurissa)
+        if (rawName === 'C') finalAcc = "=";
+        if (rawName === 'G') finalAcc = "="; 
+        
+        if (rawName.startsWith('^')) { finalAcc = "^"; rawName = rawName.substring(1); }
+        if (octShift > 0) { rawName = rawName.toLowerCase(); octShift--; }
+        var octaveMarks = (octShift > 0) ? "'".repeat(octShift) : (octShift < 0 ? ",".repeat(Math.abs(octShift)) : "");
+        
+        return finalAcc + rawName + octaveMarks + dur;
+    }
+
+    abcInput.value = fixedLines.join('\n');
+    processAbc();
+};
+
+
+function smartSearch(isRandom) {
+    var query = document.getElementById('searchInput').value.toLowerCase().trim();
+    resultsDiv.innerHTML = "Analysoidaan...";
+    resultsDiv.style.display = "block";
+
+    var candidates = getFilteredLibrary();
+    
+    // ARVONTA-LOGIIKKA
+    if (isRandom) {
+        candidates = [candidates[Math.floor(Math.random() * candidates.length)]];
+    } 
+    // LAAJENNETTU HAKU-LOGIIKKA (T:, O: ja S: kentät)
+    else if (query !== "") {
+        candidates = candidates.filter(function(f) {
+            var abc = f.abc || f.notation || f.content || "";
+            // Haetaan metatiedot ABC-tekstistä
+            var title = (abc.match(/^T:\s*(.*)/m) || ["", ""])[1].toLowerCase();
+            var origin = (abc.match(/^O:\s*(.*)/m) || ["", ""])[1].toLowerCase();
+            var origin = (abc.match(/^R:\s*(.*)/m) || ["", ""])[1].toLowerCase();
+            var source = (abc.match(/^S:\s*(.*)/m) || ["", ""])[1].toLowerCase();
+            
+            // Tarkistetaan löytyykö haku jostain näistä neljästä
+            return title.includes(query) || origin.includes(query) || source.includes(query);
+        });
+    }
+   
+
+    var filtered = [];
+    var semitones = {'C':0,'C#':1,'Db':1,'D':2,'D#':3,'Eb':3,'E':4,'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11};
+
+    for (var i = 0; i < candidates.length; i++) {
+        var item = candidates[i];
+        if (!item) continue;
+        
+        var abc = item.abc || item.notation || item.content || "";
+        var keyMatch = abc.match(/^K:\s*([A-G][b#]?)\s*([a-zA-Z]*)/m);
+        if (!keyMatch) continue;
+
+        var startNote = keyMatch[1];
+        var mode = (keyMatch[2] || "").toLowerCase().trim();
+        var startVal = semitones[startNote] || 0;
+
+        // --- TÄSSÄ ON MUUTOS: KUTSUTAAN YHTEISTÄ FUNKTIOTA ---
+        var targets = getTargetTranspositions(mode);
+        // -----------------------------------------------------
+
+        var bestScore = { rate: 1.1, oct: 0, trans: 0 };
+
+        targets.forEach(function(targetVal) {
+            var transOptions = [targetVal - startVal, (targetVal - startVal) + 12, (targetVal - startVal) - 12];
+            transOptions.forEach(function(trans) {
+                [-1, 0, 1].forEach(function(oct) {
+                    var rate = countErrorRate(abc, trans, oct);
+                    if (rate < bestScore.rate) {
+                        bestScore = { rate: rate, oct: oct, trans: trans };
+                    }
                 });
-
-                abcInput.value = oldAbc; 
-                displayAbc = optimizedAbc;
-                favoritesSelect.value = ""; // Nollaa suosikkivalikko
-            }
-
-            if (!hasBends || filterMode === "all") {
-                foundCount++;
-                const row = document.createElement('div');
-                row.className = "search-item";
-                row.innerHTML = `🎻 ${hasBends ? "🪗 " : "✅ "} <b>${tune.name}</b>`;
-                
-                row.onclick = () => {
-                    abcInput.value = displayAbc;
-                    userHasSelectedHarp = false;
-                    processAbc();
-                    analyzeKey(displayAbc);
-                    resDiv.style.display = "none";
-                };
-                resDiv.appendChild(row);
-            }
+            });
         });
 
-        // Haetaan genren mukaiset tulokset myös TheSessionista
-        const sessionCount = await fetchFromTheSession(genre, resDiv, filterMode, t);
-        foundCount += sessionCount;
-
-        if (foundCount === 0) {
-            resDiv.innerHTML = `<div style="padding:10px;">${t.msgNotFoundSrch || "Ei löytynyt"}</div>`;
-            statusDisplay.innerText = t.msgNotFoundSrch || "Ei löytynyt";
-        } else {
-            statusDisplay.innerText = t.msgSearchDone || "Haku valmis";
+        // Hyväksytään kappale, jos se sopii huilulle kohtuullisen hyvin
+        if (bestScore.rate < 0.5) {  // hakee biisit joiden nuoteista 50% on soitettavia
+            filtered.push({ item: item, oct: bestScore.oct, trans: bestScore.trans });
         }
 
-        // Skrollataan hakutuloksiin automaattisesti, jotta käyttäjä näkee ne heti
-        resDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Estetään selaimen jäätyminen pitkissä listauksissa
+        if (!isRandom && filtered.length > 40) break;
+    }
+    renderResults(filtered);
+}
 
+// --- UUSI: Hae 3 (Etsii liukusäätimen virheprosentilla ja numeroi tulokset) ---
+var searchStrictLimitedBtn = document.getElementById('searchStrictLimitedBtn');
+if (searchStrictLimitedBtn) {
+    searchStrictLimitedBtn.onclick = function() {
+        hideUndo();
+        searchWithSliderLimit();
     };
+}
 
-    // Kytketään genre-napit toimintaan
-    document.querySelectorAll('.genre-btn').forEach(btn => {
-        btn.onclick = () => fetchAndFilter(btn.getAttribute('data-genre'));
+function searchWithSliderLimit() {
+    var query = document.getElementById('searchInput').value.toLowerCase().trim();
+    var resultsDiv = document.getElementById('searchResults');
+    var slider = document.getElementById('errorRateSlider');
+    
+    // Luetaan sallittu virheprosentti (esim. 10% = 0.1)
+    var allowedErrorThreshold = slider ? (parseFloat(slider.value) / 100) : 0.1;
+
+    resultsDiv.innerHTML = "Etsitään (max " + (allowedErrorThreshold * 100).toFixed(0) + "% virheitä)...";
+    resultsDiv.style.display = "block";
+
+    // Pieni viive, jotta selain ehtii piirtää "Etsitään..." -tekstin ruudulle ennen raskasta laskentaa
+    setTimeout(function() {
+        var candidates = getFilteredLibrary();
+        
+        // Jos hakukentässä on tekstiä, suodatetaan ensin sillä
+        if (query !== "") {
+            candidates = candidates.filter(function(f) {
+                var abc = f.abc || f.notation || f.content || "";
+                var title = (abc.match(/^T:\s*(.*)/m) || ["", ""])[1].toLowerCase();
+                return title.includes(query);
+            });
+        }
+
+        var filtered = [];
+        var semitones = {'C':0,'C#':1,'Db':1,'D':2,'D#':3,'Eb':3,'E':4,'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11};
+        var resultCounter = 1; // Aloitetaan numerointi ykkösestä
+
+        for (var i = 0; i < candidates.length; i++) {
+            var item = candidates[i];
+            if (!item) continue;
+
+            var abc = item.abc || item.notation || item.content || "";
+            var keyMatch = abc.match(/^K:\s*([A-G][b#]?)\s*([a-zA-Z]*)/m);
+            if (!keyMatch) continue;
+
+            var titleMatch = abc.match(/^T:\s*(.*)/m);
+            var originalTitle = titleMatch ? titleMatch[1].trim() : "Nimetön kappale";
+
+            var startNote = keyMatch[1];
+            var mode = (keyMatch[2] || "").toLowerCase().trim();
+            var startVal = semitones[startNote] || 0;
+
+            var targets = getTargetTranspositions(mode);
+            var bestScore = { rate: 1.1, oct: 0, trans: 0 };
+
+            // Kokeillaan kaikki transponointivaihtoehdot
+            targets.forEach(function(targetVal) {
+                var transOptions = [targetVal - startVal, (targetVal - startVal) + 12, (targetVal - startVal) - 12];
+                transOptions.forEach(function(trans) {
+                    [-1, 0, 1].forEach(function(oct) {
+                        var rate = countErrorRate(abc, trans, oct);
+                        if (rate < bestScore.rate) {
+                            bestScore = { rate: rate, oct: oct, trans: trans };
+                        }
+                    });
+                });
+            });
+
+            // Jos kappaleen paras transponointi alittaa tai on yhtä suuri kuin sallittu virheprosentti
+            if (bestScore.rate <= allowedErrorThreshold) {
+                
+                // Numeroidaan tulos ja lisätään virheprosentti näkyviin
+                var displayTitle = resultCounter + ". " + originalTitle + " (" + (bestScore.rate * 100).toFixed(0) + " %)";
+                
+                filtered.push({ 
+                    item: { name: displayTitle, abc: abc }, // Luodaan väliaikainen objekti renderöintiä varten
+                    oct: bestScore.oct, 
+                    trans: bestScore.trans 
+                });
+                resultCounter++;
+            }
+
+            // Katkaistaan haku 200 kappaleen kohdalla, ettei selain jäädy täysin valtavilla tietokannoilla
+            if (filtered.length >= 200) break;
+        }
+
+        renderResults(filtered);
+        
+        // Lisätään huomautus, jos tuloksia oli valtavasti
+        if (filtered.length === 200) {
+            var notice = document.createElement('div');
+            notice.style.fontSize = "0.8em";
+            notice.style.color = "#666";
+            notice.style.padding = "5px";
+            notice.innerText = "Näytetään vain ensimmäiset 200 tulosta selaimen nopeuttamiseksi.";
+            resultsDiv.appendChild(notice);
+        }
+
+    // LISÄYS: Lisätään "Lisää kaikki" -nappi tulosten alkuun, jos tuloksia löytyi
+        if (filtered.length > 0) {
+            var addAllBtn = document.createElement('button');
+            addAllBtn.innerHTML = "⭐ Lisää kaikki hakutulokset suosikkeihin";
+            addAllBtn.className = "add-all-favorites-btn"; // Voit tyylitellä CSS:llä
+            addAllBtn.style = "display: block; width: 100%; margin: 10px 0; padding: 10px; background: #ffc107; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;";
+            
+            addAllBtn.onclick = function() {
+                addAllResultsToFavorites(filtered);
+            };
+
+            // Lisätään nappi hakutulosten alkuun
+            resultsDiv.insertBefore(addAllBtn, resultsDiv.firstChild);
+        }
+    }, 50);
+}
+
+function addAllResultsToFavorites(results) {
+    if (!results || results.length === 0) return;
+
+    // Käytetään sovelluksesi omaa tapaa hakea suosikit (getSafeFavorites)
+    var favorites = (typeof getSafeFavorites === "function") 
+        ? getSafeFavorites() 
+        : JSON.parse(localStorage.getItem('harpFavorites') || '[]');
+    
+    var addedCount = 0;
+
+    results.forEach(function(res) {
+        var abcContent = res.item.abc;
+        
+        // Tarkistetaan duplikaatit sovelluksesi logiikalla
+        if (!favorites.some(f => f.abc === abcContent)) {
+            
+            // Haetaan nimi ABC-tekstistä
+            var currentName = "Nimetön kappale";
+            var titleMatch = abcContent.match(/^T:\s*(.*)/m);
+            if (titleMatch) currentName = titleMatch[1].trim();
+
+            // Tallennetaan täsmälleen samassa muodossa kuin addFavBtn tekee
+            favorites.push({
+                name: currentName,
+                abc: abcContent,
+                trans: res.trans || 0, // Käytetään haun löytämää parasta transponointia
+                oct: res.oct || 0      // Käytetään haun löytämää parasta oktaavia
+            });
+            addedCount++;
+        }
     });
 
-    // --- SUOSIKKIEN POISTO ---
-const deleteFavBtn = document.getElementById('deleteFavBtn');
-if (deleteFavBtn) {
-    deleteFavBtn.onclick = () => {
-        const val = favoritesSelect.value;
-        // Jos valinta on tyhjä tai oletusteksti (esim. "-- Omat tallennukset --"), lopetetaan
-        if (!val || val.startsWith('--')) return;
+    // Tallennetaan takaisin localStorageen
+    localStorage.setItem('harpFavorites', JSON.stringify(favorites));
+    
+    if (addedCount > 0) {
+        alert("⭐ Lisätty " + addedCount + " uutta kappaletta suosikkeihin!");
+        // Päivitetään suosikkinäkymä jos se on auki
+        if (typeof loadFavorites === "function" && document.getElementById('searchInput').value === "") {
+            loadFavorites();
+        }
+    } else {
+        alert("Kaikki kappaleet olivat jo suosikeissasi.");
+    }
+}
 
-        const currentLang = localStorage.getItem('prefLang') || 'en'; // Oletus nyt englanti
-        const t = translations[currentLang];
+// --- UUSI: Hae 4 (Kuten Hae 3, mutta rajoituksella max c3 / 22) ---
+var searchStrictC3Btn = document.getElementById('searchStrictC3Btn');
+if (searchStrictC3Btn) {
+    searchStrictC3Btn.onclick = function() {
+        hideUndo();
+        searchWithSliderAndRangeLimit(22); // Raja: c3 (22)
+    };
+}
+
+function searchWithSliderAndRangeLimit(maxNoteLimit) {
+    var query = document.getElementById('searchInput').value.toLowerCase().trim();
+    var resultsDiv = document.getElementById('searchResults');
+    var slider = document.getElementById('errorRateSlider');
+    var allowedErrorThreshold = slider ? (parseFloat(slider.value) / 100) : 0.1;
+
+    resultsDiv.innerHTML = "Etsitään (max " + (allowedErrorThreshold * 100).toFixed(0) + "% virhettä & max c3)...";
+    resultsDiv.style.display = "block";
+
+    setTimeout(function() {
+        var candidates = getFilteredLibrary();
+        if (query !== "") {
+            candidates = candidates.filter(function(f) {
+                var abc = f.abc || f.notation || f.content || "";
+                var title = (abc.match(/^T:\s*(.*)/m) || ["", ""])[1].toLowerCase();
+                return title.includes(query);
+            });
+        }
+
+        var filtered = [];
+        var semitones = {'C':0,'C#':1,'Db':1,'D':2,'D#':3,'Eb':3,'E':4,'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11};
+        var resultCounter = 1;
+
+        for (var i = 0; i < candidates.length; i++) {
+            var item = candidates[i];
+            if (!item) continue;
+
+            var abc = item.abc || item.notation || item.content || "";
+            var keyMatch = abc.match(/^K:\s*([A-G][b#]?)\s*([a-zA-Z]*)/m);
+            if (!keyMatch) continue;
+
+            var startNote = keyMatch[1];
+            var mode = (keyMatch[2] || "").toLowerCase().trim();
+            var startVal = semitones[startNote] || 0;
+            var targets = getTargetTranspositions(mode);
+            
+            var bestScore = { rate: 1.1, oct: 0, trans: 0 };
+
+            targets.forEach(function(targetVal) {
+                var transOptions = [targetVal - startVal, (targetVal - startVal) + 12, (targetVal - startVal) - 12];
+                transOptions.forEach(function(trans) {
+                    [-1, 0, 1].forEach(function(oct) {
+                        var rate = countErrorRate(abc, trans, oct);
+                        
+                        // --- UUSI TARKISTUS: Tarkistetaan korkein nuotti ---
+                        // Tämä apufunktio varmistaa, ettei transponoitu korkein nuotti ylitä rajaa
+                        if (rate < bestScore.rate) {
+                            if (isNoteRangeOk(abc, trans, oct, maxNoteLimit)) {
+                                bestScore = { rate: rate, oct: oct, trans: trans };
+                            }
+                        }
+                    });
+                });
+            });
+
+            if (bestScore.rate <= allowedErrorThreshold) {
+                var titleMatch = abc.match(/^T:\s*(.*)/m);
+                var originalTitle = titleMatch ? titleMatch[1].trim() : "Nimetön";
+                var displayTitle = resultCounter + ". " + originalTitle + " (" + (bestScore.rate * 100).toFixed(0) + " %)";
+                
+                filtered.push({ 
+                    item: { name: displayTitle, abc: abc }, 
+                    oct: bestScore.oct, 
+                    trans: bestScore.trans 
+                });
+                resultCounter++;
+            }
+            if (filtered.length >= 200) break;
+        }
+        renderResults(filtered);
+   // LISÄYS: Lisätään "Lisää kaikki" -nappi tulosten alkuun, jos tuloksia löytyi
+        if (filtered.length > 0) {
+            var addAllBtn = document.createElement('button');
+            addAllBtn.innerHTML = "⭐ Lisää kaikki hakutulokset suosikkeihin";
+            addAllBtn.className = "add-all-favorites-btn"; // Voit tyylitellä CSS:llä
+            addAllBtn.style = "display: block; width: 100%; margin: 10px 0; padding: 10px; background: #ffc107; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;";
+            
+            addAllBtn.onclick = function() {
+                addAllResultsToFavorites(filtered);
+            };
+
+            // Lisätään nappi hakutulosten alkuun
+            resultsDiv.insertBefore(addAllBtn, resultsDiv.firstChild);
+        }
+    }, 50);
+}
+
+// Apufunktio, joka tarkistaa pysyvätkö kaikki nuotit annetun rajan alapuolella ohjelman omalla asteikolla
+function isNoteRangeOk(abc, trans, oct, maxNoteLimit) {
+    // 1. Otetaan talteen kappaleen etumerkintä (K:) sävellajin automaattisia merkkejä varten
+    var keyMatch = abc.match(/^K:\s*([A-G][b#]?)\s*([a-zA-Z]*)/m);
+    var keyAccidentals = {};
+    if (keyMatch) {
+        var keyBase = keyMatch[1];
+        var mode = keyMatch[2].toLowerCase().trim();
+        keyAccidentals = getKeyAccidentals(keyBase, mode);
+    }
+
+    // 2. Haetaan kaikki kappaleen nuotit
+    var notes = abc.match(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g) || [];
+    if (notes.length === 0) return true;
+
+    // 3. Käydään nuotit läpi ja lasketaan niiden absoluuttinen arvo transponoinnin jälkeen
+    for (var i = 0; i < notes.length; i++) {
+        var n = notes[i];
+        var m = n.match(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/);
+        var v = getPitchValue(m[2]);
+
+        // Huomioidaan sävellajin etumerkit, jos nuotilla ei ole omaa tilapäistä merkkiä
+        if (!m[1]) {
+            var step = m[2].toUpperCase();
+            if (keyAccidentals[step]) v += keyAccidentals[step];
+        }
+
+        // Huomioidaan tilapäiset ylennykset ja alennukset
+        if (m[1] === '^') v++; 
+        if (m[1] === '_') v--;
         
-        if (confirm(`${t.msgDeleteConfirm} "${val}"?`)) {
-            // Haetaan data ja varmistetaan, että se on objekti
-            let favs = {};
-            try {
-                const stored = localStorage.getItem('harpFavorites');
-                favs = stored ? JSON.parse(stored) : {};
-                
-                // Jos data sattuisi olemaan taulukko, nollataan se objektiksi virheiden välttämiseksi
-                if (Array.isArray(favs)) favs = {}; 
-            } catch (e) {
-                favs = {};
+        // Huomioidaan oktaavimerkit (pilkut ja heittomerkit)
+        for (var j = 0; j < m[3].length; j++) { 
+            if (m[3][j] === ',') v -= 12; 
+            if (m[3][j] === "'") v += 12; 
+        }
+
+        // 4. Lasketaan LOPULLINEN sävelkorkeus ohjelman D-logiikalla (baseShift = 2)
+        var finalStep = v + trans + (oct * 12) - 2;
+
+        // Jos yksikin nuotti ylittää rajan (esim. 22), hylätään heti tämä transponointivaihtoehto
+        if (finalStep > maxNoteLimit) {
+            return false;
+        }
+    }
+    
+    return true; // Jos looppi pääsi loppuun, yksikään nuotti ei ollut liian korkea
+}
+
+
+// Apufunktio soivien nuottien laskemiseen (metatiedot, tekstit ja tanssiaskeleet ohitetaan)
+function hasEnoughPlayableNotes(abc) {
+    if (!abc) return false;
+    
+    // 1. Jaetaan teksti riveihin ja otetaan mukaan VAIN ne rivit, joilla on tahtiviiva '|'
+    // Tämä pudottaa pois otsikot (T:), sävellajit (K:), tahtilajit (M:) ja pelkät tekstirivit
+    var lines = abc.split('\n');
+    var musicContent = "";
+    
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i].trim();
+        if (line.includes('|')) {
+            musicContent += " " + line;
+        }
+    }
+    
+    // 2. Poistetaan hakasulkeet ja niiden sisältö (esim. [V:1] tai [r:ohje]) varmuuden vuoksi
+    musicContent = musicContent.replace(/\[[^\]]*\]/g, '');
+    
+    // 3. Etsitään vain varsinaiset nuotit A-G ja a-g tästä puhdistetusta musiikkisisällöstä
+    var notes = musicContent.match(/[A-Ga-g]/g) || [];
+    
+    // Palautetaan true vain, jos aitoja nuotteja tahtien sisällä on vähintään 4
+    return notes.length >= 4;
+}
+
+// --- MUUTETTU randomStrictSearch (Arvonta2) suodattimilla ---
+function randomStrictSearch() {
+    var library = getFilteredLibrary(); // Korvattu [...window.harpLibrary]
+    if (!library || library.length === 0) {
+        alert("Valitusta lähteestä ei löytynyt kappaleita.");
+        return;
+    }
+
+    // Luodaan kopio kirjastosta ja sekoitetaan se
+    var libraryCopy = [...window.harpLibrary];
+    for (let i = libraryCopy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [libraryCopy[i], libraryCopy[j]] = [libraryCopy[j], libraryCopy[i]];
+    }
+
+    var found = false;
+    var semitones = {'C':0,'C#':1,'Db':1,'D':2,'D#':3,'Eb':3,'E':4,'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11};
+
+    // Käydään kirjastoa läpi kunnes löytyy sopiva
+    for (var i = 0; i < libraryCopy.length; i++) {
+        var item = libraryCopy[i];
+        var abc = item.abc || item.notation || item.content || "";
+
+	// UUSI SUODATIN: Pitää olla vähintään 4 soivaa nuottia (tauot ei riitä)
+        if (!hasEnoughPlayableNotes(abc)) {
+            continue;
+        }
+		
+        // --- SUODATIN 1: Pituus (vähintään 5 tahtia) ---
+        // Lasketaan pystyviivat | ABC-koodista
+        var barCount = (abc.match(/\|/g) || []).length;
+        if (barCount <= 5) continue; // pystyviivojen eli tahtiviivojen vähimmäismäärä
+
+        var keyMatch = abc.match(/^K:\s*([A-G][b#]?)\s*([a-zA-Z]*)/m);
+        if (!keyMatch) continue;
+
+        var startNote = keyMatch[1];
+        var mode = (keyMatch[2] || "").toLowerCase().trim();
+        var startVal = semitones[startNote] || 0;
+
+        var targets = [];
+        if (mode.includes("lyd")) targets = [2];
+        else if (mode.includes("mix")) targets = [4];
+        else if (mode.includes("dor")) targets = [9, 7];
+        else if (mode.includes("min") || mode === "m") targets = [2, 9, 11];
+        else targets = [2, 9];
+
+        var bestMatchFoundForThisSong = false;
+
+        for (let targetVal of targets) {
+            var transOptions = [targetVal - startVal, (targetVal - startVal) + 12, (targetVal - startVal) - 12];
+            for (let trans of transOptions) {
+                for (let oct of [-1, 0, 1]) {
+                    
+                    // Tarkistetaan virheaste (tavoite 100% sopivuus = 0.0)
+                    var rate = countErrorRate(abc, trans, oct);
+                    
+                    if (rate <= 0.01) {
+                        // --- SUODATIN 2: Korkein sävel (max 24) ---
+                        var notes = abc.match(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g) || [];
+                        var tooHigh = false;
+                        
+                        for (let n of notes) {
+                            var m = n.match(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/);
+                            var v = getPitchValue(m[2]);
+                            // Yksinkertaistettu pitch-laskenta suodatusta varten
+                            if (m[1] === '^') v++; if (m[1] === '_') v--;
+                            for (var j=0; j<m[3].length; j++) { if (m[3][j] === ',') v-=12; if (m[3][j]==="'") v+=12; }
+                            
+                            var finalStep = v + trans + (oct * 12) - 2;
+                            if (finalStep > 24) {    // korkein sallittu sävel 24 eli c4
+                                tooHigh = true;
+                                break;
+                            }
+                        }
+
+                        if (!tooHigh) {
+                            document.getElementById('abcInput').value = abc;
+                            window.currentTranspose = trans;
+                            window.currentOctave = oct;
+                            processAbc();
+                            found = true;
+                            bestMatchFoundForThisSong = true;
+                            break;
+                        }
+                    }
+                }
+                if (bestMatchFoundForThisSong) break;
+            }
+            if (bestMatchFoundForThisSong) break;
+        }
+
+        if (found) break;
+    }
+
+    if (!found) {
+        alert("Sopivaa kappaletta ei löytynyt tällä kertaa. Yritä uudelleen.");
+    }
+}
+
+// ARVONTA 3 FUNKTIO
+    // Sekoitetaan vain pieni osa kirjastoa kerrallaan tai rajoitetaan läpikäyntiä
+    
+async function randomStrictSearchLimited() {
+    var library = getFilteredLibrary();
+    if (!library || library.length === 0) {
+        alert("Valitusta lähteestä ei löytynyt kappaleita.");
+        return;
+    }
+    
+    // resultsDiv.innerHTML = "Arvotaan sopivaa kappaletta...";
+    // resultsDiv.style.display = "block";
+    
+    var slider = document.getElementById('errorRateSlider');
+    var allowedErrorThreshold = slider ? (parseFloat(slider.value) / 100) : 0;
+    var resultsDiv = document.getElementById('searchResults');
+    resultsDiv.innerHTML = "Etsitään sopivaa...";
+    resultsDiv.style.display = "block";
+
+    // Kopioidaan ja sekoitetaan
+    var pool = [...library];
+    for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+
+    var found = false;
+    var maxAttempts = Math.min(pool.length, 3000);
+    const semitones = {'C':0,'C#':1,'Db':1,'D':2,'D#':3,'Eb':3,'E':4,'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11};
+
+    for (var i = 0; i < maxAttempts; i++) {
+        var item = pool[i];
+        var abc = item.abc || item.notation || item.content || "";
+
+	// UUSI SUODATIN: Pitää olla vähintään 4 soivaa nuottia (tauot ei riitä)
+        if (!hasEnoughPlayableNotes(abc)) {
+            continue;
+        }
+		
+        if ((abc.match(/\|/g) || []).length <= 5) continue;
+
+        var keyMatch = abc.match(/^K:\s*([A-G][b#]?)\s*([a-zA-Z]*)/m);
+        if (!keyMatch) continue;
+
+        var startNote = keyMatch[1];
+        var mode = (keyMatch[2] || "").toLowerCase().trim();
+        var startVal = semitones[startNote] || 0;
+        var targets = (mode.includes("min") || mode === "m") ? [2, 9, 11] : [2, 9];
+
+        for (let targetVal of targets) {
+            var transOptions = [targetVal - startVal, (targetVal - startVal) + 12, (targetVal - startVal) - 12];
+            for (let trans of transOptions) {
+                for (let oct of [-1, 0, 1]) {
+                    var rate = countErrorRate(abc, trans, oct);
+                    if (rate <= allowedErrorThreshold) {
+                        document.getElementById('abcInput').value = abc;
+                        window.currentTranspose = trans;
+                        window.currentOctave = oct;
+                        processAbc();
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) break;
+            }
+            if (found) break;
+        }
+        if (found) break;
+    }
+
+    resultsDiv.style.display = "none";
+    if (!found) alert("Ei löytynyt ehtoja vastaavaa kappaletta.");
+}
+
+async function randomStrictSearchLimited() {
+    if (!window.harpLibrary || window.harpLibrary.length === 0) {
+        alert("Kirjastoa ei ole vielä ladattu.");
+        return;
+    }
+
+    // Luetaan liukusäätimen arvo
+    var slider = document.getElementById('errorRateSlider');
+    var allowedErrorThreshold = slider ? (parseFloat(slider.value) / 100) : 0;
+
+    var resultsDiv = document.getElementById('searchResults');
+    resultsDiv.innerHTML = "Etsitään sopivaa kappaletta...";
+    resultsDiv.style.display = "block";
+
+    var library = [...window.harpLibrary];
+    for (let i = library.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [library[i], library[j]] = [library[j], library[i]];
+    }
+
+    var found = false;
+    const semitones = {'C':0,'C#':1,'Db':1,'D':2,'D#':3,'Eb':3,'E':4,'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11};
+    var maxAttempts = Math.min(library.length, 5000);
+
+    for (var i = 0; i < maxAttempts; i++) {
+        var item = library[i];
+        var abc = item.abc || item.notation || item.content || "";
+
+		// UUSI SUODATIN: Pitää olla vähintään 4 soivaa nuottia (tauot ei riitä)
+        if (!hasEnoughPlayableNotes(abc)) {
+            continue;
+        }
+        
+        if ((abc.match(/\|/g) || []).length <= 5) continue; 
+
+        var keyMatch = abc.match(/^K:\s*([A-G][b#]?)\s*([a-zA-Z]*)/m);
+        if (!keyMatch) continue;
+
+        var rawNotes = abc.match(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g) || [];
+        if (rawNotes.length === 0) continue;
+
+        var parsedPitches = rawNotes.map(n => {
+            var m = n.match(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/);
+            var v = getPitchValue(m[2]);
+            if (m[1] === '^') v++; if (m[1] === '_') v--;
+            for (var j=0; j<m[3].length; j++) { if (m[3][j] === ',') v-=12; if (m[3][j]==="'") v+=12; }
+            return v;
+        });
+
+        var startNote = keyMatch[1];
+        var mode = (keyMatch[2] || "").toLowerCase().trim();
+        var startVal = semitones[startNote] || 0;
+
+        var targets = (mode.includes("min") || mode === "m") ? [2, 9, 11] : [2, 9];
+
+        for (let targetVal of targets) {
+            var transOptions = [targetVal - startVal, (targetVal - startVal) + 12, (targetVal - startVal) - 12];
+            for (let trans of transOptions) {
+                for (let oct of [-1, 0, 1]) {
+                    let errCount = 0;
+                    let tooHigh = false;
+                    let shift = trans + (oct * 12) - 2;
+
+                    for (let v of parsedPitches) {
+                        let finalStep = v + shift;
+                        if (finalStep > 22) { tooHigh = true; break; } // korkein sallittu sävel 22 eli c3
+                        if (allowedD.indexOf(finalStep) === -1) errCount++;
+                    }
+
+                    var currentRate = errCount / parsedPitches.length;
+
+                    if (!tooHigh && currentRate <= allowedErrorThreshold) {
+                        document.getElementById('abcInput').value = abc;
+                        window.currentTranspose = trans;
+                        window.currentOctave = oct;
+                        processAbc();
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) break;
+            }
+            if (found) break;
+        }
+        if (found) break;
+    }
+    resultsDiv.style.display = "none";
+    if (!found) alert("Ei löytynyt matalaa kappaletta näillä ehdoilla.");
+}
+
+
+
+
+function countErrorRate(abc, trans, oct) {
+var keyMatch = abc.match(/^K:\s*([A-G][b#]?)\s*([a-zA-Z]*)/m);
+var keyAccidentals = {};
+
+if (keyMatch){
+    var keyBase = keyMatch[1];
+    var mode = keyMatch[2].toLowerCase().trim();
+    mode = mode.trim();
+    keyAccidentals = getKeyAccidentals(keyBase, mode);
+}
+var notes = abc.match(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g) || [];  
+if (notes.length === 0) return 1;  
+  
+  
+  
+var errCount = 0;  
+notes.forEach(n => {  
+    var m = n.match(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/);  
+    var v = getPitchValue(m[2]);
+
+if (!m[1]) {
+    var step = m[2].toUpperCase();
+    if (keyAccidentals[step]) v += keyAccidentals[step];
+}  
+    if (m[1] === '^') v++; if (m[1] === '_') v--;  
+    for (var j=0; j<m[3].length; j++) { if (m[3][j] === ',') v-=12; if (m[3][j]==="'") v+=12; }  
+      
+   var s = v + trans + (oct * 12) - 2;  
+      if (trans === 7) {
+        var isAllowed = allowedD.indexOf(s) !== -1;
+        console.log(`D-DUURI TESTI: Nuotti ${n} -> Arvo ${s} -> Sallittu: ${isAllowed}`);
+    }
+    // Tarkistetaan uutta listaa vasten  
+    if (allowedD.indexOf(s) === -1) errCount++; 
+});  
+return errCount / notes.length;
+
+}
+
+document.getElementById('searchStrictBtn').onclick = async function() {
+hideUndo();
+    var query = document.getElementById('searchInput').value.toLowerCase().trim();
+    var resultsDiv = document.getElementById('searchResults');
+    
+   // KORJAUS 1: Käytetään valittua kirjastoa (esim. vain Tarkistusnuotit)
+    var candidates = getFilteredLibrary();
+
+    resultsDiv.innerHTML = "Etsitään tiukalla suodatuksella (max 4s)...";
+    resultsDiv.style.display = "block";
+
+    var filtered = [];
+    var semitones = {'C':0,'C#':1,'Db':1,'D':2,'D#':3,'Eb':3,'E':4,'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11};
+
+    // Aikarajan asetus
+    var startTime = performance.now();
+    var timeLimit = 4000; // 4 sekuntia millisekunteina
+
+    for (var i = 0; i < candidates.length; i++) {
+        // TARKISTUS: Onko aika loppunut?
+        if (performance.now() - startTime > timeLimit) break; 
+
+        var item = candidates[i];
+        if (!item) continue;
+
+        // KORJAUS 2: Jos query on tyhjä, päästetään kaikki läpi analyysiin. 
+        // Jos queryssä on tekstiä, suodatetaan nimen perusteella.
+        if (query !== "") {
+            var name = (item.name || "").toLowerCase();
+            if (name.indexOf(query) === -1) continue;
+        }
+
+        var abc = item.abc || item.notation || item.content || "";
+        var keyMatch = abc.match(/^K:\s*([A-G][b#]?)\s*([a-zA-Z]*)/m);
+        if (!keyMatch) continue;
+
+        var startNote = keyMatch[1];
+        var mode = (keyMatch[2] || "").toLowerCase().trim();
+        var startVal = semitones[startNote] || 0;
+
+        var targets = [];
+        if (mode.includes("lyd")) targets = [2];
+        else if (mode.includes("mix")) targets = [4];
+        else if (mode.includes("dor")) targets = [9, 7, 4];
+        else if (mode.includes("min") || mode === "m") targets = [2, 9, 11];
+        else targets = [2, 9];
+
+        var bestScore = { rate: 1.1, oct: 0, trans: 0 };
+
+        targets.forEach(targetVal => {
+            var transOptions = [targetVal - startVal, (targetVal - startVal) + 12, (targetVal - startVal) - 12];
+            transOptions.forEach(trans => {
+                [-1, 0, 1].forEach(oct => {
+                    var rate = countErrorRate(abc, trans, oct);
+                    if (rate < bestScore.rate) {
+                        bestScore = { rate: rate, oct: oct, trans: trans };
+                    }
+                });
+            });
+        });
+
+       // Speksien mukainen 90% raja (rate <= 0.1)
+        if (bestScore.rate <= 0.1) {
+            filtered.push({ 
+                item: item, 
+                oct: bestScore.oct, 
+                trans: bestScore.trans,
+                info: "Sopivuus: " + ((1 - bestScore.rate) * 100).toFixed(0) + "%" 
+            });
+        }
+        // Estetään listaamasta tuhansia tuloksia kerralla
+        if (filtered.length > 50) break;
+    }
+
+    renderResults(filtered);
+    
+    // Jos haku loppui kesken, lisätään pieni ilmoitus
+    if (performance.now() - startTime > timeLimit) {
+        var notice = document.createElement('div');
+        notice.style.fontSize = "0.8em";
+        notice.style.color = "#666";
+        notice.style.padding = "5px";
+        notice.innerText = "Näytetään vain ensimmäiset 4 sekunnin aikana löytyneet tulokset.";
+        resultsDiv.prepend(notice);
+    }
+};
+
+function renderResults(res) {  
+    resultsDiv.innerHTML = res.length === 0 ? "Ei tuloksia." : "";  
+    res.forEach(r => {  
+        var d = document.createElement('div');  
+        d.className = 'result-item';  
+        d.innerHTML = "<strong>" + r.item.name + "</strong>";  
+        d.onclick = function() {
+
+    abcInput.value = r.item.abc || r.item.notation || r.item.content || "";
+
+    resultsDiv.style.display = "none";
+
+    autoTransposeFromKey(abcInput.value);
+
+    processAbc();
+
+};
+        
+        resultsDiv.appendChild(d);  
+    });  
+}
+
+// --- UUSI APUFUNKTIO: Transponoi ABC-tekstin fyysisesti latausta varten ---
+function getTransposedAbcText(abcText, semitones) {
+    if (!semitones || semitones === 0) return abcText;
+
+    var keys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'];
+    var sharps = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    var useSharps = [7, 2, 9, 4, 11, 6, 1, 8]; // Sävellajit, jotka suosivat ristejä
+
+    // Perusnuottien arvot (C = 0)
+    var basePitch = { 'C':0, 'D':2, 'E':4, 'F':5, 'G':7, 'A':9, 'B':11, 'c':12, 'd':14, 'e':16, 'f':17, 'g':19, 'a':21, 'b':23 };
+
+    var lines = abcText.split('\n');
+    var newLines = lines.map(function(line) {
+        
+        // 1. Sävellajin (K:) transponointi
+        if (/^(K:\s*)([A-G][b#]?)(.*)/i.test(line)) {
+            var match = line.match(/^(K:\s*)([A-G][b#]?)(.*)/i);
+            var prefix = match[1];
+            var root = match[2].charAt(0).toUpperCase() + match[2].slice(1);
+            var suffix = match[3];
+
+            var index = keys.indexOf(root);
+            if (index === -1) index = sharps.indexOf(root);
+            if (index !== -1) {
+                var newIndex = ((index + semitones) % 12 + 12) % 12;
+                var newRoot = useSharps.includes(newIndex) ? sharps[newIndex] : keys[newIndex];
+                return prefix + newRoot + suffix;
+            }
+            return line;
+        }
+
+        // 2. Ohitetaan otsikot ja sanoitukset (mutta K-rivi käsiteltiin jo yllä)
+        if (/^[A-Z]:/.test(line) && !line.startsWith('K:')) return line;
+        if (line.trim().startsWith('w:')) return line;
+        if (line.trim().startsWith('%')) return line; // Ohitetaan kommentit
+
+        // 3. Nuottien fyysinen transponointi
+        return line.replace(/([\^_=]?)([A-Ga-g])([,']*)([0-9\/]*)/g, function(match, acc, note, octs, dur) {
+            if (basePitch[note] === undefined) return match; // Varmistus
+
+            var v = basePitch[note];
+            if (acc === '^') v++;
+            if (acc === '_') v--;
+            for (var j = 0; j < octs.length; j++) {
+                if (octs[j] === ',') v -= 12;
+                if (octs[j] === "'") v += 12;
             }
 
-            // Poistetaan avain
-            if (favs.hasOwnProperty(val)) {
-                delete favs[val];
-                localStorage.setItem('harpFavorites', JSON.stringify(favs));
-                
-                // Päivitetään käyttöliittymä
-                loadFavorites();
-                
-                // Tyhjennetään tekstialue ja nuotit
-                if (typeof abcInput !== 'undefined') abcInput.value = "";
-                if (typeof processAbc === 'function') processAbc();
+            // Lisätään transponointi
+            v += semitones;
+
+            // Lasketaan uusi nuotti
+            var absPitch = ((v % 12) + 12) % 12;
+            var octShift = Math.floor(v / 12);
+            
+            var rawName = sharps[absPitch]; 
+            var finalAcc = "";
+            
+            if (rawName.length > 1) { 
+                finalAcc = "^";
+                rawName = rawName.charAt(0);
+            } else if (acc === '_' || acc === '^') {
+                finalAcc = "="; // Palautusmerkki, jos siirrytään valkoiselle koskettimelle
             }
+
+            if (octShift > 0) {
+                rawName = rawName.toLowerCase();
+                octShift--; 
+            }
+            
+            var octaveMarks = "";
+            if (octShift > 0) {
+                octaveMarks = "'".repeat(octShift);
+            } else if (octShift < 0) {
+                octaveMarks = ",".repeat(Math.abs(octShift));
+            }
+
+            return finalAcc + rawName + octaveMarks + dur;
+        });
+    });
+
+    return newLines.join('\n');
+}
+
+// --- PÄIVITETTY LATAUSFUNKTIO ---
+function updateAbcDownload(abc) {
+    var downloadContainer = document.getElementById('abc-download'); 
+    if (!downloadContainer) return;
+
+    // 1. Symbolien korvaus
+    var cleanedAbc = abc.replace(/⬤/g, "\u25CF")
+                        .replace(/◯/g, "\u25CB")
+                        .replace(/◒/g, "\u25D2");
+
+    // 2. KOKONAISVALTAINEN TRANSPONOINTI LATAUSTA VARTEN
+    // Oletetaan, että transponointi tallentuu window.currentTranspose -muuttujaan
+    var transSemitones = window.currentTranspose || 0;
+    if (transSemitones !== 0) {
+        // Ajetaan teksti uuden myllyn läpi
+        cleanedAbc = getTransposedAbcText(cleanedAbc, transSemitones);
+    }
+
+    // 3. Luodaan tiedosto ja latauslinkki
+    var blob = new Blob([cleanedAbc], { type: "text/plain;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+
+    var titleMatch = cleanedAbc.match(/^T:\s*(.*)/m);
+    var fileName = titleMatch ? titleMatch[1].trim().replace(/[^a-z0-9]/gi, '_') + ".abc" : "nuotit.abc";
+
+    downloadContainer.innerHTML = `
+        <a href="${url}" 
+           download="${fileName}" 
+           style="display:inline-block; padding:10px 20px; background:#3498db; color:white; text-decoration:none; border-radius:5px; font-weight:bold;">
+           ⬇️ABC
+        </a>`;
+}
+
+
+
+
+
+// 1. Luodaan "Takaisin" -nappi dynaamisesti (jos sitä ei ole)
+let exitBtn = document.getElementById('exitFocusMode');
+if (!exitBtn) {
+    exitBtn = document.createElement('button');
+    exitBtn.id = "exitFocusMode";
+    exitBtn.innerHTML = "🔙 Lopeta pelkistetty tila";
+    document.body.appendChild(exitBtn);
+}
+
+// 2. Hallitaan näkymän vaihtoa
+const toggleBtn = document.getElementById('toggleFocusMode');
+
+if (toggleBtn) {
+    toggleBtn.onclick = function() {
+        document.body.classList.add('focus-mode');
+        setupFocusLayout(true);
+    };
+}
+
+exitBtn.onclick = function() {
+    document.body.classList.remove('focus-mode');
+    setupFocusLayout(false);
+};
+
+document.getElementById('randomStrictFixBtn').onclick = function() {
+    // 1. Aloitetaan puhtaalta pöydältä
+    hideUndo();
+
+    // 2. Suoritetaan haku (Arvonta 3)
+    randomStrictSearchLimited();
+
+    // 3. Korjausvaihe viiveellä
+    setTimeout(function() {
+        var abcInput = document.getElementById('abcInput');
+        
+        // Tallennetaan alkuperäinen kumoa-toimintoa varten
+        lastOriginalAbc = abcInput.value;
+        
+        // 4. Suoritetaan Korjaa sävelet 2
+        var fixBtn = document.getElementById('fixNotesBtn2');
+        if (fixBtn) {
+            fixBtn.onclick();
+        }
+        
+        if (typeof processAbc === "function") processAbc();
+
+        // --- UUSI OSA: AUTOMAATTINEN SOITTO PELKISTETYSSÄ TILASSA ---
+        // Tarkistetaan onko "focus-mode" päällä
+        if (document.body.classList.contains('focus-mode')) {
+            // Annetaan soittimelle pieni hetki päivittää nuotit sisäisesti
+            setTimeout(function() {
+                if (synthControl) {
+                    // Kutsutaan abcjs-soittimen omaa play-toimintoa
+                    synthControl.play();
+                }
+            }, 100); // 100ms viive riittää yleensä nuottien päivitykseen
+        }
+    }, 70); 
+};
+
+function setupFocusLayout(enable) {
+    const paper = document.getElementById('paper');
+    const soitin = document.getElementById('audio');
+    const arvontaGroup = document.getElementById('arvonta-group'); // Sisältää ❤️ ja 🎲4
+    
+    // Alkuperäiset kodit palautusta varten
+    const searchBar = document.querySelector('.search-bar');
+    const toggleBtn = document.getElementById('toggleFocusMode');
+    const editorArea = document.getElementById('editor-area');
+
+    if (enable) {
+        document.body.classList.add('focus-mode');
+        
+        // Luodaan tai haetaan säiliö
+        let container = document.getElementById('focus-container');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'focus-container';
+            // Laitetaan säiliö nuottipaperin yläpuolelle
+            paper.parentNode.insertBefore(container, paper);
+        }
+
+        // Siirretään koko ryhmä (nappi + sydän) ja soitin säiliöön
+        if (arvontaGroup) container.appendChild(arvontaGroup);
+        if (soitin) container.appendChild(soitin);
+
+    } else {
+        document.body.classList.remove('focus-mode');
+        
+        // --- PALAUTUS NORMAALIIN ---
+        
+        // 1. Palautetaan arvonta-group hakupalkkiin, Pelkistetty-napin eteen
+        if (searchBar && arvontaGroup) {
+            searchBar.insertBefore(arvontaGroup, toggleBtn);
+        }
+        
+        // 2. Palautetaan soitin tekstikentän yläpuolelle
+        if (editorArea && soitin) {
+            editorArea.insertBefore(soitin, editorArea.firstChild);
+        }
+
+        // 3. Poistetaan ylimääräinen säiliö
+        const container = document.getElementById('focus-container');
+        if (container) container.remove();
+    }
+
+    // Päivitetään näkymä
+    setTimeout(() => {
+        if (typeof processAbc === "function") processAbc();
+    }, 100);
+}
+
+	// --- UUSI: Hae suoraan thesession.org API:sta ---
+var searchTheSessionBtn = document.getElementById('searchTheSessionBtn');
+if (searchTheSessionBtn) {
+    searchTheSessionBtn.onclick = async function() {
+        hideUndo();
+        var query = document.getElementById('searchInput').value.toLowerCase().trim();
+        var resultsDiv = document.getElementById('searchResults');
+        
+        if (query === "") {
+            alert("Kirjoita hakusana (esim. polka tai kappaleen nimi) etsiäksesi thesession.org:ista.");
+            return;
+        }
+
+        // Näytetään latausilmoitus
+        resultsDiv.innerHTML = "Haetaan The Session -tietokannasta...";
+        resultsDiv.style.display = "block";
+
+        try {
+            // 1. Etsi kappaleiden ID:t ja nimet thesession.org API:sta
+            var searchRes = await fetch("https://thesession.org/tunes/search?q=" + encodeURIComponent(query) + "&format=json");
+            var searchData = await searchRes.json();
+            
+            if (!searchData.tunes || searchData.tunes.length === 0) {
+                resultsDiv.innerHTML = "Ei osumia thesession.org:ista tällä hakusanalla.";
+                return;
+            }
+
+            // Rajoitetaan haku kymmeneen ensimmäiseen osumaan, ettei API tai selain tukkeudu
+            var topTunes = searchData.tunes.slice(0, 10);
+            var filtered = [];
+            var semitones = {'C':0,'C#':1,'Db':1,'D':2,'D#':3,'Eb':3,'E':4,'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11};
+
+            // Muunnetaan The Sessionin kappaletyypit ABC-tahtilajeiksi
+            var typeToMeter = {
+                'jig': '6/8', 'slip jig': '9/8', 'reel': '4/4', 'hornpipe': '4/4',
+                'polka': '2/4', 'waltz': '3/4', 'slide': '12/8', 'march': '4/4', 'strathspey': '4/4'
+            };
+
+            // 2. Haetaan kunkin kappaleen tarkat ABC-nuotit ja versiot (settings)
+            for (var i = 0; i < topTunes.length; i++) {
+                resultsDiv.innerHTML = "Ladataan thesession.org osumia (" + (i+1) + "/" + topTunes.length + ")...";
+                var tuneId = topTunes[i].id;
+                
+                var tuneRes = await fetch("https://thesession.org/tunes/" + tuneId + "?format=json");
+                var tuneData = await tuneRes.json();
+
+                if (tuneData.settings && tuneData.settings.length > 0) {
+                    for (var j = 0; j < tuneData.settings.length; j++) {
+                        var setting = tuneData.settings[j];
+                        var meter = typeToMeter[tuneData.type] || '4/4';
+                        
+                                                // Siivotaan rivinvaihdot pois ABC-rungosta, jotta tabulatuurit levittäytyvät koko kappaleeseen
+                                                // Siivotaan The Sessionin raakadatasta soinnut, korukuviot ja erikoismerkit,
+                                                // --- TEHOPUHDISTUS: Siivotaan kaikki "valenuotit" ---
+                        var cleanAbcBody = setting.abc
+                            // 1. Kitarasoinnut (esim. "Am", "D7") pois
+                            .replace(/"[^"]*"/g, '')
+                            // 2. Korukuviot (esim. {def}) pois
+                            .replace(/\{[^}]*\}/g, '')
+                            // 3. Tekstikomennot ja dynamiikat (esim. !fermata!, !trill!) pois
+                            .replace(/![^!]+!/g, '')
+                            // 4. Inline-määritykset (esim. [K:G], [M:4/4]) pois
+                            .replace(/\[[A-Z]:[^\]]*\]/g, '')
+                            // 5. Moniääniset soinnut (esim. [D2F2A2]) muutetaan ensimmäiseksi säveleksi
+                            .replace(/\[([^\]]+)\]/g, function(match, inner) {
+                                var m = inner.match(/[\^_=]?[A-Ga-g][,']*[0-9\/]*/);
+                                return m ? m[0] : '';
+                            })
+                            // 6. Ylimääräiset soittotekniset merkit pois (~, H, L, M)
+                            .replace(/[~HLM]/g, '')
+                            // 7. Mahdolliset rivin jatkot pois
+                            .replace(/\\/g, '')
+                            .trim();
+
+                        // Rakennetaan vaadittu otsikosto
+                        var abc = "X:1\n" +
+                                  "T:" + tuneData.name + " (The Session #" + setting.id + ")\n" +
+                                  "M:" + meter + "\n" +
+                                  "L:1/8\n" +
+                                  "K:" + setting.key + "\n" +
+                                  cleanAbcBody;
+
+
+
+
+                        var keyMatch = setting.key.match(/^([A-G][b#]?)(.*)/i);
+                        if (!keyMatch) continue;
+
+                        var startNote = keyMatch[1];
+                        var mode = (keyMatch[2] || "").toLowerCase().trim();
+                        var startVal = semitones[startNote] || 0;
+
+                        var targets = getTargetTranspositions(mode);
+                        var bestScore = { rate: 1.1, oct: 0, trans: 0 };
+
+                        // Kokeillaan transponoinnit samalla logiikalla kuin alkuperäisessä haussa
+                        targets.forEach(function(targetVal) {
+                            var transOptions = [targetVal - startVal, (targetVal - startVal) + 12, (targetVal - startVal) - 12];
+                            transOptions.forEach(function(trans) {
+                                [-1, 0, 1].forEach(function(oct) {
+                                    var rate = countErrorRate(abc, trans, oct);
+                                    if (rate < bestScore.rate) {
+                                        bestScore = { rate: rate, oct: oct, trans: trans };
+                                    }
+                                });
+                            });
+                        });
+
+                        // Hyväksytään kappale, jos vähintään 50% nuoteista on soitettavissa huilulla
+                        if (bestScore.rate < 0.5) {
+                            filtered.push({ 
+                                item: { 
+                                    name: tuneData.name + " (" + setting.key + ") - Sopivuus: " + ((1 - bestScore.rate) * 100).toFixed(0) + "%", 
+                                    abc: abc 
+                                }, 
+                                oct: bestScore.oct, 
+                                trans: bestScore.trans 
+                            });
+                        }
+                    }
+                }
+            }
+            
+            // 3. Renderöidään tulokset ruudulle
+            if (filtered.length > 0) {
+                renderResults(filtered);
+                
+                // Lisätään tuttu "Lisää kaikki hakutulokset suosikkeihin" -nappi
+                var addAllBtn = document.createElement('button');
+                addAllBtn.innerHTML = "⭐ Lisää kaikki hakutulokset suosikkeihin";
+                addAllBtn.className = "add-all-favorites-btn";
+                addAllBtn.style = "display: block; width: 100%; margin: 10px 0; padding: 10px; background: #ffc107; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;";
+                
+                addAllBtn.onclick = function() {
+                    addAllResultsToFavorites(filtered);
+                };
+                resultsDiv.insertBefore(addAllBtn, resultsDiv.firstChild);
+            } else {
+                resultsDiv.innerHTML = "Löydetyt thesession.org tulokset eivät sopineet pitkähuilulle (yli 50% virheitä).";
+            }
+
+        } catch (err) {
+            resultsDiv.innerHTML = "Virhe haettaessa thesession.org:ista: " + err.message;
+            console.error("TheSession API error:", err);
         }
     };
 }
-  
-  
-  
-  
-    // --- ARVONTA ---
-    randomBtn.onclick = () => {
-        const currentLang = localStorage.getItem('prefLang') || 'fi';
-        const t = translations[currentLang];
-        const filterMode = document.getElementById('filterSelect').value;
-
-        if (!window.harpLibrary || window.harpLibrary.length === 0) {
-            statusDisplay.innerText = " ";
-            return;
-        }
-
-        statusDisplay.innerText = t.msgRandomizing;
-        let selected = null;
-        let attempts = 0;
-        const maxAttempts = 100;
-
-        while (!selected && attempts < maxAttempts) {
-            let tempTune = window.harpLibrary[Math.floor(Math.random() * window.harpLibrary.length)];
-            
-            // Tarkistetaan tahtien määrä (vähintään 4)
-            if (countMeasures(tempTune.abc) < 4) {
-                attempts++;
-                continue; 
-            }
-
-            if (filterMode === "all") {
-                selected = tempTune;
-            } else {
-                // "Ei taivutuksia" -logiikka
-                const oldAbc = abcInput.value;
-                abcInput.value = tempTune.abc;
-                
-                analyzeKey(tempTune.abc);
-                autoOptimize();
-                
-                let hasBends = false;
-                let harpShift = parseInt(harpKeySelect.value);
-                let currentAbcText = abcInput.value; 
-
-                currentAbcText.split('\n').forEach(line => {
-                    if (/^[A-Z]:/.test(line) || line.trim() === "") return;
-                    line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
-                        let absPitch = getPitchValue(acc, note, octs);
-                        let relPitch = absPitch - harpShift + (octaveOffset * 12);
-                        const tab = harpMap[relPitch.toString()] || "";
-                        if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
-                    });
-                });
-
-                if (!hasBends) {
-                    selected = tempTune;
-                } else {
-                    abcInput.value = oldAbc; // Palautetaan vanha, jos ei kelvannut
-                }
-            }
-            attempts++;
-        }
-
-        if (selected) {
-            abcInput.value = selected.abc;
-            processAbc();
-        } else {
-            statusDisplay.innerText = t.msgNotFound;
-        }
-    };
-
-   
-// Käytetään eventListeneriä, jotta emme riko muita window.onload-funktioita
-document.addEventListener('click', function(e) {
-    if (e.target && e.target.id === 'downloadAbcBtn') {
-        const abcInput = document.getElementById('abcInput');
-        
-        if (!abcInput || !abcInput.value.trim()) {
-            alert("Ei ladattavaa sisältöä!");
-            return;
-        }
-
-                // --- TÄRKEÄ MUUTOS TÄSSÄ ---
-        // Käytetään sovelluksesi omaa funktiota, joka lisää tabulatuurit tekstin sekaan
-        let contentWithTabs = getFinalAbc(); 
-        
-        const harpKey = document.getElementById('harpKey');
-        const harpName = harpKey ? harpKey.options[harpKey.selectedIndex].text : "C";
-
-        // Lisätään huuliharpputieto ja copyright
-        // Käytetään pientä viivettä, jotta varmistetaan että R: ja C: menevät oikeille paikoilleen
-        if (!contentWithTabs.includes("R:")) {
-            contentWithTabs = contentWithTabs.replace(/(T:.*)/, "$1\nR: " + harpName + "-harppu");
-        }
-        if (!contentWithTabs.includes("C:")) {
-            contentWithTabs = contentWithTabs.replace(/(T:.*)/, "$1\nC: www.huuliharppu.fi");
-        }
-
-        // Luodaan lataus
-        const blob = new Blob([contentWithTabs], { type: 'text/plain' });
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        
-        const titleMatch = contentWithTabs.match(/^T:\s*(.*)/m);
-        const fileName = titleMatch ? titleMatch[1].trim() : "nuotti";
-
-        a.href = url;
-        a.download = fileName + ".abc";
-        document.body.appendChild(a);
-        a.click();
-        
-        setTimeout(() => {
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);
-        }, 100);
-    }
-});
 
 
-    // Copyright: Janne Ojajärvi www.huuliharppu.fi
+// Globaali funktio soitinasetusten hakemiseen
+window.getAudioOptions = function() {
+    var instrumentSelect = document.getElementById('instrumentSelect');
+    var selectedInstrument = instrumentSelect ? instrumentSelect.value : 'piano';
 
-    // Alustukset latauksen lopuksi
-    loadFavorites();
-    if (abcInput.value) {
-        processAbc();
+    if (selectedInstrument === 'flute') {
+        // Sinun Pro Tools -huilusi (paikalliset MP3-tiedostot)
+        return {
+            midiTranspose: window.currentTranspose || 0,
+            program: 73,                        // Hakee kansiota flute-mp3
+            soundFontUrl: "soundfonts/",        // Polku paikalliseen kansioon
+            warpToMidi: true,
+            reverb: 0.8                         // 0.4 = 40% kaikua huilulle!
+        };
     } else {
-        // Jos kenttä on tyhjä, arvotaan heti ensimmäinen kappale
-        randomBtn.click();
+        // ALKUPERÄINEN ABCJS-SOITIN
+        // Jätetään kaikki soundfont-polut pois, jolloin abcjs käyttää omaa sisäistä soitintaan!
+        return {
+            midiTranspose: window.currentTranspose || 0
+        };
     }
-}; // window.onload päättyy
+};
+
+// Luodaan soitinohjain
+synthControl = new ABCJS.synth.SynthController();
+
+function initAudioController() {
+    var currentOptions = window.getAudioOptions();
+    
+    synthControl.load("#audio", null, {
+        displayLoop: true,
+        displayRestart: true,
+        displayPlay: true,
+        displayProgress: true,
+        displayWarp: false,
+        options: currentOptions
+    });
+}
+
+// Ensimmäinen käynnistys
+initAudioController();
+synth = new ABCJS.synth.CreateSynth();
+processAbc();
+
+// Funktio, joka asettaa kuuntelijan valikolle
+function lisaaSoitinKuuntelija() {
+    var instrumentSelect = document.getElementById('instrumentSelect');
+    if (instrumentSelect) {
+        // Poistetaan vanha kuuntelija varmuuden vuoksi, ettei tule tuplia
+        instrumentSelect.removeEventListener('change', vaihdaSoitinLennosta);
+        instrumentSelect.addEventListener('change', vaihdaSoitinLennosta);
+        console.log("✅ Soitinvalikon kuuntelija aktivoitu onnistuneesti!");
+    } else {
+        console.warn("⚠️ Valikkoa 'instrumentSelect' ei vielä löytynyt sivulta.");
+    }
+}
+
+function vaihdaSoitinLennosta() {
+    console.log("🔄 Soitin vaihdettu valikosta: " + this.value);
+    if (synth) {
+        synth.stop();
+    }
+    initAudioController();
+    processAbc();
+}
+
+// Yritetään heti
+lisaaSoitinKuuntelija();
+
+// Yritetään vielä uudestaan, kun sivu on varmasti ladannut kaiken
+document.addEventListener('DOMContentLoaded', lisaaSoitinKuuntelija);
+window.addEventListener('load', lisaaSoitinKuuntelija);
+
+// Info-ikkunan hallinta
+var modal = document.getElementById("infoModal");
+var btn = document.getElementById("infoBtn");
+var span = document.getElementById("closeModal");
+
+// Avaa ikkunaa
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// Sulje ikkuna ruksista
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// Sulje ikkuna klikkaamalla muualta kuin ikkunasta
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+	// Rekisteröidään Service Worker heti
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+    .then(reg => console.log('Service Worker rekisteröity!', reg))
+    .catch(err => console.log('Service Worker virhe:', err));
+}
+
+};
+
+// Herätetään äänimoottori heti, kun käyttäjä klikkaa sivua missä tahansa
+document.addEventListener('click', function() {
+    if (synth && synth.audioContext && synth.audioContext.state === 'suspended') {
+        synth.audioContext.resume().then(function() {
+            console.log("🔊 Selainlukitus avattu! Äänimoottori aktivoitu klikkauksella.");
+        });
+    }
+}, { once: true });
