@@ -1,4 +1,4 @@
-var 358_danske_folkedansemelodier = [
+var dansk3 = [
   {
     name: "Fremad",
     abc: "X:1\nT:1. Fremad\nC:Falster.\nL:1/16\nM:2/4\nK:G\nV:1 treble nm=\nV:2 treble nm=\nV:3 treble transpose=-3 nm=\nV:4 bass transpose=-12 nm=\nV:1\nL:1/16\nK:G\ng2g2 B4 | dcBc A4 | f2f2 d2ef | g2B2 d4 | g2g2 B4 |\ndcBc A4 | f2f2 d2ef | g2g2 g2 z2 :: dddd e2d2 | gggg b2g2 |ffff g2f2 |\n gggg b2f2 | dddd e2d2 | gggg b2g2 | ffff g2f2 |g2g2 g2 z2 :|\nV:2\nL:1/8\nK:G\n [B,G]2 [B,G]2 | [CF]2 [CF]2 | [CD]2 [CD]2 | [B,D][B,D] [B,D]2 | BB G2 |\n [CF]2 [CF]2 | [DA]2 [DA]2 | [B,G][B,G] [B,G] z :: GD GD | B,/D/G/B/ dB | cA cA |\n GB d/c/B/A/ | B/B/B/B/ GG | B/B/B/B/ GB | d/d/d/d/ cc | BB B z :|\nV:3\nL:1/16\nK:G\n[K:Bb] F2D2 F2 z2 | FGFG F2 z2 | FAcA FAcA | FGFE D2 z2 | F2B2 d4 |\nf4 efed | c2f2 a2ga | b2b2 b2 z2 :: dddd B2d2 | dddd B2d2 |ffff e4 |\n dddd d2 z2 | g4 b2ag | f2gf d2 z2 | c2de f2ga |b2b2 b2 z2 :|\nV:4\nL:1/4\nK:G\nG, G, | D, D, | D, D, | G, G, | G, G, |\nD, D, | D, D, | G,/G,/ G,/ z/ :: G,, B,, | D, G, |D, D, |\n G, G, | G,, B,, | D, G, | D, D, |G,/G,/ G,/ z/ :|"
