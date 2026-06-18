@@ -55,6 +55,7 @@ async function loadGistData() {
         "hardanger.js",
         "nordbeck.js",
         "esavelmat_hs1.js",
+        "bluesjazz.js",
         "folkwikiExtra.js",
     "folkwikiSet1.js",
     "folkwikiSet2.js",
