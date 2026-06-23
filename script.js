@@ -1058,12 +1058,14 @@ async function fetchFromTheSession(query, resDiv, filterMode, t) {
     const rhythm = (abc.match(/^R:\s*(.*)/m) || ["", ""])[1];
     const source = (abc.match(/^S:\s*(.*)/m) || ["", ""])[1];
     const disco = (abc.match(/^D:\s*(.*)/m) || ["", ""])[1];
+    const book = (abc.match(/^B:\s*(.*)/m) || ["", ""])[1];
 
     // Tarkistetaan löytyykö puhdistettu hakusana mistään kentästä
     return nameMatch || 
            cleanText(origin).includes(cleanQ) || 
            cleanText(rhythm).includes(cleanQ) || 
            cleanText(source).includes(cleanQ) || 
+           cleanText(book).includes(cleanQ) || 
            cleanText(disco).includes(cleanQ);
 });
 
