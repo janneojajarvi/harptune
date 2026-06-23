@@ -561,14 +561,28 @@ root = root.replace('H', 'B');
             targetVal = rootIdx; 
         }
 
-        const options = Array.from(harpKeySelect.options).map(o => ({
+                // 1. Haetaan kaikki vaihtoehdot ja katsotaan harpun nimi (esim. "G")
+        const allOptions = Array.from(harpKeySelect.options).map(o => ({
             val: parseInt(o.value),
-            semitone: parseInt(o.value) % 12
+            semitone: parseInt(o.value) % 12,
+            name: o.text.split(' ')[0] // Oletetaan että valikon teksti alkaa harpun nimellä
         }));
 
-        let bestOption = options.reduce((prev, curr) => 
+        // 2. SUODATUS: Poistetaan molliharput (isMinor) ehdokkaista
+        const validOptions = allOptions.filter(o => {
+            const data = keyData[o.name];
+            // Sallitaan harppu, jos se EI ole molliharppu (tai jos tietoa ei löydy)
+            return !(data && data.isMinor);
+        });
+
+        // 3. Valitaan paras vaihtoehto, mutta käytetään vain sallittuja harppuja
+        // (Varotoimena: jos suodatus tyhjentää listan, käytetään kaikkia)
+        const searchOptions = validOptions.length > 0 ? validOptions : allOptions;
+
+        let bestOption = searchOptions.reduce((prev, curr) => 
             Math.abs(curr.semitone - targetVal) < Math.abs(prev.semitone - targetVal) ? curr : prev
         );
+
 
         let closest = bestOption.val;
         
