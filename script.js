@@ -441,27 +441,55 @@ window.onload = function() {
     
   
     const harpMap = {
+        // --- LISÄYS: Matalat sävelet (Reiät 1 ja 2) ---
+        "-12": "+1",    // C4 (0-tason C5 alapuolella)
+        "-11": "-1'",   // C#4
+        "-10": "-1",    // D4
+        "-9": "+1o",    // D#4
+        "-8": "+2",     // E4
+        "-7": "-2''",   // F4
+        "-6": "-2'",    // F#4
+        
+        // --- Alkuperäinen keskirekisteri korjattuna ---
         "-5": "-2", "-4": "-3'''", "-3": "-3''", "-2": "-3'", "-1": "-3",
-        "0": "+4", "1": "-4'", "2": "-4", "3": "-4o", "4": "+5", "5": "-5", 
-        "6": "+5o", "7": "+6", "8": "-6'", "9": "-6", "10": "-7'", "11": "-7",
-        "12": "+7", "13": "-7o", "14": "-8", "15": "+8'", "16": "+8", "17": "-9",
-        "18": "+9'", "19": "+9", "20": "-10", "21": "+10''", "22": "+10'", "23": "+10"
+        "0": "+4", "1": "-4'", "2": "-4", 
+        "3": "-4o", // Overblow 4 (D#5)
+        "4": "+5", "5": "-5", 
+        "6": "+5o", // Overblow 5 (F#5)
+        "7": "+6", "8": "-6'", "9": "-6", 
+        "10": "+6o", // KORJATTU: Bb5 on overblow 6 (ei -7')
+        "11": "-7", "12": "+7", 
+        "13": "-7o", // Overdraw 7 (C#6)
+        "14": "-8", "15": "+8'", "16": "+8", "17": "-9", "18": "+9'", "19": "+9",
+        
+        // --- KORJATTU: Ylärekisterin siirtymävirhe (G#6 lisätty väliin) ---
+        "20": "-9o",    // G#6 (Overdraw 9)
+        "21": "-10",    // A6
+        "22": "+10''",  // Bb6
+        "23": "+10'",   // B6
+        "24": "+10"     // C7
     };
 
     // Moodien "perussävellajit"
     const keyData = {
-        'C': { acc: {}, hName: 'C', val: 12 }, 'Am': { acc: {}, hName: 'C', val: 12 },
-        'B': { acc: {'F':1, 'C':1, 'G':1, 'D':1, 'A':1}, hName: 'B (H)', val: 11 }, // (B tai H-duuri)
-        'G': { acc: {'F':1}, hName: 'G', val: 7 }, 'Em': { acc: {'F':1}, hName: 'G', val: 7 },
-        'D': { acc: {'F':1, 'C':1}, hName: 'D', val: 14 }, 'Bm': { acc: {'F':1, 'C':1}, hName: 'D', val: 14 },
-        'A': { acc: {'F':1, 'C':1, 'G':1}, hName: 'A', val: 9 }, 'F#m': { acc: {'F':1, 'C':1, 'G':1}, hName: 'A', val: 9 },
-        'E': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16 }, 'C#m': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16 },
-        'F': { acc: {'B':-1}, hName: 'F', val: 17 }, 'Dm': { acc: {'B':-1}, hName: 'F', val: 17 },
-        'Bb': { acc: {'B':-1, 'E':-1}, hName: 'Bb', val: 10 }, 'Gm': { acc: {'B':-1, 'E':-1}, hName: 'Bb', val: 10 },
-        'B': { acc: {'F':1, 'C':1, 'G':1, 'D':1, 'A':1}, hName: 'B', val: 11 }, 
-        'Bm': { acc: {'F':1, 'C':1}, hName: 'D', val: 14 }, // H-molli (vastaa D-duuria)
-        'Eb': { acc: {'B':-1, 'E':-1, 'A':-1}, hName: 'Eb', val: 15 }
-    };
+    'G': { acc: {'F':1}, hName: 'G', val: 7 },
+    'Em': { acc: {'F':1}, hName: 'G', val: 7, isMinor: true }, // Em käyttää G-harppua
+    'A': { acc: {'F':1, 'C':1, 'G':1}, hName: 'A', val: 9 },
+    'F#m': { acc: {'F':1, 'C':1, 'G':1}, hName: 'A', val: 9, isMinor: true },
+    'Bb': { acc: {'B':-1, 'E':-1}, hName: 'Bb', val: 10 },
+    'Gm': { acc: {'B':-1, 'E':-1}, hName: 'Bb', val: 10, isMinor: true },
+    'B': { acc: {'F':1, 'C':1, 'G':1, 'D':1, 'A':1}, hName: 'B', val: 11 },
+    'Bm': { acc: {'F':1, 'C':1}, hName: 'D', val: 11, isMinor: true }, // Bm käyttää B-harppua
+    'C': { acc: {}, hName: 'C', val: 12 },
+    'Am': { acc: {}, hName: 'C', val: 12, isMinor: true },
+    'D': { acc: {'F':1, 'C':1}, hName: 'D', val: 14 },
+    'Dm': { acc: {'B':-1}, hName: 'F', val: 14, isMinor: true }, // Dm käyttää D-harppua
+    'Eb': { acc: {'B':-1, 'E':-1, 'A':-1}, hName: 'Eb', val: 15 },
+    'E': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16 },
+    'C#m': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16, isMinor: true },
+    'F': { acc: {'B':-1}, hName: 'F', val: 17 }
+};
+
 
     // Apufunktio moodien muuntamiseen vastaavaksi duuriksi etumerkkien osalta
     function getModeEquivalent(root, mode) {
