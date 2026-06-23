@@ -493,10 +493,11 @@ if (titleDisplay) {
 }
 
       
-        const keyMatch = abcText.match(/^K:\s*([A-G][#b]?)([A-Za-z0-9]*)/m);
+        const keyMatch = abcText.match(/^K:\s*([A-Ga-g][#b]?)([A-Za-z0-9]*)/m);
         if (!keyMatch) return;
 
         let root = keyMatch[1].trim();
+root = root.charAt(0).toUpperCase() + root.slice(1);
         let mode = keyMatch[2] ? keyMatch[2].toLowerCase().trim() : "";
         root = root.replace('H', 'B');
         
@@ -573,9 +574,11 @@ if (titleDisplay) {
         // --- KORJAUS TÄSSÄ ---
         // Jos rivi alkaa K: (sävellaji), päivitetään etumerkit mutta ei yritetä lisätä tabeja
         if (line.startsWith('K:')) {
-            const keyMatch = line.match(/^K:\s*([A-G][#b]?)([A-Za-z0-9]*)/);
+            const keyMatch = line.match(/^K:\s*([A-Ga-g][#b]?)([A-Za-z0-9]*)/);
             if (keyMatch) {
-                let root = keyMatch[1].replace('H', 'B');
+                let root = keyMatch[1];
+root = root.charAt(0).toUpperCase() + root.slice(1);
+root = root.replace('H', 'B');
                 let mode = keyMatch[2] ? keyMatch[2].toLowerCase() : "";
                 let equivRoot = getModeEquivalent(root, mode);
                 let visualData = keyData[equivRoot] || { acc: {} };
