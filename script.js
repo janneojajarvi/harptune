@@ -652,9 +652,20 @@ root = root.replace('H', 'B');
     
         function processAbc() {
     if (!abcInput.value) return;
-    
+
+    // --- UUSI LISÄYS: Päivitetään sivun otsikko PDF-tulosteen oletusnimeä varten ---
+    let songName = "Huuliharppunuotti"; // Oletusnimi, jos kappaleella ei ole nimeä
+    const titleMatch = abcInput.value.match(/^T:\s*(.*)/m);
+    if (titleMatch && titleMatch[1].trim() !== "") {
+        // Puhdistetaan kielletyt merkit tiedostonimestä (\ / : * ? " < > |)
+        songName = titleMatch[1].trim().replace(/[\/\\:\*\?"<>\|]/g, "_");
+    }
+    document.title = songName;
+    // -----------------------------------------------------------------------------
+
     const isNewSong = (abcInput.value !== lastProcessedAbc);
     analyzeKey(abcInput.value);
+
 
     if (isNewSong) {
          autoOptimize();
