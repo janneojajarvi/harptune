@@ -577,32 +577,32 @@ root = root.replace('H', 'B');
         // --- KORJAUS TÄSSÄ ---
         // Jos rivi alkaa K: (sävellaji), päivitetään etumerkit mutta ei yritetä lisätä tabeja
         if (line.startsWith('K:')) {
-            const keyMatch = line.match(/^K:\s*([A-Ga-g][#b]?)([A-Za-z0-9]*)/);
-            if (keyMatch) {
-                let root = keyMatch[1];
-root = root.charAt(0).toUpperCase() + root.slice(1);
-root = root.replace('H', 'B');
-                let mode = keyMatch[2] ? keyMatch[2].toLowerCase() : "";
-                
-                if (keyMatch[1] === keyMatch[1].toLowerCase() && !mode) {
-    mode = "m";
+    const keyMatch = line.match(/^K:\s*([A-Ga-g][#b]?)([A-Za-z0-9]*)/);
+
+    if (keyMatch) {
+
+        const originalRoot = keyMatch[1];   // esim. "g"
+
+        let root = originalRoot;
+        root = root.charAt(0).toUpperCase() + root.slice(1);
+        root = root.replace('H', 'B');
+
+        let mode = keyMatch[2] ? keyMatch[2].toLowerCase() : "";
+
+        // pieni kirjain => molli
+        if (originalRoot === originalRoot.toLowerCase() && !mode) {
+            mode = "m";
+            line = `K:${root}m`;
+        }
+
+        let equivRoot = getModeEquivalent(root, mode);
+        let visualData = keyData[equivRoot] || { acc: {} };
+        currentKeyAccidentals = visualData.acc;
+    }
+
+    finalAbc += line + "\n" + `Q:1/4=${tempoRange.value}\n`;
+    return;
 }
-                
-                let equivRoot = getModeEquivalent(root, mode);
-                let visualData = keyData[equivRoot] || { acc: {} };
-                currentKeyAccidentals = visualData.acc;
-            }
-            finalAbc += line + "\n" + `Q:1/4=${tempoRange.value}\n`;
-            return;
-        }
-        
-        if (/^[A-Z]:/.test(line) || line.trim() === "") { 
-            finalAbc += line + "\n";
-            if (line.startsWith('K:')) {
-                finalAbc += `Q:1/4=${tempoRange.value}\n`;
-            }
-            return; 
-        }
 
         currentKeyAccidentals = JSON.parse(defaultAccidentals);
 
