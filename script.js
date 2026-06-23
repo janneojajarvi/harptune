@@ -499,7 +499,10 @@ if (titleDisplay) {
         let root = keyMatch[1].trim();
 root = root.charAt(0).toUpperCase() + root.slice(1);
         let mode = keyMatch[2] ? keyMatch[2].toLowerCase().trim() : "";
-        root = root.replace('H', 'B');
+        if (keyMatch[1] === keyMatch[1].toLowerCase() && !mode) {
+    mode = "m";
+}
+root = root.replace('H', 'B');
         
         // 1. Etsitään etumerkit (accidentals) moodin mukaan
         let equivRoot = getModeEquivalent(root, mode);
@@ -580,6 +583,11 @@ root = root.charAt(0).toUpperCase() + root.slice(1);
 root = root.charAt(0).toUpperCase() + root.slice(1);
 root = root.replace('H', 'B');
                 let mode = keyMatch[2] ? keyMatch[2].toLowerCase() : "";
+                
+                if (keyMatch[1] === keyMatch[1].toLowerCase() && !mode) {
+    mode = "m";
+}
+                
                 let equivRoot = getModeEquivalent(root, mode);
                 let visualData = keyData[equivRoot] || { acc: {} };
                 currentKeyAccidentals = visualData.acc;
