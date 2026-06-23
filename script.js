@@ -485,9 +485,9 @@ window.onload = function() {
     'F': { acc: {'B':-1}, hName: 'F', val: 17 }
 
  // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
-    'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy' },
-    'DPaddy': { acc: {'F':1, 'C':1}, hName: 'D Paddy', val: 14, tuning: 'paddy' },
-    'GPaddy': { acc: {'F':1}, hName: 'G Paddy', val: 7, tuning: 'paddy' }
+    'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy', isPaddy: true },
+    'DPaddy': { acc: {'F':1, 'C':1}, hName: 'D Paddy', val: 14, tuning: 'paddy', isPaddy: true },
+    'GPaddy': { acc: {'F':1}, hName: 'G Paddy', val: 7, tuning: 'paddy', isPaddy: true }
 };
 
 
@@ -568,12 +568,15 @@ root = root.replace('H', 'B');
             name: o.text.split(' ')[0] // Oletetaan että valikon teksti alkaa harpun nimellä
         }));
 
-        // 2. SUODATUS: Poistetaan molliharput (isMinor) ehdokkaista
-        const validOptions = allOptions.filter(o => {
-            const data = keyData[o.name];
-            // Sallitaan harppu, jos se EI ole molliharppu (tai jos tietoa ei löydy)
-            return !(data && data.isMinor);
-        });
+        // 2. SUODATUS: Poistetaan molliharput JA Paddy Richterit automaattisesta valinnasta
+const validOptions = allOptions.filter(o => {
+    const data = keyData[o.name];
+    
+    // Sallitaan harppu vain, jos se EI ole molliharppu EIKÄ Paddy Richter
+    const isExcluded = data && (data.isMinor || data.isPaddy);
+    return !isExcluded;
+});
+
 
         // 3. Valitaan paras vaihtoehto, mutta käytetään vain sallittuja harppuja
         // (Varotoimena: jos suodatus tyhjentää listan, käytetään kaikkia)
