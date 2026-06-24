@@ -415,7 +415,17 @@ window.onload = function() {
                 line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
                     let absPitch = getPitchValue(acc, note, octs);
                     // Laskenta suhteessa testattavaan oktaaviin
-                    let relPitch = absPitch - harpShift + transposeOffset + (testOffset * 12);
+                    if (
+    harpKeySelect.options[harpKeySelect.selectedIndex].text === "Am" &&
+    note === "A"
+) {
+    alert(
+        "absPitch=" + absPitch +
+        "\nharpShift=" + harpShift +
+        "\nrelPitch=" + (absPitch - harpShift + (octaveOffset * 12))
+    );
+}
+let relPitch = absPitch - harpShift + transposeOffset + (testOffset * 12);
                     const tab = defaultHarpMap[relPitch.toString()] || "";
                     
                     if (tab === "") {
@@ -1428,16 +1438,7 @@ if (deleteFavBtn) {
                     if (/^[A-Z]:/.test(line) || line.trim() === "") return;
                     line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
                         let absPitch = getPitchValue(acc, note, octs);
-                    if (
-    harpKeySelect.options[harpKeySelect.selectedIndex].text === "Am" &&
-    note === "A"
-) {
-    alert(
-        "absPitch=" + absPitch +
-        "\nharpShift=" + harpShift +
-        "\nrelPitch=" + (absPitch - harpShift + (octaveOffset * 12))
-    );
-}
+                    
     let relPitch = absPitch - harpShift + (octaveOffset * 12);
                         const tab = defaultHarpMap[relPitch.toString()] || "";
                         if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
