@@ -415,16 +415,7 @@ window.onload = function() {
                 line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
                     let absPitch = getPitchValue(acc, note, octs);
                     // Laskenta suhteessa testattavaan oktaaviin
-                    if (
-    harpKeySelect.options[harpKeySelect.selectedIndex].text === "Am" &&
-    note === "A"
-) {
-    alert(
-        "absPitch=" + absPitch +
-        "\nharpShift=" + harpShift +
-        "\nrelPitch=" + (absPitch - harpShift + (octaveOffset * 12))
-    );
-}
+                    
 let relPitch = absPitch - harpShift + transposeOffset + (testOffset * 12);
                     const tab = defaultHarpMap[relPitch.toString()] || "";
                     
@@ -614,8 +605,14 @@ const validOptions = allOptions.filter(o => !o.manualOnly);
 
     
             function getFinalAbc() {
+            
     let harpShift = parseInt(harpKeySelect.value);
     let finalAbc = "";
+    const selectedOption =
+    harpKeySelect.options[harpKeySelect.selectedIndex];
+
+const isMinorHarp =
+    selectedOption.dataset.mode === "minor";
     
     // Tallennetaan sävellajin alkuperäiset etumerkit
     const defaultAccidentals = JSON.stringify(currentKeyAccidentals);
@@ -682,7 +679,15 @@ const validOptions = allOptions.filter(o => !o.manualOnly);
                 else if (acc === '=') currentKeyAccidentals[nU] = 0;
             }
 
-            let relPitch = absPitch - harpShift + (octaveOffset * 12);
+let effectiveShift = harpShift;
+
+if (isMinorHarp) {
+    effectiveShift -= 9;
+}
+
+            let relPitch =
+    absPitch - effectiveShift +
+    (octaveOffset * 12);
             // Haetaan tabulatuuri oikeasta kartasta valitun virityksen mukaan
             const tab = harpMap[selectedTuning][relPitch.toString()] || "";
             
