@@ -869,14 +869,7 @@ const validOptions = allOptions.filter(o => {
                     line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
                         let absPitch = getPitchValue(acc, note, octs);
                         let relPitch = absPitch - harpShift + ((window.octaveOffset || 0) * 12);
-                        // --- TÄHÄN KOHTAAN KORVAAT VANHAN HAKULOGIIKAN ---
-const selectedHarpName = harpKeySelect.options[harpKeySelect.selectedIndex].text;
-// Varmistetaan, että valinta löytyy, muuten oletus 'richter'
-const selectedTuning = keyData[selectedHarpName]?.tuning || 'richter';
-
-// Haetaan tabulatuuri valitun virityksen mukaan
-const tab = harpMaps[selectedTuning][relPitch.toString()] || "";
-// ------------
+                        
                         // Jos tabulatuuria ei löydy tai se on bend/overblow
                         if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
                     });
