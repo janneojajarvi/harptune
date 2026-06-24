@@ -480,13 +480,13 @@ window.onload = function() {
     'Eb': { acc: {'B':-1, 'E':-1, 'A':-1}, hName: 'Eb', val: 15 },
     'E': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16 },
     'C#m': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16, isMinor: true },
-    'F': { acc: {'B':-1}, hName: 'F', val: 17 }
+    'F': { acc: {'B':-1}, hName: 'F', val: 17 },
     
     // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
     'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy' },
     'DPaddy': { acc: {'F':1, 'C':1}, hName: 'D Paddy', val: 14, tuning: 'paddy' },
     'GPaddy': { acc: {'F':1}, hName: 'G Paddy', val: 7, tuning: 'paddy' }
-};
+}; 
 
 
     // Apufunktio moodien muuntamiseen vastaavaksi duuriksi etumerkkien osalta
