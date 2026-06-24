@@ -416,7 +416,7 @@ window.onload = function() {
                     let absPitch = getPitchValue(acc, note, octs);
                     // Laskenta suhteessa testattavaan oktaaviin
                     let relPitch = absPitch - harpShift + transposeOffset + (testOffset * 12);
-                    const tab = harpMap[relPitch.toString()] || "";
+                    const tab = defaultHarpMap[relPitch.toString()] || "";
                     
                     if (tab === "") {
                         score += 100; 
@@ -462,6 +462,8 @@ window.onload = function() {
         "22": "+10''", "23": "+10'", "24": "+10"
     }
 };
+
+const defaultHarpMap = harpMap.richter;
 
     // Moodien "perussävellajit"
     const keyData = {
@@ -866,7 +868,7 @@ const validOptions = allOptions.filter(o => !o.manualOnly);
                     line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
                         let absPitch = getPitchValue(acc, note, octs);
                         let relPitch = absPitch - harpShift + ((window.octaveOffset || 0) * 12);
-                        const tab = harpMap[relPitch.toString()] || "";
+                        const tab = defaultHarpMap[relPitch.toString()] || "";
                         // Jos tabulatuuria ei löydy tai se on bend/overblow
                         if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
                     });
@@ -1062,7 +1064,7 @@ async function fetchFromTheSession(query, resDiv, filterMode, t) {
                     line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
                         let absPitch = getPitchValue(acc, note, octs);
                         let relPitch = absPitch - harpShift + ((window.octaveOffset || 0) * 12);
-                        const tab = harpMap[relPitch.toString()] || "";
+                        const tab = defaultHarpMap[relPitch.toString()] || "";
                         if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
                     });
                 });
@@ -1170,7 +1172,7 @@ async function fetchFromTheSession(query, resDiv, filterMode, t) {
                     line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
                         let absPitch = getPitchValue(acc, note, octs);
                         let relPitch = absPitch - harpShift + ((window.octaveOffset || 0) * 12);
-                        const tab = harpMap[relPitch.toString()] || "";
+                        const tab = defaultHarpMap[relPitch.toString()] || "";
                         if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
                     });
                 });
@@ -1292,7 +1294,7 @@ if (genre === "Waltz") {
                     line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
                         let absPitch = getPitchValue(acc, note, octs);
                         let relPitch = absPitch - harpShift + (octaveOffset * 12);
-                        const tab = harpMap[relPitch.toString()] || "";
+                        const tab = defaultHarpMap[relPitch.toString()] || "";
                         if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
                     });
                 });
@@ -1427,7 +1429,7 @@ if (deleteFavBtn) {
                     line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
                         let absPitch = getPitchValue(acc, note, octs);
                         let relPitch = absPitch - harpShift + (octaveOffset * 12);
-                        const tab = harpMap[relPitch.toString()] || "";
+                        const tab = defaultHarpMap[relPitch.toString()] || "";
                         if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
                     });
                 });
