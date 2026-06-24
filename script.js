@@ -674,7 +674,7 @@ const validOptions = allOptions.filter(o => !o.manualOnly);
 
             let relPitch = absPitch - harpShift + (octaveOffset * 12);
             // Haetaan tabulatuuri oikeasta kartasta valitun virityksen mukaan
-            const tab = harpMaps[selectedTuning][relPitch.toString()] || "";
+            const tab = harpMap[selectedTuning][relPitch.toString()] || "";
             
             // LISÄTTY ALAVIIVA (_): '"_' siirtää tabin nuotin alapuolelle.
             // Jos haluat ne myöhemmin takaisin ylös, poista vain tuo alaviiva.
