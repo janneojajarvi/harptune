@@ -440,7 +440,7 @@ window.onload = function() {
 
     
   
-    const harpMaps = {
+    const harpMap = {
     // Standardi Richter-viritys
     richter: {
         "-12": "+1", "-11": "-1'", "-10": "-1", "-9": "+1o", "-8": "+2", "-7": "-2''", "-6": "-2'",
