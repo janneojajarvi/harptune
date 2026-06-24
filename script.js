@@ -440,7 +440,7 @@ window.onload = function() {
 
     
   
-    const harpMap = {
+    const harpMaps = {
     // Standardi Richter-viritys
     richter: {
         "-12": "+1", "-11": "-1'", "-10": "-1", "-9": "+1o", "-8": "+2", "-7": "-2''", "-6": "-2'",
@@ -485,9 +485,9 @@ window.onload = function() {
     'F': { acc: {'B':-1}, hName: 'F', val: 17 }
 
  // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
-    'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy', isPaddy: true },
-    'DPaddy': { acc: {'F':1, 'C':1}, hName: 'D Paddy', val: 14, tuning: 'paddy', isPaddy: true },
-    'GPaddy': { acc: {'F':1}, hName: 'G Paddy', val: 7, tuning: 'paddy', isPaddy: true }
+    'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy' },
+    'DPaddy': { acc: {'F':1, 'C':1}, hName: 'D Paddy', val: 14, tuning: 'paddy' },
+    'GPaddy': { acc: {'F':1}, hName: 'G Paddy', val: 7, tuning: 'paddy' }
 };
 
 
@@ -568,13 +568,12 @@ root = root.replace('H', 'B');
             name: o.text.split(' ')[0] // Oletetaan että valikon teksti alkaa harpun nimellä
         }));
 
-        // 2. SUODATUS: Poistetaan molliharput automaattisesta valinnasta
-const validOptions = allOptions.filter(o => {
-    const data = keyData[o.name];
-    
-  
-});
-
+        // 2. SUODATUS: Poistetaan molliharput (isMinor) ehdokkaista
+        const validOptions = allOptions.filter(o => {
+            const data = keyData[o.name];
+            // Sallitaan harppu, jos se EI ole molliharppu (tai jos tietoa ei löydy)
+            return !(data && data.isMinor);
+        });
 
         // 3. Valitaan paras vaihtoehto, mutta käytetään vain sallittuja harppuja
         // (Varotoimena: jos suodatus tyhjentää listan, käytetään kaikkia)
@@ -867,7 +866,14 @@ const validOptions = allOptions.filter(o => {
                     line.replace(/([\^_=]?)([A-Ga-gHh])([,']*)/g, (match, acc, note, octs) => {
                         let absPitch = getPitchValue(acc, note, octs);
                         let relPitch = absPitch - harpShift + ((window.octaveOffset || 0) * 12);
-                        
+                        // --- TÄHÄN KOHTAAN KORVAAT VANHAN HAKULOGIIKAN ---
+const selectedHarpName = harpKeySelect.options[harpKeySelect.selectedIndex].text;
+// Varmistetaan, että valinta löytyy, muuten oletus 'richter'
+const selectedTuning = keyData[selectedHarpName]?.tuning || 'richter';
+
+// Haetaan tabulatuuri valitun virityksen mukaan
+const tab = harpMaps[selectedTuning][relPitch.toString()] || "";
+// ------------
                         // Jos tabulatuuria ei löydy tai se on bend/overblow
                         if (tab === "" || tab.includes("'") || tab.includes("o")) hasBends = true;
                     });
