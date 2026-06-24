@@ -613,7 +613,9 @@ const validOptions = allOptions.filter(o => {
     // Tallennetaan sävellajin alkuperäiset etumerkit
     const defaultAccidentals = JSON.stringify(currentKeyAccidentals);
 
-
+ // Haetaan valitun harpun viritystyyppi (esim. 'paddy' tai 'richter')
+    const selectedHarpKey = harpKeySelect.options[harpKeySelect.selectedIndex].text.replace(/\s+/g, '');
+    const selectedTuning = keyData[selectedHarpKey]?.tuning || 'richter';
 
     abcInput.value.split('\n').forEach(line => {
         if (line.startsWith('Q:')) return; 
@@ -674,7 +676,8 @@ const validOptions = allOptions.filter(o => {
             }
 
             let relPitch = absPitch - harpShift + (octaveOffset * 12);
-            const tab = harpMap[relPitch.toString()] || "";
+            // Haetaan tabulatuuri oikeasta kartasta valitun virityksen mukaan
+            const tab = harpMaps[selectedTuning][relPitch.toString()] || "";
             
             // LISÄTTY ALAVIIVA (_): '"_' siirtää tabin nuotin alapuolelle.
             // Jos haluat ne myöhemmin takaisin ylös, poista vain tuo alaviiva.
