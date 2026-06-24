@@ -682,7 +682,7 @@ const isMinorHarp =
 let effectiveShift = harpShift;
 
 if (isMinorHarp) {
-    effectiveShift -= 9;
+    effectiveShift += 9;
 }
 
             let relPitch =
