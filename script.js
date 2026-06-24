@@ -611,9 +611,7 @@ root = root.replace('H', 'B');
     // Tallennetaan sävellajin alkuperäiset etumerkit
     const defaultAccidentals = JSON.stringify(currentKeyAccidentals);
 
-// Haetaan valitun harpun viritystyyppi (esim. 'paddy' tai 'richter')
-    const selectedHarpKey = harpKeySelect.options[harpKeySelect.selectedIndex].text.replace(/\s+/g, '');
-    const selectedTuning = keyData[selectedHarpKey]?.tuning || 'richter';
+
 
     abcInput.value.split('\n').forEach(line => {
         if (line.startsWith('Q:')) return; 
