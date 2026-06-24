@@ -440,28 +440,35 @@ window.onload = function() {
 
     
   
-    const harpMap ={
-    // Standardi Richter-viritys
-    richter: {
-        "-12": "+1", "-11": "-1'", "-10": "-1", "-9": "+1o", "-8": "+2", "-7": "-2''", "-6": "-2'",
-        "-5": "-2", "-4": "-3'''", "-3": "-3''", "-2": "-3'", "-1": "-3", "0": "+4", "1": "-4'", 
-        "2": "-4", "3": "-4o", "4": "+5", "5": "-5", "6": "+5o", "7": "+6", "8": "-6'", 
-        "9": "-6", "10": "+6o", "11": "-7", "12": "+7", "13": "-7o", "14": "-8", "15": "+8'", 
-        "16": "+8", "17": "-9", "18": "+9'", "19": "+9", "20": "-9o", "21": "-10", 
-        "22": "+10''", "23": "+10'", "24": "+10"
-    },
-    // Paddy Richter -viritys (esim. 3-puhallus muutettu)
-    paddy: {
-        // Tähän voit kopioida richter-kartan ja muuttaa vain ne reiät, jotka ovat Paddy Richterissä erilaisia
-        // Esim. 3. reiän puhallus on nyt perussävel, eli +3 sijasta siellä voi olla jotain muuta
-        "-12": "+1", "-11": "-1'", "-10": "-1", "-9": "+1o", "-8": "+2", "-7": "-2''", "-6": "-2'",
-        "-5": "-2", "-4": "-3'''", "-3": "-3''", "-2": "-3'", "-1": "-3", "0": "+3", "1": "-4'", 
-        "2": "-4", "3": "-4o", "4": "+5", "5": "-5", "6": "+5o", "7": "+6", "8": "-6'", 
-        "9": "-6", "10": "+6o", "11": "-7", "12": "+7", "13": "-7o", "14": "-8", "15": "+8'", 
-        "16": "+8", "17": "-9", "18": "+9'", "19": "+9", "20": "-9o", "21": "-10", 
-        "22": "+10''", "23": "+10'", "24": "+10"
-    }
-};
+    const harpMap = {
+        // --- LISÄYS: Matalat sävelet (Reiät 1 ja 2) ---
+        "-12": "+1",    // C4 (0-tason C5 alapuolella)
+        "-11": "-1'",   // C#4
+        "-10": "-1",    // D4
+        "-9": "+1o",    // D#4
+        "-8": "+2",     // E4
+        "-7": "-2''",   // F4
+        "-6": "-2'",    // F#4
+        
+        // --- Alkuperäinen keskirekisteri korjattuna ---
+        "-5": "-2", "-4": "-3'''", "-3": "-3''", "-2": "-3'", "-1": "-3",
+        "0": "+4", "1": "-4'", "2": "-4", 
+        "3": "-4o", // Overblow 4 (D#5)
+        "4": "+5", "5": "-5", 
+        "6": "+5o", // Overblow 5 (F#5)
+        "7": "+6", "8": "-6'", "9": "-6", 
+        "10": "+6o", // KORJATTU: Bb5 on overblow 6 (ei -7')
+        "11": "-7", "12": "+7", 
+        "13": "-7o", // Overdraw 7 (C#6)
+        "14": "-8", "15": "+8'", "16": "+8", "17": "-9", "18": "+9'", "19": "+9",
+        
+        // --- KORJATTU: Ylärekisterin siirtymävirhe (G#6 lisätty väliin) ---
+        "20": "-9o",    // G#6 (Overdraw 9)
+        "21": "-10",    // A6
+        "22": "+10''",  // Bb6
+        "23": "+10'",   // B6
+        "24": "+10"     // C7
+    };
 
     // Moodien "perussävellajit"
     const keyData = {
@@ -480,13 +487,8 @@ window.onload = function() {
     'Eb': { acc: {'B':-1, 'E':-1, 'A':-1}, hName: 'Eb', val: 15 },
     'E': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16 },
     'C#m': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16, isMinor: true },
-    'F': { acc: {'B':-1}, hName: 'F', val: 17 },
-    
-    // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
-    'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy' },
-    'DPaddy': { acc: {'F':1, 'C':1}, hName: 'D Paddy', val: 14, tuning: 'paddy' },
-    'GPaddy': { acc: {'F':1}, hName: 'G Paddy', val: 7, tuning: 'paddy' }
-}; 
+    'F': { acc: {'B':-1}, hName: 'F', val: 17 }
+};
 
 
     // Apufunktio moodien muuntamiseen vastaavaksi duuriksi etumerkkien osalta
@@ -566,13 +568,11 @@ root = root.replace('H', 'B');
             name: o.text.split(' ')[0] // Oletetaan että valikon teksti alkaa harpun nimellä
         }));
 
-        // 2. SUODATUS: Poistetaan molliharput JA Paddy Richterit automaattisesta valinnasta
-const validOptions = allOptions.filter(o => {
-    const data = keyData[o.name];
-    
-    // Sallitaan harppu vain, jos se EI ole molliharppu EIKÄ Paddy Richter
-    const isExcluded = data && (data.isMinor || data.isPaddy);
-    return !isExcluded;
+        // 2. SUODATUS: Poistetaan molliharput (isMinor) ehdokkaista
+        const validOptions = allOptions.filter(o => {
+            const data = keyData[o.name];
+            // Sallitaan harppu, jos se EI ole molliharppu (tai jos tietoa ei löydy)
+            return !(data && data.isMinor);
         });
 
         // 3. Valitaan paras vaihtoehto, mutta käytetään vain sallittuja harppuja
@@ -612,10 +612,6 @@ const validOptions = allOptions.filter(o => {
     
     // Tallennetaan sävellajin alkuperäiset etumerkit
     const defaultAccidentals = JSON.stringify(currentKeyAccidentals);
-
- // Haetaan valitun harpun viritystyyppi (esim. 'paddy' tai 'richter')
-    const selectedHarpKey = harpKeySelect.options[harpKeySelect.selectedIndex].text.replace(/\s+/g, '');
-    const selectedTuning = keyData[selectedHarpKey]?.tuning || 'richter';
 
     abcInput.value.split('\n').forEach(line => {
         if (line.startsWith('Q:')) return; 
@@ -676,8 +672,7 @@ const validOptions = allOptions.filter(o => {
             }
 
             let relPitch = absPitch - harpShift + (octaveOffset * 12);
-            // Haetaan tabulatuuri oikeasta kartasta valitun virityksen mukaan
-            const tab = harpMaps[selectedTuning][relPitch.toString()] || "";
+            const tab = harpMap[relPitch.toString()] || "";
             
             // LISÄTTY ALAVIIVA (_): '"_' siirtää tabin nuotin alapuolelle.
             // Jos haluat ne myöhemmin takaisin ylös, poista vain tuo alaviiva.
