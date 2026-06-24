@@ -568,13 +568,11 @@ root = root.replace('H', 'B');
             name: o.text.split(' ')[0] // Oletetaan että valikon teksti alkaa harpun nimellä
         }));
 
-        // 2. SUODATUS: Poistetaan molliharput JA Paddy Richterit automaattisesta valinnasta
+        // 2. SUODATUS: Poistetaan molliharput automaattisesta valinnasta
 const validOptions = allOptions.filter(o => {
     const data = keyData[o.name];
     
-    // Sallitaan harppu vain, jos se EI ole molliharppu EIKÄ Paddy Richter
-    const isExcluded = data && (data.isMinor || data.isPaddy);
-    return !isExcluded;
+  
 });
 
 
