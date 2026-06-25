@@ -651,6 +651,11 @@ const isMinorHarp =
  // Haetaan valitun harpun viritystyyppi (esim. 'paddy' tai 'richter')
     const selectedHarpKey = harpKeySelect.options[harpKeySelect.selectedIndex].text.replace(/\s+/g, '');
     const selectedTuning = keyData[selectedHarpKey]?.tuning || 'richter';
+    
+    alert(
+    "harpShift=" + harpShift +
+    "\nselectedTuning=" + selectedTuning
+);
 
     abcInput.value.split('\n').forEach(line => {
         if (line.startsWith('Q:')) return; 
@@ -718,10 +723,7 @@ let effectiveShift = harpShift;
     absPitch - effectiveShift +
     (octaveOffset * 12);
     
-    alert(
-    "harpShift=" + harpShift +
-    "\nselectedTuning=" + selectedTuning
-);
+    
    
             // Haetaan tabulatuuri oikeasta kartasta valitun virityksen mukaan
             const tab = harpMap[selectedTuning][relPitch.toString()] || "";
