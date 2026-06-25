@@ -461,6 +461,9 @@ let relPitch = absPitch - harpShift + transposeOffset + (testOffset * 12);
         "9": "-6", "10": "+6o", "11": "-7", "12": "+7", "13": "-7o", "14": "-8", "15": "+8'", 
         "16": "+8", "17": "-9", "18": "+9'", "19": "+9", "20": "-9o", "21": "-10", 
         "22": "+10''", "23": "+10'", "24": "+10"
+    },
+    harmonicMinor: {
+        // lisätään tähän myöhemmin
     }
 };
 
@@ -652,10 +655,7 @@ const isMinorHarp =
     const selectedHarpKey = harpKeySelect.options[harpKeySelect.selectedIndex].text.replace(/\s+/g, '');
     const selectedTuning = keyData[selectedHarpKey]?.tuning || 'richter';
     
-    alert(
-    "harpShift=" + harpShift +
-    "\nselectedTuning=" + selectedTuning
-);
+    
 
     abcInput.value.split('\n').forEach(line => {
         if (line.startsWith('Q:')) return; 
@@ -724,7 +724,13 @@ let effectiveShift = harpShift;
     (octaveOffset * 12);
     
     
-   
+   if (selectedTuning === "harmonicMinor") {
+    alert(
+        "Nuotti: " + note +
+        "\nabsPitch: " + absPitch +
+        "\nrelPitch: " + relPitch
+    );
+}
             // Haetaan tabulatuuri oikeasta kartasta valitun virityksen mukaan
             const tab = harpMap[selectedTuning][relPitch.toString()] || "";
             
