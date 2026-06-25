@@ -473,17 +473,48 @@ const defaultHarpMap = harpMap.richter;
     'A': { acc: {'F':1, 'C':1, 'G':1}, hName: 'A', val: 9 },
     'F#m': { acc: {'F':1, 'C':1, 'G':1}, hName: 'A', val: 9, isMinor: true },
     'Bb': { acc: {'B':-1, 'E':-1}, hName: 'Bb', val: 10 },
-    'Gm': { acc: {'B':-1, 'E':-1}, hName: 'Bb', val: 10, isMinor: true },
+
     'B': { acc: {'F':1, 'C':1, 'G':1, 'D':1, 'A':1}, hName: 'B', val: 11 },
     'Bm': { acc: {'F':1, 'C':1}, hName: 'D', val: 11, isMinor: true }, // Bm käyttää B-harppua
     'C': { acc: {}, hName: 'C', val: 12 },
-    'Am': { acc: {}, hName: 'C', val: 12, isMinor: true },
+    
     'D': { acc: {'F':1, 'C':1}, hName: 'D', val: 14 },
-    'Dm': { acc: {'B':-1}, hName: 'F', val: 14, isMinor: true }, // Dm käyttää D-harppua
+    
     'Eb': { acc: {'B':-1, 'E':-1, 'A':-1}, hName: 'Eb', val: 15 },
     'E': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16 },
     'C#m': { acc: {'F':1, 'C':1, 'G':1, 'D':1}, hName: 'E', val: 16, isMinor: true },
     'F': { acc: {'B':-1}, hName: 'F', val: 17 },
+    'Am': {
+    acc: {},
+    hName: 'Am',
+    val: 12,
+    isMinor: true,
+    tuning: 'harmonicMinor'
+},
+
+'Gm': {
+    acc: {'B':-1, 'E':-1},
+    hName: 'Gm',
+    val: 10,
+    isMinor: true,
+    tuning: 'harmonicMinor'
+},
+
+'Dm': {
+    acc: {'B':-1},
+    hName: 'Dm',
+    val: 5,
+    isMinor: true,
+    tuning: 'harmonicMinor'
+},
+
+'Cm': {
+    acc: {'B':-1, 'E':-1, 'A':-1},
+    hName: 'Cm',
+    val: 0,
+    isMinor: true,
+    tuning: 'harmonicMinor'
+},
     
     // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
     'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy' },
@@ -681,13 +712,17 @@ const isMinorHarp =
 
 let effectiveShift = harpShift;
 
-if (isMinorHarp) {
-    effectiveShift += 9;
-}
+
 
             let relPitch =
     absPitch - effectiveShift +
     (octaveOffset * 12);
+    
+    alert(
+    "harpShift=" + harpShift +
+    "\nselectedTuning=" + selectedTuning
+);
+   
             // Haetaan tabulatuuri oikeasta kartasta valitun virityksen mukaan
             const tab = harpMap[selectedTuning][relPitch.toString()] || "";
             
