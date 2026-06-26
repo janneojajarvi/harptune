@@ -461,9 +461,13 @@ let relPitch = absPitch - harpShift + transposeOffset + (testOffset * 12);
         "9": "-6", "10": "+6o", "11": "-7", "12": "+7", "13": "-7o", "14": "-8", "15": "+8'", 
         "16": "+8", "17": "-9", "18": "+9'", "19": "+9", "20": "-9o", "21": "-10", 
         "22": "+10''", "23": "+10'", "24": "+10"
-    },
+    }
+};
+
+// Sävelkohtaiset tabikartat erikoisvirityksille
+const noteMaps = {
     harmonicMinor: {
-        // lisätään tähän myöhemmin
+
     }
 };
 
@@ -719,20 +723,23 @@ let effectiveShift = harpShift;
 
 
 
-            let relPitch =
+           let relPitch =
     absPitch - effectiveShift +
     (octaveOffset * 12);
-    
-    
-   if (selectedTuning === "harmonicMinor") {
-    alert(
-        "Nuotti: " + note +
-        "\nabsPitch: " + absPitch +
-        "\nrelPitch: " + relPitch
-    );
+
+let tab = "";
+
+if (selectedTuning === "harmonicMinor") {
+
+    const noteName = pitchToNote(absPitch);
+
+    tab = noteMaps.harmonicMinor[noteName] || "";
+
+} else {
+
+    tab = harpMap[selectedTuning][relPitch.toString()] || "";
+
 }
-            // Haetaan tabulatuuri oikeasta kartasta valitun virityksen mukaan
-            const tab = harpMap[selectedTuning][relPitch.toString()] || "";
             
             // LISÄTTY ALAVIIVA (_): '"_' siirtää tabin nuotin alapuolelle.
             // Jos haluat ne myöhemmin takaisin ylös, poista vain tuo alaviiva.
@@ -850,6 +857,16 @@ let effectiveShift = harpShift;
     }
 
     // Copyright: Janne Ojajärvi www.huuliharppu.fi
+    
+    function pitchToNote(absPitch) {
+    const names = [
+        "C", "C#", "D", "Eb", "E", "F",
+        "F#", "G", "Ab", "A", "Bb", "B"
+    ];
+
+    const octave = 4 + Math.floor(absPitch / 12);
+    return names[absPitch % 12] + octave;
+}
     
     // --- OHJAIMET ---
     document.getElementById('octaveUp').onclick = () => { octaveOffset++; processAbc(); };
