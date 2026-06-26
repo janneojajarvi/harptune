@@ -467,23 +467,48 @@ let relPitch = absPitch - harpShift + transposeOffset + (testOffset * 12);
 // Sävelkohtaiset tabikartat erikoisvirityksille
 const noteMaps = {
     harmonicMinor: {
+        "-3": "+1",
+        "-2": "-1'",
+        "-1": "-1",
 
-        // 4. oktaavi
-        "A4": "+4",
-        "Bb4": "-4'",
-        "B4": "-4",
+        "0": "+2",
+        "1": "-2'''",
+        "2": "-2''",
+        "3": "-2'",
+        "4": "-2",
 
-        // 5. oktaavi
-        "C5": "+5",
-        "Db5": "-5'",
-        "D5": "-5",
-        "Eb5": "+5o",
-        "E5": "+6",
-        "F5": "-6",
-        "F#5": "+6o",
-        "G5": "-7'''",
-        "Ab5": "-7",
-        "A5": "+7"
+        "5": "-3'''",
+        "6": "-3''",
+        "7": "-3'",
+        "8": "-3",
+
+        "9": "+4",
+        "10": "-4'",
+        "11": "-4",
+
+        "12": "+5",
+        "13": "-5'",
+        "14": "-5",
+
+        "16": "+6",
+        "17": "-6",
+        "18": "+6o",
+        "20": "-7",
+        "21": "+7",
+        "22": "-7o",
+
+        "24": "+8",
+        "23": "-8",
+        "25": "-8o",
+        "27": "+9'",
+        "28": "+9",
+        "29": "-10",
+        "30": "+10'''",
+        "31": "+10''",
+        "32": "+10'",
+        "33": "+10",
+        "34": "-10o",
+        "26": "-9"
     }
 };
 
@@ -747,9 +772,7 @@ let tab = "";
 
 if (selectedTuning === "harmonicMinor") {
 
-    const noteName = pitchToNote(absPitch);
-
-    tab = noteMaps.harmonicMinor[noteName] || "";
+    tab = noteMaps.harmonicMinor[relPitch.toString()] || "";
 
 } else {
 
