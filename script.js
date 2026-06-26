@@ -468,6 +468,22 @@ let relPitch = absPitch - harpShift + transposeOffset + (testOffset * 12);
 const noteMaps = {
     harmonicMinor: {
 
+        // 4. oktaavi
+        "A4": "+4",
+        "Bb4": "-4'",
+        "B4": "-4",
+
+        // 5. oktaavi
+        "C5": "+5",
+        "Db5": "-5'",
+        "D5": "-5",
+        "Eb5": "+5o",
+        "E5": "+6",
+        "F5": "-6",
+        "F#5": "+6o",
+        "G5": "-7'''",
+        "Ab5": "-7",
+        "A5": "+7"
     }
 };
 
