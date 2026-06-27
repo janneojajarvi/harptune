@@ -537,7 +537,8 @@ const defaultHarpMap = harpMap.richter;
     hName: 'Am',
     val: 12,
     isMinor: true,
-    tuning: 'harmonicMinor'
+    tuning: 'harmonicMinor',
+    octaveShift: 12
 },
 
 'Gm': {
@@ -545,7 +546,8 @@ const defaultHarpMap = harpMap.richter;
     hName: 'Gm',
     val: 10,
     isMinor: true,
-    tuning: 'harmonicMinor'
+    tuning: 'harmonicMinor',
+    octaveShift: 12
 },
 
 'Dm': {
@@ -553,7 +555,8 @@ const defaultHarpMap = harpMap.richter;
     hName: 'Dm',
     val: 5,
     isMinor: true,
-    tuning: 'harmonicMinor'
+    tuning: 'harmonicMinor',
+    octaveShift: 24
 },
 
 'Cm': {
@@ -561,7 +564,8 @@ const defaultHarpMap = harpMap.richter;
     hName: 'Cm',
     val: 0,
     isMinor: true,
-    tuning: 'harmonicMinor'
+    tuning: 'harmonicMinor',
+    octaveShift: 24
 },
     
     // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
@@ -700,11 +704,7 @@ const isMinorHarp =
     const selectedHarpKey = harpKeySelect.options[harpKeySelect.selectedIndex].text.replace(/\s+/g, '');
     const selectedTuning = keyData[selectedHarpKey]?.tuning || 'richter';
     
-    alert(
-    selectedOption.text +
-    "\nvalue = " + harpShift +
-    "\ntuning = " + selectedTuning
-);
+    
 
     abcInput.value.split('\n').forEach(line => {
         if (line.startsWith('Q:')) return; 
