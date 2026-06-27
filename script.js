@@ -562,7 +562,7 @@ const defaultHarpMap = harpMap.richter;
 'Cm': {
     acc: {'B':-1, 'E':-1, 'A':-1},
     hName: 'Cm',
-    val: 3,
+    val: 15,
     isMinor: true,
     tuning: 'harmonicMinor',
     octaveShift: 12
