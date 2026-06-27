@@ -773,7 +773,7 @@ let effectiveShift = harpShift;
     (octaveOffset * 12);
     
     if (selectedTuning === "harmonicMinor") {
-    relPitch += 12;
+    relPitch += keyData[selectedHarpKey].octaveShift;
 }
 
 let tab = "";
