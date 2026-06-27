@@ -538,8 +538,7 @@ const defaultHarpMap = harpMap.richter;
     val: 12,
     isMinor: true,
     tuning: 'harmonicMinor',
-    octaveShift: 12,
-    noteOffset: 0
+    octaveShift: 12
 },
 
 'Gm': {
@@ -548,8 +547,7 @@ const defaultHarpMap = harpMap.richter;
     val: 10,
     isMinor: true,
     tuning: 'harmonicMinor',
-    octaveShift: 12,
-    noteOffset: 0
+    octaveShift: 12
 },
 
 'Dm': {
@@ -558,8 +556,7 @@ const defaultHarpMap = harpMap.richter;
     val: 5,
     isMinor: true,
     tuning: 'harmonicMinor',
-    octaveShift: 0,
-    noteOffset: 0
+    octaveShift: 0
 },
 
 'Cm': {
@@ -568,8 +565,7 @@ const defaultHarpMap = harpMap.richter;
     val: 0,
     isMinor: true,
     tuning: 'harmonicMinor',
-    octaveShift: 0,
-    noteOffset: 3
+    octaveShift: 0
 },
     
     // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
@@ -768,26 +764,23 @@ const isMinorHarp =
                 else if (acc === '=') currentKeyAccidentals[nU] = 0;
             }
 
-let effectiveShift = harpShift;
-
-
-
-           let relPitch =
-    absPitch - effectiveShift +
-    (octaveOffset * 12);
-
-if (selectedTuning === "harmonicMinor") {
-    relPitch += keyData[selectedHarpKey].octaveShift;
-    relPitch += keyData[selectedHarpKey].noteOffset;
-}
-
 let tab = "";
 
 if (selectedTuning === "harmonicMinor") {
 
+    let relPitch =
+        absPitch +
+        (octaveOffset * 12) +
+        (keyData[selectedHarpKey].octaveShift || 0);
+
     tab = noteMaps.harmonicMinor[relPitch.toString()] || "";
 
 } else {
+
+    let relPitch =
+        absPitch -
+        harpShift +
+        (octaveOffset * 12);
 
     tab = harpMap[selectedTuning][relPitch.toString()] || "";
 
