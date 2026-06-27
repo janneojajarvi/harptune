@@ -562,10 +562,10 @@ const defaultHarpMap = harpMap.richter;
 'Cm': {
     acc: {'B':-1, 'E':-1, 'A':-1},
     hName: 'Cm',
-    val: 15,
+    val: 0,
     isMinor: true,
     tuning: 'harmonicMinor',
-    octaveShift: 12
+    octaveShift: 0
 },
     
     // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
