@@ -569,7 +569,7 @@ const defaultHarpMap = harpMap.richter;
     isMinor: true,
     tuning: 'harmonicMinor',
     octaveShift: 0,
-    noteOffset: 3
+    noteOffset: 4
 },
     
     // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
