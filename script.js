@@ -605,7 +605,7 @@ const defaultHarpMap = harpMap.richter;
 },
     
     // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
-    'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy' noteMap: 'paddyRichterC', },
+    'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy' noteMap: 'paddyRichterC' },
     'DPaddy': { acc: {'F':1, 'C':1}, hName: 'D Paddy', val: 14, tuning: 'paddy' },
     'GPaddy': { acc: {'F':1}, hName: 'G Paddy', val: 7, tuning: 'paddy' }
 }; 
