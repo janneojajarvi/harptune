@@ -768,17 +768,6 @@ const isMinorHarp =
 
 let tab = "";
 
-if (selectedTuning === "harmonicMinor") {
-
-    const data = keyData[selectedHarpKey];
-
-let noteName = pitchToNote(absPitch);
-
-noteName = transposeNote(
-    noteName,
-    -(data.transpose || 0)
-);
-
 tab = noteMaps[data.noteMap][noteName] || "";
 
 } else {
