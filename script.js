@@ -700,7 +700,11 @@ const isMinorHarp =
     const selectedHarpKey = harpKeySelect.options[harpKeySelect.selectedIndex].text.replace(/\s+/g, '');
     const selectedTuning = keyData[selectedHarpKey]?.tuning || 'richter';
     
-    
+    alert(
+    selectedOption.text +
+    "\nvalue = " + harpShift +
+    "\ntuning = " + selectedTuning
+);
 
     abcInput.value.split('\n').forEach(line => {
         if (line.startsWith('Q:')) return; 
