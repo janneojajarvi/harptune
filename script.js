@@ -472,33 +472,27 @@ const noteMaps = {
         "A3": "+1",
         "Bb3": "-1'",
         "B3": "-1",
-
         "C4": "+2",
         "C#4": "-2'''",
         "D4": "-2''",
         "Eb4": "-2'",
         "E4": "-2",
-
         "F4": "-3'''",
         "F#4": "-3''",
         "G4": "-3'",
         "Ab4": "-3",
-
         "A4": "+4",
         "Bb4": "-4'",
         "B4": "-4",
-
         "C5": "+5",
         "C#5": "-5'",
         "D5": "-5",
-
         "E5": "+6",
         "F5": "-6",
         "F#5": "+6o",
         "Ab5": "-7",
         "A5": "+7",
         "Bb5": "-7o",
-
         "B5": "-8",
         "C6": "+8",
         "C#6": "-8o",
@@ -511,7 +505,47 @@ const noteMaps = {
         "Ab6": "+10'",
         "A6": "+10",
         "Bb6": "-10o"
-    }
+    },
+    paddyRichterC: {
+    "C4": "+1",
+    "C#4": "-1'",
+    "D4": "-1",
+    "Eb4": "+1o",
+    "E4": "+2",
+    "F4": "-2''",
+    "F#4": "-2'",
+    "G4": "-2",
+    "Ab4": "+2o",
+    "A4": "+3",
+    "Bb4": "-3'",
+    "B4": "-3",
+    "C5": "+4",
+    "C#5": "-4'",
+    "D5": "-4",
+    "Eb5": "+4o",
+    "E5": "+5",
+    "F5": "-5",
+    "F#5": "+5o",
+    "G5": "+6",
+    "Ab5": "-6'",
+    "A5": "-6",
+    "Bb5": "+6o",
+    "B5": "-7",
+    "C6": "+7",
+    "C#6": "-7o",
+    "D6": "-8",
+    "Eb6": "+8'",
+    "E6": "+8",
+    "F6": "-9",
+    "F#6": "+9'",
+    "G6": "+9",
+    "Ab6": "-9o",
+    "A6": "-10",
+    "Bb6": "+10''",
+    "B6": "+10'",
+    "C7": "+10",
+    "C#7": "-10o"
+}
 };
 
 const defaultHarpMap = harpMap.richter;
@@ -571,7 +605,7 @@ const defaultHarpMap = harpMap.richter;
 },
     
     // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
-    'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy' },
+    'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy' noteMap: 'paddyRichterC', },
     'DPaddy': { acc: {'F':1, 'C':1}, hName: 'D Paddy', val: 14, tuning: 'paddy' },
     'GPaddy': { acc: {'F':1}, hName: 'G Paddy', val: 7, tuning: 'paddy' }
 }; 
