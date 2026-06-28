@@ -505,6 +505,45 @@ const noteMaps = {
         "Ab6": "+10'",
         "A6": "+10",
         "Bb6": "-10o"
+    },
+        paddyC: {
+        "C4": "+1",
+        "C#4": "-1'",
+        "D4": "-1",
+        "Eb4": "+1o",
+        "E4": "+2",
+        "F4": "-2''",
+        "F#4": "-2'",
+        "G4": "-2",
+        "Ab4": "-3'''",
+        "A4": "+3", // Paddy Richter -erikoisuus: G4 on muuttunut A4:ksi!
+        "Bb4": "-3'",
+        "B4": "-3",
+        "C5": "+4",
+        "C#5": "-4'",
+        "D5": "-4",
+        "Eb5": "+4o",
+        "E5": "+5",
+        "F5": "-5",
+        "F#5": "+5o",
+        "G5": "+6",
+        "Ab5": "-6'",
+        "A5": "-6",
+        "Bb5": "-7o",
+        "B5": "-7",
+        "C6": "+7",
+        "C#6": "+7o",
+        "D6": "-8",
+        "Eb6": "+8'",
+        "E6": "+8",
+        "F6": "-9",
+        "F#6": "+9'",
+        "G6": "+9",
+        "Ab6": "-9o",
+        "A6": "-10",
+        "Bb6": "+10''",
+        "B6": "+10'",
+        "C7": "+10"
     }
 };
 
@@ -563,9 +602,17 @@ const defaultHarpMap = harpMap.richter;
     noteMap: 'harmonicMinorA',
     transpose: -9
 },
+    'CPaddy': { 
+        acc: {}, 
+        hName: 'C Paddy', 
+        val: 12, 
+        tuning: 'harmonicMinor', // Ohjaa harpun käyttämään absoluuttista noteMap-hakua
+        noteMap: 'paddyC', 
+        transpose: 0            // Ei transponointitarvetta, koska kartta on jo valmiiksi C-tasossa
+    },
+
     
     // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
-    'CPaddy': { acc: {}, hName: 'C Paddy', val: 12, tuning: 'paddy' },
     'DPaddy': { acc: {'F':1, 'C':1}, hName: 'D Paddy', val: 14, tuning: 'paddy' },
     'GPaddy': { acc: {'F':1}, hName: 'G Paddy', val: 7, tuning: 'paddy' }
 }; 
@@ -766,7 +813,9 @@ if (selectedTuning === "harmonicMinor") {
 
     const data = keyData[selectedHarpKey];
 
-let noteName = pitchToNote(absPitch);
+let noteName = pitchToNote(
+    absPitch + octaveOffset * 12
+);
 
 noteName = transposeNote(
     noteName,
