@@ -605,20 +605,28 @@ const defaultHarpMap = harpMap.richter;
     noteMap: 'harmonicMinorA',
     transpose: -9,
     octaveTranspose: -12
-},
-    'CPaddy': { 
-        acc: {}, 
-        hName: 'C Paddy', 
-        val: 12, 
-        tuning: 'harmonicMinor', // Ohjaa harpun käyttämään absoluuttista noteMap-hakua
-        noteMap: 'paddyC', 
-        transpose: 0            // Ei transponointitarvetta, koska kartta on jo valmiiksi C-tasossa
-    },
-
-    
+},    
     // Paddy Richterit (val = 12 on C, 2 on D, 7 on G)
-    'DPaddy': { acc: {'F':1, 'C':1}, hName: 'D Paddy', val: 14, tuning: 'paddy' },
-    'GPaddy': { acc: {'F':1}, hName: 'G Paddy', val: 7, tuning: 'paddy' }
+    'CPaddy': {
+    acc:{},
+    hName:'CPaddy',
+    val:12,
+    tuning:'paddy'
+},
+
+'GPaddy': {
+    acc:{'F':1},
+    hName:'GPaddy',
+    val:7,
+    tuning:'paddy'
+},
+
+'DPaddy': {
+    acc:{'F':1,'C':1},
+    hName:'DPaddy',
+    val:14,
+    tuning:'paddy'
+}
 }; 
 
 
