@@ -594,7 +594,7 @@ const defaultHarpMap = harpMap.richter;
     tuning: 'harmonicMinor',
     noteMap: 'harmonicMinorA',
     transpose: -7,
-    octaveTranspose: 12
+    octaveTranspose: -12
 },
 
 'Cm': {
@@ -604,7 +604,7 @@ const defaultHarpMap = harpMap.richter;
     tuning: 'harmonicMinor',
     noteMap: 'harmonicMinorA',
     transpose: -9,
-    octaveTranspose: 12
+    octaveTranspose: -12
 },
     'CPaddy': { 
         acc: {}, 
