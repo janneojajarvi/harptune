@@ -573,7 +573,8 @@ const defaultHarpMap = harpMap.richter;
     val: 12,
     tuning: 'harmonicMinor',
     noteMap: 'harmonicMinorA',
-    transpose: 0
+    transpose: 0,
+    octaveTranspose: 0
 },
 
 'Gm': {
@@ -582,7 +583,8 @@ const defaultHarpMap = harpMap.richter;
     val: 10,
     tuning: 'harmonicMinor',
     noteMap: 'harmonicMinorA',
-    transpose: -2
+    transpose: -2,
+    octaveTranspose: 0
 },
 
 'Dm': {
@@ -591,7 +593,8 @@ const defaultHarpMap = harpMap.richter;
     val: 5,
     tuning: 'harmonicMinor',
     noteMap: 'harmonicMinorA',
-    transpose: -7
+    transpose: -7,
+    octaveTranspose: 12
 },
 
 'Cm': {
@@ -600,7 +603,8 @@ const defaultHarpMap = harpMap.richter;
     val: 0,
     tuning: 'harmonicMinor',
     noteMap: 'harmonicMinorA',
-    transpose: -9
+    transpose: -9,
+    octaveTranspose: 12
 },
     'CPaddy': { 
         acc: {}, 
@@ -819,7 +823,7 @@ let noteName = pitchToNote(
 
 noteName = transposeNote(
     noteName,
-    -(data.transpose || 0)
+    -(data.transpose || 0) + (data.octaveTranspose || 0)
 );
 
 tab = noteMaps[data.noteMap][noteName] || "";
