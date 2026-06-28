@@ -611,21 +611,27 @@ const defaultHarpMap = harpMap.richter;
     acc:{},
     hName:'CPaddy',
     val:12,
-    tuning:'paddy'
+    tuning:'paddy',
+    noteMap:'paddyC',
+    transpose:0
 },
 
 'GPaddy': {
     acc:{'F':1},
     hName:'GPaddy',
     val:7,
-    tuning:'paddy'
+    tuning:'paddy',
+    noteMap:'paddyC',
+    transpose:-5
 },
 
 'DPaddy': {
     acc:{'F':1,'C':1},
     hName:'DPaddy',
     val:14,
-    tuning:'paddy'
+    tuning:'paddy',
+    noteMap:'paddyC',
+    transpose:2
 }
 }; 
 
@@ -821,24 +827,24 @@ const isMinorHarp =
 
 let tab = "";
 
-if (selectedTuning === "harmonicMinor") {
+const data = keyData[selectedHarpKey];
 
-    const data = keyData[selectedHarpKey];
+if (data.noteMap) {
 
-let noteName = pitchToNote(
-    absPitch + octaveOffset * 12
-);
+    let noteName = pitchToNote(
+        absPitch + octaveOffset * 12
+    );
 
-noteName = transposeNote(
-    noteName,
-    -(data.transpose || 0) + (data.octaveTranspose || 0)
-);
+    noteName = transposeNote(
+        noteName,
+        -(data.transpose || 0) + (data.octaveTranspose || 0)
+    );
 
-tab = noteMaps[data.noteMap][noteName] || "";
+    tab = noteMaps[data.noteMap][noteName] || "";
 
 } else {
-	
-	let relPitch =
+
+    let relPitch =
         absPitch -
         harpShift +
         (octaveOffset * 12);
