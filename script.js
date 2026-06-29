@@ -971,13 +971,16 @@ if (data.noteMap) {
     // Copyright: Janne Ojajärvi www.huuliharppu.fi
     
     function pitchToNote(absPitch) {
+
     const names = [
-        "C", "C#", "D", "Eb", "E", "F",
-        "F#", "G", "Ab", "A", "Bb", "B"
+        "C","C#","D","Eb","E","F",
+        "F#","G","Ab","A","Bb","B"
     ];
 
+    const note = ((absPitch % 12) + 12) % 12;
     const octave = 4 + Math.floor(absPitch / 12);
-    return names[absPitch % 12] + octave;
+
+    return names[note] + octave;
 }
 
 function noteToMidi(noteName) {
@@ -1008,7 +1011,9 @@ function transposeNote(noteName, semitones) {
 
     const octave = Math.floor(midi / 12) - 1;
 
-    return names[midi % 12] + octave;
+    const note = ((midi % 12) + 12) % 12;
+
+return names[note] + octave;
 }
     
     // --- OHJAIMET ---
